@@ -19,7 +19,7 @@ import io.cucumber.testng.CucumberOptions;
 		glue = {"com\\follo\\stepdefinition\\sp1", "com\\follo\\stepdefinition\\sp2", "com\\follo\\stepdefinition\\sp3", 
 				"com\\follo\\stepdefinition\\sp4" , "com.follo.stepdefinition.sp5" , "com.follo.stepdefinition.sp6" , "com.follo.stepdefinition.sp7",
 		"\\com\\follo\\Hooks"}, 
-	//	plugin = {"rerun:target/failed_Cases.txt"},
+		plugin = {"rerun:target/failed_Cases.txt"},
 
 		monochrome = true,	dryRun= false)
 public class EngineRunner extends AbstractTestNGCucumberTests {
