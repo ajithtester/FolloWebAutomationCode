@@ -1518,6 +1518,7 @@ Wait(7000);
 						JsClick("DoneButton", CraneCalenderLocators);								
 						ReportConfig.PassedLogInfo("User add attachment to the crane calendar request","Done button is clicked");
 						Print("Done button is clicked");
+						Wait(10000);
 
 						//JsClick("DoneButton", CraneCalenderLocators);
 

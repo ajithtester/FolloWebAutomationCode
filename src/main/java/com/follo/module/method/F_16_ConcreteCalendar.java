@@ -1248,9 +1248,11 @@ public class F_16_ConcreteCalendar extends Baseclass {
 			}
 
 			Wait(5000);
-			Clear("Concrete.SearchField", ConcreteCalendarLocators);
-			Wait(3000);
-			JsClick("Concrete.CloseSearch", ConcreteCalendarLocators);
+			Refresh();
+			Wait(5000);
+//			Clear("Concrete.SearchField", ConcreteCalendarLocators);
+//			Wait(3000);
+//			JsClick("Concrete.CloseSearch", ConcreteCalendarLocators);
 
 
 		}

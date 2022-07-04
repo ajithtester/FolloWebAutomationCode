@@ -409,10 +409,6 @@ public class F_07_Equipment extends Baseclass {
 				Print("Minimum charcter length needed error : " + MinimumCharacters);
 				ReportConfig.Givenlogpass("user adds equipment name with two characters","Minimum character length needed error: " + MinimumCharacters);
 
-				String IssueSummary = "Equipment name accepts two characters" ;
-				String Storydescription = "user adds equipment name with two characters" ;
-				pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
-				
 				String name = RandomStringUtils.randomAlphabetic(300);
 
 				Wait(2000);

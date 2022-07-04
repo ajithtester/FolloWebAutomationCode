@@ -554,7 +554,6 @@ public class F_12_CalendarSettings extends Baseclass {
 				}
 			});
 			int rowcount = SizeOfTheList("EditButton", CalendarSettingsLocators);
-			Print("rowcount" + rowcount);
 
 			for(int EditButton =1; EditButton<=rowcount; EditButton++)	{
 
@@ -572,7 +571,7 @@ public class F_12_CalendarSettings extends Baseclass {
 					Print("yes");
 					WebElement Edit =	FindElement("EditButtonList" ,CalendarSettingsLocators,  EditButton);
 					//						
-					Print("Edit " + EditButton);
+					Print("Edit button is clicked");
 					Click(Edit);
 
 
@@ -629,9 +628,7 @@ public class F_12_CalendarSettings extends Baseclass {
 
 						Wait(2000);
 						String ExcelMeridian = ReadFrom.Excel(CalendarEditRequest, 7, ReadFrom.EditCalendarSettingsRequest);
-						Print("eXCEL" + ExcelMeridian);
 						String Meridian = GetText("FromMeridian", CalendarSettingsLocators);
-						Print("WEB" + Meridian);
 						if(IsEqual(Meridian, ExcelMeridian)) {
 
 

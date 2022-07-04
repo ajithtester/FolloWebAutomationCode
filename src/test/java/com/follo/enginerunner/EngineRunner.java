@@ -6,10 +6,10 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
-	//	tags = "@Regression", 	
+		tags = "@Regression", 	
 
 		// tags = "@Register" ,
-		 tags = "@Login",
+		// tags = "@Login",
 		//	tags = "@NegativeCases" ,		
 		features = {"Features_SP1" , "Features_SP2", "Features_SP3", "Features_SP4" , "Features_SP5", "Features_SP6" , "Features_SP7"}, 
 
