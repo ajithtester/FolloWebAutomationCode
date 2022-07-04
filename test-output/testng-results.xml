@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-04T13:25:34 IST" name="Default suite" finished-at="2022-07-04T13:30:02 IST" duration-ms="267963">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.follo.enginerunner.EngineRunner@82de64a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2022-07-04T13:25:34 IST" name="Default test" finished-at="2022-07-04T13:30:02 IST" duration-ms="267963">
+      <class name="com.follo.enginerunner.EngineRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.follo.enginerunner.EngineRunner@82de64a]" started-at="2022-07-04T13:25:34 IST" name="setUpClass" finished-at="2022-07-04T13:25:34 IST" duration-ms="579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.follo.enginerunner.EngineRunner@82de64a]" started-at="2022-07-04T13:25:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T13:26:03 IST" duration-ms="29082" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Launch the app URL and navigate to login page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[To verify the Login feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.follo.enginerunner.EngineRunner@82de64a]" started-at="2022-07-04T13:26:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T13:26:14 IST" duration-ms="10354" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login With without credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[To verify the Login feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.follo.enginerunner.EngineRunner@82de64a]" started-at="2022-07-04T13:26:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T13:26:40 IST" duration-ms="26563" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Invalid Email Format Error"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[To verify the Login feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.follo.enginerunner.EngineRunner@82de64a]" started-at="2022-07-04T13:26:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T13:27:00 IST" duration-ms="20016" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Invalid Password Error"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[To verify the Login feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.follo.enginerunner.EngineRunner@82de64a]" started-at="2022-07-04T13:27:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T13:27:21 IST" duration-ms="20206" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To check for Broken Links and images in Login page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[To verify the Login feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.follo.enginerunner.EngineRunner@82de64a]" started-at="2022-07-04T13:27:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T13:29:45 IST" duration-ms="144350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User logging in with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[To verify the Login feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.follo.enginerunner.EngineRunner@82de64a]" started-at="2022-07-04T13:29:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T13:30:02 IST" duration-ms="16731" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To select project"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[To verify the Login feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.follo.enginerunner.EngineRunner@82de64a]" started-at="2022-07-04T13:30:02 IST" name="tearDownClass" finished-at="2022-07-04T13:30:02 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.follo.enginerunner.EngineRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
