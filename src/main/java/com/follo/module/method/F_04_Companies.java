@@ -31,8 +31,8 @@ public class F_04_Companies extends Baseclass {
 		for(int AddCompany =1; AddCompany<=ReadFrom.rowcount; AddCompany++)		{	
 			Wait(2000);
 			Click("NewCompany", CompaniesLocators);
-			ReportConfig.PassedLogInfo("To add new companies" ,"New company button is clicked");
-			Print("New company button is clicked");
+			ReportConfig.PassedLogInfo("To add new companies" ,"Click on New company button");
+			Print("Click on New company button");
 
 			Wait(5000);
 			if(IsElementDisplayed("Dfow", CompaniesLocators)) {
