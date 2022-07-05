@@ -46,7 +46,7 @@ public class ReportConfig extends Baseclass{
 		ExtentHtmlReporter spark = new ExtentHtmlReporter(System.getProperty("user.dir") + "//Report-output//FolloWeb.html");
 		spark.config().setTheme(Theme.DARK);
 		spark.config().setDocumentTitle("Follo Web Automation Report");
-		spark.config().setReportName("Regression Cases, Sprint1-6");
+		spark.config().setReportName("Report Check, Rerun");
 		extent.attachReporter(spark);
 
 		return extent;

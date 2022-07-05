@@ -21,7 +21,7 @@ public class F_03_DFOW extends Baseclass  {
 	public static void AddDFOW() throws Throwable {
 
 		Wait(3000);
-		PrintError("Add Dfow Started");
+		PrintError("Validate with add option");
 
 		ReadFrom.DynamicExcel(ReadFrom.AddDFOW);
 			for(int Rows =1; Rows<=ReadFrom.rowcount; Rows++)		{	
@@ -31,8 +31,8 @@ public class F_03_DFOW extends Baseclass  {
 				Clear(SpecSec);
 				EnterValueInTheElement(SpecSec, ReadFrom.Excel(Rows, 0, ReadFrom.AddDFOW));
 
-				Print("Specification is entered as : " + ReadFrom.Excel(Rows, 0, ReadFrom.AddDFOW));
-				ReportConfig.PassedLogInfo("Specification is entered as : " , ReadFrom.Excel(Rows, 0, ReadFrom.AddDFOW));
+				Print("Entered Specification  : " + ReadFrom.Excel(Rows, 0, ReadFrom.AddDFOW));
+				ReportConfig.PassedLogInfo("User adds DFOW list","Entered Specification : " + ReadFrom.Excel(Rows, 0, ReadFrom.AddDFOW));
 
 				Wait(3000);
 
@@ -41,12 +41,12 @@ public class F_03_DFOW extends Baseclass  {
 				Clear(dfow);
 				EnterValueInTheElement(dfow, ReadFrom.Excel(Rows, 1, ReadFrom.AddDFOW));
 
-				Print("Dfow is entered as : " + ReadFrom.Excel(Rows, 1, ReadFrom.AddDFOW));
-				ReportConfig.PassedLogInfo("Dfow is entered as : " , ReadFrom.Excel(Rows, 1, ReadFrom.AddDFOW));
+				Print("Entered Dfow  : " + ReadFrom.Excel(Rows, 1, ReadFrom.AddDFOW));
+				ReportConfig.PassedLogInfo("User adds DFOW list", "Entered Dfow : " + ReadFrom.Excel(Rows, 1, ReadFrom.AddDFOW));
 
 				Click("AddRow", DFOWLocators);
-				Print("Add row is clicked");
-				ReportConfig.PassedLogInfo("User adds DFOW list" ,"Add row is clicked");
+				Print("Click on Add row button");
+				ReportConfig.PassedLogInfo("User adds DFOW list" ,"Click on Add row button");
 
 			}
 	}
@@ -60,7 +60,7 @@ public class F_03_DFOW extends Baseclass  {
 			for(int SearchDfow =1; SearchDfow<=ReadFrom.rowcount; SearchDfow++)	{
 
 				TypeDataInTheField("SearchDfow", DFOWLocators, ReadFrom.Excel(SearchDfow, 0, ReadFrom.SearchDFOW));
-				ReportConfig.PassedLogInfo("Dfow entered in the search bar is : " , ReadFrom.Excel(SearchDfow, 0, ReadFrom.SearchDFOW)  );
+				ReportConfig.PassedLogInfo("User search the dfow", "Entered Dfow  : " + ReadFrom.Excel(SearchDfow, 0, ReadFrom.SearchDFOW)  );
 				ClickEnter();
 				Wait(6000);
 
@@ -80,15 +80,15 @@ public class F_03_DFOW extends Baseclass  {
 					if(IsEqual(DFOWname, SearchedValue)) {
 
 						Wait(2000);
-						Print("Displayed value is : " + DFOWname);
-						ReportConfig.PassedLogInfo("Displayed value is : " , DFOWname);
+						Print("Searched Dfow: " + DFOWname);
+						ReportConfig.PassedLogInfo("User search the dfow", "Displayed Dfow: " + DFOWname);
 						Wait(3000);
 
 					}
 					else {
-						PrintError("Displayed value is : " + DFOWname);
-//						ReportConfig.FailedLogInfo("Displayed value is : " , DFOWname);
-//						String IssueSummary = "Searched value is : " + ReadFrom.Excel(SearchDfow, 0, ReadFrom.SearchDFOW) + "but displayed value is : " + DFOWname;
+						PrintError("Searched Value: " + DFOWname);
+//						ReportConfig.FailedLogInfo("Searched Value: " , DFOWname);
+//						String IssueSummary = "Searched value is : " + ReadFrom.Excel(SearchDfow, 0, ReadFrom.SearchDFOW) + "but Searched Value: " + DFOWname;
 //						String Storydescription = "Search DFOW" ;
 //						pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
 					}
@@ -107,7 +107,7 @@ public class F_03_DFOW extends Baseclass  {
 
 
 	public static void EditDFOW() throws Throwable {
-		PrintError("Edit Dfow Started");
+		PrintError("Validate with Edit DFOW flow");
 
 		ReadFrom.DynamicExcel(ReadFrom.EditDFOW);
 
@@ -115,7 +115,6 @@ public class F_03_DFOW extends Baseclass  {
 
 
 				int rowcount = 	SizeOfTheList("DFOWlist", DFOWLocators);
-				Print("No of elements : " + rowcount);
 
 				for(int DfowList =1; DfowList<=rowcount; DfowList++)		{
 
@@ -141,16 +140,16 @@ public class F_03_DFOW extends Baseclass  {
 						Clear(EditSpecSec);
 						EnterValueInTheElement(EditSpecSec, ReadFrom.Excel(EditDfow, 2, ReadFrom.EditDFOW));
 
-						Print("Spec is edited as : " + ReadFrom.Excel(EditDfow, 2, ReadFrom.EditDFOW));
-						ReportConfig.PassedLogInfo("Specification is edited as : " , ReadFrom.Excel(EditDfow, 2, ReadFrom.EditDFOW));
+						Print("Edited Value is : " + ReadFrom.Excel(EditDfow, 2, ReadFrom.EditDFOW));
+						ReportConfig.PassedLogInfo("User edits a DFOW from the list","Edited Value is : " + ReadFrom.Excel(EditDfow, 2, ReadFrom.EditDFOW));
 
 						WebElement EditDfowlist =	FindElement("DfowRow", DFOWLocators, DfowList);
 						Clear(EditDfowlist);
 						EnterValueInTheElement(EditDfowlist, ReadFrom.Excel(EditDfow,3, ReadFrom.EditDFOW));
 
 
-						Print("Dfow is edited as : " + ReadFrom.Excel(EditDfow, 3, ReadFrom.EditDFOW));
-						ReportConfig.PassedLogInfo("Dfow is edited as : " , ReadFrom.Excel(EditDfow, 3, ReadFrom.EditDFOW));
+						Print("Edited Value is : " + ReadFrom.Excel(EditDfow, 3, ReadFrom.EditDFOW));
+						ReportConfig.PassedLogInfo("User edits a DFOW from the list", "Edited Value is : " + ReadFrom.Excel(EditDfow, 3, ReadFrom.EditDFOW));
 
 						Wait(5000);
 						break;
@@ -163,14 +162,13 @@ public class F_03_DFOW extends Baseclass  {
 
 
 	public static void DeleteDFOW() throws Throwable {
-		PrintError("Delete Dfow Started");
+		PrintError("Validate with Delete DFOW");
 
 		ReadFrom.DynamicExcel(ReadFrom.DeleteDFOW);
 
 			for(int DeleteDfow =1; DeleteDfow<=ReadFrom.rowcount; DeleteDfow++)	{
 
 				int rowcount = 	SizeOfTheList("DFOWlist", DFOWLocators);
-				Print("No of elements : " + rowcount);
 
 				for(int List =1; List<=rowcount; List++)	{
 
@@ -202,8 +200,8 @@ public class F_03_DFOW extends Baseclass  {
 						Wait(2000);
 
 						Click("YesDelete", DFOWLocators);
-						ReportConfig.PassedLogInfo("User deletes a DFOW from the list","Yes delete button is clicked");
-						Print("Yes delete button is clicked");
+						ReportConfig.PassedLogInfo("User deletes a DFOW from the list","Click on Yes");
+						Print("Click on Yes");
 
 						Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 								.withTimeout(Duration.ofSeconds(120))
@@ -217,8 +215,8 @@ public class F_03_DFOW extends Baseclass  {
 						});
 
 						if(IsElementDisplayed("DeleteDfowMessage", DFOWLocators)){
-							Print("DFOW deleted is : " + ReadFrom.Excel(DeleteDfow, 0, ReadFrom.DeleteDFOW));
-							ReportConfig.PassedLogInfo("DFOW deleted is : " , ReadFrom.Excel(DeleteDfow, 0, ReadFrom.DeleteDFOW));
+							Print("Deleted DFOW  : " + ReadFrom.Excel(DeleteDfow, 0, ReadFrom.DeleteDFOW));
+							ReportConfig.PassedLogInfo("User deletes a DFOW from the list", "Deleted DFOW  : " + ReadFrom.Excel(DeleteDfow, 0, ReadFrom.DeleteDFOW));
 							break;
 						}
 					}
@@ -230,7 +228,7 @@ public class F_03_DFOW extends Baseclass  {
 
 
 	public static void DfowBulkUpload() throws Throwable {
-		PrintError(" Dfow BulkUpload Started");
+		PrintError("Bulk upload is in progress");
 
 		Wait(2000);
 		String upload = ReadFrom.UploadDfowFile;
@@ -259,15 +257,15 @@ public class F_03_DFOW extends Baseclass  {
 		Wait(1000);
 		String invalidText =	GetText("InvalidFileAlert", DFOWLocators);
 
-		Print("Invalid file upload alert : " + invalidText);
+		Print("Please enter valid file format: " + invalidText);
 		ReportConfig.Givenlogpass("User uploads invalid DFOW file" ,"Invalid file upload alert: " + invalidText);
 		
 		Wait(4000);
 		
 		Click("CloseButton", DFOWLocators);
 		
-		Print("Close button is clicked");
-		ReportConfig.Givenlogpass("User uploads invalid DFOW file" ,"Close button is clicked");
+		Print("Click on Close button");
+		ReportConfig.Givenlogpass("User uploads invalid DFOW file" ,"Click on Close button");
 		
 
 	}

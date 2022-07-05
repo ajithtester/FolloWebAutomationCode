@@ -37,17 +37,16 @@ public class Follo_01_Register extends Baseclass {
 
 			if(IsEqual(ActualTitle, ExpectedTitle)) {
 
-				ReportConfig.reportStepPass("Application test");
-				ReportConfig.Givenlogpass("User launching the web url","Entered URL is : " + PropertyFile("URL", AppProperties) + ": Application launched successfully");
+				ReportConfig.Givenlogpass("User launching the web url","Page title verified as : " + PropertyFile("PageTitle", AppProperties));
 
-				Print("Page title is : " + PropertyFile("PageTitle", AppProperties) + ": Application launched successfully");
+				Print("Page title verified as : " + PropertyFile("PageTitle", AppProperties));
 
 			}
 			else {
 
-				ReportConfig.Givenlogfail("User launching the web url","Entered URL is : " + PropertyFile("PageTitle", AppProperties) + ": Application launched failed");
+				ReportConfig.Givenlogfail("User launching the web url","Page title verified as : " + PropertyFile("PageTitle", AppProperties));
 
-				PrintError("Page title is : " + PropertyFile("PageTitle", AppProperties) + ": Application launched failed");
+				PrintError("Page title verified as : " + PropertyFile("PageTitle", AppProperties));
 				String IssueSummary = "Excepted Page title is : " + ExpectedTitle  + " , But actual page title is : " + ActualTitle ;
 				String Storydescription = "Application launched failed" ;
 				pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
@@ -57,12 +56,12 @@ public class Follo_01_Register extends Baseclass {
 
 		catch (Exception e) {
 
-			ReportConfig.Givenlogfail("User launching the web url","Entered URL is : " + PropertyFile("PageTitle", AppProperties) + ": Application launched failed");
+			ReportConfig.Givenlogfail("User launching the web url","Page title verified as : " + PropertyFile("PageTitle", AppProperties));
 			Print(e.getMessage());
 			String IssueSummary = e.getMessage();
 			String Storydescription = "Application launched failed" ;
 			pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
-			Print("Page title is : " + PropertyFile("PageTitle", AppProperties) + ": Application launched failed because : " + e.getMessage());
+			Print("Page title verified as : " + PropertyFile("PageTitle", AppProperties) + ": Application launched failed because : " + e.getMessage());
 		}
 
 	}
@@ -76,7 +75,7 @@ public class Follo_01_Register extends Baseclass {
 				Click("GetStarted", RegisterPageLocators);
 				Print("Get Started button is clicked");
 
-				ReportConfig.Andlogpass("User clicks the get-started button","Get Started button is clicked");
+				ReportConfig.Andlogpass("User clicks the get-started button","Get Started button clicked successfully");
 
 			}
 
@@ -121,18 +120,18 @@ public class Follo_01_Register extends Baseclass {
 	public void user_enter_mail_id_and_phone_number() throws Throwable {
 
 		try {
-			ReportConfig.ReportCreateScenarioTest("Filling the mailId and phone number");
+			ReportConfig.ReportCreateScenarioTest("User enter mail Id and Phone number");
 			TypeDataInTheField("EmailId", RegisterPageLocators, ReadFrom.Excel(0, 1, ReadFrom.Register));
-			Print("EmailId is entered as : " + ReadFrom.Excel(0, 1, ReadFrom.Register));
-			ReportConfig.PassedLogInfo("EmailId is entered as : " ,ReadFrom.Excel(0, 1, ReadFrom.Register));
+			Print("Entered Email id: " + ReadFrom.Excel(0, 1, ReadFrom.Register));
+			ReportConfig.PassedLogInfo("User enter mail Id and Phone number", "Entered Email id: " +ReadFrom.Excel(0, 1, ReadFrom.Register));
 
 			SelectFromDropdown("PhoneCode", RegisterPageLocators, ReadFrom.Excel(1, 1, ReadFrom.Register));
-			Print("Phonecode is selected as : " + ReadFrom.Excel(1, 1, ReadFrom.Register));
-			ReportConfig.PassedLogInfo("Phonecode is selected as : " , ReadFrom.Excel(1, 1, ReadFrom.Register));
+			Print("Selected Phone code: " + ReadFrom.Excel(1, 1, ReadFrom.Register));
+			ReportConfig.PassedLogInfo("User enter mail Id and Phone number", "Selected Phone code: " + ReadFrom.Excel(1, 1, ReadFrom.Register));
 
 			TypeDataInTheField("Mobile", RegisterPageLocators, ReadFrom.Excel(2, 1, ReadFrom.Register));
-			Print("Mobile number is entered as : " + ReadFrom.Excel(2, 1, ReadFrom.Register));
-			ReportConfig.PassedLogInfo("Mobile number is entered as : " , ReadFrom.Excel(2, 1, ReadFrom.Register));
+			Print("Entered Mobile number: " + ReadFrom.Excel(2, 1, ReadFrom.Register));
+			ReportConfig.PassedLogInfo("User enter mail Id and Phone number", "Entered Mobile number: " + ReadFrom.Excel(2, 1, ReadFrom.Register));
 
 
 			ReportConfig.Givenlogpass("User enter mail Id and Phone number","Email and Mobile number is filled");
@@ -159,9 +158,9 @@ public class Follo_01_Register extends Baseclass {
 			if(IsElementDisplayed("ContinueButton", RegisterPageLocators)) {
 				Click("ContinueButton", RegisterPageLocators);
 
-				Print("Continue button is clicked");
+				Print("Click on Continue Button");
 
-				ReportConfig.Andlogpass("User Clicks the continue button","Continue button is clicked");
+				ReportConfig.Andlogpass("User Clicks the continue button","Click on Continue Button");
 
 			}
 		}	
@@ -183,8 +182,8 @@ public class Follo_01_Register extends Baseclass {
 			Wait(3000);
 			WaitForTheElement("FirstName", RegisterPageLocators);
 			if(IsElementDisplayed("FirstName", RegisterPageLocators)) {
-				Print("Basic details popup is displayed");
-				ReportConfig.Thenlogpass("User should see the basic details popup","Basic details popup is displayed");
+				Print("Validate Basic details information");
+				ReportConfig.Thenlogpass("User should see the basic details popup","Validate Basic details information");
 
 			}
 
@@ -206,32 +205,29 @@ public class Follo_01_Register extends Baseclass {
 
 
 		try {
-			ReportConfig.ReportCreateScenarioTest("Filling the basic details");
+			ReportConfig.ReportCreateScenarioTest("User fills the basic details");
 			Wait(2000);
 			Waitfortheelement("FirstName", RegisterPageLocators);
 
 
 			TypeDataInTheField("FirstName", RegisterPageLocators, ReadFrom.Excel(3, 1 , ReadFrom.Register));
 
-			Print("First name is entered as : " + ReadFrom.Excel(3, 1 , ReadFrom.Register));
-			ReportConfig.PassedLogInfo("First name is entered as : " , ReadFrom.Excel(3, 1 , ReadFrom.Register));
+			Print("Entered First Name: " + ReadFrom.Excel(3, 1 , ReadFrom.Register));
+			ReportConfig.PassedLogInfo("User fills the basic details" ,"Entered First Name: " + ReadFrom.Excel(3, 1 , ReadFrom.Register));
 
 
 
 			Waitfortheelement("LastName", RegisterPageLocators);
 			TypeDataInTheField("LastName", RegisterPageLocators, ReadFrom.Excel(4, 1 , ReadFrom.Register));
 
-			Print("Last name is entered as : " + ReadFrom.Excel(4, 1 , ReadFrom.Register));
-			ReportConfig.PassedLogInfo("Last name is entered as : " , ReadFrom.Excel(4, 1 , ReadFrom.Register));
+			Print("Entered Last  Name: " + ReadFrom.Excel(4, 1 , ReadFrom.Register));
+			ReportConfig.PassedLogInfo("User fills the basic details" , "Entered Last  Name: " + ReadFrom.Excel(4, 1 , ReadFrom.Register));
 
 
 			ScrollDown();
-
-
-
 			Click("ContinueButton", RegisterPageLocators);
 
-			Print("Continue button is clicked");
+			Print("Click on Continue Button");
 			ReportConfig.Givenlogpass("User fills the basic details and clicks continue button","Basic details are filled");
 
 		}
@@ -255,38 +251,38 @@ public class Follo_01_Register extends Baseclass {
 				MoveToElement("CompanyName", RegisterPageLocators);
 
 				TypeDataInTheField("CompanyName", RegisterPageLocators, ReadFrom.Excel(7, 1 , ReadFrom.Register));
-				Print("Company name is entered as : " + ReadFrom.Excel(7, 1 , ReadFrom.Register));
-				ReportConfig.PassedLogInfo("Company name is entered as : " , ReadFrom.Excel(7, 1 , ReadFrom.Register));
+				Print("Entered Company name : " + ReadFrom.Excel(7, 1 , ReadFrom.Register));
+				ReportConfig.PassedLogInfo("User fills the basic details" , "Entered Company name : " + ReadFrom.Excel(7, 1 , ReadFrom.Register));
 
 
 				//////////
 				TypeDataInTheField("City", RegisterPageLocators, ReadFrom.Excel(10, 1 , ReadFrom.Register));
-				Print("City is entered as : " + ReadFrom.Excel(10, 1 , ReadFrom.Register));
-				ReportConfig.PassedLogInfo("City is entered as : " , ReadFrom.Excel(10, 1 , ReadFrom.Register));
+				Print("Entered City  : " + ReadFrom.Excel(10, 1 , ReadFrom.Register));
+				ReportConfig.PassedLogInfo("User fills the basic details" ,"Entered City  : " + ReadFrom.Excel(10, 1 , ReadFrom.Register));
 
 
 
 				TypeDataInTheField("State", RegisterPageLocators, ReadFrom.Excel(11, 1 , ReadFrom.Register));
-				Print("State is entered as : " + ReadFrom.Excel(11, 1 , ReadFrom.Register));
-				ReportConfig.PassedLogInfo("State is entered as : " , ReadFrom.Excel(11, 1 , ReadFrom.Register));
+				Print("Entered State  : " + ReadFrom.Excel(11, 1 , ReadFrom.Register));
+				ReportConfig.PassedLogInfo("User fills the basic details" , "Entered State  : " +  ReadFrom.Excel(11, 1 , ReadFrom.Register));
 
 
 
 				TypeDataInTheField("Country", RegisterPageLocators, ReadFrom.Excel(12, 1 , ReadFrom.Register));
-				Print("Country is entered as : " + ReadFrom.Excel(12, 1 , ReadFrom.Register));
-				ReportConfig.PassedLogInfo("Country is entered as : " , ReadFrom.Excel(12, 1 , ReadFrom.Register));
+				Print("Entered Country : " + ReadFrom.Excel(12, 1 , ReadFrom.Register));
+				ReportConfig.PassedLogInfo("User fills the basic details" ,"Entered Country : " + ReadFrom.Excel(12, 1 , ReadFrom.Register));
 
 
 
 
 				TypeDataInTheField("Website", RegisterPageLocators, ReadFrom.Excel(14, 1 , ReadFrom.Register));
-				Print("Website is entered as : " + ReadFrom.Excel(14, 1 , ReadFrom.Register));
-				ReportConfig.PassedLogInfo("Website is entered as : " , ReadFrom.Excel(14, 1 , ReadFrom.Register));
+				Print("Entered Website : " + ReadFrom.Excel(14, 1 , ReadFrom.Register));
+				ReportConfig.PassedLogInfo("User fills the basic details" , "Entered Website : " + ReadFrom.Excel(14, 1 , ReadFrom.Register));
 
 
 				TypeDataInTheField("CompanyAddress", RegisterPageLocators, ReadFrom.Excel(8, 1 , ReadFrom.Register));
-				Print("Company address is entered as : " + ReadFrom.Excel(8, 1 , ReadFrom.Register));
-				ReportConfig.PassedLogInfo("Company address is entered as : " , ReadFrom.Excel(8, 1 , ReadFrom.Register));
+				Print("Entered Company address : " + ReadFrom.Excel(8, 1 , ReadFrom.Register));
+				ReportConfig.PassedLogInfo("User fills the basic details" ,"Entered Company address : " + ReadFrom.Excel(8, 1 , ReadFrom.Register));
 
 				ClickEnter();
 
@@ -295,20 +291,20 @@ public class Follo_01_Register extends Baseclass {
 
 				Wait(2000);
 				TypeDataInTheField("ZipCode", RegisterPageLocators, ReadFrom.Excel(13, 1 , ReadFrom.Register));
-				Print("ZipCode is entered as : " + ReadFrom.Excel(13, 1 , ReadFrom.Register));
-				ReportConfig.PassedLogInfo("ZipCode is entered as : " , ReadFrom.Excel(13, 1 , ReadFrom.Register));
+				Print("Entered ZipCode : " + ReadFrom.Excel(13, 1 , ReadFrom.Register));
+				ReportConfig.PassedLogInfo("User fills the basic details" , "Entered ZipCode : " + ReadFrom.Excel(13, 1 , ReadFrom.Register));
 
 
 				Click("ContinueButton", RegisterPageLocators);
-				Print("Continue button is clicked");
-				ReportConfig.PassedLogInfo("User fills the basic details and clicks continue button" ,"ZContinue button is clicked");
+				Print("Click on Continue Button");
+				ReportConfig.PassedLogInfo("User fills the basic details and clicks continue button" ,"Click on Continue Button");
 
 
 			}
 
 
 		} catch (Exception e) {
-			PrintError("Company address Auto-Filled");
+			PrintError("Validate Country Address Auto Filled");
 
 		}
 
@@ -320,9 +316,8 @@ public class Follo_01_Register extends Baseclass {
 
 			WaitForTheElement("ProjectDetailsPopup", RegisterPageLocators);
 			if(IsElementDisplayed("ProjectDetailsPopup", RegisterPageLocators)) {
-				Print("Project details popup is displayed");
-				ReportConfig.Thenlogpass("User should see the project details popup","Project details popup is displayed");
-
+				Print("Validate Project details information");
+				ReportConfig.Thenlogpass("User should see the project details popup","Validate Project details information");
 
 			}
 
@@ -343,18 +338,18 @@ public class Follo_01_Register extends Baseclass {
 
 		try {
 
-			ReportConfig.ReportCreateScenarioTest(" Filling the project details");
+			ReportConfig.ReportCreateScenarioTest("User fills the project name and address");
 
 			TypeDataInTheField("ProjectName", RegisterPageLocators, ReadFrom.Excel(5, 1 , ReadFrom.Register));
-			Print("Project name is entered as : " + ReadFrom.Excel(5, 1 , ReadFrom.Register));
-			ReportConfig.PassedLogInfo("Project name is entered as : " , ReadFrom.Excel(5, 1 , ReadFrom.Register));
+			Print("Entered Project Name: " + ReadFrom.Excel(5, 1 , ReadFrom.Register));
+			ReportConfig.PassedLogInfo("User fills the project name and address", "Entered Project Name: " + ReadFrom.Excel(5, 1 , ReadFrom.Register));
 
 
 			Clear("ProjectAddress", RegisterPageLocators);
 
 			TypeDataInTheField("ProjectAddress", RegisterPageLocators, ReadFrom.Excel(6, 1 , ReadFrom.Register));
-			Print("Project address is entered as : " + ReadFrom.Excel(6, 1 , ReadFrom.Register));
-			ReportConfig.PassedLogInfo("Project address is entered as : " , ReadFrom.Excel(6, 1 , ReadFrom.Register));
+			Print("Entered Project Address: " + ReadFrom.Excel(6, 1 , ReadFrom.Register));
+			ReportConfig.PassedLogInfo("Entered Project Address: " , ReadFrom.Excel(6, 1 , ReadFrom.Register));
 
 		//	ClickEnter();
 			Wait(2000);
@@ -385,8 +380,8 @@ public class Follo_01_Register extends Baseclass {
 			Waitfortheelement("NextButton", RegisterPageLocators);
 			Click("NextButton", RegisterPageLocators);
 
-			Print("Next button is clicked");
-			ReportConfig.Andlogpass("User click next button","Next button is clicked");
+			Print("Click on Next Button");
+			ReportConfig.Andlogpass("User click next button","Click on Next Button");
 
 
 		}
@@ -411,8 +406,8 @@ public class Follo_01_Register extends Baseclass {
 
 			WaitForTheElement("SubcriptionPage", RegisterPageLocators);
 			if(IsElementDisplayed("SubcriptionPage", RegisterPageLocators)) {
-				Print("Subcription page is displayed");
-				ReportConfig.Thenlogpass("User should see the subscription plan page","Subcription page is displayed");
+				Print("Validate Subcription Page");
+				ReportConfig.Thenlogpass("User should see the subscription plan page","Validate Subcription Page");
 
 
 
@@ -463,8 +458,8 @@ public class Follo_01_Register extends Baseclass {
 		try {
 
 			if(IsElementDisplayed("Email", RegisterPageLocators)) {
-				Print("User redirected to the login page after selecting the plan");
-				ReportConfig.Givenlogpass("User should redirected to the login page","User redirected to the login page after selecting the plan");
+				Print("Validate user redirect to login page");
+				ReportConfig.Givenlogpass("User should redirected to the login page","Validate user redirect to login page");
 
 			}
 
@@ -495,20 +490,20 @@ public class Follo_01_Register extends Baseclass {
 			Wait(1000);
 			Click("ContinueButton", RegisterPageLocators);
 
-			Print("Continue button is clicked");
-			ReportConfig.Givenlogpass("User tries to register without credentials in register" ,"Continue button is clicked");
+			Print("Click on Continue Button");
+			ReportConfig.Givenlogpass("User tries to register without credentials in register" ,"Click on Continue Button");
 
 			Wait(1000);
 			String invalidText =	GetText("NoEmailError", RegisterPageLocators);
 
-			Print("No Email Entered Error : " + invalidText);
-			ReportConfig.Givenlogpass("User tries to register without credentials in register" , "No Email Entered Error : " + invalidText);
+			Print("Validate without Email id: " + invalidText);
+			ReportConfig.Givenlogpass("User tries to register without credentials in register" , "Validate without Email id: " + invalidText);
 
 
 			String invalidText2 =	GetText("NoPhoneError", RegisterPageLocators);
 
-			Print("No Password Entered Error : " + invalidText2);
-			ReportConfig.Givenlogpass("User tries to register without credentials in register", "No Phone number Entered Error : " + invalidText2);
+			Print("Validate without Password: " + invalidText2);
+			ReportConfig.Givenlogpass("User tries to register without credentials in register", "Validate without Password: " + invalidText2);
 
 		} 
 		catch (Exception e) {
@@ -530,29 +525,29 @@ public class Follo_01_Register extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("Invalid Email Format Error in register");
 
 			TypeDataInTheField("EmailId", RegisterPageLocators, ReadFrom.Excel(1, 2, ReadFrom.Login));
-			ReportConfig.Givenlogpass("Invalid Email Format Error in register" ,"EmailId is entered as : " + ReadFrom.Excel(1, 2, ReadFrom.Login));
-			Print("EmailId is entered as : " + ReadFrom.Excel(1, 2, ReadFrom.Login));
+			ReportConfig.Givenlogpass("Invalid Email Format Error in register" ,"Entered Email id: " + ReadFrom.Excel(1, 2, ReadFrom.Login));
+			Print("Entered Email id: " + ReadFrom.Excel(1, 2, ReadFrom.Login));
 
 
 			SelectFromDropdown("PhoneCode", RegisterPageLocators, ReadFrom.Excel(1, 1, ReadFrom.Register));
-			ReportConfig.Givenlogpass("Invalid Email Format Error in register", "Phonecode is selected as : " + ReadFrom.Excel(1, 1, ReadFrom.Register));
-			Print("Phonecode is selected as : " + ReadFrom.Excel(1, 1, ReadFrom.Register));
+			ReportConfig.Givenlogpass("Invalid Email Format Error in register", "Selected Phone code: " + ReadFrom.Excel(1, 1, ReadFrom.Register));
+			Print("Selected Phone code: " + ReadFrom.Excel(1, 1, ReadFrom.Register));
 
 			TypeDataInTheField("Mobile", RegisterPageLocators, ReadFrom.Excel(2, 1, ReadFrom.Register));
-			ReportConfig.Givenlogpass("Invalid Email Format Error in register", "Mobile number is entered as : " + ReadFrom.Excel(2, 1, ReadFrom.Register));
-			Print("Mobile number is entered as : " + ReadFrom.Excel(2, 1, ReadFrom.Register));
+			ReportConfig.Givenlogpass("Invalid Email Format Error in register", "Entered Mobile number: " + ReadFrom.Excel(2, 1, ReadFrom.Register));
+			Print("Entered Mobile number: " + ReadFrom.Excel(2, 1, ReadFrom.Register));
 
 			Wait(1000);
 			Click("ContinueButton", RegisterPageLocators);
 
-			Print("Continue button is clicked");
-			ReportConfig.Givenlogpass("Invalid Email Format Error in register" ,"Continue button is clicked");
+			Print("Click on Continue Button");
+			ReportConfig.Givenlogpass("Invalid Email Format Error in register" ,"Click on Continue Button");
 
 			Wait(1000);
 			String invalidText =	GetText("NoValidEmailError", RegisterPageLocators);
 
-			Print("No Valid Email format Entered Error : " + invalidText);
-			ReportConfig.Givenlogpass("Invalid Email Format Error in register", "No valid Email format Entered Error : " + invalidText);
+			Print("Validated with Invalid Email format: " + invalidText);
+			ReportConfig.Givenlogpass("Invalid Email Format Error in register", "Validated with Invalid Email format: " + invalidText);
 
 
 		} 
@@ -584,22 +579,22 @@ public class Follo_01_Register extends Baseclass {
 			Wait(1000);
 
 			TypeDataInTheField("EmailId", RegisterPageLocators, ReadFrom.Excel(1, 0, ReadFrom.Login));
-			ReportConfig.Givenlogpass("User enters already used mail Id and Phone number" ,"EmailId is entered as : " + ReadFrom.Excel(1, 0, ReadFrom.Login));
-			Print("EmailId is entered as : " + ReadFrom.Excel(1, 0, ReadFrom.Login));
+			ReportConfig.Givenlogpass("User enters already used mail Id and Phone number" ,"Entered Email id: " + ReadFrom.Excel(1, 0, ReadFrom.Login));
+			Print("Entered Email id: " + ReadFrom.Excel(1, 0, ReadFrom.Login));
 
 			SelectFromDropdown("PhoneCode", RegisterPageLocators, ReadFrom.Excel(1, 1, ReadFrom.Register));
-			ReportConfig.Givenlogpass("User enters already used mail Id and Phone number" ,"Phonecode is selected as : " + ReadFrom.Excel(1, 1, ReadFrom.Register));
-			Print("Phonecode is selected as : " + ReadFrom.Excel(1, 1, ReadFrom.Register));
+			ReportConfig.Givenlogpass("User enters already used mail Id and Phone number" ,"Selected Phone code: " + ReadFrom.Excel(1, 1, ReadFrom.Register));
+			Print("Selected Phone code: " + ReadFrom.Excel(1, 1, ReadFrom.Register));
 
 			TypeDataInTheField("Mobile", RegisterPageLocators, ReadFrom.Excel(2, 1, ReadFrom.Register));
-			ReportConfig.Givenlogpass("User enters already used mail Id and Phone number" ,"Mobile number is entered as : " + ReadFrom.Excel(2, 1, ReadFrom.Register));
-			Print("Mobile number is entered as : " + ReadFrom.Excel(2, 1, ReadFrom.Register));
+			ReportConfig.Givenlogpass("User enters already used mail Id and Phone number" ,"Entered Mobile number: " + ReadFrom.Excel(2, 1, ReadFrom.Register));
+			Print("Entered Mobile number: " + ReadFrom.Excel(2, 1, ReadFrom.Register));
 
 			Wait(1000);
 			Click("ContinueButton", RegisterPageLocators);
 
-			Print("Continue button is clicked");
-			ReportConfig.Givenlogpass("User enters already used mail Id and Phone number" ,"Continue button is clicked");
+			Print("Click on Continue Button");
+			ReportConfig.Givenlogpass("User enters already used mail Id and Phone number" ,"Click on Continue Button");
 
 			Wait(2000);
 			WebDriverWait wait = new WebDriverWait(driver, 120);
@@ -607,15 +602,15 @@ public class Follo_01_Register extends Baseclass {
 
 			String invalidText =	GetText("InvalidFileAlert", RegisterPageLocators);
 
-			Print("Already used Email and ph.no Entered Error : " + invalidText);
-			ReportConfig.Givenlogpass("User enters already used mail Id and Phone number" ,"Already used Email and ph.no Entered Error : " + invalidText);
+			Print("Validate with Existing Email and phone number: " + invalidText);
+			ReportConfig.Givenlogpass("User enters already used mail Id and Phone number" ,"Validate with Existing Email and phone number: " + invalidText);
 
 			Wait(4000);
 
 			Click("CloseButton", CompaniesLocators);
-			Print("Close button is clicked");
+			Print("Click on Close button");
 
-			ReportConfig.Givenlogpass("User enters already used mail Id and Phone number" ,"Close button is clicked");
+			ReportConfig.Givenlogpass("User enters already used mail Id and Phone number" ,"Click on Close button");
 			Wait(2000);
 			Click("GetStarted", RegisterPageLocators);
 			//			Wait(2000);

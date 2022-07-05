@@ -38,12 +38,12 @@ public class F_01_Registeration extends Baseclass {
 			});
 
 			if(IsElementDisplayed("CloseButton", RegisterPageLocators)) {
-				Print("Trial plan is selected");
+				Print("Selected plan is: Trial plan");
 
-				ReportConfig.PassedLogInfo("User selects the subscription plan", "Plan selection popup is displayed : Trial plan is selected");
+				ReportConfig.PassedLogInfo("User selects the subscription plan", "Plan selection popup is displayed : Selected plan is: Trial plan");
 
 				Click("CloseButton", RegisterPageLocators);
-				ReportConfig.PassedLogInfo("User selects the subscription plan", "Close button is clicked");
+				ReportConfig.PassedLogInfo("User selects the subscription plan", "Click on Close button");
 
 			}
 			else {
@@ -65,11 +65,11 @@ public class F_01_Registeration extends Baseclass {
 			ReportConfig.PassedLogInfo("User selects the subscription plan","Project Plan is clicked");
 
 			if(IsElementDisplayed("PaymentPage", RegisterPageLocators)) {
-				ReportConfig.PassedLogInfo("User selects the subscription plan","Payment page is displayed");
-				Print("Payment page is displayed");
+				ReportConfig.PassedLogInfo("User selects the subscription plan","Validate Payment Page");
+				Print("Validate Payment Page");
 
 				SelectFromDropdown("MonthorYear", RegisterPageLocators, ReadFrom.Excel(22, 1, ReadFrom.Register));
-				ReportConfig.PassedLogInfo("User takes subscription for : " , ReadFrom.Excel(22, 1, ReadFrom.Register));
+				ReportConfig.PassedLogInfo("User selects the subscription plan", "Selected : " + ReadFrom.Excel(22, 1, ReadFrom.Register));
 
 				if(IsEqual(ReadFrom.Excel(22, 1, ReadFrom.Register),("year"))){
 					Wait(2000);
@@ -79,32 +79,32 @@ public class F_01_Registeration extends Baseclass {
 
 				}
 				TypeDataInTheField("NameOnTheCard", RegisterPageLocators, ReadFrom.Excel(23, 1, ReadFrom.Register));
-				ReportConfig.PassedLogInfo("Name on the card is entered as : " , ReadFrom.Excel(23, 1, ReadFrom.Register));
+				ReportConfig.PassedLogInfo("Entered Card name : " , ReadFrom.Excel(23, 1, ReadFrom.Register));
 
 				TypeDataInTheField("CardNumber", RegisterPageLocators, ReadFrom.Excel(24, 1, ReadFrom.Register));
-				ReportConfig.PassedLogInfo("Card number is entered as : " , ReadFrom.Excel(24, 1, ReadFrom.Register));
+				ReportConfig.PassedLogInfo("Entered Card number  : " , ReadFrom.Excel(24, 1, ReadFrom.Register));
 
 
 				SelectFromDropdown("ExpiryMonth", RegisterPageLocators, ReadFrom.Excel(25, 1, ReadFrom.Register));
-				ReportConfig.PassedLogInfo("Expiry month is entered as : " , ReadFrom.Excel(25, 1, ReadFrom.Register));
+				ReportConfig.PassedLogInfo("Entered Expiry month : " , ReadFrom.Excel(25, 1, ReadFrom.Register));
 
 				SelectFromDropdown("ExpiryYear", RegisterPageLocators, ReadFrom.Excel(26, 1, ReadFrom.Register));
-				ReportConfig.PassedLogInfo("Expiry year is entered as : " , ReadFrom.Excel(26, 1, ReadFrom.Register));
+				ReportConfig.PassedLogInfo("Entered Expiry year : " , ReadFrom.Excel(26, 1, ReadFrom.Register));
 
 
 				TypeDataInTheField("Cvc", RegisterPageLocators, ReadFrom.Excel(27, 1, ReadFrom.Register));
-				ReportConfig.PassedLogInfo("CVC is entered as : " , ReadFrom.Excel(27, 1, ReadFrom.Register));
+				ReportConfig.PassedLogInfo("Entered CVC : " , ReadFrom.Excel(27, 1, ReadFrom.Register));
 
 				Wait(2000);
 				SelectFromDropdown("PaymentCountry", RegisterPageLocators, ReadFrom.Excel(28, 1, ReadFrom.Register));
-				ReportConfig.PassedLogInfo("Payment country is selected as : " , ReadFrom.Excel(28, 1, ReadFrom.Register));
+				ReportConfig.PassedLogInfo("Selected Payment country : " , ReadFrom.Excel(28, 1, ReadFrom.Register));
 
 
 				TypeDataInTheField("PaymentzipCode", RegisterPageLocators, ReadFrom.Excel(29, 1, ReadFrom.Register));
-				ReportConfig.PassedLogInfo("ZipCode is entered as : " , ReadFrom.Excel(29, 1, ReadFrom.Register));
+				ReportConfig.PassedLogInfo("Entered ZipCode  : " , ReadFrom.Excel(29, 1, ReadFrom.Register));
 
 				Click("Pay", RegisterPageLocators);
-				ReportConfig.PassedLogInfo("User selects the subscription plan", "Pay button is clicked");
+				ReportConfig.PassedLogInfo("User selects the subscription plan", "Click on Pay Button");
 
 				Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 						.withTimeout(Duration.ofSeconds(120))
@@ -120,8 +120,8 @@ public class F_01_Registeration extends Baseclass {
 
 
 				if(getElement("CloseButton", RegisterPageLocators).isDisplayed()) {
-					Print("Project plan is selected");
-					ReportConfig.PassedLogInfo("User selects the subscription plan","Plan selection popup is displayed : Project plan is selected");
+					Print("Selected plan is: Project plan");
+					ReportConfig.PassedLogInfo("User selects the subscription plan","Plan selection popup is displayed : Selected plan is: Project plan");
 
 					Click("CloseButton", RegisterPageLocators);
 					ReportConfig.PassedLogInfo("User selects the subscription plan","Close button is clicked");
@@ -147,8 +147,8 @@ public class F_01_Registeration extends Baseclass {
 			ReportConfig.PassedLogInfo("User selects the subscription plan","Enterprise Plan is clicked");
 
 			if(IsElementDisplayed("EnterprisePlanMessage", RegisterPageLocators)) {
-				Print("Enterprise plan is selected");
-				ReportConfig.PassedLogInfo("User selects the subscription plan","Plan selection popup is displayed : Enterprise plan is selected");
+				Print("Selected plan is: Enterprise plan");
+				ReportConfig.PassedLogInfo("User selects the subscription plan","Plan selection popup is displayed : Selected plan is: Enterprise plan");
 			}
 			else {
 				PrintError("Enterprise plan is not selected successfully");

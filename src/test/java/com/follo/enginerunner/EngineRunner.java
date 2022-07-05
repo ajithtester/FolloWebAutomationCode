@@ -6,11 +6,13 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
-		tags = "@Regression", 	
+		//	tags = "@Regression", 	
 
 		// tags = "@Register" ,
 		// tags = "@Login",
-		//	tags = "@NegativeCases" ,		
+		//	tags = "@NegativeCases" ,
+
+		tags = "@Test",
 		features = {"Features_SP1" , "Features_SP2", "Features_SP3", "Features_SP4" , "Features_SP5", "Features_SP6" , "Features_SP7"}, 
 
 		glue = {"com\\follo\\stepdefinition\\sp1", "com\\follo\\stepdefinition\\sp2", "com\\follo\\stepdefinition\\sp3", 

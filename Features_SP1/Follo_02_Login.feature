@@ -1,35 +1,35 @@
 Feature: To verify the Login feature
 
-  @Login @Regression @ForgotPassword @NegativeCases 
+  @Login @Regression @ForgotPassword @NegativeCases @Test
   Scenario: Launch the app URL and navigate to login page
     Given User launching the webapp url
     And User clicks the Login button
     Then User should see login page
 
-  @Login @NegativeCases @Regression 
+  @Login @NegativeCases @Regression @Test
   Scenario: Login With without credentials
     Given User tries to login without credentials
 
-  @Login @NegativeCases @Regression
+  @Login @NegativeCases @Regression @Test
   Scenario: Invalid Email Format Error
     Given User gives invalid email format
 
-  @Login @NegativeCases @Regression
+  @Login @NegativeCases @Regression @Test
   Scenario: Invalid Password Error
     Given User gives invalid Password
 
-  @Login @NegativeCases @Regression
+  @Login @NegativeCases @Regression @Test
   Scenario: To check for Broken Links and images in Login page
     Given Broken Links in the Login page to be checked
     And Broken images in the Login page to be checked
 
-  @Login @NegativeCases @Regression 
+  @Login @NegativeCases @Regression @Test
   Scenario: User logging in with valid credentials
     Given User enter mail Id and password
     And User clicks the signin button
     Then User should see the login success message
 
-  @Login @NegativeCases @Regression 
+  @Login @NegativeCases @Regression @Test
   Scenario: To select project
     Given User selects the project
 

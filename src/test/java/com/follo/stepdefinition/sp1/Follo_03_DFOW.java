@@ -36,8 +36,8 @@ public class Follo_03_DFOW extends Baseclass {
 				ClickPageDown();
 
 				Click("Settings", DFOWLocators);
-				Print("Settings button is clicked");
-				ReportConfig.Givenlogpass("User clicks settings button","Settings button is clicked");
+				Print("Click on Setting Button");
+				ReportConfig.Givenlogpass("User clicks settings button","Click on Setting Button");
 
 			}
 		} catch (Exception e) {
@@ -61,12 +61,12 @@ public class Follo_03_DFOW extends Baseclass {
 
 			ClickPageDown();
 
-			Print("Page down button is clicked in keyboard");
-			ReportConfig.Andlogpass("User scrolls in the settings menu", "Page down button is clicked in keyboard");
+			Print("Click on the Down arrow in Keyboard");
+			ReportConfig.Andlogpass("User scrolls in the settings menu", "Click on the Down arrow in Keyboard");
 
 		} catch (Exception e) {
 			PrintError("Page down button is not clicked");
-			ReportConfig.Andlogfail("User scrolls in the settings menu", "Page down button is clicked in keyboard because : " + e.getMessage());
+			ReportConfig.Andlogfail("User scrolls in the settings menu", "Page down button is not clicked in keyboard because : " + e.getMessage());
 			String IssueSummary = e.getMessage() ;
 			String Storydescription = "Page down button is clicked" ;
 			pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
@@ -82,8 +82,8 @@ public class Follo_03_DFOW extends Baseclass {
 			if(IsElementDisplayed("DFOW", DFOWLocators)) {
 
 				Click("DFOW", DFOWLocators);
-				Print("DFOW button is clicked");
-				ReportConfig.Andlogpass("User clicks the DFOW from the menu","DFOW button is clicked");
+				Print("Click on the DFOW button");
+				ReportConfig.Andlogpass("User clicks the DFOW from the menu","Click on the DFOW button");
 				ClickPageDown();
 			}
 		} catch (Exception e) {
@@ -105,8 +105,8 @@ public class Follo_03_DFOW extends Baseclass {
 		try {
 
 			if(IsElementDisplayed("AddRow", DFOWLocators)) {
-				Print("DFOW page is dispayed");
-				ReportConfig.Thenlogpass("DFOW page should be displayed","DFOW page is dispayed");
+				Print("Validate DFOW Page");
+				ReportConfig.Thenlogpass("DFOW page should be displayed","Validate DFOW Page");
 			}
 
 		} 
@@ -133,8 +133,8 @@ public class Follo_03_DFOW extends Baseclass {
 			Wait(2000);
 			WaitForTheElement("AddRow", DFOWLocators);
 			Click("AddRow", DFOWLocators);
-			Print("AddRow button is clicked");
-			ReportConfig.Givenlogpass("User clicks add row","AddRow button is clicked");
+			Print("Click on AddRow button");
+			ReportConfig.Givenlogpass("User clicks add row","Click on AddRow button");
 
 		} catch (Exception e) {
 			PrintError("AddRow button is not clicked");
@@ -154,7 +154,7 @@ public class Follo_03_DFOW extends Baseclass {
 
 
 			F_03_DFOW.AddDFOW();
-			ReportConfig.Andlogpass("User adds DFOW list", "Dfow details are filled");
+			ReportConfig.Andlogpass("User adds DFOW list", "Validate the dfow list ");
 
 		}  catch (Exception e) {
 
@@ -175,8 +175,8 @@ public class Follo_03_DFOW extends Baseclass {
 			if(IsElementDisplayed("AddRow", DFOWLocators)) {
 
 				Click("SaveButton", DFOWLocators);
-				Print("Save button is clicked");
-				ReportConfig.Andlogpass("User clicks the save button", "Save button is clicked");
+				Print("Click on Save button");
+				ReportConfig.Andlogpass("User clicks the save button", "Click on Save button");
 				ClickPageDown();
 			}
 		} catch (Exception e) {
@@ -198,8 +198,8 @@ public class Follo_03_DFOW extends Baseclass {
 			F_03_DFOW.AddSuccessfullMessage();
 			if(getElement("SuccessfullMessage", DFOWLocators).isDisplayed()) {
 				Click("SuccessfullMessage", DFOWLocators);
-				Print("DFOW list added");
-				ReportConfig.Thenlogpass("DFOW list should get added", "DFOW list added");
+				Print("Validate the list");
+				ReportConfig.Thenlogpass("DFOW list should get added", "Validate the list");
 
 			}
 		} 
@@ -246,8 +246,8 @@ public class Follo_03_DFOW extends Baseclass {
 			Waitfortheelement("Export", DFOWLocators);
 			if(IsElementDisplayed("Export", DFOWLocators)){
 
-				Print("Export button is displayed : DFOW list is available");
-				ReportConfig.Givenlogpass("User looks for the export button", "Export button is displayed");
+				Print("Validate Export button : DFOW list is available");
+				ReportConfig.Givenlogpass("User looks for the export button", "Validate Export button");
 
 			}
 		} 
@@ -271,8 +271,8 @@ public class Follo_03_DFOW extends Baseclass {
 				Click("Export", DFOWLocators);
 
 
-				Print("Export button is clicked : File is exported");
-				ReportConfig.Thenlogpass("User looks for the export button","Export button is clicked : File is exported");
+				Print("Validate Export button click");
+				ReportConfig.Thenlogpass("User looks for the export button","Validate Export button click");
 			}
 		} catch (Exception e) {
 			PrintError("Export button is not clicked : File is not exported");
@@ -318,8 +318,8 @@ public class Follo_03_DFOW extends Baseclass {
 			F_03_DFOW.AddSuccessfullMessage();
 			if(IsElementDisplayed("SuccessfullMessage", DFOWLocators)) {
 				Click("SuccessfullMessage", DFOWLocators);
-				Print("DFOW list edited successfully");
-				ReportConfig.Thenlogpass("User should get edit success popup","DFOW list edited successfully");
+				Print("DFOW edited successfully");
+				ReportConfig.Thenlogpass("User should get edit success popup","DFOW edited successfully");
 
 			}
 		} 
@@ -463,8 +463,8 @@ public class Follo_03_DFOW extends Baseclass {
 
 			if(IsElementDisplayed("Import", DFOWLocators)) {
 				Click("Import", DFOWLocators);
-				ReportConfig.Givenlogpass("User clicks import button","Import button is clicked");
-				Print("Import button is clicked");
+				ReportConfig.Givenlogpass("User clicks import button","Click on Import button");
+				Print("Click on Import button");
 			}
 		} catch (Exception e) {
 			PrintError("Import button is not clicked");
@@ -508,9 +508,9 @@ public class Follo_03_DFOW extends Baseclass {
 			Wait(2000);
 			if(IsElementDisplayed("DoneButton", DFOWLocators)){
 				Click("DoneButton", DFOWLocators);
-				ReportConfig.Andlogpass("User clicks the done button","Done button is clicked");
+				ReportConfig.Andlogpass("User clicks the done button","Click on Done button");
 
-				Print("Done button is clicked");
+				Print("Click on Done button");
 				ClickPageDown();
 			}
 		} catch (Exception e) {
@@ -533,8 +533,8 @@ public class Follo_03_DFOW extends Baseclass {
 			F_03_DFOW.BulkSuccessfullMessage();
 
 			if(IsElementDisplayed("SuccessfullMessage2", DFOWLocators)){
-				Print("DFOW list added");
-				ReportConfig.Thenlogpass("User clicks the done button","DFOW list added");
+				Print("Validate the list");
+				ReportConfig.Thenlogpass("User clicks the done button","Validate the list");
 
 			}
 		} 

@@ -26,7 +26,7 @@ public class Follo_02_Login extends Baseclass {
 
 		try {
 
-		ReportConfig.Reports();
+			//ReportConfig.Reports();
 			ReportConfig.ReportCreateFeatureTest("To verify the Login feature");
 			ReportConfig.ReportCreateScenarioTest("Launch the app URL and navigate to login page");
 
@@ -35,37 +35,33 @@ public class Follo_02_Login extends Baseclass {
 			String ActualTitle =	PageTitle();		
 			String ExpectedTitle =	PropertyFile("PageTitle", AppProperties);
 
-			ReportConfig.Givenlogpass("User launching the web url", ActualTitle);
-			ReportConfig.Givenlogpass("User launching the web url", ExpectedTitle);
 			if(IsEqual(ActualTitle, ExpectedTitle)) {
 
+				ReportConfig.Givenlogpass("User launching the web url","Page title verified as : " + PropertyFile("PageTitle", AppProperties));
 
-				ReportConfig.Givenlogpass("User launching the web url","Entered URL is : " + PropertyFile("URL", AppProperties) + ": Application launched successfully");
-
-				Print("Page title is : " + PropertyFile("URL", AppProperties) + ": Application launched successfully");
+				Print("Page title verified as : " + PropertyFile("PageTitle", AppProperties));
 
 			}
 			else {
 
-				ReportConfig.Givenlogfail("User launching the web url","Entered URL is : " + PropertyFile("URL", AppProperties) + ": Application launched failed");
+				ReportConfig.Givenlogfail("User launching the web url","Page title verified as : " + PropertyFile("PageTitle", AppProperties));
 
-				PrintError("Page title is : " + PropertyFile("URL", AppProperties) + ": Application launched failed");
+				PrintError("Page title verified as : " + PropertyFile("PageTitle", AppProperties));
 				String IssueSummary = "Excepted Page title is : " + ExpectedTitle  + " , But actual page title is : " + ActualTitle ;
 				String Storydescription = "Application launched failed" ;
 				pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
-
 			}
 
 		} 
 
 		catch (Exception e) {
 
-			ReportConfig.Givenlogfail("User launching the web url","Entered URL is : " + PropertyFile("URL", AppProperties) + ": Application launched failed because : " + e.getMessage());
-
-			Print("Page title is : " + PropertyFile("URL", AppProperties) + ": Application launched failed");
-			String IssueSummary = e.getMessage() ;
+			ReportConfig.Givenlogfail("User launching the web url","Page title verified as : " + PropertyFile("PageTitle", AppProperties));
+			Print(e.getMessage());
+			String IssueSummary = e.getMessage();
 			String Storydescription = "Application launched failed" ;
 			pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
+			Print("Page title verified as : " + PropertyFile("PageTitle", AppProperties) + ": Application launched failed because : " + e.getMessage());
 		}
 
 	}
@@ -82,9 +78,9 @@ public class Follo_02_Login extends Baseclass {
 				Click("LoginButton", LoginPageLocators);
 
 
-				ReportConfig.Andlogpass("User clicks the Login button","Login button in homepage is clicked");
+				ReportConfig.Andlogpass("User clicks the Login button","Validate Login button click action in homepage");
 
-				Print("Login button in homepage is clicked");
+				Print("Validate Login button click action in homepage");
 
 			}
 
@@ -112,9 +108,9 @@ public class Follo_02_Login extends Baseclass {
 
 			if(IsElementDisplayed("Email", LoginPageLocators)) {
 
-				ReportConfig.Thenlogpass("User should see login page","Login page is displayed");
+				ReportConfig.Thenlogpass("User should see login page","Validate Login page");
 
-				Print("Login page is displayed");
+				Print("Validate Login page");
 
 			}
 
@@ -154,8 +150,8 @@ public class Follo_02_Login extends Baseclass {
 			Wait(1000);
 			Click("LoginButton", LoginPageLocators);
 
-			Print("Login button is clicked");
-			ReportConfig.Givenlogpass("User tries to login without credentials" ,"Login button is clicked");
+			Print("Click on Login Button");
+			ReportConfig.Givenlogpass("User tries to login without credentials" ,"Click on Login Button");
 
 			Wait(1000);
 			String invalidText =	GetText("NoEmailError", LoginPageLocators);
@@ -193,25 +189,25 @@ public class Follo_02_Login extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("Login With invalid email");
 
 			TypeDataInTheField("email", LoginPageLocators, ReadFrom.Excel(1, 2 , ReadFrom.Login));
-			ReportConfig.Givenlogpass("User gives invalid email format" , "EmailId is entered as : " + ReadFrom.Excel(1, 2 , ReadFrom.Login));
-			Print("EmailId is entered as : " + ReadFrom.Excel(1, 2 , "Login"));
+			ReportConfig.Givenlogpass("User gives invalid email format" , "Entered Email id: " + ReadFrom.Excel(1, 2 , ReadFrom.Login));
+			Print("Entered Email id: " + ReadFrom.Excel(1, 2 , "Login"));
 
 			TypeDataInTheField("Password", LoginPageLocators, ReadFrom.Excel(1, 3 , "Login"));
-			ReportConfig.Givenlogpass("User gives invalid email format" ,"Password is selected as : " + ReadFrom.Excel(1, 3 , ReadFrom.Login));
-			Print("Password is selected as : " + ReadFrom.Excel(1, 3 , "Login"));
+			ReportConfig.Givenlogpass("User gives invalid email format" ,"Entered Password: " + ReadFrom.Excel(1, 3 , ReadFrom.Login));
+			Print("Entered Password: " + ReadFrom.Excel(1, 3 , "Login"));
 
 			Wait(1000);
 
 			Click("LoginButton", LoginPageLocators);
 
-			Print("Login button is clicked");
-			ReportConfig.Givenlogpass("User gives invalid email format" ,"Login button is clicked");
+			Print("Click on Login Button");
+			ReportConfig.Givenlogpass("User gives invalid email format" ,"Click on Login Button");
 
 			Wait(1000);
 			String invalidText =	GetText("NoValidEmailError", LoginPageLocators);
 
-			Print("No Valid Email format Entered Error : " + invalidText);
-			ReportConfig.Givenlogpass("User gives invalid email format" ,"No valid Email format Entered Error : " + invalidText);
+			Print("Validated with Invalid Email format: " + invalidText);
+			ReportConfig.Givenlogpass("User gives invalid email format" ,"Validated with Invalid Email format: " + invalidText);
 
 
 		} 
@@ -240,23 +236,23 @@ public class Follo_02_Login extends Baseclass {
 			Wait(1000);
 
 			TypeDataInTheField("email", LoginPageLocators, ReadFrom.Excel(1, 0 , ReadFrom.Login));
-			ReportConfig.Givenlogpass("User gives valid email", "EmailId is entered as : " + ReadFrom.Excel(1, 0, ReadFrom.Login));
-			Print("EmailId is entered as : " + ReadFrom.Excel(1, 0 , "Login"));
+			ReportConfig.Givenlogpass("User gives valid email", "Entered Email id: " + ReadFrom.Excel(1, 0, ReadFrom.Login));
+			Print("Entered Email id: " + ReadFrom.Excel(1, 0 , "Login"));
 
 			Wait(1000);
 			Clear("Password", LoginPageLocators);
 			Wait(1000);
 
 			TypeDataInTheField("Password", LoginPageLocators, ReadFrom.Excel(1, 3 , "Login"));
-			ReportConfig.Givenlogpass("User gives invalid Password","Password is selected as : " + ReadFrom.Excel(1, 3 , ReadFrom.Login));
-			Print("Password is selected as : " + ReadFrom.Excel(1, 3 , "Login"));
+			ReportConfig.Givenlogpass("User gives invalid Password","Entered Password: " + ReadFrom.Excel(1, 3 , ReadFrom.Login));
+			Print("Entered Password: " + ReadFrom.Excel(1, 3 , "Login"));
 
 			Wait(1000);
 
 			Click("LoginButton", LoginPageLocators);
 
-			Print("Login button is clicked");
-			ReportConfig.Givenlogpass("User gives invalid Password","Login button is clicked");
+			Print("Click on Login Button");
+			ReportConfig.Givenlogpass("User gives invalid Password","Click on Login Button");
 
 			Wait(1000);
 			WebDriverWait wait = new WebDriverWait(driver, 120);
@@ -264,8 +260,8 @@ public class Follo_02_Login extends Baseclass {
 
 			String invalidText =	GetText("InvalidFileAlert", LoginPageLocators);
 
-			Print("Invalid Password Entered Error : " + invalidText);
-			ReportConfig.Givenlogpass("User gives invalid Password","Invalid Password Entered Error : " + invalidText);
+			Print("Validate with invalid Password: " + invalidText);
+			ReportConfig.Givenlogpass("User gives invalid Password","Validate with invalid Password: " + invalidText);
 
 
 		} 
@@ -284,13 +280,13 @@ public class Follo_02_Login extends Baseclass {
 	public void broken_links_in_the_login_page_to_be_checked() throws Throwable {
 		ReportConfig.ReportCreateScenarioTest("User check for Broken Links and images in Login page");
 
-		Print("Checking for Broken Links in Login Page");
-		ReportConfig.Givenlogpass("Broken Links in the Login page to be checked" , "Checking for Broken Links in Login Page");
+		Print("Validate Broken links in Login page");
+		ReportConfig.Givenlogpass("Broken Links in the Login page to be checked" , "Validate Broken links in Login page");
 
 
 		java.util.List<WebElement> links=driver.findElements(By.tagName("a"));
 		links.addAll(driver.findElements(By.tagName("href")));
-		System.out.println("Total links are "+links.size());
+		System.out.println("Number of Links in Login page"+links.size());
 
 		for(int i=0;i<links.size();i++)
 		{
@@ -303,7 +299,6 @@ public class Follo_02_Login extends Baseclass {
 
 		}
 
-
 	}
 
 	@Given("Broken images in the Login page to be checked")
@@ -311,14 +306,14 @@ public class Follo_02_Login extends Baseclass {
 		ReportConfig.ReportCreateScenarioTest("Broken images in the Login page to be checked");
 
 
-		Print("Checking for Broken images in Login Page");
-		ReportConfig.Givenlogpass("Broken images in the Login page to be checked" ,"Checking for Broken images in Login Page");
+		Print("Validate Broken images in Login Page");
+		ReportConfig.Givenlogpass("Broken images in the Login page to be checked" ,"Validate Broken images in Login Page");
 
 
 		java.util.List<WebElement> links=driver.findElements(By.tagName("img"));
 		links.addAll(driver.findElements(By.tagName("src")));
 
-		Print("Total Images are "+links.size());
+		Print("Number of images in Login page"+links.size());
 
 		for(int i=0;i<links.size();i++)
 		{
@@ -345,14 +340,14 @@ public class Follo_02_Login extends Baseclass {
 			Clear("email", LoginPageLocators);
 			String email = ReadFrom.Excel(1, 0 , ReadFrom.Login);
 			TypeDataInTheField("email", LoginPageLocators, email);
-			Print("EmailId is entered as : " + email);
-			ReportConfig.PassedLogInfo("Entered mailid is : ", email);
+			Print("Entered Email id: " + email);
+			ReportConfig.PassedLogInfo("User logging in with valid credentials" , "Entered mailid is : "+ email);
 
 			Clear("Password", LoginPageLocators);
 			String Password = ReadFrom.Excel(1, 1 , ReadFrom.Login);
 			TypeDataInTheField("Password", LoginPageLocators, Password);
-			Print("Password is entered as : " + Password);
-			ReportConfig.PassedLogInfo("Entered Password is : ", Password);
+			Print("Entered Password: " + Password);
+			ReportConfig.PassedLogInfo("User logging in with valid credentials", "Entered Password is : "+ Password);
 
 
 		} 
@@ -380,9 +375,9 @@ public class Follo_02_Login extends Baseclass {
 			Wait(3000);
 
 			Click("LoginButton", LoginPageLocators);
-			ReportConfig.Andlogpass("User clicks the Login button","Login button is clicked");
+			ReportConfig.Andlogpass("User clicks the Login button","Click on Login Button");
 
-			Print("Login button is clicked");
+			Print("Click on Login Button");
 
 
 		} catch (Exception e) {
@@ -414,19 +409,19 @@ public class Follo_02_Login extends Baseclass {
 			F_02_Login.Loginsucces();
 
 			if(IsElementDisplayed("LoginSuccess", LoginPageLocators)) {
-				Print("Dashboard is displayed : Login passed");
+				Print("Dashboard is displayed");
 
 
-				ReportConfig.Thenlogpass("User should see the login success message","HomePage is displayed : Login passed");
+				ReportConfig.Thenlogpass("User should see the login success message","Dashboard is displayed");
 			}
 			else {
 				Print("Dashboard is not displayed ");
 
 
-				ReportConfig.Thenlogfail("User should see the login success message","HomePage is not displayed ");
+				ReportConfig.Thenlogfail("User should see the login success message","Dashboard is not displayed");
 
-				String IssueSummary = "User should see the login success message" ;
-				String Storydescription = "Login button is not clicked" ;
+				String IssueSummary = "User should land in dashboard" ;
+				String Storydescription = "" ;
 				pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
 			}
 
@@ -460,8 +455,8 @@ public class Follo_02_Login extends Baseclass {
 			Wait(3000);
 			F_02_Login.SelectProject(ReadFrom.Excel(1, 4, ReadFrom.Login));
 
-			Print("Project selected is : " + ReadFrom.Excel(1, 4, ReadFrom.Login));
-			ReportConfig.Andlogpass("User selects the project","Project selected is : " + ReadFrom.Excel(1, 4, ReadFrom.Login));
+			Print("Selected Project is: " + ReadFrom.Excel(1, 4, ReadFrom.Login));
+			ReportConfig.Andlogpass("User selects the project","Selected Project is: " + ReadFrom.Excel(1, 4, ReadFrom.Login));
 
 
 
@@ -517,8 +512,8 @@ public class Follo_02_Login extends Baseclass {
 		try {
 
 			TypeDataInTheField("email", LoginPageLocators, ReadFrom.Excel(1, 0 , ReadFrom.Login));
-			Print("EmailId is entered as : " + ReadFrom.Excel(1, 0 , "Login"));
-			ReportConfig.PassedLogInfo("EmailId is entered as : " , ReadFrom.Excel(1, 0 , "Login"));
+			Print("Entered Email id: " + ReadFrom.Excel(1, 0 , "Login"));
+			ReportConfig.PassedLogInfo("Entered Email id: " , ReadFrom.Excel(1, 0 , "Login"));
 
 			ReportConfig.Andlogpass("User enters mailId in the email feild","Mail id is entered");
 

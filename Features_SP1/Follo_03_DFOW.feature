@@ -1,6 +1,6 @@
 Feature: To verify the DFOW feature
 
-  @DFOW @Regression @NegativeCases
+  @DFOW @Regression @NegativeCases @Test
   Scenario: To navigate to DFOW feature
     Given User clicks settings button
     And User scrolls in the settings menu
@@ -14,19 +14,19 @@ Feature: To verify the DFOW feature
     And User clicks the save button
     Then DFOW list should get added
 
-  @DFOW @NegativeCases @Regression
+  @DFOW @NegativeCases @Regression @Test
   Scenario: Import Invalid DFOW File
     Given User clicks import button
     And User uploads invalid DFOW file
 
-  @DFOW @Regression
+  @DFOW @Regression @Test
   Scenario: Import DFOW list
     Given User clicks import button
     And User selects file to upload
     And User clicks the done button
     Then DFOW list from the excel should get added
 
-  @DFOW @Regression
+  @DFOW @Regression @Test
   Scenario: Search DFOW
     Given User enters the dfow value in the search bar
 
@@ -41,7 +41,7 @@ Feature: To verify the DFOW feature
     And User clicks the save button
     Then User should get edit success popup
 
-  @DFOW @Regression
+  @DFOW @Regression @Test
   Scenario: Delete a DFOW from the list
     Given User deletes a DFOW from the list
 
