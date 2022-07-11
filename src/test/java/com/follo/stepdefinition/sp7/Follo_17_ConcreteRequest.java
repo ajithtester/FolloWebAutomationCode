@@ -21,8 +21,8 @@ public class Follo_17_ConcreteRequest extends Baseclass {
 			Wait(2000);
 			Click("ConcreteRequest.AllRequests", ConcreteRequestLocators);
 
-			Print("All requests button is clicked");
-			ReportConfig.Givenlogpass("User clicks All requests button from the menu to click Concrete","All requests button is clicked");
+			Print("Click on All requests button");
+			ReportConfig.Givenlogpass("User clicks All requests button from the menu to click Concrete","Click on All requests button");
 
 		} 
 		catch (Exception e) {
@@ -47,8 +47,8 @@ public class Follo_17_ConcreteRequest extends Baseclass {
 			Wait(2000);
 			Click("ConcreteRequest.Requests", ConcreteRequestLocators);
 
-			Print("Concrete requests button is clicked");
-			ReportConfig.Givenlogpass("User clicks All requests button from the menu to click Concrete","Concrete requests button is clicked");
+			Print("Click on Concrete requests button");
+			ReportConfig.Givenlogpass("User clicks All requests button from the menu to click Concrete","Click on Concrete requests button");
 
 		} 
 		catch (Exception e) {
@@ -74,7 +74,7 @@ public class Follo_17_ConcreteRequest extends Baseclass {
 
 			F_17_ConcreteRequest.AddConcreteRequest();	
 
-			ReportConfig.Givenlogpass("User add new Concrete request","Concrete request is added successfully");
+			//ReportConfig.Givenlogpass("User add new Concrete request","Concrete request is added successfully");
 
 		} 
 		catch (Exception e) {
@@ -99,7 +99,7 @@ public class Follo_17_ConcreteRequest extends Baseclass {
 
 			F_17_ConcreteRequest.SearchConcreteRequest();	
 
-			ReportConfig.Givenlogpass("User search the Concrete request from the list","Concrete request is searched successfully");
+			//ReportConfig.Givenlogpass("User search the Concrete request from the list","Concrete request is searched successfully");
 
 		} 
 		catch (Exception e) {
@@ -124,7 +124,7 @@ public class Follo_17_ConcreteRequest extends Baseclass {
 
 			F_17_ConcreteRequest.EditConcreteRequest();	
 
-			ReportConfig.Givenlogpass("User edit a Concrete request from the list","Concrete request is added successfully");
+			//ReportConfig.Givenlogpass("User edit a Concrete request from the list","Concrete request is added successfully");
 
 		} 
 		catch (Exception e) {
@@ -148,7 +148,7 @@ public class Follo_17_ConcreteRequest extends Baseclass {
 
 			F_17_ConcreteRequest.FilterConcreteRequest();	
 
-			ReportConfig.Givenlogpass("User filter the Concrete request from the list","Concrete request is filtered successfully");
+			//ReportConfig.Givenlogpass("User filter the Concrete request from the list","Concrete request is filtered successfully");
 
 		} 
 		catch (Exception e) {
@@ -175,7 +175,7 @@ public class Follo_17_ConcreteRequest extends Baseclass {
 
 			F_17_ConcreteRequest.ConcreteRequestInfo();	
 
-			ReportConfig.Givenlogpass("User view info and history, add comment, add attachment to the Concrete request","Concrete request is added successfully");
+			//ReportConfig.Givenlogpass("User view info and history, add comment, add attachment to the Concrete request","Concrete request is added successfully");
 
 		} 
 		catch (Exception e) {
@@ -199,7 +199,7 @@ public class Follo_17_ConcreteRequest extends Baseclass {
 			Wait(2000);
 			F_17_ConcreteRequest.ApproveAndComplete();	
 
-			ReportConfig.Givenlogpass("User Approve and Complete a concrete request from the list","Concrete request approved and completed successfully");
+			//ReportConfig.Givenlogpass("User Approve and Complete a concrete request from the list","Concrete request approved and completed successfully");
 
 		} 
 		catch (Exception e) {
@@ -225,7 +225,7 @@ public class Follo_17_ConcreteRequest extends Baseclass {
 
 			F_17_ConcreteRequest.AddPump();	
 
-			ReportConfig.Givenlogpass("User add pump to the concrete request in the list","Pump added successfully");
+			//ReportConfig.Givenlogpass("User add pump to the concrete request in the list","Pump added successfully");
 
 		} 
 		catch (Exception e) {
@@ -251,7 +251,7 @@ public class Follo_17_ConcreteRequest extends Baseclass {
 
 			F_17_ConcreteRequest.VoidConcreteRequest();	
 
-			ReportConfig.Givenlogpass("User push a Concrete request from the list","Concrete request is pushed to void successfully");
+		//	ReportConfig.Givenlogpass("User push a Concrete request from the list","Concrete request is pushed to void successfully");
 
 		} 
 		catch (Exception e) {

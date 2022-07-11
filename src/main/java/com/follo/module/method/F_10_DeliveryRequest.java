@@ -44,8 +44,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 
 			if(IsElementDisplayed("CreateNew", DeliveryRequestLocators)){
 				JsClick("CreateNew", DeliveryRequestLocators);
-				Print("Create new button is clicked");
-				ReportConfig.PassedLogInfo("User add new delivery request", "Create new button is clicked");
+				Print("Click on Create new button");
+				ReportConfig.PassedLogInfo("User add new delivery request", "Click on Create new button");
 
 			}
 			else
@@ -77,31 +77,31 @@ public class F_10_DeliveryRequest extends Baseclass {
 			}
 
 			TypeDataInTheField("Description", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 0, ReadFrom.AllDeliverRequest));
-			Print("Description is entered as : " + ReadFrom.Excel(AllDeliverRequest, 0, ReadFrom.AllDeliverRequest));
-			ReportConfig.PassedLogInfo("User add new delivery request","Description is entered as : " + ReadFrom.Excel(AllDeliverRequest, 0, ReadFrom.AllDeliverRequest));
+			Print("Entered Description : " + ReadFrom.Excel(AllDeliverRequest, 0, ReadFrom.AllDeliverRequest));
+			ReportConfig.PassedLogInfo("User add new delivery request","Entered Description : " + ReadFrom.Excel(AllDeliverRequest, 0, ReadFrom.AllDeliverRequest));
 
 			SelectFromVisibleText("GateDropdown", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 1, ReadFrom.AllDeliverRequest));
-			Print("Gate dropdown is selected as : " + ReadFrom.Excel(AllDeliverRequest, 1, ReadFrom.AllDeliverRequest));
-			ReportConfig.PassedLogInfo("User add new delivery request","Gate dropdown is selected as : " + ReadFrom.Excel(AllDeliverRequest, 1, ReadFrom.AllDeliverRequest));
+			Print("Selected Gate dropdown : " + ReadFrom.Excel(AllDeliverRequest, 1, ReadFrom.AllDeliverRequest));
+			ReportConfig.PassedLogInfo("User add new delivery request","Selected Gate dropdown : " + ReadFrom.Excel(AllDeliverRequest, 1, ReadFrom.AllDeliverRequest));
 
 
 
 			SelectFromVisibleText("EquipmentDropdown", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 2, ReadFrom.AllDeliverRequest));
-			Print("Equipment dropdown is selected as : " + ReadFrom.Excel(AllDeliverRequest, 2, ReadFrom.AllDeliverRequest));
-			ReportConfig.PassedLogInfo("User add new delivery request","Equipment dropdown is selected as : " + ReadFrom.Excel(AllDeliverRequest, 2, ReadFrom.AllDeliverRequest));
+			Print("Selected Equipment dropdown : " + ReadFrom.Excel(AllDeliverRequest, 2, ReadFrom.AllDeliverRequest));
+			ReportConfig.PassedLogInfo("User add new delivery request","Selected Equipment dropdown : " + ReadFrom.Excel(AllDeliverRequest, 2, ReadFrom.AllDeliverRequest));
 
 			Wait(2000);
 			try {
 				if(IsElementDisplayed("PickingFrom", DeliveryRequestLocators)) {
 
 					TypeDataInTheField("PickingFrom", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 14, ReadFrom.AllDeliverRequest));
-					Print("Picking from is entered as : " + ReadFrom.Excel(AllDeliverRequest, 14, ReadFrom.AllDeliverRequest));
-					ReportConfig.PassedLogInfo("User add new delivery request","Picking from is entered as : " + ReadFrom.Excel(AllDeliverRequest, 14, ReadFrom.AllDeliverRequest));
+					Print("Entered Picking from : " + ReadFrom.Excel(AllDeliverRequest, 14, ReadFrom.AllDeliverRequest));
+					ReportConfig.PassedLogInfo("User add new delivery request","Entered Picking from : " + ReadFrom.Excel(AllDeliverRequest, 14, ReadFrom.AllDeliverRequest));
 
 					Wait(2000);
 					TypeDataInTheField("PickingTo", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 15, ReadFrom.AllDeliverRequest));
-					Print("Picking to is entered as : " + ReadFrom.Excel(AllDeliverRequest, 15, ReadFrom.AllDeliverRequest));
-					ReportConfig.PassedLogInfo("User add new delivery request","Picking to is entered as : " + ReadFrom.Excel(AllDeliverRequest, 15, ReadFrom.AllDeliverRequest));
+					Print("Entered Picking to : " + ReadFrom.Excel(AllDeliverRequest, 15, ReadFrom.AllDeliverRequest));
+					ReportConfig.PassedLogInfo("User add new delivery request","Entered Picking to : " + ReadFrom.Excel(AllDeliverRequest, 15, ReadFrom.AllDeliverRequest));
 
 				}
 
@@ -116,13 +116,13 @@ public class F_10_DeliveryRequest extends Baseclass {
 			Wait(2000);
 			MoveToElement("AdditionalText", DeliveryRequestLocators);
 			TypeDataInTheField("AdditionalText", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 3, ReadFrom.AllDeliverRequest));
-			Print("Additional text is entered as : " + ReadFrom.Excel(AllDeliverRequest, 3, ReadFrom.AllDeliverRequest));
-			ReportConfig.PassedLogInfo("User add new delivery request","Additional text is entered as : " + ReadFrom.Excel(AllDeliverRequest, 3, ReadFrom.AllDeliverRequest));
+			Print("Entered Additional text : " + ReadFrom.Excel(AllDeliverRequest, 3, ReadFrom.AllDeliverRequest));
+			ReportConfig.PassedLogInfo("User add new delivery request","Entered Additional text : " + ReadFrom.Excel(AllDeliverRequest, 3, ReadFrom.AllDeliverRequest));
 
 			Wait(2000);
 			TypeDataInTheField("VehicleDetails", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.AllDeliverRequest));
-			Print("Vehicle details is entered as : " + ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.AllDeliverRequest));
-			ReportConfig.PassedLogInfo("User add new delivery request","Vehicle details is entered as : " + ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.AllDeliverRequest));
+			Print("Entered Vehicle details : " + ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.AllDeliverRequest));
+			ReportConfig.PassedLogInfo("User add new delivery request","Entered Vehicle details : " + ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.AllDeliverRequest));
 
 
 			//	Click("DeliveryDate", DeliveryRequestLocators);
@@ -132,14 +132,14 @@ public class F_10_DeliveryRequest extends Baseclass {
 
 			Clear("DeliveryDate", DeliveryRequestLocators);
 			TypeDataInTheField("DeliveryDate", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.AllDeliverRequest));
-			Print("Start date is entered as : " + ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.AllDeliverRequest));
-			ReportConfig.PassedLogInfo("User add new delivery request","Start date is entered as : " + ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.AllDeliverRequest));
+			Print("Entered Start date : " + ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.AllDeliverRequest));
+			ReportConfig.PassedLogInfo("User add new delivery request","Entered Start date : " + ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.AllDeliverRequest));
 
 
 			///////////////////////
 
 			Click("Dfow", DeliveryRequestLocators);
-			ReportConfig.PassedLogInfo("User add new delivery request","Dfow dropdown is clicked");
+			ReportConfig.PassedLogInfo("User add new delivery request","Click on Dfow dropdown");
 
 			String DfowInExcel = ReadFrom.Excel(AllDeliverRequest, 6,ReadFrom.AllDeliverRequest);
 			Print(DfowInExcel);
@@ -156,8 +156,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 				if(IsEqual(DfowInDropdown, DfowInExcel)){
 					Click(Dfow);
 
-					//			ReportConfig.PassedLogInfo("User add new delivery request","Dfow is selected as : " + DfowInDropdown );
-					Print("Dfow is selected as : " + DfowInDropdown );
+					//			ReportConfig.PassedLogInfo("User add new delivery request","Selected Dfow : " + DfowInDropdown );
+					Print("Selected Dfow : " + DfowInDropdown );
 					break;
 				}
 			
@@ -166,7 +166,7 @@ public class F_10_DeliveryRequest extends Baseclass {
 			/////////////////////////////////////
 
 			Click("Company", DeliveryRequestLocators);
-			ReportConfig.PassedLogInfo("User add new delivery request","Company dropdown is clicked");
+			ReportConfig.PassedLogInfo("User add new delivery request","Click on Company dropdown");
 
 			String CompanyInExcel = ReadFrom.Excel(AllDeliverRequest, 7,ReadFrom.AllDeliverRequest);
 			Print(CompanyInExcel);
@@ -183,8 +183,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 				if(IsEqual(CompanyInDropdown, CompanyInExcel)){
 					Click(Company);
 
-					ReportConfig.PassedLogInfo("User add new delivery request","Dfow is selected as : " + CompanyInDropdown );
-					Print("Dfow is selected as : " + CompanyInDropdown );
+					ReportConfig.PassedLogInfo("User add new delivery request","Selected Dfow : " + CompanyInDropdown );
+					Print("Selected Dfow : " + CompanyInDropdown );
 					break;
 				}
 				else {
@@ -195,14 +195,14 @@ public class F_10_DeliveryRequest extends Baseclass {
 			Wait(2000);
 			Clear("FromHrs", DeliveryRequestLocators);
 			TypeDataInTheField("FromHrs", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 8, ReadFrom.AllDeliverRequest));
-			Print("From hrs is entered as : " + ReadFrom.Excel(AllDeliverRequest, 8, ReadFrom.AllDeliverRequest));
-			ReportConfig.PassedLogInfo("User add new delivery request","From hrs is entered as : " + ReadFrom.Excel(AllDeliverRequest, 8, ReadFrom.AllDeliverRequest));
+			Print("Entered From hrs  : " + ReadFrom.Excel(AllDeliverRequest, 8, ReadFrom.AllDeliverRequest));
+			ReportConfig.PassedLogInfo("User add new delivery request","Entered From hrs : " + ReadFrom.Excel(AllDeliverRequest, 8, ReadFrom.AllDeliverRequest));
 
 			Wait(2000);
 			Clear("FromMin", DeliveryRequestLocators);
 			TypeDataInTheField("FromMin", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 9, ReadFrom.AllDeliverRequest));
-			Print("From min is entered as : " + ReadFrom.Excel(AllDeliverRequest, 9, ReadFrom.AllDeliverRequest));
-			ReportConfig.PassedLogInfo("User add new delivery request","From min is entered as : " + ReadFrom.Excel(AllDeliverRequest, 9, ReadFrom.AllDeliverRequest));
+			Print("Entered From min : " + ReadFrom.Excel(AllDeliverRequest, 9, ReadFrom.AllDeliverRequest));
+			ReportConfig.PassedLogInfo("User add new delivery request","Entered From min : " + ReadFrom.Excel(AllDeliverRequest, 9, ReadFrom.AllDeliverRequest));
 
 			Wait(2000);
 			String ExcelMeridian = ReadFrom.Excel(AllDeliverRequest, 10, ReadFrom.AllDeliverRequest);
@@ -220,14 +220,14 @@ public class F_10_DeliveryRequest extends Baseclass {
 			Wait(2000);
 			Clear("ToHrs", DeliveryRequestLocators);
 			TypeDataInTheField("ToHrs", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 11, ReadFrom.AllDeliverRequest));
-			Print("To hrs is entered as : " + ReadFrom.Excel(AllDeliverRequest, 11, ReadFrom.AllDeliverRequest));
-			ReportConfig.PassedLogInfo("User add new delivery request","To hrs is entered as : " + ReadFrom.Excel(AllDeliverRequest, 11, ReadFrom.AllDeliverRequest));
+			Print("Entered To hrs : " + ReadFrom.Excel(AllDeliverRequest, 11, ReadFrom.AllDeliverRequest));
+			ReportConfig.PassedLogInfo("User add new delivery request","Entered To hrs : " + ReadFrom.Excel(AllDeliverRequest, 11, ReadFrom.AllDeliverRequest));
 
 			Wait(2000);
 			Clear("ToMin", DeliveryRequestLocators);
 			TypeDataInTheField("ToMin", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 12, ReadFrom.AllDeliverRequest));
-			Print("To min is entered as : " + ReadFrom.Excel(AllDeliverRequest, 12, ReadFrom.AllDeliverRequest));
-			ReportConfig.PassedLogInfo("User add new delivery request","To min is entered as : " + ReadFrom.Excel(AllDeliverRequest, 12, ReadFrom.AllDeliverRequest));
+			Print("Entered To min : " + ReadFrom.Excel(AllDeliverRequest, 12, ReadFrom.AllDeliverRequest));
+			ReportConfig.PassedLogInfo("User add new delivery request","Entered To min : " + ReadFrom.Excel(AllDeliverRequest, 12, ReadFrom.AllDeliverRequest));
 
 			Wait(2000);
 			String ExcelMeridian1 = ReadFrom.Excel(AllDeliverRequest, 13, ReadFrom.AllDeliverRequest);
@@ -385,8 +385,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 			Clear("Search", DeliveryRequestLocators);
 			Wait(3000);
 			Click("CloseSearch", DeliveryRequestLocators);
-			ReportConfig.PassedLogInfo("User search and view the delivery request from the list","Clear search button is clicked");
-			Print("Clear search button is clicked");
+			ReportConfig.PassedLogInfo("User search and view the delivery request from the list","Click on Clear search button");
+			Print("Click on Clear search button");
 		}
 	}
 
@@ -418,8 +418,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 
 					JsClick(EditButton);
 
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Edit button is clicked");
-					Print("Edit button is clicked");
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Click on Edit button");
+					Print("Click on Edit button");
 
 
 					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
@@ -441,32 +441,32 @@ public class F_10_DeliveryRequest extends Baseclass {
 
 					Clear("Description", DeliveryRequestLocators);
 					TypeDataInTheField("Description", DeliveryRequestLocators, ReadFrom.Excel(EditRequest, 1, ReadFrom.EditRequest));
-					Print("Description is entered as : " + ReadFrom.Excel(EditRequest, 1, ReadFrom.EditRequest));
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Description is entered as : " + ReadFrom.Excel(EditRequest, 1, ReadFrom.EditRequest));
+					Print("Entered Description : " + ReadFrom.Excel(EditRequest, 1, ReadFrom.EditRequest));
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Entered Description : " + ReadFrom.Excel(EditRequest, 1, ReadFrom.EditRequest));
 
 					SelectFromVisibleText("GateDropdown", DeliveryRequestLocators, ReadFrom.Excel(EditRequest, 2, ReadFrom.EditRequest));
-					Print("Gate dropdown is selected as : " + ReadFrom.Excel(EditRequest, 2, ReadFrom.EditRequest));
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Gate dropdown is selected as : " + ReadFrom.Excel(EditRequest, 2, ReadFrom.EditRequest));
+					Print("Selected Gate dropdown : " + ReadFrom.Excel(EditRequest, 2, ReadFrom.EditRequest));
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Selected Gate dropdown : " + ReadFrom.Excel(EditRequest, 2, ReadFrom.EditRequest));
 
 
 
 					SelectFromVisibleText("EquipmentDropdown", DeliveryRequestLocators, ReadFrom.Excel(EditRequest, 3, ReadFrom.EditRequest));
-					Print("Equipment dropdown is selected as : " + ReadFrom.Excel(EditRequest, 3, ReadFrom.EditRequest));
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Equipment dropdown is selected as : " + ReadFrom.Excel(EditRequest, 3, ReadFrom.EditRequest));
+					Print("Selected Equipment dropdown : " + ReadFrom.Excel(EditRequest, 3, ReadFrom.EditRequest));
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Selected Equipment dropdown : " + ReadFrom.Excel(EditRequest, 3, ReadFrom.EditRequest));
 
 					Wait(2000);
 					try {
 						if(IsElementDisplayed("PickingFrom", DeliveryRequestLocators)) {
 							Clear("PickingFrom", DeliveryRequestLocators);
 							TypeDataInTheField("PickingFrom", DeliveryRequestLocators, ReadFrom.Excel(EditRequest, 15, ReadFrom.EditRequest));
-							Print("Picking from is entered as : " + ReadFrom.Excel(EditRequest, 15, ReadFrom.EditRequest));
-							ReportConfig.PassedLogInfo("User edit a delivery request from the list","Picking from is entered as : " + ReadFrom.Excel(EditRequest, 15, ReadFrom.EditRequest));
+							Print("Entered Picking from : " + ReadFrom.Excel(EditRequest, 15, ReadFrom.EditRequest));
+							ReportConfig.PassedLogInfo("User edit a delivery request from the list","Entered Picking from : " + ReadFrom.Excel(EditRequest, 15, ReadFrom.EditRequest));
 
 							Wait(2000);
 							Clear("PickingTo", DeliveryRequestLocators);
 							TypeDataInTheField("PickingTo", DeliveryRequestLocators, ReadFrom.Excel(EditRequest, 16, ReadFrom.EditRequest));
-							Print("Picking to is entered as : " + ReadFrom.Excel(EditRequest, 16, ReadFrom.EditRequest));
-							ReportConfig.PassedLogInfo("User edit a delivery request from the list","Picking to is entered as : " + ReadFrom.Excel(EditRequest, 16, ReadFrom.EditRequest));
+							Print("Entered Picking to : " + ReadFrom.Excel(EditRequest, 16, ReadFrom.EditRequest));
+							ReportConfig.PassedLogInfo("User edit a delivery request from the list","Entered Picking to : " + ReadFrom.Excel(EditRequest, 16, ReadFrom.EditRequest));
 
 						}
 
@@ -482,22 +482,22 @@ public class F_10_DeliveryRequest extends Baseclass {
 					MoveToElement("AdditionalText", DeliveryRequestLocators);
 					Clear("AdditionalText", DeliveryRequestLocators);
 					TypeDataInTheField("AdditionalText", DeliveryRequestLocators, ReadFrom.Excel(EditRequest, 4, ReadFrom.EditRequest));
-					Print("Additional text is entered as : " + ReadFrom.Excel(EditRequest, 4, ReadFrom.EditRequest));
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Additional text is entered as : " + ReadFrom.Excel(EditRequest, 4, ReadFrom.EditRequest));
+					Print("Entered Additional text : " + ReadFrom.Excel(EditRequest, 4, ReadFrom.EditRequest));
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Entered Additional text : " + ReadFrom.Excel(EditRequest, 4, ReadFrom.EditRequest));
 
 					Wait(2000);
 					Clear("VehicleDetails", DeliveryRequestLocators);
 					TypeDataInTheField("VehicleDetails", DeliveryRequestLocators, ReadFrom.Excel(EditRequest, 5, ReadFrom.EditRequest));
-					Print("Vehicle details is entered as : " + ReadFrom.Excel(EditRequest, 5, ReadFrom.EditRequest));
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Vehicle details is entered as : " + ReadFrom.Excel(EditRequest, 5, ReadFrom.EditRequest));
+					Print("Entered Vehicle details : " + ReadFrom.Excel(EditRequest, 5, ReadFrom.EditRequest));
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Entered Vehicle details : " + ReadFrom.Excel(EditRequest, 5, ReadFrom.EditRequest));
 
 
 					//Click("DeliveryDate", DeliveryRequestLocators);
 
 					Clear("DeliveryDate", DeliveryRequestLocators);
 					TypeDataInTheField("DeliveryDate", DeliveryRequestLocators, ReadFrom.Excel(EditRequest, 6, ReadFrom.EditRequest));
-					Print("Start date is entered as : " + ReadFrom.Excel(EditRequest, 6, ReadFrom.EditRequest));
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Start date is entered as : " + ReadFrom.Excel(EditRequest, 6, ReadFrom.EditRequest));
+					Print("Entered Start date : " + ReadFrom.Excel(EditRequest, 6, ReadFrom.EditRequest));
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Entered Start date : " + ReadFrom.Excel(EditRequest, 6, ReadFrom.EditRequest));
 
 					Wait(3000);
 
@@ -507,7 +507,7 @@ public class F_10_DeliveryRequest extends Baseclass {
 					JsClick("DfowEdit", DeliveryRequestLocators);
 
 
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Dfow dropdown is clicked");
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Click on Dfow dropdown");
 
 					Click("SelectAll", DeliveryRequestLocators);
 					Wait(2000);
@@ -530,8 +530,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 						if(IsEqual(DfowInDropdown, DfowInExcel)){
 							Click(Dfow);
 
-							ReportConfig.PassedLogInfo("User edit a delivery request from the list","Dfow is selected as : " + DfowInDropdown );
-							Print("Dfow is selected as : " + DfowInDropdown );
+							ReportConfig.PassedLogInfo("User edit a delivery request from the list","Selected Dfow : " + DfowInDropdown );
+							Print("Selected Dfow : " + DfowInDropdown );
 							break;
 						}
 						else {
@@ -544,8 +544,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 					JsClick("CompanyEdit", DeliveryRequestLocators);
 					//Click("Company", DeliveryRequestLocators);
 
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Company dropdown is clicked");
-					Print("Company dropdown is clicked");
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Click on Company dropdown");
+					Print("Click on Company dropdown");
 
 					Click("UnselectAll", DeliveryRequestLocators);
 					Wait(2000);
@@ -565,8 +565,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 						if(IsEqual(CompanyInDropdown, CompanyInExcel)){
 							Click(Company);
 
-							ReportConfig.PassedLogInfo("User edit a delivery request from the list","Dfow is selected as : " + CompanyInDropdown );
-							Print("Dfow is selected as : " + CompanyInDropdown );
+							ReportConfig.PassedLogInfo("User edit a delivery request from the list","Selected Dfow : " + CompanyInDropdown );
+							Print("Selected Dfow : " + CompanyInDropdown );
 							break;
 						}
 						else {
@@ -578,14 +578,14 @@ public class F_10_DeliveryRequest extends Baseclass {
 					Wait(2000);
 					Clear("FromHrs", DeliveryRequestLocators);
 					TypeDataInTheField("FromHrs", DeliveryRequestLocators, ReadFrom.Excel(EditRequest, 9, ReadFrom.EditRequest));
-					Print("From hrs is entered as : " + ReadFrom.Excel(EditRequest, 9, ReadFrom.EditRequest));
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","From hrs is entered as : " + ReadFrom.Excel(EditRequest, 9, ReadFrom.EditRequest));
+					Print("Entered From hrs  : " + ReadFrom.Excel(EditRequest, 9, ReadFrom.EditRequest));
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Entered From hrs  : " + ReadFrom.Excel(EditRequest, 9, ReadFrom.EditRequest));
 
 					Wait(2000);
 					Clear("FromMin", DeliveryRequestLocators);
 					TypeDataInTheField("FromMin", DeliveryRequestLocators, ReadFrom.Excel(EditRequest, 10, ReadFrom.EditRequest));
-					Print("From min is entered as : " + ReadFrom.Excel(EditRequest, 10, ReadFrom.EditRequest));
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","From min is entered as : " + ReadFrom.Excel(EditRequest, 10, ReadFrom.EditRequest));
+					Print("Entered From min : " + ReadFrom.Excel(EditRequest, 10, ReadFrom.EditRequest));
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Entered From min : " + ReadFrom.Excel(EditRequest, 10, ReadFrom.EditRequest));
 
 					Wait(2000);
 					String ExcelMeridian = ReadFrom.Excel(EditRequest, 11, ReadFrom.EditRequest);
@@ -604,14 +604,14 @@ public class F_10_DeliveryRequest extends Baseclass {
 					Wait(2000);
 					Clear("ToHrs", DeliveryRequestLocators);
 					TypeDataInTheField("ToHrs", DeliveryRequestLocators, ReadFrom.Excel(EditRequest, 12, ReadFrom.EditRequest));
-					Print("To hrs is entered as : " + ReadFrom.Excel(EditRequest, 12, ReadFrom.EditRequest));
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","To hrs is entered as : " + ReadFrom.Excel(EditRequest, 12, ReadFrom.EditRequest));
+					Print("Entered To hrs : " + ReadFrom.Excel(EditRequest, 12, ReadFrom.EditRequest));
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Entered To hrs : " + ReadFrom.Excel(EditRequest, 12, ReadFrom.EditRequest));
 
 					Wait(2000);
 					Clear("ToMin", DeliveryRequestLocators);
 					TypeDataInTheField("ToMin", DeliveryRequestLocators, ReadFrom.Excel(EditRequest, 13, ReadFrom.EditRequest));
-					Print("To min is entered as : " + ReadFrom.Excel(EditRequest, 13, ReadFrom.EditRequest));
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","To min is entered as : " + ReadFrom.Excel(EditRequest, 13, ReadFrom.EditRequest));
+					Print("Entered To min : " + ReadFrom.Excel(EditRequest, 13, ReadFrom.EditRequest));
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Entered To min : " + ReadFrom.Excel(EditRequest, 13, ReadFrom.EditRequest));
 
 					Wait(2000);
 					String ExcelMeridian1 = ReadFrom.Excel(EditRequest, 14, ReadFrom.EditRequest);
@@ -628,8 +628,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 					MoveToElement("SubmitButton", DeliveryRequestLocators);
 
 					Click("SubmitButton", DeliveryRequestLocators);
-					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Submit button is clicked");
-					Print("Submit button is clicked");
+					ReportConfig.PassedLogInfo("User edit a delivery request from the list","Click on Submit button");
+					Print("Click on Submit button");
 
 					Wait<WebDriver> fluentWait1111 = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -805,8 +805,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 
 						JsClick("ClosePopup", DeliveryRequestLocators);
 
-						ReportConfig.PassedLogInfo("User view the request information","Close popup button is clicked");
-						Print("Close popup button is clicked");
+						ReportConfig.PassedLogInfo("User view the request information","Click on Close popup button");
+						Print("Click on Close popup button");
 						Wait(2000);
 					}
 				}
@@ -865,12 +865,12 @@ public class F_10_DeliveryRequest extends Baseclass {
 
 					TypeDataInTheField("AddComment", DeliveryRequestLocators, ReadFrom.Excel(Comments, 1, ReadFrom.AddComment));
 					Print("Comment is entered as : " + ReadFrom.Excel(Comments, 1, ReadFrom.AddComment));
-					ReportConfig.PassedLogInfo("User add a comment to the request","Description is entered as : " + ReadFrom.Excel(Comments, 1, ReadFrom.AddComment));
+					ReportConfig.PassedLogInfo("User add a comment to the request","Entered Description : " + ReadFrom.Excel(Comments, 1, ReadFrom.AddComment));
 
 					MoveToElement("SubmitButton", DeliveryRequestLocators);
 					JsClick("SubmitButton", DeliveryRequestLocators);
-					ReportConfig.PassedLogInfo("User add a comment to the request","Submit button is clicked");
-					Print("Submit button is clicked");
+					ReportConfig.PassedLogInfo("User add a comment to the request","Click on Submit button");
+					Print("Click on Submit button");
 
 					Wait<WebDriver> fluentWait1111 = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -962,8 +962,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 						ReportConfig.PassedLogInfo("User view the history of the request",DeliveryName + " : History page is viewed");
 
 						JsClick("ClosePopup", DeliveryRequestLocators);
-						ReportConfig.PassedLogInfo("User view the history of the request","Close popup button is clicked");
-						Print("Close popup button is clicked");
+						ReportConfig.PassedLogInfo("User view the history of the request","Click on Close popup button");
+						Print("Click on Close popup button");
 					}
 				}
 			}
@@ -1067,8 +1067,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 							ReportConfig.PassedLogInfo("User add attachment to the deliver request",DeliveryName + " : History page is viewed");
 
 							JsClick("ClosePopup", DeliveryRequestLocators);
-							ReportConfig.PassedLogInfo("User add attachment to the deliver request","Close popup button is clicked");
-							Print("Close popup button is clicked");
+							ReportConfig.PassedLogInfo("User add attachment to the deliver request","Click on Close popup button");
+							Print("Click on Close popup button");
 
 						}
 					}
@@ -1127,8 +1127,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 					Print("Save button is clicked");
 					Wait(2000);
 					JsClick("YesButton", DeliveryRequestLocators);
-					ReportConfig.PassedLogInfo("User deliver the request","Yes button is clicked");
-					Print("Yes button is clicked");
+					ReportConfig.PassedLogInfo("User deliver the request","Click on Yes button");
+					Print("Click on Yes button");
 
 					Wait<WebDriver> s = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -1148,8 +1148,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 						ReportConfig.PassedLogInfo("User deliver the request",DeliveryName + " : is delivered successfully");
 
 						JsClick("ClosePopup", DeliveryRequestLocators);
-						ReportConfig.PassedLogInfo("User deliver the request","Close popup button is clicked");
-						Print("Close popup button is clicked");
+						ReportConfig.PassedLogInfo("User deliver the request","Click on Close popup button");
+						Print("Click on Close popup button");
 					}
 				}
 			}
@@ -1182,8 +1182,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 					WebElement EditButton =	FindElement("EditRequest", DeliveryRequestLocators, DeliveryLists);
 
 					JsClick(EditButton);
-					ReportConfig.PassedLogInfo("User approve or reject the delivery request","Edit button is clicked");
-					Print("Edit button is clicked");
+					ReportConfig.PassedLogInfo("User approve or reject the delivery request","Click on Edit button");
+					Print("Click on Edit button");
 
 					Wait<WebDriver> Description = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -1200,15 +1200,15 @@ public class F_10_DeliveryRequest extends Baseclass {
 
 					Clear("Description", DeliveryRequestLocators);
 					TypeDataInTheField("Description", DeliveryRequestLocators, ReadFrom.Excel(ApproveReject, 0, ReadFrom.ApproveReject));
-					Print("Description is entered as : " + ReadFrom.Excel(ApproveReject, 0, ReadFrom.ApproveReject));
-					ReportConfig.PassedLogInfo("User approve or reject the delivery request","Description is entered as : " + ReadFrom.Excel(ApproveReject, 0, ReadFrom.ApproveReject));
+					Print("Entered Description : " + ReadFrom.Excel(ApproveReject, 0, ReadFrom.ApproveReject));
+					ReportConfig.PassedLogInfo("User approve or reject the delivery request","Entered Description : " + ReadFrom.Excel(ApproveReject, 0, ReadFrom.ApproveReject));
 
 
 					MoveToElement("SubmitButton", DeliveryRequestLocators);
 
 					Click("SubmitButton", DeliveryRequestLocators);
-					ReportConfig.PassedLogInfo("User approve or reject the delivery request","Submit button is clicked");
-					Print("Submit button is clicked");
+					ReportConfig.PassedLogInfo("User approve or reject the delivery request","Click on Submit button");
+					Print("Click on Submit button");
 
 					Wait<WebDriver> fluentWait1111 = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -1241,8 +1241,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 
 					Wait(2000);
 					SelectFromVisibleText("SelectStatus", DeliveryRequestLocators, ReadFrom.Excel(ApproveReject, 1, ReadFrom.ApproveReject));
-					Print("Status is selected as : " + ReadFrom.Excel(ApproveReject, 1, ReadFrom.ApproveReject));
-					ReportConfig.PassedLogInfo("User approve or reject the delivery request","Status is selected as : " + ReadFrom.Excel(ApproveReject, 1, ReadFrom.ApproveReject));
+					Print("Selected Status : " + ReadFrom.Excel(ApproveReject, 1, ReadFrom.ApproveReject));
+					ReportConfig.PassedLogInfo("User approve or reject the delivery request","Selected Status : " + ReadFrom.Excel(ApproveReject, 1, ReadFrom.ApproveReject));
 
 					Wait(2000);
 					JsClick("Save", DeliveryRequestLocators);
@@ -1269,8 +1269,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 						Print("Delivery request is approved");
 						Wait(3000);
 						JsClick("ClosePopup", DeliveryRequestLocators);
-						ReportConfig.PassedLogInfo("User approve or reject the delivery request","Close popup button is clicked");
-						Print("Close popup button is clicked");
+						ReportConfig.PassedLogInfo("User approve or reject the delivery request","Click on Close popup button");
+						Print("Click on Close popup button");
 
 					}
 					else if(IsEqual(Status, "Declined")) {
@@ -1290,8 +1290,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 						Print("Delivery request is declined");
 						Wait(3000);
 						JsClick("ClosePopup", DeliveryRequestLocators);
-						ReportConfig.PassedLogInfo("User approve or reject the delivery request","Close popup button is clicked");
-						Print("Close popup button is clicked");
+						ReportConfig.PassedLogInfo("User approve or reject the delivery request","Click on Close popup button");
+						Print("Click on Close popup button");
 					}
 					break;
 				}
@@ -1340,13 +1340,13 @@ public class F_10_DeliveryRequest extends Baseclass {
 
 					Wait(2000);
 					JsClick("VoidButton", DeliveryRequestLocators);
-					ReportConfig.PassedLogInfo("User push a request to void","Void button is clicked");
-					Print("Void button is clicked");
+					ReportConfig.PassedLogInfo("User push a request to void","Click on Void button");
+					Print("Click on Void button");
 
 					Wait(2000);
 					Click("VoidYes", DeliveryRequestLocators);
-					ReportConfig.PassedLogInfo("User push a request to void","Yes button is clicked");
-					Print("Yes button is clicked");
+					ReportConfig.PassedLogInfo("User push a request to void","Click on Yes button");
+					Print("Click on Yes button");
 
 					Wait<WebDriver> fluentWait1111 = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -1411,8 +1411,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 
 				if(IsElementDisplayed("CreateNew", DeliveryRequestLocators)){
 					JsClick("CreateNew", DeliveryRequestLocators);
-					Print("Create new button is clicked");
-					ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Create new button is clicked");
+					Print("Click on Create new button");
+					ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Click on Create new button");
 
 				}
 				else
@@ -1447,31 +1447,31 @@ public class F_10_DeliveryRequest extends Baseclass {
 				Wait(3000);
 
 				TypeDataInTheField("Description", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 0, ReadFrom.AllDeliverRequest));
-				Print("Description is entered as : " + ReadFrom.Excel(AllDeliverRequest, 0, ReadFrom.AllDeliverRequest));
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Description is entered as : " + ReadFrom.Excel(AllDeliverRequest, 0, ReadFrom.AllDeliverRequest));
+				Print("Entered Description : " + ReadFrom.Excel(AllDeliverRequest, 0, ReadFrom.AllDeliverRequest));
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Entered Description : " + ReadFrom.Excel(AllDeliverRequest, 0, ReadFrom.AllDeliverRequest));
 
 				SelectFromVisibleText("GateDropdown", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 1, ReadFrom.AllDeliverRequest));
-				Print("Gate dropdown is selected as : " + ReadFrom.Excel(AllDeliverRequest, 1, ReadFrom.AllDeliverRequest));
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Gate dropdown is selected as : " + ReadFrom.Excel(AllDeliverRequest, 1, ReadFrom.AllDeliverRequest));
+				Print("Selected Gate dropdown : " + ReadFrom.Excel(AllDeliverRequest, 1, ReadFrom.AllDeliverRequest));
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Selected Gate dropdown : " + ReadFrom.Excel(AllDeliverRequest, 1, ReadFrom.AllDeliverRequest));
 
 
 
 				SelectFromVisibleText("EquipmentDropdown", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 2, ReadFrom.AllDeliverRequest));
-				Print("Equipment dropdown is selected as : " + ReadFrom.Excel(AllDeliverRequest, 2, ReadFrom.AllDeliverRequest));
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Equipment dropdown is selected as : " + ReadFrom.Excel(AllDeliverRequest, 2, ReadFrom.AllDeliverRequest));
+				Print("Selected Equipment dropdown : " + ReadFrom.Excel(AllDeliverRequest, 2, ReadFrom.AllDeliverRequest));
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Selected Equipment dropdown : " + ReadFrom.Excel(AllDeliverRequest, 2, ReadFrom.AllDeliverRequest));
 
 				Wait(2000);
 				try {
 					if(IsElementDisplayed("PickingFrom", DeliveryRequestLocators)) {
 
 						TypeDataInTheField("PickingFrom", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 14, ReadFrom.AllDeliverRequest));
-						Print("Picking from is entered as : " + ReadFrom.Excel(AllDeliverRequest, 14, ReadFrom.AllDeliverRequest));
-						ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Picking from is entered as : " + ReadFrom.Excel(AllDeliverRequest, 14, ReadFrom.AllDeliverRequest));
+						Print("Entered Picking from : " + ReadFrom.Excel(AllDeliverRequest, 14, ReadFrom.AllDeliverRequest));
+						ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Entered Picking from : " + ReadFrom.Excel(AllDeliverRequest, 14, ReadFrom.AllDeliverRequest));
 
 						Wait(2000);
 						TypeDataInTheField("PickingTo", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 15, ReadFrom.AllDeliverRequest));
-						Print("Picking to is entered as : " + ReadFrom.Excel(AllDeliverRequest, 15, ReadFrom.AllDeliverRequest));
-						ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Picking to is entered as : " + ReadFrom.Excel(AllDeliverRequest, 15, ReadFrom.AllDeliverRequest));
+						Print("Entered Picking to : " + ReadFrom.Excel(AllDeliverRequest, 15, ReadFrom.AllDeliverRequest));
+						ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Entered Picking to : " + ReadFrom.Excel(AllDeliverRequest, 15, ReadFrom.AllDeliverRequest));
 
 					}
 
@@ -1486,25 +1486,25 @@ public class F_10_DeliveryRequest extends Baseclass {
 				Wait(2000);
 				MoveToElement("AdditionalText", DeliveryRequestLocators);
 				TypeDataInTheField("AdditionalText", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 3, ReadFrom.AllDeliverRequest));
-				Print("Additional text is entered as : " + ReadFrom.Excel(AllDeliverRequest, 3, ReadFrom.AllDeliverRequest));
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Additional text is entered as : " + ReadFrom.Excel(AllDeliverRequest, 3, ReadFrom.AllDeliverRequest));
+				Print("Entered Additional text : " + ReadFrom.Excel(AllDeliverRequest, 3, ReadFrom.AllDeliverRequest));
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Entered Additional text : " + ReadFrom.Excel(AllDeliverRequest, 3, ReadFrom.AllDeliverRequest));
 
 				TypeDataInTheField("VehicleDetails", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.AllDeliverRequest));
-				Print("Vehicle details is entered as : " + ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.AllDeliverRequest));
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Vehicle details is entered as : " + ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.AllDeliverRequest));
+				Print("Entered Vehicle details : " + ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.AllDeliverRequest));
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Entered Vehicle details : " + ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.AllDeliverRequest));
 
 				Wait(4000);
 
 				Clear("DeliveryDate", DeliveryRequestLocators);
 				TypeDataInTheField("DeliveryDate", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.AllDeliverRequest));
-				Print("Start date is entered as : " + ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.AllDeliverRequest));
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Start date is entered as : " + ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.AllDeliverRequest));
+				Print("Entered Start date : " + ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.AllDeliverRequest));
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Entered Start date : " + ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.AllDeliverRequest));
 
 
 				///////////////////////
 
 				Click("Dfow", DeliveryRequestLocators);
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Dfow dropdown is clicked");
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Click on Dfow dropdown");
 
 				String DfowInExcel = ReadFrom.Excel(AllDeliverRequest, 6,ReadFrom.AllDeliverRequest);
 
@@ -1519,33 +1519,30 @@ public class F_10_DeliveryRequest extends Baseclass {
 					if(IsEqual(DfowInDropdown, DfowInExcel)){
 						Click(Dfow);
 
-						ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Dfow is selected as : " + DfowInDropdown );
-						Print("Dfow is selected as : " + DfowInDropdown );
+						ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Selected Dfow : " + DfowInDropdown );
+						Print("Selected Dfow : " + DfowInDropdown );
 						break;
 					}
 			
 				}	
 
 				Click("Company", DeliveryRequestLocators);
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Company dropdown is clicked");
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Click on Company dropdown");
 
 				String CompanyInExcel = ReadFrom.Excel(AllDeliverRequest, 7,ReadFrom.AllDeliverRequest);
-				Print(CompanyInExcel);
 
 				int countofthelist = 	SizeOfTheList("CompanyList", DeliveryRequestLocators);
-				Print("No of elements : " + countofthelist);
 
 				for(int DropdownValues =1; DropdownValues<=countofthelist; DropdownValues++)		{	
 					WebElement Company = 	FindElement("CompanyInDropdown", DeliveryRequestLocators, DropdownValues);
 					String CompanyInDropdown = 	GetTextFromTheElement(Company);
-					Print(CompanyInDropdown);
 
 
 					if(IsEqual(CompanyInDropdown, CompanyInExcel)){
 						Click(Company);
 
-						ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Dfow is selected as : " + CompanyInDropdown );
-						Print("Dfow is selected as : " + CompanyInDropdown );
+						ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Selected Dfow : " + CompanyInDropdown );
+						Print("Selected Dfow : " + CompanyInDropdown );
 						break;
 					}
 					else {
@@ -1557,14 +1554,14 @@ public class F_10_DeliveryRequest extends Baseclass {
 				Wait(2000);
 				Clear("FromHrs", DeliveryRequestLocators);
 				TypeDataInTheField("FromHrs", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.NegativeCraneCalendar));
-				Print("From hrs is entered as : " + ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.NegativeCraneCalendar));
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"From hrs is entered as : " + ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.NegativeCraneCalendar));
+				Print("Entered From hrs  : " + ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.NegativeCraneCalendar));
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Entered From hrs  : " + ReadFrom.Excel(AllDeliverRequest, 4, ReadFrom.NegativeCraneCalendar));
 
 				Wait(2000);
 				Clear("FromMin", DeliveryRequestLocators);
 				TypeDataInTheField("FromMin", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.NegativeCraneCalendar));
-				Print("From min is entered as : " + ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.NegativeCraneCalendar));
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"From min is entered as : " + ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.NegativeCraneCalendar));
+				Print("Entered From min : " + ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.NegativeCraneCalendar));
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Entered From min : " + ReadFrom.Excel(AllDeliverRequest, 5, ReadFrom.NegativeCraneCalendar));
 
 				Wait(2000);
 				String ExcelMeridian = ReadFrom.Excel(AllDeliverRequest, 6, ReadFrom.NegativeCraneCalendar);
@@ -1582,14 +1579,14 @@ public class F_10_DeliveryRequest extends Baseclass {
 				Wait(2000);
 				Clear("ToHrs", DeliveryRequestLocators);
 				TypeDataInTheField("ToHrs", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 7, ReadFrom.NegativeCraneCalendar));
-				Print("To hrs is entered as : " + ReadFrom.Excel(AllDeliverRequest, 7, ReadFrom.NegativeCraneCalendar));
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"To hrs is entered as : " + ReadFrom.Excel(AllDeliverRequest, 7, ReadFrom.NegativeCraneCalendar));
+				Print("Entered To hrs : " + ReadFrom.Excel(AllDeliverRequest, 7, ReadFrom.NegativeCraneCalendar));
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Entered To hrs : " + ReadFrom.Excel(AllDeliverRequest, 7, ReadFrom.NegativeCraneCalendar));
 
 				Wait(2000);
 				Clear("ToMin", DeliveryRequestLocators);
 				TypeDataInTheField("ToMin", DeliveryRequestLocators, ReadFrom.Excel(AllDeliverRequest, 8, ReadFrom.NegativeCraneCalendar));
-				Print("To min is entered as : " + ReadFrom.Excel(AllDeliverRequest, 8, ReadFrom.NegativeCraneCalendar));
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"To min is entered as : " + ReadFrom.Excel(AllDeliverRequest, 8, ReadFrom.NegativeCraneCalendar));
+				Print("Entered To min : " + ReadFrom.Excel(AllDeliverRequest, 8, ReadFrom.NegativeCraneCalendar));
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Entered To min : " + ReadFrom.Excel(AllDeliverRequest, 8, ReadFrom.NegativeCraneCalendar));
 
 				Wait(2000);
 				String ExcelMeridian1 = ReadFrom.Excel(AllDeliverRequest, 9, ReadFrom.NegativeCraneCalendar);
@@ -1614,7 +1611,7 @@ public class F_10_DeliveryRequest extends Baseclass {
 
 
 				Print("Invalid Time selected Error : " + InvalidTime);
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Invalid Time selected Error: " + InvalidTime);
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Please enter valid time format. " + InvalidTime);
 
 				Wait(4000);
 
@@ -1625,8 +1622,8 @@ public class F_10_DeliveryRequest extends Baseclass {
 
 				Click("Yes", DeliveryRequestLocators);
 
-				Print("Yes button is clicked");
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Close button is clicked");
+				Print("Click on Yes button");
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Request" ,"Click on Close button");
 
 			}
 		}
@@ -1637,8 +1634,8 @@ public static void InvalidFileError() throws Throwable {
 		
 		Click("ImportMultiple", DeliveryRequestLocators);
 		
-		Print("Import Multiple button is clicked");
-		ReportConfig.Givenlogpass("User uploads invalid file in DeliveryRequest" ,"Import Multiple button is clicked");
+		Print("Click on Import button");
+		ReportConfig.Givenlogpass("User uploads invalid file in DeliveryRequest" ,"Click on Import button");
 		
 		Wait(2000);
 		
@@ -1653,17 +1650,17 @@ public static void InvalidFileError() throws Throwable {
 		Wait(1000);
 		String InvalidFileAlert =	GetText("InvalidFileAlert", DeliveryRequestLocators);
 
-		Print("Invalid Image upload alert : " + InvalidFileAlert);
-		ReportConfig.Givenlogpass("User uploads invalid file in DeliveryRequest" ,"Invalid Image upload alert: " + InvalidFileAlert);
+		Print("Please upload valid image format : " + InvalidFileAlert);
+		ReportConfig.Givenlogpass("User uploads invalid file in DeliveryRequest" ,"Please upload valid image format: " + InvalidFileAlert);
 		Click("InvalidFileAlert", DeliveryRequestLocators);
 		Wait(3000);
 		
 		Click("ClosePopup", DeliveryRequestLocators);
-		Print("Close button is clicked");
+		Print("Click on Close button");
 		
 		Wait(3000);
 		
-		ReportConfig.Givenlogpass("User uploads invalid file in DeliveryRequest" ,"Close button is clicked");
+		ReportConfig.Givenlogpass("User uploads invalid file in DeliveryRequest" ,"Click on Close button");
 		
 	}
 

@@ -21,8 +21,8 @@ public class Follo_05_Members extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("To click members button from the menu");
 			if(IsElementDisplayed("MembersButton", MembersLocators)){
 				Click("MembersButton", MembersLocators);
-				Print("Members button is clicked");
-				ReportConfig.Givenlogpass("User clicks members button","Members button is clicked");
+				Print("Click on Members button");
+				ReportConfig.Givenlogpass("User clicks members button","Click on Members button");
 				
 
 			}
@@ -66,8 +66,8 @@ public class Follo_05_Members extends Baseclass {
 
 			if(IsElementDisplayed("InviteMembers", MembersLocators)){
 				Click("InviteMembers", MembersLocators);
-				Print("Invite members button is clicked");
-				ReportConfig.Givenlogpass("User enters invite members button","Invite members button is clicked");
+				Print("Click on Invite button");
+				ReportConfig.Givenlogpass("User enters invite members button","Click on Invite button");
 
 			}
 		} 
@@ -132,8 +132,8 @@ public class Follo_05_Members extends Baseclass {
 			MoveToElement("SendInvitesButton", MembersLocators);
 			if(IsElementDisplayed("SendInvitesButton", MembersLocators)){
 				Click("SendInvitesButton", MembersLocators);
-				Print("Send invites button is clicked");
-				ReportConfig.Andlogpass("User clicks send invite button","Send invites button is clicked");
+				Print("Click on Send invites button");
+				ReportConfig.Andlogpass("User clicks send invite button","Click on Send invites button");
 
 			}
 		} 
@@ -157,7 +157,7 @@ public class Follo_05_Members extends Baseclass {
 			if(IsElementDisplayed("SuccessMessage", MembersLocators)){
 				Click("SuccessMessage", MembersLocators);
 				Print("Invite sent successfully");
-				ReportConfig.Thenlogpass("User should see the invite sent success message","Send invites button is clicked");
+				ReportConfig.Thenlogpass("User should see the invite sent success message","Click on Send invites button");
 
 			}
 		} 
@@ -178,7 +178,7 @@ public class Follo_05_Members extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("Edit a member from the list");
 			F_05_Members.EditMembers();
-			ReportConfig.Givenlogpass("User edit a member from the list","Members are edited successfully");
+		//	ReportConfig.Givenlogpass("User edit a member from the list","Members are edited successfully");
 
 		} 
 
@@ -200,7 +200,7 @@ public class Follo_05_Members extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("Search a member from the list");
 			F_05_Members.SearchMember();
-			ReportConfig.Givenlogpass("User search and view the members","Members are searched successfully");
+		//	ReportConfig.Givenlogpass("User search and view the members","Members are searched successfully");
 		} 
 		catch (Exception e) {
 
@@ -223,7 +223,7 @@ public class Follo_05_Members extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("To send re-invites to members in pending state");
 			F_05_Members.ReInviteMembers();
-			ReportConfig.Givenlogpass("User send reinvites to the pending members","Reinvites are sent to members");
+		//	ReportConfig.Givenlogpass("User send reinvites to the pending members","Reinvites are sent to members");
 
 		} 
 		catch (Exception e) {
@@ -248,7 +248,7 @@ public class Follo_05_Members extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("Filter Members based on role");
 
 			F_05_Members.FilterMemberOnRole();
-			ReportConfig.Givenlogpass("User search and filter the company based on role","Members are filtered successfully");
+		//	ReportConfig.Givenlogpass("User search and filter the company based on role","Members are filtered successfully");
 
 		} 
 
@@ -270,7 +270,7 @@ public class Follo_05_Members extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("Delete a member from the list");
 			F_05_Members.DeleteMembers();
-			ReportConfig.Givenlogpass("User deletes a member from the list","Members are deleted successfully");
+		//	ReportConfig.Givenlogpass("User deletes a member from the list","Members are deleted successfully");
 
 		} 
 
@@ -321,8 +321,8 @@ public class Follo_05_Members extends Baseclass {
 				Click("RemoveButton", MembersLocators);
 				Wait(2000);
 				Click("YesDelete", MembersLocators);
-				Print("Remove button is clicked");
-				ReportConfig.Andlogpass("User clicks remove button and click yes from the popup","Remove button is clicked");
+				Print("Click on remove button");
+				ReportConfig.Andlogpass("User clicks remove button and click yes from the popup","Click on remove button");
 
 				
 			}

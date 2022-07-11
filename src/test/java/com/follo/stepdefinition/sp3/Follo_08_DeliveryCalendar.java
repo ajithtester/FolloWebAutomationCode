@@ -25,8 +25,8 @@ public class Follo_08_DeliveryCalendar extends Baseclass {
 			if(IsElementDisplayed("DeliveryCalendar", DeliveryCalendarLocators)){
 				Print("Delivery calendar button is displayed");
 				Click("DeliveryCalendar", DeliveryCalendarLocators);
-				Print("Delivery calendar button is clicked");
-				ReportConfig.Givenlogpass("User clicks delivery calendar button","Delivery calendar button is clicked");
+				Print("Click on Delivery calendar button");
+				ReportConfig.Givenlogpass("User clicks delivery calendar button","Click on Delivery calendar button");
 
 			}
 		} 
@@ -70,7 +70,7 @@ public class Follo_08_DeliveryCalendar extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("Search delivery request");
 
 			F_08_DeliveryCalendar.SearchDelivery();
-			ReportConfig.Givenlogpass("User search and view the delivery request","Delivery calendar searched successfully");
+		//	ReportConfig.Givenlogpass("User search and view the delivery request","Delivery calendar searched successfully");
 		} 
 		catch (Exception e) {
 
@@ -93,7 +93,7 @@ public class Follo_08_DeliveryCalendar extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("Edit a delivery request");
 
 			F_08_DeliveryCalendar.EditDelivery();
-			ReportConfig.Givenlogpass("User edit a delivery request","Delivery calendar edited successfully");
+		//	ReportConfig.Givenlogpass("User edit a delivery request","Delivery calendar edited successfully");
 
 
 		} 
@@ -117,7 +117,7 @@ public class Follo_08_DeliveryCalendar extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("Filter a delivery request");
 
 			F_08_DeliveryCalendar.FilterDelivery();
-			ReportConfig.Givenlogpass("User filter the delivery request based on company name","Delivery calendar filtered successfully");
+		//	ReportConfig.Givenlogpass("User filter the delivery request based on company name","Delivery calendar filtered successfully");
 
 
 		} 
@@ -141,7 +141,7 @@ public class Follo_08_DeliveryCalendar extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("User view and delivers the request");
 
 			//F_08_DeliveryCalendar.ViewDeliveryInfo();
-			ReportConfig.Givenlogpass("User view the request info","Delivery calendar info viewed successfully");
+		//	ReportConfig.Givenlogpass("User view the request info","Delivery calendar info viewed successfully");
 		} 
 		catch (Exception e) {
 
@@ -162,7 +162,7 @@ public class Follo_08_DeliveryCalendar extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("User add a comment");
 
 			F_08_DeliveryCalendar.AddComment();
-			ReportConfig.Andlogpass("User add a comment","User add a comment successfully");
+		//	ReportConfig.Andlogpass("User add a comment","User add a comment successfully");
 
 		} 
 		catch (Exception e) {
@@ -184,7 +184,7 @@ public class Follo_08_DeliveryCalendar extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("User view and delivers the request");
 
 			F_08_DeliveryCalendar.ViewHistory();
-			ReportConfig.Andlogpass("User view history","History viewed successfully");
+		//	ReportConfig.Andlogpass("User view history","History viewed successfully");
 
 		} 
 		catch (Exception e) {
@@ -206,7 +206,7 @@ public class Follo_08_DeliveryCalendar extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("User delivers the request");
 
 			F_08_DeliveryCalendar.Deliver();
-			ReportConfig.Thenlogpass("User delivers the request","Request delivers successfully");
+	//		ReportConfig.Thenlogpass("User delivers the request","Request delivers successfully");
 
 		} 
 		catch (Exception e) {
@@ -230,7 +230,7 @@ public class Follo_08_DeliveryCalendar extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("User view and approve or reject the request");
 
 			F_08_DeliveryCalendar.ApproveOrReject();
-			ReportConfig.Givenlogpass("User approve or reject the request","User approve or reject the request successfully");
+		//	ReportConfig.Givenlogpass("User approve or reject the request","User approve or reject the request successfully");
 
 		} 
 		catch (Exception e) {
@@ -254,7 +254,7 @@ public class Follo_08_DeliveryCalendar extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("Push a delivery request to void");
 
 			F_08_DeliveryCalendar.PushToVoid();
-			ReportConfig.Givenlogpass("User push a delivery request to void","Request pushed to void successfully");
+	//		ReportConfig.Givenlogpass("User push a delivery request to void","Request pushed to void successfully");
 
 
 		} 
@@ -278,7 +278,7 @@ public class Follo_08_DeliveryCalendar extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("User add attachment to the delivery calendar request");
 			F_08_DeliveryCalendar.AddAttcahment();
-			ReportConfig.Givenlogpass("User add attachment to the delivery delivery request", "Attcahment added successfully");
+	//		ReportConfig.Givenlogpass("User add attachment to the delivery delivery request", "Attcahment added successfully");
 
 		} 
 		catch (Exception e) {

@@ -43,8 +43,8 @@ public class F_13_CraneCalender extends Baseclass {
 
 			if(IsElementDisplayed("CreateNew", CraneCalenderLocators)){
 				JsClick("CreateNew", CraneCalenderLocators);
-				Print("Create new button is clicked");
-				ReportConfig.PassedLogInfo("User add new crane request","Create new button is clicked");
+				Print("Click on Create new button");
+				ReportConfig.PassedLogInfo("User add new crane request","Click on Create new button");
 
 			}
 			else
@@ -78,12 +78,12 @@ public class F_13_CraneCalender extends Baseclass {
 			}
 
 			TypeDataInTheField("Description", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 0, ReadFrom.CraneCalendar));
-			Print("Description is entered as : " + ReadFrom.Excel(CraneCalendar, 0, ReadFrom.CraneCalendar));
-			ReportConfig.PassedLogInfo("User add new crane request","Description is entered as : " + ReadFrom.Excel(CraneCalendar, 0, ReadFrom.CraneCalendar));
+			Print("Entered Description : " + ReadFrom.Excel(CraneCalendar, 0, ReadFrom.CraneCalendar));
+			ReportConfig.PassedLogInfo("User add new crane request","Entered Description : " + ReadFrom.Excel(CraneCalendar, 0, ReadFrom.CraneCalendar));
 
 
 			Click("Company", CraneCalenderLocators);
-			ReportConfig.PassedLogInfo("User add new crane request","Company dropdown is clicked");
+			ReportConfig.PassedLogInfo("User add new crane request","Click on Company dropdown");
 
 			String CompanyInExcel = ReadFrom.Excel(CraneCalendar, 1, ReadFrom.CraneCalendar);
 
@@ -105,7 +105,7 @@ public class F_13_CraneCalender extends Baseclass {
 			///////////////////////
 
 			Click("Dfow", CraneCalenderLocators);
-			ReportConfig.PassedLogInfo("User add new crane request","Dfow dropdown is clicked");
+			ReportConfig.PassedLogInfo("User add new crane request","Click on Dfow dropdown");
 
 			String DfowInExcel = ReadFrom.Excel(CraneCalendar, 2,ReadFrom.CraneCalendar);
 
@@ -119,7 +119,7 @@ public class F_13_CraneCalender extends Baseclass {
 				if(IsEqual(DfowInDropdown, DfowInExcel)){
 					Click(Dfow);
 					ReportConfig.PassedLogInfo("User add new crane request",DfowInDropdown + " is selected from the dropdown");
-					Print("Dfow is selected as : " + DfowInDropdown );
+					Print("Selected DFOW : " + DfowInDropdown );
 					break;
 				}
 			}	
@@ -127,28 +127,28 @@ public class F_13_CraneCalender extends Baseclass {
 			/////////////////////////////////////
 
 			SelectFromVisibleText("EquipmentDropdown", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 10, ReadFrom.CraneCalendar));
-			Print("Equipment dropdown is selected as : " + ReadFrom.Excel(CraneCalendar, 10, ReadFrom.CraneCalendar));
-			ReportConfig.PassedLogInfo("User add new crane request","Equipment dropdown is selected as : " + ReadFrom.Excel(CraneCalendar, 10, ReadFrom.CraneCalendar));
+			Print("Selected Equipment  : " + ReadFrom.Excel(CraneCalendar, 10, ReadFrom.CraneCalendar));
+			ReportConfig.PassedLogInfo("User add new crane request","Selected Equipment  : " + ReadFrom.Excel(CraneCalendar, 10, ReadFrom.CraneCalendar));
 
 
 			Clear("DeliveryDate", CraneCalenderLocators);
 			TypeDataInTheField("DeliveryDate", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 3, ReadFrom.CraneCalendar));
-			Print("Start date is entered as : " + ReadFrom.Excel(CraneCalendar, 3, ReadFrom.CraneCalendar));
-			ReportConfig.PassedLogInfo("User add new crane request","Start date is entered as : " + ReadFrom.Excel(CraneCalendar, 3, ReadFrom.CraneCalendar));
+			Print("Entered Start date : " + ReadFrom.Excel(CraneCalendar, 3, ReadFrom.CraneCalendar));
+			ReportConfig.PassedLogInfo("User add new crane request","Entered Start date : " + ReadFrom.Excel(CraneCalendar, 3, ReadFrom.CraneCalendar));
 
 			///////
 
 			Wait(2000);
 			Clear("FromHrs", CraneCalenderLocators);
 			TypeDataInTheField("FromHrs", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 4, ReadFrom.CraneCalendar));
-			Print("From hrs is entered as : " + ReadFrom.Excel(CraneCalendar, 4, ReadFrom.CraneCalendar));
-			ReportConfig.PassedLogInfo("User add new crane request","From hrs is entered as : " + ReadFrom.Excel(CraneCalendar, 4, ReadFrom.CraneCalendar));
+			Print("Entered From hrs : " + ReadFrom.Excel(CraneCalendar, 4, ReadFrom.CraneCalendar));
+			ReportConfig.PassedLogInfo("User add new crane request","Entered From hrs : " + ReadFrom.Excel(CraneCalendar, 4, ReadFrom.CraneCalendar));
 
 			Wait(2000);
 			Clear("FromMin", CraneCalenderLocators);
 			TypeDataInTheField("FromMin", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 5, ReadFrom.CraneCalendar));
-			Print("From min is entered as : " + ReadFrom.Excel(CraneCalendar, 5, ReadFrom.CraneCalendar));
-			ReportConfig.PassedLogInfo("User add new crane request","From min is entered as : " + ReadFrom.Excel(CraneCalendar, 5, ReadFrom.CraneCalendar));
+			Print("Entered From min : " + ReadFrom.Excel(CraneCalendar, 5, ReadFrom.CraneCalendar));
+			ReportConfig.PassedLogInfo("User add new crane request","Entered From min : " + ReadFrom.Excel(CraneCalendar, 5, ReadFrom.CraneCalendar));
 
 			Wait(2000);
 			String ExcelMeridian = ReadFrom.Excel(CraneCalendar, 6, ReadFrom.CraneCalendar);
@@ -170,8 +170,8 @@ public class F_13_CraneCalender extends Baseclass {
 			Wait(2000);
 			Clear("ToMin", CraneCalenderLocators);
 			TypeDataInTheField("ToMin", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 8, ReadFrom.CraneCalendar));
-			Print("To min is entered as : " + ReadFrom.Excel(CraneCalendar, 8, ReadFrom.CraneCalendar));
-			ReportConfig.PassedLogInfo("User add new crane request","To min is entered as : " + ReadFrom.Excel(CraneCalendar, 8, ReadFrom.CraneCalendar));
+			Print("Entered To min : " + ReadFrom.Excel(CraneCalendar, 8, ReadFrom.CraneCalendar));
+			ReportConfig.PassedLogInfo("User add new crane request","Entered To min : " + ReadFrom.Excel(CraneCalendar, 8, ReadFrom.CraneCalendar));
 
 			Wait(2000);
 			String ExcelMeridian1 = ReadFrom.Excel(CraneCalendar, 9, ReadFrom.CraneCalendar);
@@ -188,21 +188,21 @@ public class F_13_CraneCalender extends Baseclass {
 			Wait(2000);
 			Clear("PickingFrom", CraneCalenderLocators);
 			TypeDataInTheField("PickingFrom", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 11, ReadFrom.CraneCalendar));
-			Print("Picking from is entered as : " + ReadFrom.Excel(CraneCalendar, 11, ReadFrom.CraneCalendar));
-			ReportConfig.PassedLogInfo("User add new crane request","Picking from is entered as : " + ReadFrom.Excel(CraneCalendar, 11, ReadFrom.CraneCalendar));
+			Print("Entered Picking from : " + ReadFrom.Excel(CraneCalendar, 11, ReadFrom.CraneCalendar));
+			ReportConfig.PassedLogInfo("User add new crane request","Entered Picking from : " + ReadFrom.Excel(CraneCalendar, 11, ReadFrom.CraneCalendar));
 
 			Wait(2000);
 			Clear("PickingTo", CraneCalenderLocators);
 			TypeDataInTheField("PickingTo", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 12, ReadFrom.CraneCalendar));
-			Print("Picking to is entered as : " + ReadFrom.Excel(CraneCalendar, 12, ReadFrom.CraneCalendar));
-			ReportConfig.PassedLogInfo("User add new crane request","Picking to is entered as : " + ReadFrom.Excel(CraneCalendar, 12, ReadFrom.CraneCalendar));
+			Print("Entered Picking to : " + ReadFrom.Excel(CraneCalendar, 12, ReadFrom.CraneCalendar));
+			ReportConfig.PassedLogInfo("User add new crane request","Entered Picking to : " + ReadFrom.Excel(CraneCalendar, 12, ReadFrom.CraneCalendar));
 
 			Wait(2000);
 			MoveToElement("AdditionalText", CraneCalenderLocators);
 			Clear("AdditionalText", CraneCalenderLocators);
 			TypeDataInTheField("AdditionalText", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 13, ReadFrom.CraneCalendar));
-			Print("Additional text is entered as : " + ReadFrom.Excel(CraneCalendar, 13, ReadFrom.CraneCalendar));
-			ReportConfig.PassedLogInfo("User add new crane request","Additional text is entered as : " + ReadFrom.Excel(CraneCalendar, 13, ReadFrom.CraneCalendar));
+			Print("Entered Additional text : " + ReadFrom.Excel(CraneCalendar, 13, ReadFrom.CraneCalendar));
+			ReportConfig.PassedLogInfo("User add new crane request","Entered Additional text : " + ReadFrom.Excel(CraneCalendar, 13, ReadFrom.CraneCalendar));
 
 			Wait(4000);	
 
@@ -260,8 +260,8 @@ public class F_13_CraneCalender extends Baseclass {
 
 			if(IsElementDisplayed("CreateNew", CraneCalenderLocators)){
 				JsClick("CreateNew", CraneCalenderLocators);
-				Print("Create new button is clicked");
-				ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Create new button is clicked");
+				Print("Click on Create new button");
+				ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Click on Create new button");
 
 			}
 			else
@@ -295,8 +295,8 @@ public class F_13_CraneCalender extends Baseclass {
 			}
 
 			TypeDataInTheField("Description", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 0, ReadFrom.NegativeCraneCalendar));
-			Print("Description is entered as : " + ReadFrom.Excel(CraneCalendar, 0, ReadFrom.NegativeCraneCalendar));
-			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Description is entered as : " + ReadFrom.Excel(CraneCalendar, 0, ReadFrom.NegativeCraneCalendar));
+			Print("Entered Description : " + ReadFrom.Excel(CraneCalendar, 0, ReadFrom.NegativeCraneCalendar));
+			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Entered Description : " + ReadFrom.Excel(CraneCalendar, 0, ReadFrom.NegativeCraneCalendar));
 
 
 			///////////////////////
@@ -304,22 +304,22 @@ public class F_13_CraneCalender extends Baseclass {
 			/////////////////////////////////////
 
 			SelectFromVisibleText("EquipmentDropdown", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 10, ReadFrom.NegativeCraneCalendar));
-			Print("Equipment dropdown is selected as : " + ReadFrom.Excel(CraneCalendar, 10, ReadFrom.NegativeCraneCalendar));
-			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Equipment dropdown is selected as : " + ReadFrom.Excel(CraneCalendar, 10, ReadFrom.NegativeCraneCalendar));
+			Print("Selected Equipment  : " + ReadFrom.Excel(CraneCalendar, 10, ReadFrom.NegativeCraneCalendar));
+			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Selected Equipment  : " + ReadFrom.Excel(CraneCalendar, 10, ReadFrom.NegativeCraneCalendar));
 
 			///////
 
 			Wait(2000);
 			Clear("FromHrs", CraneCalenderLocators);
 			TypeDataInTheField("FromHrs", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 4, ReadFrom.NegativeCraneCalendar));
-			Print("From hrs is entered as : " + ReadFrom.Excel(CraneCalendar, 4, ReadFrom.NegativeCraneCalendar));
-			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","From hrs is entered as : " + ReadFrom.Excel(CraneCalendar, 4, ReadFrom.NegativeCraneCalendar));
+			Print("Entered From hrs : " + ReadFrom.Excel(CraneCalendar, 4, ReadFrom.NegativeCraneCalendar));
+			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Entered From hrs : " + ReadFrom.Excel(CraneCalendar, 4, ReadFrom.NegativeCraneCalendar));
 
 			Wait(2000);
 			Clear("FromMin", CraneCalenderLocators);
 			TypeDataInTheField("FromMin", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 5, ReadFrom.NegativeCraneCalendar));
-			Print("From min is entered as : " + ReadFrom.Excel(CraneCalendar, 5, ReadFrom.NegativeCraneCalendar));
-			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","From min is entered as : " + ReadFrom.Excel(CraneCalendar, 5, ReadFrom.NegativeCraneCalendar));
+			Print("Entered From min : " + ReadFrom.Excel(CraneCalendar, 5, ReadFrom.NegativeCraneCalendar));
+			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Entered From min : " + ReadFrom.Excel(CraneCalendar, 5, ReadFrom.NegativeCraneCalendar));
 
 			Wait(2000);
 			String ExcelMeridian = ReadFrom.Excel(CraneCalendar, 6, ReadFrom.NegativeCraneCalendar);
@@ -341,8 +341,8 @@ public class F_13_CraneCalender extends Baseclass {
 			Wait(2000);
 			Clear("ToMin", CraneCalenderLocators);
 			TypeDataInTheField("ToMin", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 8, ReadFrom.NegativeCraneCalendar));
-			Print("To min is entered as : " + ReadFrom.Excel(CraneCalendar, 8, ReadFrom.NegativeCraneCalendar));
-			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","To min is entered as : " + ReadFrom.Excel(CraneCalendar, 8, ReadFrom.NegativeCraneCalendar));
+			Print("Entered To min : " + ReadFrom.Excel(CraneCalendar, 8, ReadFrom.NegativeCraneCalendar));
+			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Entered To min : " + ReadFrom.Excel(CraneCalendar, 8, ReadFrom.NegativeCraneCalendar));
 
 			Wait(2000);
 			String ExcelMeridian1 = ReadFrom.Excel(CraneCalendar, 9, ReadFrom.NegativeCraneCalendar);
@@ -359,14 +359,14 @@ public class F_13_CraneCalender extends Baseclass {
 			Wait(2000);
 			Clear("PickingFrom", CraneCalenderLocators);
 			TypeDataInTheField("PickingFrom", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 11, ReadFrom.NegativeCraneCalendar));
-			Print("Picking from is entered as : " + ReadFrom.Excel(CraneCalendar, 11, ReadFrom.NegativeCraneCalendar));
-			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Picking from is entered as : " + ReadFrom.Excel(CraneCalendar, 11, ReadFrom.NegativeCraneCalendar));
+			Print("Entered Picking from : " + ReadFrom.Excel(CraneCalendar, 11, ReadFrom.NegativeCraneCalendar));
+			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Entered Picking from : " + ReadFrom.Excel(CraneCalendar, 11, ReadFrom.NegativeCraneCalendar));
 
 			Wait(2000);
 			Clear("PickingTo", CraneCalenderLocators);
 			TypeDataInTheField("PickingTo", CraneCalenderLocators, ReadFrom.Excel(CraneCalendar, 12, ReadFrom.NegativeCraneCalendar));
-			Print("Picking to is entered as : " + ReadFrom.Excel(CraneCalendar, 12, ReadFrom.NegativeCraneCalendar));
-			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Picking to is entered as : " + ReadFrom.Excel(CraneCalendar, 12, ReadFrom.NegativeCraneCalendar));
+			Print("Entered Picking to : " + ReadFrom.Excel(CraneCalendar, 12, ReadFrom.NegativeCraneCalendar));
+			ReportConfig.PassedLogInfo("User gives invalid time in Crane calendar","Entered Picking to : " + ReadFrom.Excel(CraneCalendar, 12, ReadFrom.NegativeCraneCalendar));
 
 			Wait(2000);
 
@@ -394,7 +394,7 @@ public class F_13_CraneCalender extends Baseclass {
 				Click("CancelButton", CraneCalenderLocators);
 				ReportConfig.PassedLogInfo("User add new crane request","Cancel button is clicked");
 				Click("Yes", CraneCalenderLocators);
-				ReportConfig.PassedLogInfo("User add new crane request","Yes button is clicked");
+				ReportConfig.PassedLogInfo("User add new crane request","Click on Yes button");
 
 		//	}
 //			else {
@@ -410,12 +410,12 @@ public class F_13_CraneCalender extends Baseclass {
 
 		PrintError("NegativeMandatory Crane Calender started");
 		Wait(2000);
-		ReportConfig.PassedLogInfo("User add new crane request","Create new button is clicked");
+		ReportConfig.PassedLogInfo("User add new crane request","Click on Create new button");
 		JsClick("CreateNew", CraneCalenderLocators);
 		Wait(2000);
 		MoveToElement("SubmitButton", CraneCalenderLocators);
 		JsClick("SubmitButton", CraneCalenderLocators);
-		ReportConfig.PassedLogInfo("User add new crane request","Submit button is clicked");
+		ReportConfig.PassedLogInfo("User add new crane request","Click on Submit button");
 
 		String DescriptionRequired = 	GetText("DescriptionRequired", CraneCalenderLocators);
 		String EquipmentRequired = 		GetText("EquipmentRequired", CraneCalenderLocators);
@@ -431,7 +431,7 @@ public class F_13_CraneCalender extends Baseclass {
 		Click("CancelButton", CraneCalenderLocators);
 		ReportConfig.PassedLogInfo("User add new crane request","Cancel button is clicked");
 		Click("Yes", CraneCalenderLocators);
-		ReportConfig.PassedLogInfo("User add new crane request","Yes button is clicked");
+		ReportConfig.PassedLogInfo("User add new crane request","Click on Yes button");
 	}
 
 	public static void SearchMonth(int Row , String Excel) throws Throwable {
@@ -641,8 +641,8 @@ public class F_13_CraneCalender extends Baseclass {
 
 					JsClick("Expand", CraneCalenderLocators);
 
-					ReportConfig.PassedLogInfo("User view Crane request information" ,"Expand button is clicked");
-					Print("Expand button is clicked");
+					ReportConfig.PassedLogInfo("User view Crane request information" ,"Click on Expand button");
+					Print("Click on Expand button");
 
 //					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 //							.withTimeout(Duration.ofSeconds(120))
@@ -662,8 +662,8 @@ public class F_13_CraneCalender extends Baseclass {
 
 						JsClick("ClosePopup", CraneCalenderLocators);
 
-						ReportConfig.PassedLogInfo("User view Crane request information" ,"Close popup button is clicked");
-						Print("Close popup button is clicked");
+						ReportConfig.PassedLogInfo("User view Crane request information" ,"Click on Close button");
+						Print("Click on Close button");
 						Wait(2000);
 						Clear("Search", CraneCalenderLocators);
 						Wait(3000);
@@ -744,8 +744,8 @@ public class F_13_CraneCalender extends Baseclass {
 
 					Wait(7000);
 					JsClick("EditButton", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Edit button is clicked");
-					Print("Edit button is clicked");
+					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Click on Edit button");
+					Print("Click on Edit button");
 
 //					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 //							.withTimeout(Duration.ofSeconds(120))
@@ -766,8 +766,8 @@ public class F_13_CraneCalender extends Baseclass {
 
 					Clear("Description", CraneCalenderLocators);
 					TypeDataInTheField("Description", CraneCalenderLocators, ReadFrom.Excel(EditCraneCalendar, 3, ReadFrom.EditCraneCalendar));
-					Print("Description is entered as : " + ReadFrom.Excel(EditCraneCalendar, 3, ReadFrom.EditCraneCalendar));
-					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Description is entered as : " + ReadFrom.Excel(EditCraneCalendar, 3, ReadFrom.EditCraneCalendar));
+					Print("Entered Description : " + ReadFrom.Excel(EditCraneCalendar, 3, ReadFrom.EditCraneCalendar));
+					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Entered Description : " + ReadFrom.Excel(EditCraneCalendar, 3, ReadFrom.EditCraneCalendar));
 
 					Wait(2000);
 					Click("CompanyEdit", CraneCalenderLocators);
@@ -776,7 +776,7 @@ public class F_13_CraneCalender extends Baseclass {
 					Click("CompanySelectAll", CraneCalenderLocators);
 					Wait(2000);
 					Click("UnselectAll", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Company dropdown is clicked");
+					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Click on Company dropdown");
 
 					Wait(3000);
 					String CompanyInExcel = ReadFrom.Excel(EditCraneCalendar, 4, ReadFrom.EditCraneCalendar);
@@ -820,7 +820,7 @@ public class F_13_CraneCalender extends Baseclass {
 						if(IsEqual(DfowInDropdown, DfowInExcel)){
 							Click(Dfow);
 							ReportConfig.PassedLogInfo("User edit a Crane request from the list",DfowInDropdown + " is selected from the dropdown");
-							Print("Dfow is selected as : " + DfowInDropdown );
+							Print("Selected DFOW : " + DfowInDropdown );
 							break;
 						}
 					}	
@@ -828,28 +828,28 @@ public class F_13_CraneCalender extends Baseclass {
 					/////////////////////////////////////
 
 					SelectFromVisibleText("EquipmentDropdown", CraneCalenderLocators, ReadFrom.Excel(EditCraneCalendar, 13, ReadFrom.EditCraneCalendar));
-					Print("Equipment dropdown is selected as : " + ReadFrom.Excel(EditCraneCalendar, 13, ReadFrom.EditCraneCalendar));
-					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Equipment dropdown is selected as : " + ReadFrom.Excel(EditCraneCalendar, 13, ReadFrom.EditCraneCalendar));
+					Print("Selected Equipment  : " + ReadFrom.Excel(EditCraneCalendar, 13, ReadFrom.EditCraneCalendar));
+					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Selected Equipment  : " + ReadFrom.Excel(EditCraneCalendar, 13, ReadFrom.EditCraneCalendar));
 
 
 					Clear("DeliveryDate", CraneCalenderLocators);
 					TypeDataInTheField("DeliveryDate", CraneCalenderLocators, ReadFrom.Excel(EditCraneCalendar, 6, ReadFrom.EditCraneCalendar));
-					Print("Start date is entered as : " + ReadFrom.Excel(EditCraneCalendar, 6, ReadFrom.EditCraneCalendar));
-					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Start date is entered as : " + ReadFrom.Excel(EditCraneCalendar, 6, ReadFrom.EditCraneCalendar));
+					Print("Entered Start date : " + ReadFrom.Excel(EditCraneCalendar, 6, ReadFrom.EditCraneCalendar));
+					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Entered Start date : " + ReadFrom.Excel(EditCraneCalendar, 6, ReadFrom.EditCraneCalendar));
 
 					///////
 
 					Wait(2000);
 					Clear("FromHrs", CraneCalenderLocators);
 					TypeDataInTheField("FromHrs", CraneCalenderLocators, ReadFrom.Excel(EditCraneCalendar, 7, ReadFrom.EditCraneCalendar));
-					Print("From hrs is entered as : " + ReadFrom.Excel(EditCraneCalendar, 7, ReadFrom.EditCraneCalendar));
-					ReportConfig.PassedLogInfo("User edit a Crane request from the list","From hrs is entered as : " + ReadFrom.Excel(EditCraneCalendar, 7, ReadFrom.EditCraneCalendar));
+					Print("Entered From hrs : " + ReadFrom.Excel(EditCraneCalendar, 7, ReadFrom.EditCraneCalendar));
+					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Entered From hrs : " + ReadFrom.Excel(EditCraneCalendar, 7, ReadFrom.EditCraneCalendar));
 
 					Wait(2000);
 					Clear("FromMin", CraneCalenderLocators);
 					TypeDataInTheField("FromMin", CraneCalenderLocators, ReadFrom.Excel(EditCraneCalendar, 8, ReadFrom.EditCraneCalendar));
-					Print("From min is entered as : " + ReadFrom.Excel(EditCraneCalendar, 8, ReadFrom.EditCraneCalendar));
-					ReportConfig.PassedLogInfo("User edit a Crane request from the list","From min is entered as : " + ReadFrom.Excel(EditCraneCalendar, 8, ReadFrom.EditCraneCalendar));
+					Print("Entered From min : " + ReadFrom.Excel(EditCraneCalendar, 8, ReadFrom.EditCraneCalendar));
+					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Entered From min : " + ReadFrom.Excel(EditCraneCalendar, 8, ReadFrom.EditCraneCalendar));
 
 					Wait(2000);
 					String ExcelMeridian = ReadFrom.Excel(EditCraneCalendar, 9, ReadFrom.EditCraneCalendar);
@@ -871,8 +871,8 @@ public class F_13_CraneCalender extends Baseclass {
 					Wait(2000);
 					Clear("ToMin", CraneCalenderLocators);
 					TypeDataInTheField("ToMin", CraneCalenderLocators, ReadFrom.Excel(EditCraneCalendar, 11, ReadFrom.EditCraneCalendar));
-					Print("To min is entered as : " + ReadFrom.Excel(EditCraneCalendar, 11, ReadFrom.EditCraneCalendar));
-					ReportConfig.PassedLogInfo("User edit a Crane request from the list","To min is entered as : " + ReadFrom.Excel(EditCraneCalendar, 11, ReadFrom.EditCraneCalendar));
+					Print("Entered To min : " + ReadFrom.Excel(EditCraneCalendar, 11, ReadFrom.EditCraneCalendar));
+					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Entered To min : " + ReadFrom.Excel(EditCraneCalendar, 11, ReadFrom.EditCraneCalendar));
 
 					Wait(2000);
 					String ExcelMeridian1 = ReadFrom.Excel(EditCraneCalendar, 12, ReadFrom.EditCraneCalendar);
@@ -890,23 +890,23 @@ public class F_13_CraneCalender extends Baseclass {
 					Clear("PickingFrom", CraneCalenderLocators);
 
 					TypeDataInTheField("PickingFrom", CraneCalenderLocators, ReadFrom.Excel(EditCraneCalendar, 14, ReadFrom.EditCraneCalendar));
-					Print("Picking from is entered as : " + ReadFrom.Excel(EditCraneCalendar, 14, ReadFrom.EditCraneCalendar));
-					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Picking from is entered as : " + ReadFrom.Excel(EditCraneCalendar, 14, ReadFrom.EditCraneCalendar));
+					Print("Entered Picking from : " + ReadFrom.Excel(EditCraneCalendar, 14, ReadFrom.EditCraneCalendar));
+					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Entered Picking from : " + ReadFrom.Excel(EditCraneCalendar, 14, ReadFrom.EditCraneCalendar));
 
 					Wait(2000);
 					Clear("PickingTo", CraneCalenderLocators);
 
 					TypeDataInTheField("PickingTo", CraneCalenderLocators, ReadFrom.Excel(EditCraneCalendar, 15, ReadFrom.EditCraneCalendar));
-					Print("Picking to is entered as : " + ReadFrom.Excel(EditCraneCalendar, 15, ReadFrom.EditCraneCalendar));
-					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Picking to is entered as : " + ReadFrom.Excel(EditCraneCalendar, 15, ReadFrom.EditCraneCalendar));
+					Print("Entered Picking to : " + ReadFrom.Excel(EditCraneCalendar, 15, ReadFrom.EditCraneCalendar));
+					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Entered Picking to : " + ReadFrom.Excel(EditCraneCalendar, 15, ReadFrom.EditCraneCalendar));
 
 					Wait(2000);
 					MoveToElement("AdditionalText", CraneCalenderLocators);
 					Clear("AdditionalText", CraneCalenderLocators);
 
 					TypeDataInTheField("AdditionalText", CraneCalenderLocators, ReadFrom.Excel(EditCraneCalendar, 16, ReadFrom.EditCraneCalendar));
-					Print("Additional text is entered as : " + ReadFrom.Excel(EditCraneCalendar, 16, ReadFrom.EditCraneCalendar));
-					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Additional text is entered as : " + ReadFrom.Excel(EditCraneCalendar, 16, ReadFrom.EditCraneCalendar));
+					Print("Entered Additional text : " + ReadFrom.Excel(EditCraneCalendar, 16, ReadFrom.EditCraneCalendar));
+					ReportConfig.PassedLogInfo("User edit a Crane request from the list","Entered Additional text : " + ReadFrom.Excel(EditCraneCalendar, 16, ReadFrom.EditCraneCalendar));
 
 					Wait(4000);	
 
@@ -995,8 +995,8 @@ public class F_13_CraneCalender extends Baseclass {
 					Wait(7000);
 
 					JsClick("EditButton", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("User edit and save a crane request without company in Crane Calendar","Edit button is clicked");
-					Print("Edit button is clicked");
+					ReportConfig.PassedLogInfo("User edit and save a crane request without company in Crane Calendar","Click on Edit button");
+					Print("Click on Edit button");
 
 //					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 //							.withTimeout(Duration.ofSeconds(120))
@@ -1022,7 +1022,7 @@ public class F_13_CraneCalender extends Baseclass {
 					Click("CompanySelectAll", CraneCalenderLocators);
 					Wait(2000);
 					Click("UnselectAll", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("User edit and save a crane request without company in Crane Calendar","Company dropdown is clicked");
+					ReportConfig.PassedLogInfo("User edit and save a crane request without company in Crane Calendar","Click on Company dropdown");
 					///////////////////////
 
 					Wait(4000);	
@@ -1053,7 +1053,7 @@ public class F_13_CraneCalender extends Baseclass {
 						Click("CancelButton", CraneCalenderLocators);
 						ReportConfig.PassedLogInfo("User edit and save a crane request without company in Crane Calendar","Cancel button is clicked");
 						Click("Yes", CraneCalenderLocators);
-						ReportConfig.PassedLogInfo("User edit and save a crane request without company in Crane Calendar","Yes button is clicked");
+						ReportConfig.PassedLogInfo("User edit and save a crane request without company in Crane Calendar","Click on Yes button");
 
 						ReportConfig.PassedLogInfo("User edit and save a crane request without company in Crane Calendar","Crane request updated");
 
@@ -1138,8 +1138,8 @@ public class F_13_CraneCalender extends Baseclass {
 					Wait(7000);
 
 					JsClick("EditButton", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("User edit and save a crane request without dfow in Crane Calendar","Edit button is clicked");
-					Print("Edit button is clicked");
+					ReportConfig.PassedLogInfo("User edit and save a crane request without dfow in Crane Calendar","Click on Edit button");
+					Print("Click on Edit button");
 
 //					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 //							.withTimeout(Duration.ofSeconds(120))
@@ -1165,7 +1165,7 @@ public class F_13_CraneCalender extends Baseclass {
 					Click("DfowSelectAll", CraneCalenderLocators);
 					Wait(2000);
 					Click("UnselectAll", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("User edit and save a crane request without dfow in Crane Calendar","Company dropdown is clicked");
+					ReportConfig.PassedLogInfo("User edit and save a crane request without dfow in Crane Calendar","Click on Company dropdown");
 					///////////////////////
 
 					Wait(4000);	
@@ -1196,7 +1196,7 @@ public class F_13_CraneCalender extends Baseclass {
 						Click("CancelButton", CraneCalenderLocators);
 						ReportConfig.PassedLogInfo("User edit and save a crane request without dfow in Crane Calendar","Cancel button is clicked");
 						Click("Yes", CraneCalenderLocators);
-						ReportConfig.PassedLogInfo("User edit and save a crane request without dfow in Crane Calendar","Yes button is clicked");
+						ReportConfig.PassedLogInfo("User edit and save a crane request without dfow in Crane Calendar","Click on Yes button");
 
 						ReportConfig.PassedLogInfo("User edit and save a crane request without dfow in Crane Calendar","Crane request updated");
 
@@ -1344,8 +1344,8 @@ public class F_13_CraneCalender extends Baseclass {
 
 					Wait(7000);
 					JsClick("ExpandRequest", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("User add a comment to a crane request in calendar settings","Expand button is clicked");
-					Print("Expand button is clicked");
+					ReportConfig.PassedLogInfo("User add a comment to a crane request in calendar settings","Click on Expand button");
+					Print("Click on Expand button");
 
 //					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 //							.withTimeout(Duration.ofSeconds(120))
@@ -1367,11 +1367,11 @@ public class F_13_CraneCalender extends Baseclass {
 
 						TypeDataInTheField("AddComment", CraneCalenderLocators, ReadFrom.Excel(Comments, 3, ReadFrom.AddCommentCraneCalendar));
 						Print("Comment is entered as : " + ReadFrom.Excel(Comments, 3, ReadFrom.AddCommentCraneCalendar));
-						ReportConfig.PassedLogInfo("User add a comment to a crane request in calendar settings","Description is entered as : " + ReadFrom.Excel(Comments, 3, ReadFrom.AddCommentCraneCalendar));
+						ReportConfig.PassedLogInfo("User add a comment to a crane request in calendar settings","Entered Description : " + ReadFrom.Excel(Comments, 3, ReadFrom.AddCommentCraneCalendar));
 
 						JsClick("SubmitButton", CraneCalenderLocators);
-						ReportConfig.PassedLogInfo("User add a comment to a crane request in calendar settings","Submit button is clicked");
-						Print("Submit button is clicked");
+						ReportConfig.PassedLogInfo("User add a comment to a crane request in calendar settings","Click on Submit button");
+						Print("Click on Submit button");
 
 //						Wait<WebDriver> fluentWait1111 = new FluentWait<WebDriver>(driver)
 //								.withTimeout(Duration.ofSeconds(120))
@@ -1476,8 +1476,8 @@ public class F_13_CraneCalender extends Baseclass {
 
 					Wait(7000);
 					JsClick("ExpandRequest", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("User add attachment to the crane calendar request","Expand button is clicked");
-					Print("Expand button is clicked");
+					ReportConfig.PassedLogInfo("User add attachment to the crane calendar request","Click on Expand button");
+					Print("Click on Expand button");
 
 //					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 //							.withTimeout(Duration.ofSeconds(120))
@@ -1540,8 +1540,8 @@ Wait(7000);
 							ReportConfig.PassedLogInfo("User add attachment to the crane request", "Attachment added successfully to the " + DeliveryName);
 
 							JsClick("ClosePopup", CraneCalenderLocators);
-							ReportConfig.PassedLogInfo("User add attachment to the crane request","Close popup button is clicked");
-							Print("Close popup button is clicked");
+							ReportConfig.PassedLogInfo("User add attachment to the crane request","Click on Close button");
+							Print("Click on Close button");
 
 							Wait(2000);
 							Clear("Search", CraneCalenderLocators);
@@ -1628,8 +1628,8 @@ Wait(7000);
 //					});
 					Wait(7000);
 					JsClick("ExpandRequest", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("User upload a invalid file in attachment in Crane Calendar","Expand button is clicked");
-					Print("Expand button is clicked");
+					ReportConfig.PassedLogInfo("User upload a invalid file in attachment in Crane Calendar","Click on Expand button");
+					Print("Click on Expand button");
 
 //					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 //							.withTimeout(Duration.ofSeconds(120))
@@ -1672,8 +1672,8 @@ Wait(7000);
 							ReportConfig.Givenlogpass("User upload a invalid file in attachment in Crane Calendar", "Error " );
 
 							JsClick("ClosePopup", CraneRequestLocators);
-							ReportConfig.PassedLogInfo("User upload a invalid file in attachment in Crane Calendar","Close popup button is clicked");
-							Print("Close popup button is clicked");
+							ReportConfig.PassedLogInfo("User upload a invalid file in attachment in Crane Calendar","Click on Close button");
+							Print("Click on Close button");
 
 							Wait(2000);
 							Clear("Search", CraneCalenderLocators);
@@ -1848,8 +1848,8 @@ Wait(7000);
 
 					Wait(2000);
 					Click("VoidYes", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("Push a crane request in calendar settings to void", "Yes button is clicked");
-					Print("Yes button is clicked");
+					ReportConfig.PassedLogInfo("Push a crane request in calendar settings to void", "Click on Yes button");
+					Print("Click on Yes button");
 
 //					Wait<WebDriver> fluentWait1111 = new FluentWait<WebDriver>(driver)
 //							.withTimeout(Duration.ofSeconds(120))
@@ -1947,8 +1947,8 @@ Wait(7000);
 //			});
 			Wait(7000);
 			JsClick("EditButton", CraneCalenderLocators);
-			ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Edit button is clicked");
-			Print("Edit button is clicked");
+			ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Click on Edit button");
+			Print("Click on Edit button");
 
 //			Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 //					.withTimeout(Duration.ofSeconds(120))
@@ -1969,15 +1969,15 @@ Wait(7000);
 
 			Clear("Description", CraneCalenderLocators);
 			TypeDataInTheField("Description", CraneCalenderLocators, ReadFrom.Excel(ApproveOrRejectCraneCalendar, 2, ReadFrom.ApproveOrRejectCraneCalendar));
-			Print("Description is entered as : " + ReadFrom.Excel(ApproveOrRejectCraneCalendar, 2, ReadFrom.ApproveOrRejectCraneCalendar));
-			ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Description is entered as : " + ReadFrom.Excel(ApproveOrRejectCraneCalendar, 2, ReadFrom.ApproveOrRejectCraneCalendar));
+			Print("Entered Description : " + ReadFrom.Excel(ApproveOrRejectCraneCalendar, 2, ReadFrom.ApproveOrRejectCraneCalendar));
+			ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Entered Description : " + ReadFrom.Excel(ApproveOrRejectCraneCalendar, 2, ReadFrom.ApproveOrRejectCraneCalendar));
 
 
 			MoveToElement("SubmitButton", CraneCalenderLocators);
 
 			Click("SubmitButton", CraneCalenderLocators);
-			ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Click on Submit button");
+			Print("Click on Submit button");
 
 //			Wait<WebDriver> fluentWait1111 = new FluentWait<WebDriver>(driver)
 //					.withTimeout(Duration.ofSeconds(120))
@@ -2057,8 +2057,8 @@ Wait(7000);
 //			});
 			Wait(7000);
 			JsClick("ExpandRequest", CraneCalenderLocators);
-			ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Expand button is clicked");
-			Print("Expand button is clicked");
+			ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Click on Expand button");
+			Print("Click on Expand button");
 
 
 //			new FluentWait<WebDriver>(driver)
@@ -2092,8 +2092,8 @@ Wait(7000);
 
 				Wait(2000);
 				JsClick("Save", CraneCalenderLocators);
-				ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Save button is clicked");
-				Print("Save button is clicked");
+				ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Click on Save button");
+				Print("Click on Save button");
 
 
 				String Status = ReadFrom.Excel(ApproveOrRejectCraneCalendar, 3, ReadFrom.ApproveOrRejectCraneCalendar);
@@ -2116,8 +2116,8 @@ Wait(7000);
 					Print("Delivery request is approved");
 					Wait(3000);
 					JsClick("ClosePopup", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Close popup button is clicked");
-					Print("Close popup button is clicked");
+					ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Click on Close button");
+					Print("Click on Close button");
 
 					Wait(2000);
 					Clear("Search", CraneCalenderLocators);
@@ -2142,8 +2142,8 @@ Wait(7000);
 					Print("Delivery request is declined");
 					Wait(3000);
 					JsClick("ClosePopup", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Close popup button is clicked");
-					Print("Close popup button is clicked");
+					ReportConfig.PassedLogInfo("User view and approve or reject the crane request","Click on Close button");
+					Print("Click on Close button");
 
 					Wait(2000);
 					Clear("Search", CraneCalenderLocators);
@@ -2227,8 +2227,8 @@ Wait(7000);
 //					});
 					Wait(7000);
 					JsClick("ExpandRequest", CraneCalenderLocators);
-					ReportConfig.PassedLogInfo("User complete the crane request","Expand button is clicked");
-					Print("Expand button is clicked");
+					ReportConfig.PassedLogInfo("User complete the crane request","Click on Expand button");
+					Print("Click on Expand button");
 
 //					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 //							.withTimeout(Duration.ofSeconds(120))
@@ -2245,16 +2245,16 @@ Wait(7000);
 				//	if(IsElementDisplayed("ViewDetails", CraneCalenderLocators)) {
 
 						JsClick("CompletedButton", CraneCalenderLocators);
-						ReportConfig.PassedLogInfo("User complete the crane request","Deliver button is clicked");
-						Print("Deliver button is clicked");
+						ReportConfig.PassedLogInfo("User complete the crane request","Click on Deliver button");
+						Print("Click on Deliver button");
 						Wait(2000);
 						JsClick("Save", CraneCalenderLocators);
-						ReportConfig.PassedLogInfo("User complete the crane request","Save button is clicked");
-						Print("Save button is clicked");
+						ReportConfig.PassedLogInfo("User complete the crane request","Click on Save button");
+						Print("Click on Save button");
 						Wait(2000);
 						JsClick("YesButton", CraneCalenderLocators);
-						ReportConfig.PassedLogInfo("User complete the crane request","Yes button is clicked");
-						Print("Yes button is clicked");
+						ReportConfig.PassedLogInfo("User complete the crane request","Click on Yes button");
+						Print("Click on Yes button");
 
 //						Wait<WebDriver> s = new FluentWait<WebDriver>(driver)
 //								.withTimeout(Duration.ofSeconds(120))
@@ -2275,8 +2275,8 @@ Wait(7000);
 						ReportConfig.PassedLogInfo("User complete the crane request",DeliveryName + " : is delivered successfully");
 
 						JsClick("ClosePopup", CraneCalenderLocators);
-						ReportConfig.PassedLogInfo("User complete the crane request","Close popup button is clicked");
-						Print("Close popup button is clicked");
+						ReportConfig.PassedLogInfo("User complete the crane request","Click on Close button");
+						Print("Click on Close button");
 
 						Wait(2000);
 						Clear("Search", CraneCalenderLocators);

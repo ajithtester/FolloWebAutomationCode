@@ -23,8 +23,8 @@ public class Follo_13_CraneCalender extends Baseclass {
 			Wait(2000);
 			Click("CraneCalendar", CraneCalenderLocators);
 
-			Print("Crane calendar button is clicked");
-			ReportConfig.Givenlogpass("User clicks Crane calendar button from the menu","Crane calendar button is clicked");
+			Print("Click on Crane calendar button");
+			ReportConfig.Givenlogpass("User clicks Crane calendar button from the menu","Click on Crane calendar button");
 
 		} 
 		catch (Exception e) {
@@ -49,8 +49,8 @@ public class Follo_13_CraneCalender extends Baseclass {
 
 			if(IsElementDisplayed("Calendar", CraneCalenderLocators)){
 
-				Print("Crane calendar page is displayed");
-				ReportConfig.Thenlogpass("Crane calendar page should display","Crane calendar page is displayed");
+				Print("Validate Crane calendar page");
+				ReportConfig.Thenlogpass("Crane calendar page should display","Validate Crane calendar page");
 
 			}
 		}
@@ -100,7 +100,7 @@ public class Follo_13_CraneCalender extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("To view a crane request");
 			F_13_CraneCalender.ViewCraneRequestInfo();		
-			ReportConfig.Givenlogpass("User view Crane request information", "Crane request info viewed successfully");
+		//	ReportConfig.Givenlogpass("User view Crane request information", "Crane request info viewed successfully");
 
 		} 
 		catch (Exception e) {
@@ -124,7 +124,7 @@ public class Follo_13_CraneCalender extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("To edit a crane request");
 			F_13_CraneCalender.EditCraneCalendar();		
-			ReportConfig.Givenlogpass("User edit a Crane request from the list", "Crane request edited successfully");
+		//	ReportConfig.Givenlogpass("User edit a Crane request from the list", "Crane request edited successfully");
 
 		} 
 		catch (Exception e) {
@@ -147,7 +147,7 @@ public class Follo_13_CraneCalender extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("To filter a crane request");
 			F_13_CraneCalender.FilterCraneCalendar();
-			ReportConfig.Givenlogpass("User filter the Crane request from the list", "Crane request filtered successfully");
+		//	ReportConfig.Givenlogpass("User filter the Crane request from the list", "Crane request filtered successfully");
 
 		} 
 		catch (Exception e) {
@@ -168,7 +168,7 @@ public class Follo_13_CraneCalender extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("User add a comment to a crane request ");
 			F_13_CraneCalender.AddComment();
-			ReportConfig.Givenlogpass("User add a comment to a crane request in calendar settings", "Comment added to Crane request successfully");
+		//	ReportConfig.Givenlogpass("User add a comment to a crane request in calendar settings", "Comment added to Crane request successfully");
 
 		} 
 		catch (Exception e) {
@@ -189,7 +189,7 @@ public class Follo_13_CraneCalender extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("User add a comment to a crane request ");
 			F_13_CraneCalender.Search();
-			ReportConfig.Givenlogpass("User search and view the crane request in calendar settings", "Crane request searched successfully");
+		//	ReportConfig.Givenlogpass("User search and view the crane request in calendar settings", "Crane request searched successfully");
 
 		} 
 		catch (Exception e) {
@@ -210,7 +210,7 @@ public class Follo_13_CraneCalender extends Baseclass {
 			
 			ReportConfig.ReportCreateScenarioTest("Push a crane request in calendar settings to void");
 			F_13_CraneCalender.PushToVoid();
-			ReportConfig.Givenlogpass("Push a crane request in calendar settings to void", "Crane request pushed to void successfully");
+		//	ReportConfig.Givenlogpass("Push a crane request in calendar settings to void", "Crane request pushed to void successfully");
 
 		} 
 		catch (Exception e) {
@@ -232,7 +232,7 @@ public class Follo_13_CraneCalender extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("User view and approve or reject the crane request");
 			F_13_CraneCalender.ApproveOrRejectCraneCalendar();
-			ReportConfig.Givenlogpass("User view and approve or reject the crane request", "Crane request approved or rejected successfully");
+		//	ReportConfig.Givenlogpass("User view and approve or reject the crane request", "Crane request approved or rejected successfully");
 
 		} 
 		catch (Exception e) {
@@ -255,7 +255,7 @@ public class Follo_13_CraneCalender extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("User complete the crane request");
 			F_13_CraneCalender.Complete();
-			ReportConfig.Givenlogpass("User complete the crane request", "Crane request marked completed successfully");
+		//	ReportConfig.Givenlogpass("User complete the crane request", "Crane request marked completed successfully");
 
 		} 
 		catch (Exception e) {
@@ -276,7 +276,7 @@ public class Follo_13_CraneCalender extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("User add attachment to the crane calendar request");
 			F_13_CraneCalender.AddAttcahment();
-			ReportConfig.Givenlogpass("User add attachment to the crane calendar request", "Attcahment added successfully");
+	//		ReportConfig.Givenlogpass("User add attachment to the crane calendar request", "Attcahment added successfully");
 
 		} 
 		catch (Exception e) {

@@ -21,8 +21,8 @@ public class Follo_11_QueuedRequest extends Baseclass{
 			if(IsElementDisplayed("QueuedDelivery", QueuedRequestLocators)) {
 
 				Click("QueuedDelivery", QueuedRequestLocators);
-				Print("Queued delivery button is clicked");
-				ReportConfig.Givenlogpass("User clicks queued requests button from the menu","Queued delivery button is clicked");
+				Print("Click on Queued delivery button");
+				ReportConfig.Givenlogpass("User clicks queued requests button from the menu","Click on Queued delivery button");
 			}
 		} 
 		catch (Exception e) {
@@ -56,7 +56,7 @@ public class Follo_11_QueuedRequest extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("Edit a queued request from the list");
 			F_11_QueuedRequest.EditQueuedRequest();
-			ReportConfig.Givenlogpass("User edit a queued request from the list","Queued delivery is edited successfully");
+		//	ReportConfig.Givenlogpass("User edit a queued request from the list","Queued delivery is edited successfully");
 		} 
 		catch (Exception e) {
 
@@ -76,7 +76,7 @@ public class Follo_11_QueuedRequest extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("Save a queued request from the list");
 			F_11_QueuedRequest.SaveQueuedRequest();
-			ReportConfig.Givenlogpass("User save a queued request from the list","Queued delivery is saved successfully");		
+		//	ReportConfig.Givenlogpass("User save a queued request from the list","Queued delivery is saved successfully");		
 		} 
 		catch (Exception e) {
 
@@ -99,7 +99,7 @@ public class Follo_11_QueuedRequest extends Baseclass{
 			ReportConfig.ReportCreateScenarioTest("Delete a queued request from the list");
 
 			F_11_QueuedRequest.DeleteRequest();
-			ReportConfig.Givenlogpass("User deletes a queued request from the list","Queued delivery is deleted successfully");		
+		//	ReportConfig.Givenlogpass("User deletes a queued request from the list","Queued delivery is deleted successfully");		
 
 
 
@@ -124,7 +124,7 @@ public class Follo_11_QueuedRequest extends Baseclass{
 			ReportConfig.ReportCreateScenarioTest("Search a queued request from the list");
 
 			F_11_QueuedRequest.SearchQueuedRequest();
-			ReportConfig.Givenlogpass("User search and view the queued request from the list","Queued delivery is searched successfully");		
+	//		ReportConfig.Givenlogpass("User search and view the queued request from the list","Queued delivery is searched successfully");		
 
 		} 
 		catch (Exception e) {
@@ -149,7 +149,7 @@ public class Follo_11_QueuedRequest extends Baseclass{
 			ReportConfig.ReportCreateScenarioTest("Filter a queued request from the list");
 
 			F_11_QueuedRequest.FilterQueuedRequest();
-			ReportConfig.Givenlogpass("User filter the queued request from the list","Queued delivery is filtered successfully");		
+		//	ReportConfig.Givenlogpass("User filter the queued request from the list","Queued delivery is filtered successfully");		
 
 		} 
 		catch (Exception e) {

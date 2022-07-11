@@ -224,7 +224,6 @@ public class Follo_03_DFOW extends Baseclass {
 
 			ReportConfig.ReportCreateScenarioTest("Search DFOW");
 			F_03_DFOW.SearchDFOW();
-			ReportConfig.Givenlogpass("User search the dfow", "DFOW are searched successfully");
 
 		} catch (Exception e) {
 			ReportConfig.Givenlogfail("User search the dfow", "DFOW search failed because : " + e.getMessage());

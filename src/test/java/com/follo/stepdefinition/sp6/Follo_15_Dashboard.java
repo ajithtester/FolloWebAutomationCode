@@ -26,8 +26,8 @@ public class Follo_15_Dashboard extends Baseclass {
 			if(IsElementDisplayed("Dashboard", DashboardLocators)) {
 
 				JsClick("Dashboard", DashboardLocators);
-				Print("Dashboard button is clicked");
-				ReportConfig.Givenlogpass("User clicks dashboard","Dashboard button is clicked");
+				Print("Click on Dashboard button");
+				ReportConfig.Givenlogpass("User clicks dashboard","Click on Dashboard button");
 			}
 		} 
 		catch (Exception e) {
@@ -99,8 +99,8 @@ public class Follo_15_Dashboard extends Baseclass {
 			if(IsElementDisplayed("Dashboard", DashboardLocators)) {
 
 				JsClick("Dashboard", DashboardLocators);
-				Print("Dashboard button is clicked");
-				ReportConfig.Givenlogpass("User clicks dashboard from deliver request page","Dashboard button is clicked");
+				Print("Click on Dashboard button");
+				ReportConfig.Givenlogpass("User clicks dashboard from deliver request page","Click on Dashboard button");
 			}
 		} 
 		catch (Exception e) {
@@ -175,8 +175,8 @@ public class Follo_15_Dashboard extends Baseclass {
 			if(IsElementDisplayed("Dashboard", DashboardLocators)) {
 
 				JsClick("Dashboard", DashboardLocators);
-				Print("Dashboard button is clicked");
-				ReportConfig.Givenlogpass("User clicks dashboard from companies page","Dashboard button is clicked");
+				Print("Click on Dashboard button");
+				ReportConfig.Givenlogpass("User clicks dashboard from companies page","Click on Dashboard button");
 			}
 		} 
 		catch (Exception e) {
@@ -252,8 +252,8 @@ public class Follo_15_Dashboard extends Baseclass {
 			if(IsElementDisplayed("Dashboard", DashboardLocators)) {
 
 				JsClick("Dashboard", DashboardLocators);
-				Print("Dashboard button is clicked");
-				ReportConfig.Givenlogpass("User clicks dashboard from Member page","Dashboard button is clicked");
+				Print("Click on Dashboard button");
+				ReportConfig.Givenlogpass("User clicks dashboard from Member page","Click on Dashboard button");
 			}
 		} 
 		catch (Exception e) {
@@ -325,8 +325,8 @@ public class Follo_15_Dashboard extends Baseclass {
 			if(IsElementDisplayed("Dashboard", DashboardLocators)) {
 
 				JsClick("Dashboard", DashboardLocators);
-				Print("Dashboard button is clicked");
-				ReportConfig.Givenlogpass("User clicks dashboard","Dashboard button is clicked");
+				Print("Click on Dashboard button");
+				ReportConfig.Givenlogpass("User clicks dashboard","Click on Dashboard button");
 			}
 		} 
 		catch (Exception e) {
@@ -553,7 +553,7 @@ public class Follo_15_Dashboard extends Baseclass {
 			Wait(2000);
 
 			F_15_Dashboard.AddCompany();
-			ReportConfig.Givenlogpass("User adds a Company to the list","Company added successsfully");
+		//	ReportConfig.Givenlogpass("User adds a Company to the list","Company added successsfully");
 
 		} 
 
@@ -583,7 +583,7 @@ public class Follo_15_Dashboard extends Baseclass {
 			F_15_Dashboard.SelectCompany();
 			Wait(2000);
 			Click("SendInvitesButton", DashboardLocators);
-			ReportConfig.Givenlogpass("User adds a members to the list","Members added successsfully");
+		//	ReportConfig.Givenlogpass("User adds a members to the list","Members added successsfully");
 
 		} 
 
@@ -608,7 +608,7 @@ public class Follo_15_Dashboard extends Baseclass {
 			Wait(2000);
 
 			F_15_Dashboard.AddEquipment();
-			ReportConfig.Givenlogpass("User adds a Company to the list","Equipment added successsfully");
+		//	ReportConfig.Givenlogpass("User adds a Company to the list","Equipment added successsfully");
 
 		} 
 
@@ -684,7 +684,7 @@ public class Follo_15_Dashboard extends Baseclass {
 			JsClick("NoOfCompanies", DashboardLocators);
 			Wait(2000);
 			F_15_Dashboard.DeleteCompany();
-			ReportConfig.Givenlogpass("User deletes a Company from the list","Company deleted successsfully");
+		//	ReportConfig.Givenlogpass("User deletes a Company from the list","Company deleted successsfully");
 
 		} 
 
@@ -756,7 +756,7 @@ public class Follo_15_Dashboard extends Baseclass {
 			JsClick("NoOfMembers", DashboardLocators);
 			Wait(2000);
 			F_15_Dashboard.DeleteMembers();
-			ReportConfig.Givenlogpass("User deletes a member from the list","Members deleted successsfully");
+	//		ReportConfig.Givenlogpass("User deletes a member from the list","Members deleted successsfully");
 
 		} 
 
@@ -821,7 +821,7 @@ public class Follo_15_Dashboard extends Baseclass {
 			JsClick("NoOfEquipments", DashboardLocators);
 			Wait(2000);
 			F_15_Dashboard.DeleteEquipment();
-			ReportConfig.Givenlogpass("User deletes a equipment from the list","Equipment deleted successsfully");
+	//		ReportConfig.Givenlogpass("User deletes a equipment from the list","Equipment deleted successsfully");
 
 		} 
 

@@ -21,8 +21,8 @@ public class Follo_04_Companies extends Baseclass {
 			if(IsElementDisplayed("Companies", CompaniesLocators)) {
 
 				Click("Companies", CompaniesLocators);
-				Print("Companies button is clicked");
-				ReportConfig.Givenlogpass("User clicks Company button","Companies button is clicked");
+				Print("Click on Companies button ");
+				ReportConfig.Givenlogpass("User clicks Company button","Click on Companies button");
 			}
 		} 
 
@@ -37,20 +37,20 @@ public class Follo_04_Companies extends Baseclass {
 		}
 	}
 
-	@Given("User add new  new companies")
+	@Given("User add new companies")
 	public void user_add_new_new_companies() throws Throwable {
 
 		try {
 			ReportConfig.ReportCreateScenarioTest("To add new companies");
 
 			F_04_Companies.AddDCompany();
-			ReportConfig.Givenlogpass("User add new  new companies","Companies are added");
+			ReportConfig.Givenlogpass("User add new companies","Validate Companies Page");
 		} 
 
 		catch (Exception e) {
 
 			PrintError(e.getMessage());
-			ReportConfig.Givenlogfail("User add new  new companies","Companies are not added because : " + e.getMessage());
+			ReportConfig.Givenlogfail("User add new companies","Companies are not added because : " + e.getMessage());
 			
 			String IssueSummary = e.getMessage() ;
 			String Storydescription = "Companies are not added" ;
@@ -66,7 +66,7 @@ public class Follo_04_Companies extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("Search Company");
 			F_04_Companies.SearchCompany();
-			ReportConfig.Givenlogpass("User search and view the company","Company Searched successsfully");
+		//	ReportConfig.Givenlogpass("User search and view the company","Company Searched successsfully");
 		} 
 
 		catch (Exception e) {
@@ -89,7 +89,7 @@ public class Follo_04_Companies extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("Filter Company");
 			F_04_Companies.FilterCompany();
-			ReportConfig.Givenlogpass("User search and filter the company","Company filtered successsfully");
+		//	ReportConfig.Givenlogpass("User search and filter the company","Company filtered successsfully");
 		} 
 
 		catch (Exception e) {
@@ -112,7 +112,7 @@ public class Follo_04_Companies extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("Edit Company");
 			F_04_Companies.EditCompany();
-			ReportConfig.Givenlogpass("User edits a Company from the list","Company edited successsfully");
+		//	ReportConfig.Givenlogpass("User edits a Company from the list","Company edited successsfully");
 		} 
 
 		catch (Exception e) {
@@ -131,7 +131,7 @@ public class Follo_04_Companies extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("Delete Company");
 			F_04_Companies.DeleteCompany();
-			ReportConfig.Givenlogpass("User deletes a Company from the list","Company deleted successsfully");
+		//	ReportConfig.Givenlogpass("User deletes a Company from the list","Company deleted successsfully");
 
 		} 
 
@@ -239,9 +239,9 @@ public class Follo_04_Companies extends Baseclass {
 
 			if(IsElementDisplayed("ImportMultiple", CompaniesLocators)) {
 				Click("ImportMultiple", CompaniesLocators);
-				ReportConfig.Givenlogpass("User clicks import multiple button","Import button is clicked");
+				ReportConfig.Givenlogpass("User clicks import multiple button","Click on Import button");
 
-				Print("Import button is clicked");
+				Print("Click on Import button");
 			}
 		} catch (Exception e) {
 			PrintError("Import button is not clicked");
@@ -265,7 +265,7 @@ public class Follo_04_Companies extends Baseclass {
 			if(IsElementDisplayed("BrowseFiles", DFOWLocators)) {
 
 			//	Print(ReadFrom.UploadCompanyFile);
-				ReportConfig.Andlogpass("User clicks browse files to upload company list","Browse File button is clicked");
+				ReportConfig.Andlogpass("User clicks browse files to upload company list","Click on Browse File button");
 
 
 			}
@@ -314,10 +314,10 @@ public class Follo_04_Companies extends Baseclass {
 			Wait(2000);
 			if(IsElementDisplayed("DoneButton", DFOWLocators)){
 				Click("DoneButton", DFOWLocators);
-				ReportConfig.Andlogpass("User clicks the done button to upload company list","Done button is clicked");
+				ReportConfig.Andlogpass("User clicks the done button to upload company list","Click on done button");
 
 
-				Print("Done button is clicked");
+				Print("Click on done button");
 				ClickPageDown();
 			}
 		} catch (Exception e) {

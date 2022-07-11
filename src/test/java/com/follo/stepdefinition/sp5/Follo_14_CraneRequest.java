@@ -25,16 +25,16 @@ public class Follo_14_CraneRequest extends Baseclass{
 				JsClick("AllRequest", DeliveryRequestLocators);
 				Wait(2000);
 				ClickPageDown();
-				Print("All request button is clicked");
-				ReportConfig.Givenlogpass("User clicks All requests button from the menu","All request button is clicked");
+				Print("Click on All request button");
+				ReportConfig.Givenlogpass("User clicks All requests button from the menu","Click on All request button");
 			}
 		} 
 		catch (Exception e) {
 			PrintError("All request button is not clicked");
-			ReportConfig.Givenlogfail("User clicks All requests button from the menu","All request button is clicked because : " + e.getMessage());
+			ReportConfig.Givenlogfail("User clicks All requests button from the menu","Click on All request button because : " + e.getMessage());
 		
 			String IssueSummary = e.getMessage() ;
-			String Storydescription = "All request button is clicked" ;
+			String Storydescription = "Click on All request button" ;
 			pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary);
 			
 		}	    
@@ -50,8 +50,8 @@ public class Follo_14_CraneRequest extends Baseclass{
 			if(IsElementDisplayed("CraneRequest", CraneRequestLocators)) {
 				Print("Crane request button is displayed");
 				Click("CraneRequest", CraneRequestLocators);
-				Print("Crane request button is clicked");
-				ReportConfig.Givenlogpass("User clicks Crane requests button from the menu","Crane request button is clicked");
+				Print("Click on Crane request button");
+				ReportConfig.Givenlogpass("User clicks Crane requests button from the menu","Click on Crane request button");
 
 			}
 		} 
@@ -77,7 +77,7 @@ public class Follo_14_CraneRequest extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("To add new Crane request");
 			F_14_CraneRequest.AddCraneRequest();	
-			ReportConfig.Givenlogpass("User add new Crane request","New crane request is added");
+		//	ReportConfig.Givenlogpass("User add new Crane request","New crane request is added");
 
 
 
@@ -101,7 +101,7 @@ public class Follo_14_CraneRequest extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("To view Crane request");
 			F_14_CraneRequest.ViewCraneRequestInfo();	
-			ReportConfig.Givenlogpass("User view the Crane request information","Crane request info is viewed");
+		//	ReportConfig.Givenlogpass("User view the Crane request information","Crane request info is viewed");
 
 
 
@@ -124,7 +124,7 @@ public class Follo_14_CraneRequest extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("To edit Crane request");
 			F_14_CraneRequest.EditCraneRequest();
-			ReportConfig.Givenlogpass("User edit a crane request from the list","Crane request edit is successfull");
+		//	ReportConfig.Givenlogpass("User edit a crane request from the list","Crane request edit is successfull");
 
 
 
@@ -147,7 +147,7 @@ public class Follo_14_CraneRequest extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("To filter Crane request");
 			F_14_CraneRequest.FilterCraneRequest();	
-			ReportConfig.Givenlogpass("User filter crane request from the list","Crane request filter is successfull");
+		//	ReportConfig.Givenlogpass("User filter crane request from the list","Crane request filter is successfull");
 
 
 		} 
@@ -170,7 +170,7 @@ public class Follo_14_CraneRequest extends Baseclass{
 			ReportConfig.ReportCreateScenarioTest("To search Crane request");
 
 			F_14_CraneRequest.SearchCraneRequest();	
-			ReportConfig.Givenlogpass("User search and view the crane request from the list","Crane request search is successfull");
+		//	ReportConfig.Givenlogpass("User search and view the crane request from the list","Crane request search is successfull");
 
 		} 
 		catch (Exception e) {
@@ -191,7 +191,7 @@ public class Follo_14_CraneRequest extends Baseclass{
 			ReportConfig.ReportCreateScenarioTest("To push a crane request to void");
 
 			F_14_CraneRequest.CranePushToVoid();
-			ReportConfig.Givenlogpass("User push a crane request to void","Crane request is pushed to void successfully");
+		//	ReportConfig.Givenlogpass("User push a crane request to void","Crane request is pushed to void successfully");
 
 
 
@@ -213,7 +213,7 @@ public class Follo_14_CraneRequest extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("To complete the request");
 			F_14_CraneRequest.CompleteRequest();	
-			ReportConfig.Givenlogpass("User complete the request","Crane request is marked complete successfully");
+		//	ReportConfig.Givenlogpass("User complete the request","Crane request is marked complete successfully");
 
 
 
@@ -236,7 +236,7 @@ public class Follo_14_CraneRequest extends Baseclass{
 
 			ReportConfig.ReportCreateScenarioTest("User view and approve or reject the crane request");
 			F_14_CraneRequest.CraneApproveReject();	
-			ReportConfig.Givenlogpass("User approve or reject the crane request","Crane request is approved or rejected successfully");
+		//	ReportConfig.Givenlogpass("User approve or reject the crane request","Crane request is approved or rejected successfully");
 
 		} 
 		catch (Exception e) {
@@ -257,7 +257,7 @@ public class Follo_14_CraneRequest extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("To add a comment to a crane request");
 			F_14_CraneRequest.Comment();	
-			ReportConfig.Givenlogpass("User add a comment to a crane request","Comment added successfully");
+	//		ReportConfig.Givenlogpass("User add a comment to a crane request","Comment added successfully");
 
 
 		} 
@@ -279,7 +279,7 @@ public class Follo_14_CraneRequest extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("User add attachment to the crane request");
 			F_14_CraneRequest.Attachment();	
-			ReportConfig.Givenlogpass("User add attachment to the crane request","Attachment added successfully");
+		//	ReportConfig.Givenlogpass("User add attachment to the crane request","Attachment added successfully");
 
 
 		} 
@@ -303,7 +303,7 @@ public class Follo_14_CraneRequest extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("User view the history of the crane request");
 			F_14_CraneRequest.ViewHistoryInfo();	
-			ReportConfig.Givenlogpass("User view the history of the crane request","History viewed successfully");
+	//		ReportConfig.Givenlogpass("User view the history of the crane request","History viewed successfully");
 
 
 		} 

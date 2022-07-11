@@ -33,7 +33,6 @@ public class F_11_QueuedRequest extends Baseclass {
 			for(int DeliveryLists =1; DeliveryLists<=rowcount; DeliveryLists++)		{
 
 				Wait(3000);
-				Print("came in" + DeliveryLists);
 				WebElement Delivery =	FindElement("DeliveryRequestList", QueuedRequestLocators, DeliveryLists);
 
 				String DeliveryName = 	GetTextFromTheElement(Delivery);
@@ -46,8 +45,8 @@ public class F_11_QueuedRequest extends Baseclass {
 					WebElement EditButton =	FindElement("EditQueuedRequest", QueuedRequestLocators, DeliveryLists);
 					Print("edit button " + EditButton);
 					JsClick(EditButton);
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","Edit button is clicked");
-					Print("Edit button is clicked");
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Click on Edit button");
+					Print("Click on Edit button");
 
 					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -66,16 +65,16 @@ public class F_11_QueuedRequest extends Baseclass {
 
 					Clear("Description", QueuedRequestLocators);
 					TypeDataInTheField("Description", QueuedRequestLocators, ReadFrom.Excel(EditQueuedRequest, 1, ReadFrom.EditQueuedRequest));
-					Print("Description is entered as : " + ReadFrom.Excel(EditQueuedRequest, 1, ReadFrom.EditQueuedRequest));
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","Description is entered as : " + ReadFrom.Excel(EditQueuedRequest, 1, ReadFrom.EditQueuedRequest));
+					Print("Entered Description : " + ReadFrom.Excel(EditQueuedRequest, 1, ReadFrom.EditQueuedRequest));
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Entered Description : " + ReadFrom.Excel(EditQueuedRequest, 1, ReadFrom.EditQueuedRequest));
 
 					SelectFromVisibleText("GateDropdown", QueuedRequestLocators, ReadFrom.Excel(EditQueuedRequest, 2, ReadFrom.EditQueuedRequest));
-					Print("Gate dropdown is selected as : " + ReadFrom.Excel(EditQueuedRequest, 2, ReadFrom.EditQueuedRequest));
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","Gate dropdown is selected as : " + ReadFrom.Excel(EditQueuedRequest, 2, ReadFrom.EditQueuedRequest));
+					Print("Selected Gate dropdown : " + ReadFrom.Excel(EditQueuedRequest, 2, ReadFrom.EditQueuedRequest));
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Selected Gate dropdown : " + ReadFrom.Excel(EditQueuedRequest, 2, ReadFrom.EditQueuedRequest));
 
 					SelectFromVisibleText("EquipmentDropdown", QueuedRequestLocators, ReadFrom.Excel(EditQueuedRequest, 3, ReadFrom.EditQueuedRequest));
-					Print("Equipment dropdown is selected as : " + ReadFrom.Excel(EditQueuedRequest, 3, ReadFrom.EditQueuedRequest));
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","Equipment dropdown is selected as : " + ReadFrom.Excel(EditQueuedRequest, 3, ReadFrom.EditQueuedRequest));
+					Print("Selected Equipment dropdown : " + ReadFrom.Excel(EditQueuedRequest, 3, ReadFrom.EditQueuedRequest));
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Selected Equipment dropdown : " + ReadFrom.Excel(EditQueuedRequest, 3, ReadFrom.EditQueuedRequest));
 
 					Wait(2000);
 
@@ -84,14 +83,14 @@ public class F_11_QueuedRequest extends Baseclass {
 
 							Clear("PickingFrom", QueuedRequestLocators);
 							TypeDataInTheField("PickingFrom", QueuedRequestLocators, ReadFrom.Excel(EditQueuedRequest, 17, ReadFrom.EditQueuedRequest));
-							Print("Picking from is entered as : " + ReadFrom.Excel(EditQueuedRequest, 17, ReadFrom.EditQueuedRequest));
-							ReportConfig.PassedLogInfo("User edit a queued request from the list","Picking from is entered as : " + ReadFrom.Excel(EditQueuedRequest, 17, ReadFrom.EditQueuedRequest));
+							Print("Entered Picking from : " + ReadFrom.Excel(EditQueuedRequest, 17, ReadFrom.EditQueuedRequest));
+							ReportConfig.PassedLogInfo("User edit a queued request from the list","Entered Picking from : " + ReadFrom.Excel(EditQueuedRequest, 17, ReadFrom.EditQueuedRequest));
 
 							Wait(2000);
 							Clear("PickingTo", QueuedRequestLocators);
 							TypeDataInTheField("PickingTo", QueuedRequestLocators, ReadFrom.Excel(EditQueuedRequest, 18, ReadFrom.EditQueuedRequest));
-							Print("Picking to is entered as : " + ReadFrom.Excel(EditQueuedRequest, 18, ReadFrom.EditQueuedRequest));
-							ReportConfig.PassedLogInfo("User edit a queued request from the list","Picking to is entered as : " + ReadFrom.Excel(EditQueuedRequest, 18, ReadFrom.EditQueuedRequest));
+							Print("Entered Picking to : " + ReadFrom.Excel(EditQueuedRequest, 18, ReadFrom.EditQueuedRequest));
+							ReportConfig.PassedLogInfo("User edit a queued request from the list","Entered Picking to : " + ReadFrom.Excel(EditQueuedRequest, 18, ReadFrom.EditQueuedRequest));
 
 						}
 
@@ -107,13 +106,13 @@ public class F_11_QueuedRequest extends Baseclass {
 					MoveToElement("AdditionalText", QueuedRequestLocators);
 					Clear("AdditionalText", QueuedRequestLocators);
 					TypeDataInTheField("AdditionalText", QueuedRequestLocators, ReadFrom.Excel(EditQueuedRequest, 4, ReadFrom.EditQueuedRequest));
-					Print("Additional text is entered as : " + ReadFrom.Excel(EditQueuedRequest, 4, ReadFrom.EditQueuedRequest));
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","Additional text is entered as : " + ReadFrom.Excel(EditQueuedRequest, 4, ReadFrom.EditQueuedRequest));
+					Print("Entered Additional text : " + ReadFrom.Excel(EditQueuedRequest, 4, ReadFrom.EditQueuedRequest));
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Entered Additional text : " + ReadFrom.Excel(EditQueuedRequest, 4, ReadFrom.EditQueuedRequest));
 
 					Clear("VehicleDetails", QueuedRequestLocators);
 					TypeDataInTheField("VehicleDetails", QueuedRequestLocators, ReadFrom.Excel(EditQueuedRequest, 5, ReadFrom.EditQueuedRequest));
-					Print("Vehicle details is entered as : " + ReadFrom.Excel(EditQueuedRequest, 5, ReadFrom.EditQueuedRequest));
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","Vehicle details is entered as : " + ReadFrom.Excel(EditQueuedRequest, 5, ReadFrom.EditQueuedRequest));
+					Print("Entered Vehicle details : " + ReadFrom.Excel(EditQueuedRequest, 5, ReadFrom.EditQueuedRequest));
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Entered Vehicle details : " + ReadFrom.Excel(EditQueuedRequest, 5, ReadFrom.EditQueuedRequest));
 
 
 					Click("DeliveryDate", QueuedRequestLocators);
@@ -214,7 +213,7 @@ public class F_11_QueuedRequest extends Baseclass {
 					JsClick("DfowEdit", QueuedRequestLocators);
 
 
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","Dfow dropdown is clicked");
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Click on Dfow dropdown");
 
 					Click("SelectAll", QueuedRequestLocators);
 					Wait(2000);
@@ -251,8 +250,8 @@ public class F_11_QueuedRequest extends Baseclass {
 					JsClick("CompanyEdit", QueuedRequestLocators);
 					//Click("Company", QueuedRequestLocators);
 
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","Company dropdown is clicked");
-					Print("Company dropdown is clicked");
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Click on Company dropdown");
+					Print("Click on Company dropdown");
 
 					Click("UnselectAll", QueuedRequestLocators);
 					Wait(2000);
@@ -286,14 +285,14 @@ public class F_11_QueuedRequest extends Baseclass {
 					Wait(2000);
 					Clear("FromHrs", QueuedRequestLocators);
 					TypeDataInTheField("FromHrs", QueuedRequestLocators, ReadFrom.Excel(EditQueuedRequest, 11, ReadFrom.EditQueuedRequest));
-					Print("From hrs is entered as : " + ReadFrom.Excel(EditQueuedRequest, 11, ReadFrom.EditQueuedRequest));
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","From hrs is entered as : " + ReadFrom.Excel(EditQueuedRequest, 11, ReadFrom.EditQueuedRequest));
+					Print("Entered From hrs : " + ReadFrom.Excel(EditQueuedRequest, 11, ReadFrom.EditQueuedRequest));
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Entered From hrs : " + ReadFrom.Excel(EditQueuedRequest, 11, ReadFrom.EditQueuedRequest));
 
 					Wait(2000);
 					Clear("FromMin", QueuedRequestLocators);
 					TypeDataInTheField("FromMin", QueuedRequestLocators, ReadFrom.Excel(EditQueuedRequest, 12, ReadFrom.EditQueuedRequest));
-					Print("From min is entered as : " + ReadFrom.Excel(EditQueuedRequest, 12, ReadFrom.EditQueuedRequest));
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","From min is entered as : " + ReadFrom.Excel(EditQueuedRequest, 12, ReadFrom.EditQueuedRequest));
+					Print("Entered From min : " + ReadFrom.Excel(EditQueuedRequest, 12, ReadFrom.EditQueuedRequest));
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Entered From min : " + ReadFrom.Excel(EditQueuedRequest, 12, ReadFrom.EditQueuedRequest));
 
 					Wait(2000);
 					String ExcelMeridian = ReadFrom.Excel(EditQueuedRequest, 13, ReadFrom.EditQueuedRequest);
@@ -312,14 +311,14 @@ public class F_11_QueuedRequest extends Baseclass {
 					Wait(2000);
 					Clear("ToHrs", QueuedRequestLocators);
 					TypeDataInTheField("ToHrs", QueuedRequestLocators, ReadFrom.Excel(EditQueuedRequest, 14, ReadFrom.EditQueuedRequest));
-					Print("To hrs is entered as : " + ReadFrom.Excel(EditQueuedRequest, 14, ReadFrom.EditQueuedRequest));
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","To hrs is entered as : " + ReadFrom.Excel(EditQueuedRequest, 14, ReadFrom.EditQueuedRequest));
+					Print("Entered To hrs : " + ReadFrom.Excel(EditQueuedRequest, 14, ReadFrom.EditQueuedRequest));
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Entered To hrs : " + ReadFrom.Excel(EditQueuedRequest, 14, ReadFrom.EditQueuedRequest));
 
 					Wait(2000);
 					Clear("ToMin", QueuedRequestLocators);
 					TypeDataInTheField("ToMin", QueuedRequestLocators, ReadFrom.Excel(EditQueuedRequest, 15, ReadFrom.EditQueuedRequest));
-					Print("To min is entered as : " + ReadFrom.Excel(EditQueuedRequest, 15, ReadFrom.EditQueuedRequest));
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","To min is entered as : " + ReadFrom.Excel(EditQueuedRequest, 15, ReadFrom.EditQueuedRequest));
+					Print("Entered To min : " + ReadFrom.Excel(EditQueuedRequest, 15, ReadFrom.EditQueuedRequest));
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Entered To min : " + ReadFrom.Excel(EditQueuedRequest, 15, ReadFrom.EditQueuedRequest));
 
 					Wait(2000);
 					String ExcelMeridian1 = ReadFrom.Excel(EditQueuedRequest, 16, ReadFrom.EditQueuedRequest);
@@ -336,8 +335,8 @@ public class F_11_QueuedRequest extends Baseclass {
 					MoveToElement("SubmitButton", QueuedRequestLocators);
 
 					Click("SubmitButton", QueuedRequestLocators);
-					ReportConfig.PassedLogInfo("User edit a queued request from the list","Submit button is clicked");
-					Print("Submit button is clicked");
+					ReportConfig.PassedLogInfo("User edit a queued request from the list","Click on Submit button");
+					Print("Click on Submit button");
 
 					Wait<WebDriver> fluentWait1111 = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -394,14 +393,14 @@ public class F_11_QueuedRequest extends Baseclass {
 					WebElement Delete =	FindElement("DeleteRequestList" ,QueuedRequestLocators, List);
 					Click(Delete);
 
-					ReportConfig.PassedLogInfo("User deletes a queued request from the list","Delete button is clicked");
-					Print("Delete button is clicked");
+					ReportConfig.PassedLogInfo("User deletes a queued request from the list","Click on Delete button");
+					Print("Click on Delete button");
 
 					Wait(2000);
 
 					Click("YesDelete", QueuedRequestLocators);
-					ReportConfig.PassedLogInfo("User deletes a queued request from the list","Yes delete button is clicked");
-					Print("Yes delete button is clicked");
+					ReportConfig.PassedLogInfo("User deletes a queued request from the list","Yes Click on Delete button");
+					Print("Yes Click on Delete button");
 
 					Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -488,7 +487,7 @@ public class F_11_QueuedRequest extends Baseclass {
 			Clear("Search", QueuedRequestLocators);
 			Wait(3000);
 			Click("CloseSearch", QueuedRequestLocators);
-			ReportConfig.PassedLogInfo("User search and view the queued request from the list","Clear search button is clicked");
+			ReportConfig.PassedLogInfo("User search and view the queued request from the list","Click on Clear search button");
 			Wait(3000);
 			//	Clear("SearchQueuedRequest", QueuedRequestLocators);
 
@@ -502,8 +501,8 @@ public class F_11_QueuedRequest extends Baseclass {
 
 		for(int Filter =1; Filter<=ReadFrom.rowcount; Filter++)	{
 			Click("FilterIcon", QueuedRequestLocators);
-			ReportConfig.PassedLogInfo("User filter the queued request from the list","Filter icon is clicked");
-			Print("Filter icon is clicked");
+			ReportConfig.PassedLogInfo("User filter the queued request from the list","Click on Filter icon button");
+			Print("Click on Filter icon button");
 			Wait(3000);
 			Print(	ReadFrom.Excel(Filter, 0, ReadFrom.FilterQueuedRequest));
 			Print("Value selected from the dropdown is : " + ReadFrom.Excel(Filter, 0, ReadFrom.FilterQueuedRequest));
@@ -513,14 +512,12 @@ public class F_11_QueuedRequest extends Baseclass {
 			Print("Value selected from the dropdown is : " + ReadFrom.Excel(Filter, 0, ReadFrom.FilterQueuedRequest));
 
 			Click("FilterApply", QueuedRequestLocators);
-			ReportConfig.PassedLogInfo("User filter the queued request from the list","Filter apply button is clicked");
-			Print("Filter apply button is clicked");
+			ReportConfig.PassedLogInfo("User filter the queued request from the list","Click on Filter apply button");
+			Print("Click on Filter apply button");
 			Wait(3000);
 
 
 			int rowcount = 	SizeOfTheList("DeliveryRequestLists", QueuedRequestLocators);
-			Print("No of request displayed : " + rowcount);
-
 
 			for(int QueuedRequest =1; QueuedRequest<=rowcount; QueuedRequest++)	{
 
@@ -553,8 +550,8 @@ public class F_11_QueuedRequest extends Baseclass {
 
 			Wait(3000);
 			JsClick("FilterReset", QueuedRequestLocators);
-			ReportConfig.PassedLogInfo("User filter the queued request from the list","Filter reset button is clicked");
-			Print("Filter reset button is clicked");
+			ReportConfig.PassedLogInfo("User filter the queued request from the list","Click on Filter reset button");
+			Print("Click on Filter reset button");
 
 			Wait(3000);
 
@@ -583,10 +580,9 @@ public class F_11_QueuedRequest extends Baseclass {
 				if(IsEqual(DeliveryName, EditIt)) {
 
 					WebElement EditButton =	FindElement("EditQueuedRequest", QueuedRequestLocators, DeliveryLists);
-					Print("edit button " + EditButton);
 					JsClick(EditButton);
-					ReportConfig.PassedLogInfo("User save a queued request from the list","Edit button is clicked");
-					Print("Edit button is clicked");
+					ReportConfig.PassedLogInfo("User save a queued request from the list","Click on Edit button");
+					Print("Click on Edit button");
 
 					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -605,16 +601,16 @@ public class F_11_QueuedRequest extends Baseclass {
 
 					Clear("Description", QueuedRequestLocators);
 					TypeDataInTheField("Description", QueuedRequestLocators, ReadFrom.Excel(SaveQueuedRequest, 1, ReadFrom.SaveQueuedRequest));
-					Print("Description is entered as : " + ReadFrom.Excel(SaveQueuedRequest, 1, ReadFrom.SaveQueuedRequest));
-					ReportConfig.PassedLogInfo("User save a queued request from the list","Description is entered as : " + ReadFrom.Excel(SaveQueuedRequest, 1, ReadFrom.SaveQueuedRequest));
+					Print("Entered Description : " + ReadFrom.Excel(SaveQueuedRequest, 1, ReadFrom.SaveQueuedRequest));
+					ReportConfig.PassedLogInfo("User save a queued request from the list","Entered Description : " + ReadFrom.Excel(SaveQueuedRequest, 1, ReadFrom.SaveQueuedRequest));
 
 					/////////////////////////////////////
 
 					MoveToElement("SaveButton", QueuedRequestLocators);
 
 					Click("SaveButton", QueuedRequestLocators);
-					ReportConfig.PassedLogInfo("User save a queued request from the list","Save button is clicked");
-					Print("Save button is clicked");
+					ReportConfig.PassedLogInfo("User save a queued request from the list","Click on Save button");
+					Print("Click on Save button");
 
 					Wait<WebDriver> fluentWait1111 = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -678,8 +674,8 @@ public class F_11_QueuedRequest extends Baseclass {
 		Wait(1000);
 		String InvalidFileAlert =	GetText("InvalidFileAlert", QueuedRequestLocators);
 
-		Print("Invalid Image upload alert : " + InvalidFileAlert);
-		ReportConfig.Givenlogpass("User uploads invalid file in QueuedRequest" ,"Invalid Image upload alert: " + InvalidFileAlert);
+		Print("Please upload valid image format. : " + InvalidFileAlert);
+		ReportConfig.Givenlogpass("User uploads invalid file in QueuedRequest" ,"Please upload valid image format.: " + InvalidFileAlert);
 		Click("InvalidFileAlert", QueuedRequestLocators);
 		Wait(4000);
 

@@ -21,8 +21,8 @@ public class Follo_06_Gate extends Baseclass{
 			if(IsElementDisplayed("GatesButton", GateLocators)){
 				Print("Gates button is displayed");
 				Click("GatesButton", GateLocators);
-				Print("Gates button is clicked");
-				ReportConfig.Givenlogpass("User clicks gate button","Gates button is clicked");
+				Print("Click on Gates button");
+				ReportConfig.Givenlogpass("User clicks gate button","Click on Gates button");
 			
 
 			}
@@ -48,7 +48,7 @@ public class Follo_06_Gate extends Baseclass{
 			ReportConfig.ReportCreateScenarioTest("To add gates");
 
 			F_06_Gate.AddGate();
-			ReportConfig.Givenlogpass("User adds new gate","Gates are added successfully");
+		//	ReportConfig.Givenlogpass("User adds new gate","Gates are added successfully");
 
 		} 
 		catch (Exception e) {
@@ -70,7 +70,7 @@ public class Follo_06_Gate extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("To edit gates");
 			F_06_Gate.EditGate();
-			ReportConfig.Givenlogpass("User edit a gate from the list","Gates are edited successfully");
+		//	ReportConfig.Givenlogpass("User edit a gate from the list","Gates are edited successfully");
 
 		} 
 		catch (Exception e) {
@@ -93,7 +93,7 @@ public class Follo_06_Gate extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("To delete gates");
 			F_06_Gate.DeleteGate();
-			ReportConfig.Givenlogpass("User delete a gate from the list","Gates are deleted successfully");
+		//	ReportConfig.Givenlogpass("User delete a gate from the list","Gates are deleted successfully");
 
 		} 
 		catch (Exception e) {
@@ -146,7 +146,7 @@ public class Follo_06_Gate extends Baseclass{
 
 
 				Print("Yes button is clicked");
-				ReportConfig.Whenlogpass("User clicks remove button and click yes from the delete popup","Detele button is clicked");
+				ReportConfig.Whenlogpass("User clicks remove button and click yes from the delete popup","Click on delete button");
 			}
 		} catch (Exception e) {
 			PrintError("Detele button is not clicked");
@@ -190,7 +190,7 @@ public class Follo_06_Gate extends Baseclass{
 		try {
 			ReportConfig.ReportCreateScenarioTest("Search gate");
 			F_06_Gate.SearchGates();
-			ReportConfig.Givenlogpass("User search and view the gates","Gates are searched successfilly");
+		//	ReportConfig.Givenlogpass("User search and view the gates","Gates are searched successfilly");
 
 
 		} 

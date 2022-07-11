@@ -48,8 +48,8 @@ public class F_12_CalendarSettings extends Baseclass {
 			}
 
 			TypeDataInTheField("Description", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 0, ReadFrom.CalendarSettingsRequest));
-			Print("Description is entered as : " + ReadFrom.Excel(CalendarAddRequest, 0, ReadFrom.CalendarSettingsRequest));
-			ReportConfig.PassedLogInfo("User add new event in Calendar settings","Description is entered as : " + ReadFrom.Excel(CalendarAddRequest, 0, ReadFrom.CalendarSettingsRequest));
+			Print("Entered Description  : " + ReadFrom.Excel(CalendarAddRequest, 0, ReadFrom.CalendarSettingsRequest));
+			ReportConfig.PassedLogInfo("User add new event in Calendar settings","Entered Description  : " + ReadFrom.Excel(CalendarAddRequest, 0, ReadFrom.CalendarSettingsRequest));
 
 
 			Wait(2000);
@@ -60,14 +60,14 @@ public class F_12_CalendarSettings extends Baseclass {
 				Wait(2000);
 				Clear("FromHH", CalendarSettingsLocators);
 				TypeDataInTheField("FromHH", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 2, ReadFrom.CalendarSettingsRequest));
-				Print("From hrs is entered as : " + ReadFrom.Excel(CalendarAddRequest, 2, ReadFrom.CalendarSettingsRequest));
-				ReportConfig.PassedLogInfo("User add new event in Calendar settings","From hrs is entered as : " + ReadFrom.Excel(CalendarAddRequest, 2, ReadFrom.CalendarSettingsRequest));
+				Print("Entered From hrs : " + ReadFrom.Excel(CalendarAddRequest, 2, ReadFrom.CalendarSettingsRequest));
+				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Entered From hrs : " + ReadFrom.Excel(CalendarAddRequest, 2, ReadFrom.CalendarSettingsRequest));
 
 				Wait(2000);
 				Clear("FromMM", CalendarSettingsLocators);
 				TypeDataInTheField("FromMM", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 3, ReadFrom.CalendarSettingsRequest));
-				Print("From min is entered as : " + ReadFrom.Excel(CalendarAddRequest, 3, ReadFrom.CalendarSettingsRequest));
-				ReportConfig.PassedLogInfo("User add new event in Calendar settings","From min is entered as : " + ReadFrom.Excel(CalendarAddRequest, 3, ReadFrom.CalendarSettingsRequest));
+				Print("Entered From min : " + ReadFrom.Excel(CalendarAddRequest, 3, ReadFrom.CalendarSettingsRequest));
+				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Entered From min : " + ReadFrom.Excel(CalendarAddRequest, 3, ReadFrom.CalendarSettingsRequest));
 
 				Wait(2000);
 				String ExcelMeridian = ReadFrom.Excel(CalendarAddRequest, 4, ReadFrom.CalendarSettingsRequest);
@@ -86,14 +86,14 @@ public class F_12_CalendarSettings extends Baseclass {
 				Wait(2000);
 				Clear("EndHH", CalendarSettingsLocators);
 				TypeDataInTheField("EndHH", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 5, ReadFrom.CalendarSettingsRequest));
-				Print("To hrs is entered as : " + ReadFrom.Excel(CalendarAddRequest, 5, ReadFrom.CalendarSettingsRequest));
-				ReportConfig.PassedLogInfo("User add new event in Calendar settings","To hrs is entered as : " + ReadFrom.Excel(CalendarAddRequest, 5, ReadFrom.CalendarSettingsRequest));
+				Print("Entered To hrs  : " + ReadFrom.Excel(CalendarAddRequest, 5, ReadFrom.CalendarSettingsRequest));
+				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Entered To hrs  : " + ReadFrom.Excel(CalendarAddRequest, 5, ReadFrom.CalendarSettingsRequest));
 
 				Wait(2000);
 				Clear("EndMM", CalendarSettingsLocators);
 				TypeDataInTheField("EndMM", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 6, ReadFrom.CalendarSettingsRequest));
-				Print("To min is entered as : " + ReadFrom.Excel(CalendarAddRequest, 6, ReadFrom.CalendarSettingsRequest));
-				ReportConfig.PassedLogInfo("User add new event in Calendar settings","To min is entered as : " + ReadFrom.Excel(CalendarAddRequest, 6, ReadFrom.CalendarSettingsRequest));
+				Print("Entered To min : " + ReadFrom.Excel(CalendarAddRequest, 6, ReadFrom.CalendarSettingsRequest));
+				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Entered To min : " + ReadFrom.Excel(CalendarAddRequest, 6, ReadFrom.CalendarSettingsRequest));
 
 				Wait(2000);
 				String ExcelMeridian1 = ReadFrom.Excel(CalendarAddRequest, 7, ReadFrom.CalendarSettingsRequest);
@@ -116,22 +116,22 @@ public class F_12_CalendarSettings extends Baseclass {
 
 			Wait(2000);
 			Click("StartDate", CalendarSettingsLocators);
-			Print("Start date is clicked");
-			ReportConfig.PassedLogInfo("User add new event in Calendar settings","Start date is clicked");
+			Print("Click on yes Start date");
+			ReportConfig.PassedLogInfo("User add new event in Calendar settings","Click on yes Start date");
 
 
 			Wait(2000);
 
 			Clear("StartDate", CalendarSettingsLocators);
 			TypeDataInTheField("StartDate", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.CalendarSettingsRequest));
-			Print("Start date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.CalendarSettingsRequest));
-			ReportConfig.PassedLogInfo("User add new event in Calendar settings","Start date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.CalendarSettingsRequest));
+			Print("Entered Start date : " + ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.CalendarSettingsRequest));
+			ReportConfig.PassedLogInfo("User add new event in Calendar settings","Entered Start date : " + ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.CalendarSettingsRequest));
 
 			Wait(2000);
 			Clear("ToDate", CalendarSettingsLocators);
 			TypeDataInTheField("ToDate", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 9, ReadFrom.CalendarSettingsRequest));
-			Print("To date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 9, ReadFrom.CalendarSettingsRequest));
-			ReportConfig.PassedLogInfo("User add new event in Calendar settings","To date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 9, ReadFrom.CalendarSettingsRequest));
+			Print("Entered To date : " + ReadFrom.Excel(CalendarAddRequest, 9, ReadFrom.CalendarSettingsRequest));
+			ReportConfig.PassedLogInfo("User add new event in Calendar settings","Entered To date : " + ReadFrom.Excel(CalendarAddRequest, 9, ReadFrom.CalendarSettingsRequest));
 
 
 			String DeliveryCalendar = ReadFrom.Excel(CalendarAddRequest, 10, ReadFrom.CalendarSettingsRequest);
@@ -167,8 +167,8 @@ public class F_12_CalendarSettings extends Baseclass {
 
 			Wait(2000);
 			SelectFromVisibleText("RecurrenceDropdown", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 12, ReadFrom.CalendarSettingsRequest));
-			Print("Recurrence dropdown is selected as : " + ReadFrom.Excel(CalendarAddRequest, 12, ReadFrom.CalendarSettingsRequest));
-			ReportConfig.PassedLogInfo("User add new event in Calendar settings","Recurrence dropdown is selected as : " + ReadFrom.Excel(CalendarAddRequest, 12, ReadFrom.CalendarSettingsRequest));
+			Print("Selected value from dropdown : " + ReadFrom.Excel(CalendarAddRequest, 12, ReadFrom.CalendarSettingsRequest));
+			ReportConfig.PassedLogInfo("User add new event in Calendar settings","Selected value from dropdown : " + ReadFrom.Excel(CalendarAddRequest, 12, ReadFrom.CalendarSettingsRequest));
 
 			String RecurrenceDropdown = ReadFrom.Excel(CalendarAddRequest, 12, ReadFrom.CalendarSettingsRequest);
 			switch (RecurrenceDropdown) {
@@ -178,8 +178,8 @@ public class F_12_CalendarSettings extends Baseclass {
 				Wait(2000);
 				MoveToElement("SubmitButton", CalendarSettingsLocators);
 				Click("SubmitButton", CalendarSettingsLocators);
-				Print("Submit button is clicked");
-				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Submit button is clicked");
+				Print("Click on Submit button");
+				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Click on Submit button");
 
 				EvenAddedPopup();
 				break;
@@ -188,15 +188,15 @@ public class F_12_CalendarSettings extends Baseclass {
 
 				Wait(2000);
 				TypeDataInTheField("RepeatEveryCount", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
-				Print("To date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
-				ReportConfig.PassedLogInfo("User add new event in Calendar settings","To date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
+				Print("Entered To date : " + ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
+				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Entered To date : " + ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
 
 				Wait(2000);
 				MoveToElement("SubmitButton", CalendarSettingsLocators);
 
 				Click("SubmitButton", CalendarSettingsLocators);
-				Print("Submit button is clicked");
-				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Submit button is clicked");
+				Print("Click on Submit button");
+				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Click on Submit button");
 				EvenAddedPopup();
 				break;
 
@@ -204,15 +204,15 @@ public class F_12_CalendarSettings extends Baseclass {
 
 				Wait(2000);
 				TypeDataInTheField("RepeatEveryCount", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
-				Print("To date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
-				ReportConfig.PassedLogInfo("User add new event in Calendar settings","To date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
+				Print("Entered To date : " + ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
+				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Entered To date : " + ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
 
 				Wait(2000);
 				MoveToElement("SubmitButton", CalendarSettingsLocators);
 
 				Click("SubmitButton", CalendarSettingsLocators);
-				Print("Submit button is clicked");
-				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Submit button is clicked");
+				Print("Click on Submit button");
+				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Click on Submit button");
 				EvenAddedPopup();
 				break;
 
@@ -220,8 +220,8 @@ public class F_12_CalendarSettings extends Baseclass {
 
 				Wait(2000);
 				TypeDataInTheField("RepeatEveryCount", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
-				Print("To date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
-				ReportConfig.PassedLogInfo("User add new event in Calendar settings","To date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
+				Print("Entered To date : " + ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
+				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Entered To date : " + ReadFrom.Excel(CalendarAddRequest, 13, ReadFrom.CalendarSettingsRequest));
 
 				if(IsEqual(CraneCalendar, "On day")) {						
 					Click("OnDay", CalendarSettingsLocators);	
@@ -237,8 +237,8 @@ public class F_12_CalendarSettings extends Baseclass {
 				MoveToElement("SubmitButton", CalendarSettingsLocators);
 
 				Click("SubmitButton", CalendarSettingsLocators);
-				Print("Submit button is clicked");
-				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Submit button is clicked");
+				Print("Click on Submit button");
+				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Click on Submit button");
 
 				EvenAddedPopup();
 				break;
@@ -258,8 +258,8 @@ public class F_12_CalendarSettings extends Baseclass {
 
 				MoveToElement("SubmitButton", CalendarSettingsLocators);
 				Click("SubmitButton", CalendarSettingsLocators);
-				Print("Submit button is clicked");
-				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Submit button is clicked");
+				Print("Click on Submit button");
+				ReportConfig.PassedLogInfo("User add new event in Calendar settings","Click on Submit button");
 
 				EvenAddedPopup();
 				break;
@@ -291,7 +291,7 @@ public class F_12_CalendarSettings extends Baseclass {
 		if(IsElementDisplayed("EventAdded", CalendarSettingsLocators)) {
 			Click("EventAdded", CalendarSettingsLocators);
 			Print("Event added successfully");
-			ReportConfig.PassedLogInfo("User add new event in Calendar settings","Submit button is clicked");
+			ReportConfig.PassedLogInfo("User add new event in Calendar settings","Click on Submit button");
 		}
 		else {
 			PrintError("Event add failed");
@@ -597,8 +597,8 @@ public class F_12_CalendarSettings extends Baseclass {
 
 					Clear("Description", CalendarSettingsLocators);
 					TypeDataInTheField("Description", CalendarSettingsLocators, ReadFrom.Excel(CalendarEditRequest, 3, ReadFrom.EditCalendarSettingsRequest));
-					Print("Description is entered as : " + ReadFrom.Excel(CalendarEditRequest, 3, ReadFrom.EditCalendarSettingsRequest));
-					ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Description is entered as : " + ReadFrom.Excel(CalendarEditRequest, 3, ReadFrom.EditCalendarSettingsRequest));
+					Print("Entered Description  : " + ReadFrom.Excel(CalendarEditRequest, 3, ReadFrom.EditCalendarSettingsRequest));
+					ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Entered Description  : " + ReadFrom.Excel(CalendarEditRequest, 3, ReadFrom.EditCalendarSettingsRequest));
 
 
 					Wait(2000);
@@ -617,14 +617,14 @@ public class F_12_CalendarSettings extends Baseclass {
 						Wait(5000);
 						Clear("FromHH", CalendarSettingsLocators);
 						TypeDataInTheField("FromHH", CalendarSettingsLocators, ReadFrom.Excel(CalendarEditRequest, 5, ReadFrom.EditCalendarSettingsRequest));
-						Print("From hrs is entered as : " + ReadFrom.Excel(CalendarEditRequest, 5, ReadFrom.EditCalendarSettingsRequest));
-						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","From hrs is entered as : " + ReadFrom.Excel(CalendarEditRequest, 5, ReadFrom.EditCalendarSettingsRequest));
+						Print("Entered From hrs : " + ReadFrom.Excel(CalendarEditRequest, 5, ReadFrom.EditCalendarSettingsRequest));
+						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Entered From hrs : " + ReadFrom.Excel(CalendarEditRequest, 5, ReadFrom.EditCalendarSettingsRequest));
 
 						Wait(2000);
 						Clear("FromMM", CalendarSettingsLocators);
 						TypeDataInTheField("FromMM", CalendarSettingsLocators, ReadFrom.Excel(CalendarEditRequest, 6, ReadFrom.EditCalendarSettingsRequest));
-						Print("From min is entered as : " + ReadFrom.Excel(CalendarEditRequest, 6, ReadFrom.EditCalendarSettingsRequest));
-						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","From min is entered as : " + ReadFrom.Excel(CalendarEditRequest, 6, ReadFrom.EditCalendarSettingsRequest));
+						Print("Entered From min : " + ReadFrom.Excel(CalendarEditRequest, 6, ReadFrom.EditCalendarSettingsRequest));
+						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Entered From min : " + ReadFrom.Excel(CalendarEditRequest, 6, ReadFrom.EditCalendarSettingsRequest));
 
 						Wait(2000);
 						String ExcelMeridian = ReadFrom.Excel(CalendarEditRequest, 7, ReadFrom.EditCalendarSettingsRequest);
@@ -642,14 +642,14 @@ public class F_12_CalendarSettings extends Baseclass {
 						Wait(2000);
 						Clear("EndHH", CalendarSettingsLocators);
 						TypeDataInTheField("EndHH", CalendarSettingsLocators, ReadFrom.Excel(CalendarEditRequest, 8, ReadFrom.EditCalendarSettingsRequest));
-						Print("To hrs is entered as : " + ReadFrom.Excel(CalendarEditRequest, 8, ReadFrom.EditCalendarSettingsRequest));
-						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","To hrs is entered as : " + ReadFrom.Excel(CalendarEditRequest, 8, ReadFrom.EditCalendarSettingsRequest));
+						Print("Entered To hrs  : " + ReadFrom.Excel(CalendarEditRequest, 8, ReadFrom.EditCalendarSettingsRequest));
+						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Entered To hrs  : " + ReadFrom.Excel(CalendarEditRequest, 8, ReadFrom.EditCalendarSettingsRequest));
 
 						Wait(2000);
 						Clear("EndMM", CalendarSettingsLocators);
 						TypeDataInTheField("EndMM", CalendarSettingsLocators, ReadFrom.Excel(CalendarEditRequest, 9, ReadFrom.EditCalendarSettingsRequest));
-						Print("To min is entered as : " + ReadFrom.Excel(CalendarEditRequest, 9, ReadFrom.EditCalendarSettingsRequest));
-						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","To min is entered as : " + ReadFrom.Excel(CalendarEditRequest, 9, ReadFrom.EditCalendarSettingsRequest));
+						Print("Entered To min : " + ReadFrom.Excel(CalendarEditRequest, 9, ReadFrom.EditCalendarSettingsRequest));
+						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Entered To min : " + ReadFrom.Excel(CalendarEditRequest, 9, ReadFrom.EditCalendarSettingsRequest));
 
 						Wait(2000);
 						String ExcelMeridian1 = ReadFrom.Excel(CalendarEditRequest, 10, ReadFrom.EditCalendarSettingsRequest);
@@ -672,22 +672,22 @@ public class F_12_CalendarSettings extends Baseclass {
 
 					Wait(2000);
 					Click("StartDate", CalendarSettingsLocators);
-					Print("Start date is clicked");
-					ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Start date is clicked");
+					Print("Click on yes Start date");
+					ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Click on yes Start date");
 
 
 					Wait(2000);
 
 					Clear("StartDate", CalendarSettingsLocators);
 					TypeDataInTheField("StartDate", CalendarSettingsLocators, ReadFrom.Excel(CalendarEditRequest, 11, ReadFrom.EditCalendarSettingsRequest));
-					Print("Start date is entered as : " + ReadFrom.Excel(CalendarEditRequest, 11, ReadFrom.EditCalendarSettingsRequest));
-					ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Start date is entered as : " + ReadFrom.Excel(CalendarEditRequest, 11, ReadFrom.EditCalendarSettingsRequest));
+					Print("Entered Start date : " + ReadFrom.Excel(CalendarEditRequest, 11, ReadFrom.EditCalendarSettingsRequest));
+					ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Entered Start date : " + ReadFrom.Excel(CalendarEditRequest, 11, ReadFrom.EditCalendarSettingsRequest));
 
 					Wait(2000);
 					Clear("ToDate", CalendarSettingsLocators);
 					TypeDataInTheField("ToDate", CalendarSettingsLocators, ReadFrom.Excel(CalendarEditRequest, 12, ReadFrom.EditCalendarSettingsRequest));
-					Print("To date is entered as : " + ReadFrom.Excel(CalendarEditRequest, 12, ReadFrom.EditCalendarSettingsRequest));
-					ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","To date is entered as : " + ReadFrom.Excel(CalendarEditRequest, 12, ReadFrom.EditCalendarSettingsRequest));
+					Print("Entered To date : " + ReadFrom.Excel(CalendarEditRequest, 12, ReadFrom.EditCalendarSettingsRequest));
+					ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Entered To date : " + ReadFrom.Excel(CalendarEditRequest, 12, ReadFrom.EditCalendarSettingsRequest));
 
 					Wait(2000);
 					Click("DeliveryCalendar", CalendarSettingsLocators);
@@ -725,8 +725,8 @@ public class F_12_CalendarSettings extends Baseclass {
 					Wait(2000);
 					
 					SelectFromVisibleText("RecurrenceDropdown", CalendarSettingsLocators, ReadFrom.Excel(CalendarEditRequest, 15, ReadFrom.EditCalendarSettingsRequest));
-					Print("Recurrence dropdown is selected as : " + ReadFrom.Excel(CalendarEditRequest, 15, ReadFrom.EditCalendarSettingsRequest));
-					ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Recurrence dropdown is selected as : " + ReadFrom.Excel(CalendarEditRequest, 15, ReadFrom.EditCalendarSettingsRequest));
+					Print("Selected value from dropdown : " + ReadFrom.Excel(CalendarEditRequest, 15, ReadFrom.EditCalendarSettingsRequest));
+					ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Selected value from dropdown : " + ReadFrom.Excel(CalendarEditRequest, 15, ReadFrom.EditCalendarSettingsRequest));
 
 					String RecurrenceDropdown = ReadFrom.Excel(CalendarEditRequest, 15, ReadFrom.EditCalendarSettingsRequest);
 					switch (RecurrenceDropdown) {
@@ -736,8 +736,8 @@ public class F_12_CalendarSettings extends Baseclass {
 						Wait(2000);
 						MoveToElement("SubmitButton", CalendarSettingsLocators);
 						Click("SubmitButton", CalendarSettingsLocators);
-						Print("Submit button is clicked");
-						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Submit button is clicked");
+						Print("Click on Submit button");
+						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Click on Submit button");
 
 						EventUpdatedPopup();
 						break;
@@ -747,15 +747,15 @@ public class F_12_CalendarSettings extends Baseclass {
 						Wait(2000);
 						Clear("RepeatEveryCount", CalendarSettingsLocators);
 						TypeDataInTheField("RepeatEveryCount", CalendarSettingsLocators, ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
-						Print("To date is entered as : " + ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
-						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","To date is entered as : " + ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
+						Print("Entered To date : " + ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
+						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Entered To date : " + ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
 
 						Wait(2000);
 						MoveToElement("SubmitButton", CalendarSettingsLocators);
 
 						Click("SubmitButton", CalendarSettingsLocators);
-						Print("Submit button is clicked");
-						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Submit button is clicked");
+						Print("Click on Submit button");
+						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Click on Submit button");
 						EventUpdatedPopup();
 						break;
 
@@ -764,15 +764,15 @@ public class F_12_CalendarSettings extends Baseclass {
 						Wait(2000);
 						Clear("RepeatEveryCount", CalendarSettingsLocators);
 						TypeDataInTheField("RepeatEveryCount", CalendarSettingsLocators, ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
-						Print("To date is entered as : " + ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
-						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","To date is entered as : " + ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
+						Print("Entered To date : " + ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
+						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Entered To date : " + ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
 
 						Wait(2000);
 						MoveToElement("SubmitButton", CalendarSettingsLocators);
 
 						Click("SubmitButton", CalendarSettingsLocators);
-						Print("Submit button is clicked");
-						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Submit button is clicked");
+						Print("Click on Submit button");
+						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Click on Submit button");
 						EventUpdatedPopup();
 						break;
 
@@ -781,8 +781,8 @@ public class F_12_CalendarSettings extends Baseclass {
 						Wait(2000);
 						Clear("RepeatEveryCount", CalendarSettingsLocators);
 						TypeDataInTheField("RepeatEveryCount", CalendarSettingsLocators, ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
-						Print("To date is entered as : " + ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
-						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","To date is entered as : " + ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
+						Print("Entered To date : " + ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
+						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Entered To date : " + ReadFrom.Excel(CalendarEditRequest, 16, ReadFrom.EditCalendarSettingsRequest));
 
 						if(IsEqual(CraneCalendar, "On day")) {						
 							Click("OnDay", CalendarSettingsLocators);	
@@ -798,8 +798,8 @@ public class F_12_CalendarSettings extends Baseclass {
 						MoveToElement("SubmitButton", CalendarSettingsLocators);
 
 						Click("SubmitButton", CalendarSettingsLocators);
-						Print("Submit button is clicked");
-						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Submit button is clicked");
+						Print("Click on Submit button");
+						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Click on Submit button");
 
 						EventUpdatedPopup();
 						break;
@@ -819,8 +819,8 @@ public class F_12_CalendarSettings extends Baseclass {
 
 						MoveToElement("SubmitButton", CalendarSettingsLocators);
 						Click("SubmitButton", CalendarSettingsLocators);
-						Print("Submit button is clicked");
-						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Submit button is clicked");
+						Print("Click on Submit button");
+						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Click on Submit button");
 
 						EventUpdatedPopup();
 						ReportConfig.PassedLogInfo("User edit a event request from the calendar settings","Event update successfully");
@@ -869,8 +869,8 @@ public class F_12_CalendarSettings extends Baseclass {
 			}
 
 			TypeDataInTheField("Description", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 0, ReadFrom.CalendarSettingsRequest));
-			Print("Description is entered as : " + ReadFrom.Excel(CalendarAddRequest, 0, ReadFrom.CalendarSettingsRequest));
-			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Description is entered as : " + ReadFrom.Excel(CalendarAddRequest, 0, ReadFrom.CalendarSettingsRequest));
+			Print("Entered Description  : " + ReadFrom.Excel(CalendarAddRequest, 0, ReadFrom.CalendarSettingsRequest));
+			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Entered Description  : " + ReadFrom.Excel(CalendarAddRequest, 0, ReadFrom.CalendarSettingsRequest));
 
 
 			Wait(2000);
@@ -881,14 +881,14 @@ public class F_12_CalendarSettings extends Baseclass {
 				Wait(2000);
 				Clear("FromHH", CalendarSettingsLocators);
 				TypeDataInTheField("FromHH", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 4, ReadFrom.NegativeCraneCalendar));
-				Print("From hrs is entered as : " + ReadFrom.Excel(CalendarAddRequest, 4, ReadFrom.NegativeCraneCalendar));
-				ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"From hrs is entered as : " + ReadFrom.Excel(CalendarAddRequest, 4, ReadFrom.NegativeCraneCalendar));
+				Print("Entered From hrs : " + ReadFrom.Excel(CalendarAddRequest, 4, ReadFrom.NegativeCraneCalendar));
+				ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Entered From hrs : " + ReadFrom.Excel(CalendarAddRequest, 4, ReadFrom.NegativeCraneCalendar));
 
 				Wait(2000);
 				Clear("FromMM", CalendarSettingsLocators);
 				TypeDataInTheField("FromMM", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 5, ReadFrom.NegativeCraneCalendar));
-				Print("From min is entered as : " + ReadFrom.Excel(CalendarAddRequest, 5, ReadFrom.NegativeCraneCalendar));
-				ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"From min is entered as : " + ReadFrom.Excel(CalendarAddRequest, 5, ReadFrom.NegativeCraneCalendar));
+				Print("Entered From min : " + ReadFrom.Excel(CalendarAddRequest, 5, ReadFrom.NegativeCraneCalendar));
+				ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Entered From min : " + ReadFrom.Excel(CalendarAddRequest, 5, ReadFrom.NegativeCraneCalendar));
 
 				Wait(2000);
 				String ExcelMeridian = ReadFrom.Excel(CalendarAddRequest, 6, ReadFrom.NegativeCraneCalendar);
@@ -905,14 +905,14 @@ public class F_12_CalendarSettings extends Baseclass {
 				Wait(2000);
 				Clear("EndHH", CalendarSettingsLocators);
 				TypeDataInTheField("EndHH", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 7, ReadFrom.NegativeCraneCalendar));
-				Print("To hrs is entered as : " + ReadFrom.Excel(CalendarAddRequest, 7, ReadFrom.NegativeCraneCalendar));
-				ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"To hrs is entered as : " + ReadFrom.Excel(CalendarAddRequest, 7, ReadFrom.NegativeCraneCalendar));
+				Print("Entered To hrs  : " + ReadFrom.Excel(CalendarAddRequest, 7, ReadFrom.NegativeCraneCalendar));
+				ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Entered To hrs  : " + ReadFrom.Excel(CalendarAddRequest, 7, ReadFrom.NegativeCraneCalendar));
 
 				Wait(2000);
 				Clear("EndMM", CalendarSettingsLocators);
 				TypeDataInTheField("EndMM", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.NegativeCraneCalendar));
-				Print("To min is entered as : " + ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.NegativeCraneCalendar));
-				ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"To min is entered as : " + ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.NegativeCraneCalendar));
+				Print("Entered To min : " + ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.NegativeCraneCalendar));
+				ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Entered To min : " + ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.NegativeCraneCalendar));
 
 				Wait(2000);
 				String ExcelMeridian1 = ReadFrom.Excel(CalendarAddRequest, 9, ReadFrom.NegativeCraneCalendar);
@@ -935,22 +935,22 @@ public class F_12_CalendarSettings extends Baseclass {
 
 			Wait(2000);
 			Click("StartDate", CalendarSettingsLocators);
-			Print("Start date is clicked");
-			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Start date is clicked");
+			Print("Click on yes Start date");
+			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Click on yes Start date");
 
 
 			Wait(2000);
 
 			Clear("StartDate", CalendarSettingsLocators);
 			TypeDataInTheField("StartDate", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.CalendarSettingsRequest));
-			Print("Start date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.CalendarSettingsRequest));
-			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Start date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.CalendarSettingsRequest));
+			Print("Entered Start date : " + ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.CalendarSettingsRequest));
+			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Entered Start date : " + ReadFrom.Excel(CalendarAddRequest, 8, ReadFrom.CalendarSettingsRequest));
 
 			Wait(2000);
 			Clear("ToDate", CalendarSettingsLocators);
 			TypeDataInTheField("ToDate", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 9, ReadFrom.CalendarSettingsRequest));
-			Print("To date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 9, ReadFrom.CalendarSettingsRequest));
-			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"To date is entered as : " + ReadFrom.Excel(CalendarAddRequest, 9, ReadFrom.CalendarSettingsRequest));
+			Print("Entered To date : " + ReadFrom.Excel(CalendarAddRequest, 9, ReadFrom.CalendarSettingsRequest));
+			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Entered To date : " + ReadFrom.Excel(CalendarAddRequest, 9, ReadFrom.CalendarSettingsRequest));
 
 
 			String DeliveryCalendar = ReadFrom.Excel(CalendarAddRequest, 10, ReadFrom.CalendarSettingsRequest);
@@ -983,14 +983,14 @@ public class F_12_CalendarSettings extends Baseclass {
 
 			Wait(2000);
 			SelectFromVisibleText("RecurrenceDropdown", CalendarSettingsLocators, ReadFrom.Excel(CalendarAddRequest, 12, ReadFrom.CalendarSettingsRequest));
-			Print("Recurrence dropdown is selected as : " + ReadFrom.Excel(CalendarAddRequest, 12, ReadFrom.CalendarSettingsRequest));
-			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Recurrence dropdown is selected as : " + ReadFrom.Excel(CalendarAddRequest, 12, ReadFrom.CalendarSettingsRequest));
+			Print("Selected value from dropdown : " + ReadFrom.Excel(CalendarAddRequest, 12, ReadFrom.CalendarSettingsRequest));
+			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Selected value from dropdown : " + ReadFrom.Excel(CalendarAddRequest, 12, ReadFrom.CalendarSettingsRequest));
 
 			Wait(2000);
 			MoveToElement("SubmitButton", CalendarSettingsLocators);
 			Click("SubmitButton", CalendarSettingsLocators);
-			Print("Submit button is clicked");
-			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Submit button is clicked");
+			Print("Click on Submit button");
+			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Click on Submit button");
 
 			Wait(2000);
 			WebDriverWait wait = new WebDriverWait(driver, 120);
@@ -998,8 +998,8 @@ public class F_12_CalendarSettings extends Baseclass {
 
 			String InvalidTime =	GetText("InvalidTime", CalendarSettingsLocators);
 
-			Print("Invalid Date Error : " + InvalidTime);
-			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Invalid Date Error : " + InvalidTime);
+			Print("Please enter valid date : " + InvalidTime);
+			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Please enter valid date : " + InvalidTime);
 
 			Wait(3000);
 
@@ -1011,7 +1011,7 @@ public class F_12_CalendarSettings extends Baseclass {
 			Click("Yes", DeliveryRequestLocators);
 
 			Print("Yes button is clicked");
-			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Close button is clicked");
+			ReportConfig.Givenlogpass("User uploads invalid date time in CalendarSettings" ,"Click on Close button");
 
 
 		}

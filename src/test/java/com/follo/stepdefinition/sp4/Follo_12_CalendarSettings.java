@@ -51,8 +51,8 @@ public class Follo_12_CalendarSettings extends Baseclass {
 			Waitfortheelement("Calendar", CalendarSettingsLocators);
 			if(IsElementDisplayed("Calendar", CalendarSettingsLocators)){
 				
-				Print("Calendar settings button is clicked");
-				ReportConfig.Andlogpass("User clicks Calendar settings button from the menu","Calendar settings button is clicked");
+				Print("Click on yes Calendar settings button");
+				ReportConfig.Andlogpass("User clicks Calendar settings button from the menu","Click on yes Calendar settings button");
 
 			}
 		
@@ -79,7 +79,7 @@ public class Follo_12_CalendarSettings extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("To add new event in Calendar settings");
 
 			F_12_CalendarSettings.AddEvent();	
-			ReportConfig.Givenlogpass("User add new event in Calendar settings","Calendar settings event added successfully");
+		//	ReportConfig.Givenlogpass("User add new event in Calendar settings","Calendar settings event added successfully");
 
 		} 
 		catch (Exception e) {
@@ -101,7 +101,7 @@ public class Follo_12_CalendarSettings extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("To search a event in Calendar settings");
 			F_12_CalendarSettings.SearchEvent();
-			ReportConfig.Givenlogpass("User search and view the event from the calendar settings","Calendar settings event searched successfully");
+		//	ReportConfig.Givenlogpass("User search and view the event from the calendar settings","Calendar settings event searched successfully");
 
 
 			

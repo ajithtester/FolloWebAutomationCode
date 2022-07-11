@@ -30,18 +30,18 @@ public class F_06_Gate extends Baseclass{
 		for(int AddGate =1; AddGate<=ReadFrom.rowcount; AddGate++)		{	
 
 			Click("AddNewGate", GateLocators);
-			ReportConfig.PassedLogInfo("To add gates" ,"Add new gate button is clicked");
-			Print("Add new gate button is clicked");
+			ReportConfig.PassedLogInfo("User adds new gate","Click on Add new gate button");
+			Print("Click on Add new gate button");
 
 			TypeDataInTheField("GateName", GateLocators, ReadFrom.Excel(AddGate, 0, ReadFrom.AddGates));
-			ReportConfig.PassedLogInfo("Gate name is entered as : " , ReadFrom.Excel(AddGate, 0, ReadFrom.AddGates));
-			Print("Gate name is entered as : " + ReadFrom.Excel(AddGate, 0, ReadFrom.AddGates));
+			ReportConfig.PassedLogInfo("User adds new gate", "Entered Gate name : " + ReadFrom.Excel(AddGate, 0, ReadFrom.AddGates));
+			Print("Entered Gate name : " + ReadFrom.Excel(AddGate, 0, ReadFrom.AddGates));
 
 			Wait(2000);
 
 			Click("SubmitButton", GateLocators);
-			ReportConfig.PassedLogInfo("To add gates" ,"Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.PassedLogInfo("User adds new gate","Click on Submit button");
+			Print("Click on Submit button");
 
 			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -57,13 +57,13 @@ public class F_06_Gate extends Baseclass{
 
 			if(IsElementDisplayed("GateAdded", GateLocators)) {
 				Click("GateAdded", GateLocators);
-				Print("Gate added is : " + ReadFrom.Excel(AddGate, 0, ReadFrom.AddGates));
-				ReportConfig.PassedLogInfo("Gate added is : " , ReadFrom.Excel(AddGate, 0, ReadFrom.AddGates));
+				Print("Gate added : " + ReadFrom.Excel(AddGate, 0, ReadFrom.AddGates));
+				ReportConfig.PassedLogInfo("User adds new gate", "Gate added : " + ReadFrom.Excel(AddGate, 0, ReadFrom.AddGates));
 			}
 			else {
 
 				PrintError("Gate is not added");
-				ReportConfig.FailedLogInfo("To add gates" ,"Gate is not added");
+				ReportConfig.FailedLogInfo("User adds new gate","Gate is not added");
 				String IssueSummary = "Gate added successfully is not displayed" ;
 				String Storydescription = "Add gates" ;
 				pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
@@ -79,7 +79,6 @@ public class F_06_Gate extends Baseclass{
 
 
 			int rowcount = 		SizeOfTheList("GateListLocator", GateLocators);
-			Print("No of elements : " + rowcount);
 
 			for(int GateList =1; GateList<=rowcount; GateList++)		{
 
@@ -109,14 +108,14 @@ public class F_06_Gate extends Baseclass{
 
 					Clear("GateName", GateLocators);
 					TypeDataInTheField("GateName", GateLocators, ReadFrom.Excel(EditGate, 1, ReadFrom.EditGates));
-					ReportConfig.PassedLogInfo("Gate name is edited as : " , ReadFrom.Excel(EditGate, 1, ReadFrom.EditGates));
-					Print("Gate name is edited as : " + ReadFrom.Excel(EditGate, 1, ReadFrom.EditGates));
+					ReportConfig.PassedLogInfo("User edit a gate from the list", "Edited Gate name is : " + ReadFrom.Excel(EditGate, 1, ReadFrom.EditGates));
+					Print("Edited Gate name is : " + ReadFrom.Excel(EditGate, 1, ReadFrom.EditGates));
 
 					Wait(2000);
 
 					Click("UpdateButton", GateLocators);
-					ReportConfig.PassedLogInfo("To edit gates," ,"Update button is clicked");
-					Print("Update button is clicked");
+					ReportConfig.PassedLogInfo("User edit a gate from the list","Click on Update button");
+					Print("Click on Update button");
 
 					Wait<WebDriver> UpdateButton = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -132,8 +131,8 @@ public class F_06_Gate extends Baseclass{
 
 					if(IsElementDisplayed("GateUpdated", GateLocators)) {
 						Click("GateUpdated", GateLocators);
-						Print("Gate updated is : " + ReadFrom.Excel(EditGate, 0, ReadFrom.AddGates));
-						ReportConfig.PassedLogInfo("Gate updated is : " , ReadFrom.Excel(EditGate, 0, ReadFrom.AddGates));
+						Print("updated Gate is : " + ReadFrom.Excel(EditGate, 0, ReadFrom.AddGates));
+						ReportConfig.PassedLogInfo("updated Gate is : " , ReadFrom.Excel(EditGate, 0, ReadFrom.AddGates));
 					}
 					else {
 
@@ -157,7 +156,6 @@ public class F_06_Gate extends Baseclass{
 
 
 			int rowcount = 	SizeOfTheList("DeleteButtonsLocator", GateLocators);
-			Print("No of elements : " + rowcount);
 
 			for(int DeleteButton =1; DeleteButton<=rowcount; DeleteButton++)	{
 
@@ -177,8 +175,8 @@ public class F_06_Gate extends Baseclass{
 					Wait(2000);
 
 					Click("YesDelete", GateLocators);
-					ReportConfig.PassedLogInfo("To delete gates" ,"Gate is selected and delete button is clicked");
-					Print("Gate is selected and delete button is clicked");
+					ReportConfig.PassedLogInfo("User delete a gate from the list","Click on delete button");
+					Print("Click on delete button");
 
 					Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -193,12 +191,12 @@ public class F_06_Gate extends Baseclass{
 
 					if(IsElementDisplayed("GateDeleted", GateLocators)){
 						Click("GateDeleted", GateLocators);
-						Print("Gate deleted is : " + ReadFrom.Excel(DeleteGate, 0, ReadFrom.DeleteGates));
-						ReportConfig.PassedLogInfo("Gate deleted is : " , ReadFrom.Excel(DeleteGate, 0, ReadFrom.DeleteGates));
+						Print("Deleted gate is : " + ReadFrom.Excel(DeleteGate, 0, ReadFrom.DeleteGates));
+						ReportConfig.PassedLogInfo("User delete a gate from the list", "Deleted gate is : " + ReadFrom.Excel(DeleteGate, 0, ReadFrom.DeleteGates));
 						break;
 					}else {
 						PrintError("Gate not deleted");
-						ReportConfig.FailedLogInfo("To delete gates" ,"Gate not deleted");
+						ReportConfig.FailedLogInfo("User delete a gate from the list","Gate not deleted");
 
 						String IssueSummary = "Gate deleted successfully is not displayed" ;
 						String Storydescription = "Delete gates" ;
@@ -225,14 +223,13 @@ public class F_06_Gate extends Baseclass{
 			Wait(2000);
 
 			TypeDataInTheField("Search", GateLocators, ReadFrom.Excel(Search, 0, ReadFrom.SearchGates));
-			ReportConfig.PassedLogInfo(ReadFrom.Excel(Search, 0, ReadFrom.SearchGates) ," is entered in the search bar");
-			Print(ReadFrom.Excel(Search, 0, ReadFrom.SearchGates) + " is entered in the search bar");
+			ReportConfig.PassedLogInfo("User search and view the gates", "Searched value :" + ReadFrom.Excel(Search, 0, ReadFrom.SearchGates));
+			Print("Searched value :" + ReadFrom.Excel(Search, 0, ReadFrom.SearchGates));
 
 			Wait(5000);
 
 
 			int rowcount = 	SizeOfTheList("GateListLocator", GateLocators);
-			Print("No of gates displayed : " + rowcount);
 
 			for(int SearchedGates =1; SearchedGates<=rowcount; SearchedGates++)	{
 
@@ -249,7 +246,7 @@ public class F_06_Gate extends Baseclass{
 
 					Wait(2000);
 					Print("Displayed value is : " + Gatename);
-					ReportConfig.PassedLogInfo("Displayed value is : " , Gatename);
+					ReportConfig.PassedLogInfo("User search and view the gates", "Displayed value is : " + Gatename);
 
 					Wait(7000);
 
@@ -268,8 +265,8 @@ public class F_06_Gate extends Baseclass{
 			Clear("Search", GateLocators);
 			Wait(3000);
 			Click("ClearSearch", GateLocators);
-			ReportConfig.PassedLogInfo("Search gate" ,"Clear search button is clicked");
-			Print("Clear search button is clicked");
+			ReportConfig.PassedLogInfo("Search gate" ,"Click on Clear search button");
+			Print("Click on Clear search button");
 
 
 		}
@@ -284,8 +281,8 @@ public class F_06_Gate extends Baseclass{
 		for(int AddGate =1; AddGate<=1; AddGate++)		{	
 
 			Click("AddNewGate", GateLocators);
-			ReportConfig.Givenlogpass("user adds gate name that exceeds maximum length" ,"Add new gate button is clicked");
-			Print("Add new gate button is clicked");
+			ReportConfig.Givenlogpass("user adds gate name that exceeds maximum length" ,"Click on Add new gate button");
+			Print("Click on Add new gate button");
 
 			Wait(3000);
 
@@ -297,8 +294,8 @@ public class F_06_Gate extends Baseclass{
 			Wait(2000);
 
 			Click("SubmitButton", GateLocators);
-			ReportConfig.Givenlogpass("user adds gate name that exceeds maximum length" ,"Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.Givenlogpass("user adds gate name that exceeds maximum length" ,"Click on Submit button");
+			Print("Click on Submit button");
 
 
 			WebDriverWait wait = new WebDriverWait(driver, 120);
@@ -323,8 +320,8 @@ public class F_06_Gate extends Baseclass{
 			Wait(2000);
 
 			Click("SubmitButton", GateLocators);
-			ReportConfig.Givenlogpass("user adds gate name that exceeds maximum length" ,"Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.Givenlogpass("user adds gate name that exceeds maximum length" ,"Click on Submit button");
+			Print("Click on Submit button");
 
 
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='alertdialog']")));
@@ -337,14 +334,14 @@ public class F_06_Gate extends Baseclass{
 			Wait(7000);
 
 			Click("CancelButton", GateLocators);
-			Print("Cancel button is clicked");
+			Print("Click on Cancel button");
 
 			Wait(3000);
 
 			Click("Yes", GateLocators);
 
 			Print("Yes button is clicked");
-			ReportConfig.Givenlogpass("user adds gate name that exceeds maximum length" ,"Close button is clicked");
+			ReportConfig.Givenlogpass("user adds gate name that exceeds maximum length" ,"Click on Close button");
 
 		}
 	}

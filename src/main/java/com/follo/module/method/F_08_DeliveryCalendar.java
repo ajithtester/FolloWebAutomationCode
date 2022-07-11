@@ -46,14 +46,14 @@ public class F_08_DeliveryCalendar extends Baseclass {
 
 			if(IsElementDisplayed("Add", DeliveryCalendarLocators)){
 				JsClick("Add", DeliveryCalendarLocators);
-				Print("Add button is clicked");
-				ReportConfig.PassedLogInfo("To add delivery", "Add button is clicked");
+				Print("Click on Add button");
+				ReportConfig.PassedLogInfo("User adds new delivery", "Click on Add button");
 
 			}
 			else
 			{
 				PrintError("Add button is not clicked");
-				ReportConfig.FailedLogInfo("To add delivery","Add button is not clicked");
+				ReportConfig.FailedLogInfo("User adds new delivery","Add button is not clicked");
 				
 				String IssueSummary = "Add button is not clicked" ;
 				String Storydescription = "Add delivery" ;
@@ -75,35 +75,35 @@ public class F_08_DeliveryCalendar extends Baseclass {
 
 			if(IsElementDisplayed("Description", DeliveryCalendarLocators)) {
 				Print("Delivery popup is opened");
-				ReportConfig.PassedLogInfo("To add delivery", "Delivery popup is opened");
+				ReportConfig.PassedLogInfo("User adds new delivery", "Delivery popup is opened");
 			}
 
 			TypeDataInTheField("Description", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 0, ReadFrom.AddDelivery));
-			Print("Description is entered as : " + ReadFrom.Excel(AddDelivery, 0, ReadFrom.AddDelivery));
-			ReportConfig.PassedLogInfo("Description is entered as : " , ReadFrom.Excel(AddDelivery, 0, ReadFrom.AddDelivery));
+			Print("Entered Description : " + ReadFrom.Excel(AddDelivery, 0, ReadFrom.AddDelivery));
+			ReportConfig.PassedLogInfo("User adds new delivery","Entered Description : " + ReadFrom.Excel(AddDelivery, 0, ReadFrom.AddDelivery));
 
 			SelectFromVisibleText("GateDropdown", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 1, ReadFrom.AddDelivery));
-			Print("Gate dropdown is selected as : " + ReadFrom.Excel(AddDelivery, 1, ReadFrom.AddDelivery));
-			ReportConfig.PassedLogInfo("Gate dropdown is selected as : " , ReadFrom.Excel(AddDelivery, 1, ReadFrom.AddDelivery));
+			Print("Entered Gate dropdown : " + ReadFrom.Excel(AddDelivery, 1, ReadFrom.AddDelivery));
+			ReportConfig.PassedLogInfo("User adds new delivery","Entered Gate dropdown : " + ReadFrom.Excel(AddDelivery, 1, ReadFrom.AddDelivery));
 
 
 
 			SelectFromVisibleText("EquipmentDropdown", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 2, ReadFrom.AddDelivery));
-			Print("Equipment dropdown is selected as : " + ReadFrom.Excel(AddDelivery, 2, ReadFrom.AddDelivery));
-			ReportConfig.PassedLogInfo("Equipment dropdown is selected as : " , ReadFrom.Excel(AddDelivery, 2, ReadFrom.AddDelivery));
+			Print("Entered Equipment dropdown : " + ReadFrom.Excel(AddDelivery, 2, ReadFrom.AddDelivery));
+			ReportConfig.PassedLogInfo("User adds new delivery","Entered Equipment dropdown : " + ReadFrom.Excel(AddDelivery, 2, ReadFrom.AddDelivery));
 
 			Wait(2000);
 			try {
 				if(IsElementDisplayed("PickingFrom", DeliveryCalendarLocators)) {
 
 					TypeDataInTheField("PickingFrom", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 16, ReadFrom.AddDelivery));
-					Print("Picking from is entered as : " + ReadFrom.Excel(AddDelivery, 16, ReadFrom.AddDelivery));
-					ReportConfig.PassedLogInfo("Picking from is entered as : " , ReadFrom.Excel(AddDelivery, 16, ReadFrom.AddDelivery));
+					Print("Entered Picking from : " + ReadFrom.Excel(AddDelivery, 16, ReadFrom.AddDelivery));
+					ReportConfig.PassedLogInfo("User adds new delivery","Entered Picking from : " + ReadFrom.Excel(AddDelivery, 16, ReadFrom.AddDelivery));
 
 					Wait(2000);
 					TypeDataInTheField("PickingTo", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 17, ReadFrom.AddDelivery));
-					Print("Picking to is entered as : " + ReadFrom.Excel(AddDelivery, 17, ReadFrom.AddDelivery));
-					ReportConfig.PassedLogInfo("Picking to is entered as : " , ReadFrom.Excel(AddDelivery, 17, ReadFrom.AddDelivery));
+					Print("Entered Picking to : " + ReadFrom.Excel(AddDelivery, 17, ReadFrom.AddDelivery));
+					ReportConfig.PassedLogInfo("User adds new delivery","Entered Picking to : " + ReadFrom.Excel(AddDelivery, 17, ReadFrom.AddDelivery));
 
 				}
 
@@ -117,13 +117,13 @@ public class F_08_DeliveryCalendar extends Baseclass {
 			Wait(2000);
 			MoveToElement("AdditionalText", DeliveryCalendarLocators);
 			TypeDataInTheField("AdditionalText", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 3, ReadFrom.AddDelivery));
-			Print("Additional text is entered as : " + ReadFrom.Excel(AddDelivery, 3, ReadFrom.AddDelivery));
-			ReportConfig.PassedLogInfo("Additional text is entered as : " , ReadFrom.Excel(AddDelivery, 3, ReadFrom.AddDelivery));
+			Print("Entered Additional text : " + ReadFrom.Excel(AddDelivery, 3, ReadFrom.AddDelivery));
+			ReportConfig.PassedLogInfo("User adds new delivery","Entered Additional text : " + ReadFrom.Excel(AddDelivery, 3, ReadFrom.AddDelivery));
 
 			Wait(2000);
 			TypeDataInTheField("VehicleDetails", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 4, ReadFrom.AddDelivery));
-			Print("Vehicle details is entered as : " + ReadFrom.Excel(AddDelivery, 4, ReadFrom.AddDelivery));
-			ReportConfig.PassedLogInfo("Vehicle details is entered as : " , ReadFrom.Excel(AddDelivery, 4, ReadFrom.AddDelivery));
+			Print("Entered Vehicle details : " + ReadFrom.Excel(AddDelivery, 4, ReadFrom.AddDelivery));
+			ReportConfig.PassedLogInfo("User adds new delivery","Entered Vehicle details : " + ReadFrom.Excel(AddDelivery, 4, ReadFrom.AddDelivery));
 
 
 			Click("DeliveryDate", DeliveryCalendarLocators);
@@ -135,7 +135,7 @@ public class F_08_DeliveryCalendar extends Baseclass {
 			///////////////////////
 
 			Click("Dfow", DeliveryCalendarLocators);
-			ReportConfig.PassedLogInfo("To add delivery","Dfow dropdown is clicked");
+			ReportConfig.PassedLogInfo("User adds new delivery","Click on Dfow dropdown");
 
 			String DfowInExcel = ReadFrom.Excel(AddDelivery, 8,ReadFrom.AddDelivery);
 
@@ -152,8 +152,8 @@ public class F_08_DeliveryCalendar extends Baseclass {
 				if(IsEqual(DfowInDropdown, DfowInExcel)){
 					Click(Dfow);
 
-					ReportConfig.PassedLogInfo("To add delivery","Dfow is selected as : " + DfowInDropdown );
-					Print("Dfow is selected as : " + DfowInDropdown );
+					ReportConfig.PassedLogInfo("User adds new delivery","Selected Dfow : " + DfowInDropdown );
+					Print("Selected Dfow : " + DfowInDropdown );
 					break;
 				}
 			}	
@@ -161,7 +161,7 @@ public class F_08_DeliveryCalendar extends Baseclass {
 			/////////////////////////////////////
 
 			Click("Company", DeliveryCalendarLocators);
-			ReportConfig.PassedLogInfo("To add delivery","Company dropdown is clicked");
+			ReportConfig.PassedLogInfo("User adds new delivery","Click on Company dropdown");
 
 			String CompanyInExcel = ReadFrom.Excel(AddDelivery, 9,ReadFrom.AddDelivery);
 
@@ -177,8 +177,8 @@ public class F_08_DeliveryCalendar extends Baseclass {
 				if(IsEqual(CompanyInDropdown, CompanyInExcel)){
 					Click(Company);
 
-					ReportConfig.PassedLogInfo("To add delivery","Dfow is selected as : " + CompanyInDropdown );
-					Print("Dfow is selected as : " + CompanyInDropdown );
+					ReportConfig.PassedLogInfo("User adds new delivery","Selected Dfow : " + CompanyInDropdown );
+					Print("Selected Dfow : " + CompanyInDropdown );
 					break;
 				}
 				else {
@@ -189,14 +189,14 @@ public class F_08_DeliveryCalendar extends Baseclass {
 			Wait(2000);
 			Clear("FromHrs", DeliveryCalendarLocators);
 			TypeDataInTheField("FromHrs", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 10, ReadFrom.AddDelivery));
-			Print("From hrs is entered as : " + ReadFrom.Excel(AddDelivery, 10, ReadFrom.AddDelivery));
-			ReportConfig.PassedLogInfo("From hrs is entered as : " , ReadFrom.Excel(AddDelivery, 10, ReadFrom.AddDelivery));
+			Print("Entered From hrs : " + ReadFrom.Excel(AddDelivery, 10, ReadFrom.AddDelivery));
+			ReportConfig.PassedLogInfo("User adds new delivery","Entered From hrs : " + ReadFrom.Excel(AddDelivery, 10, ReadFrom.AddDelivery));
 
 			Wait(2000);
 			Clear("FromMin", DeliveryCalendarLocators);
 			TypeDataInTheField("FromMin", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 11, ReadFrom.AddDelivery));
-			Print("From min is entered as : " + ReadFrom.Excel(AddDelivery, 11, ReadFrom.AddDelivery));
-			ReportConfig.PassedLogInfo("From min is entered as : " , ReadFrom.Excel(AddDelivery, 11, ReadFrom.AddDelivery));
+			Print("Entered From min : " + ReadFrom.Excel(AddDelivery, 11, ReadFrom.AddDelivery));
+			ReportConfig.PassedLogInfo("User adds new delivery","Entered From min : " + ReadFrom.Excel(AddDelivery, 11, ReadFrom.AddDelivery));
 
 			Wait(2000);
 			String ExcelMeridian = ReadFrom.Excel(AddDelivery, 12, ReadFrom.AddDelivery);
@@ -214,14 +214,14 @@ public class F_08_DeliveryCalendar extends Baseclass {
 			Wait(2000);
 			Clear("ToHrs", DeliveryCalendarLocators);
 			TypeDataInTheField("ToHrs", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 13, ReadFrom.AddDelivery));
-			Print("To hrs is entered as : " + ReadFrom.Excel(AddDelivery, 13, ReadFrom.AddDelivery));
-			ReportConfig.PassedLogInfo("To hrs is entered as : " , ReadFrom.Excel(AddDelivery, 13, ReadFrom.AddDelivery));
+			Print("Entered To hrs : " + ReadFrom.Excel(AddDelivery, 13, ReadFrom.AddDelivery));
+			ReportConfig.PassedLogInfo("User adds new delivery","Entered To hrs : " + ReadFrom.Excel(AddDelivery, 13, ReadFrom.AddDelivery));
 
 			Wait(2000);
 			Clear("ToMin", DeliveryCalendarLocators);
 			TypeDataInTheField("ToMin", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 14, ReadFrom.AddDelivery));
-			Print("To min is entered as : " + ReadFrom.Excel(AddDelivery, 14, ReadFrom.AddDelivery));
-			ReportConfig.PassedLogInfo("To min is entered as : " , ReadFrom.Excel(AddDelivery, 14, ReadFrom.AddDelivery));
+			Print("Entered To min : " + ReadFrom.Excel(AddDelivery, 14, ReadFrom.AddDelivery));
+			ReportConfig.PassedLogInfo("User adds new delivery","Entered To min : " + ReadFrom.Excel(AddDelivery, 14, ReadFrom.AddDelivery));
 
 			Wait(2000);
 			String ExcelMeridian1 = ReadFrom.Excel(AddDelivery, 14, ReadFrom.AddDelivery);
@@ -238,7 +238,7 @@ public class F_08_DeliveryCalendar extends Baseclass {
 			MoveToElement("SubmitButton", DeliveryCalendarLocators);
 
 			Click("SubmitButton", DeliveryCalendarLocators);
-			ReportConfig.PassedLogInfo("To add delivery" , "Submit Button is clicked");
+			ReportConfig.PassedLogInfo("To add delivery" , "Click on Submit button");
 
 //			Wait<WebDriver> Delivery = new FluentWait<WebDriver>(driver)
 //					.withTimeout(Duration.ofSeconds(120))
@@ -731,32 +731,32 @@ public class F_08_DeliveryCalendar extends Baseclass {
 
 					Clear("Description", DeliveryCalendarLocators);
 					TypeDataInTheField("Description", DeliveryCalendarLocators, ReadFrom.Excel(EditDelivery, 3, ReadFrom.EditDelivery));
-					Print("Description is entered as : " + ReadFrom.Excel(EditDelivery, 3, ReadFrom.EditDelivery));
-					ReportConfig.PassedLogInfo("Description is entered as : " , ReadFrom.Excel(EditDelivery, 3, ReadFrom.EditDelivery));
+					Print("Entered Description : " + ReadFrom.Excel(EditDelivery, 3, ReadFrom.EditDelivery));
+					ReportConfig.PassedLogInfo("Entered Description : " , ReadFrom.Excel(EditDelivery, 3, ReadFrom.EditDelivery));
 
 					SelectFromVisibleText("GateDropdown", DeliveryCalendarLocators, ReadFrom.Excel(EditDelivery, 4, ReadFrom.EditDelivery));
-					Print("Gate dropdown is selected as : " + ReadFrom.Excel(EditDelivery, 4, ReadFrom.EditDelivery));
-					ReportConfig.PassedLogInfo("Gate dropdown is selected as : " , ReadFrom.Excel(EditDelivery, 4, ReadFrom.EditDelivery));
+					Print("Entered Gate dropdown : " + ReadFrom.Excel(EditDelivery, 4, ReadFrom.EditDelivery));
+					ReportConfig.PassedLogInfo("Entered Gate dropdown : " , ReadFrom.Excel(EditDelivery, 4, ReadFrom.EditDelivery));
 
 
 
 					SelectFromVisibleText("EquipmentDropdown", DeliveryCalendarLocators, ReadFrom.Excel(EditDelivery, 5, ReadFrom.EditDelivery));
-					Print("Equipment dropdown is selected as : " + ReadFrom.Excel(EditDelivery, 5, ReadFrom.EditDelivery));
-					ReportConfig.PassedLogInfo("Equipment dropdown is selected as : " , ReadFrom.Excel(EditDelivery, 5, ReadFrom.EditDelivery));
+					Print("Entered Equipment dropdown : " + ReadFrom.Excel(EditDelivery, 5, ReadFrom.EditDelivery));
+					ReportConfig.PassedLogInfo("Entered Equipment dropdown : " , ReadFrom.Excel(EditDelivery, 5, ReadFrom.EditDelivery));
 
 					Wait(2000);
 					try {
 						if(IsElementDisplayed("PickingFrom", DeliveryCalendarLocators)) {
 							Clear("PickingFrom", DeliveryCalendarLocators);
 							TypeDataInTheField("PickingFrom", DeliveryCalendarLocators, ReadFrom.Excel(EditDelivery, 19, ReadFrom.EditDelivery));
-							Print("Picking from is entered as : " + ReadFrom.Excel(EditDelivery, 19, ReadFrom.EditDelivery));
-							ReportConfig.PassedLogInfo("Picking from is entered as : " , ReadFrom.Excel(EditDelivery, 19, ReadFrom.EditDelivery));
+							Print("Entered Picking from : " + ReadFrom.Excel(EditDelivery, 19, ReadFrom.EditDelivery));
+							ReportConfig.PassedLogInfo("Entered Picking from : " , ReadFrom.Excel(EditDelivery, 19, ReadFrom.EditDelivery));
 
 							Wait(2000);
 							Clear("PickingTo", DeliveryCalendarLocators);
 							TypeDataInTheField("PickingTo", DeliveryCalendarLocators, ReadFrom.Excel(EditDelivery, 20, ReadFrom.EditDelivery));
-							Print("Picking to is entered as : " + ReadFrom.Excel(EditDelivery, 20, ReadFrom.EditDelivery));
-							ReportConfig.PassedLogInfo("Picking to is entered as : " , ReadFrom.Excel(EditDelivery, 20, ReadFrom.EditDelivery));
+							Print("Entered Picking to : " + ReadFrom.Excel(EditDelivery, 20, ReadFrom.EditDelivery));
+							ReportConfig.PassedLogInfo("Entered Picking to : " , ReadFrom.Excel(EditDelivery, 20, ReadFrom.EditDelivery));
 
 						}
 
@@ -771,14 +771,14 @@ public class F_08_DeliveryCalendar extends Baseclass {
 					MoveToElement("AdditionalText", DeliveryCalendarLocators);
 					Clear("AdditionalText", DeliveryCalendarLocators);
 					TypeDataInTheField("AdditionalText", DeliveryCalendarLocators, ReadFrom.Excel(EditDelivery, 6, ReadFrom.EditDelivery));
-					Print("Additional text is entered as : " + ReadFrom.Excel(EditDelivery, 6, ReadFrom.EditDelivery));
-					ReportConfig.PassedLogInfo("Additional text is entered as : " , ReadFrom.Excel(EditDelivery, 6, ReadFrom.EditDelivery));
+					Print("Entered Additional text : " + ReadFrom.Excel(EditDelivery, 6, ReadFrom.EditDelivery));
+					ReportConfig.PassedLogInfo("Entered Additional text : " , ReadFrom.Excel(EditDelivery, 6, ReadFrom.EditDelivery));
 
 					Wait(2000);
 					Clear("VehicleDetails", DeliveryCalendarLocators);
 					TypeDataInTheField("VehicleDetails", DeliveryCalendarLocators, ReadFrom.Excel(EditDelivery, 7, ReadFrom.EditDelivery));
-					Print("Vehicle details is entered as : " + ReadFrom.Excel(EditDelivery, 7, ReadFrom.EditDelivery));
-					ReportConfig.PassedLogInfo("Vehicle details is entered as : " , ReadFrom.Excel(EditDelivery, 7, ReadFrom.EditDelivery));
+					Print("Entered Vehicle details : " + ReadFrom.Excel(EditDelivery, 7, ReadFrom.EditDelivery));
+					ReportConfig.PassedLogInfo("Entered Vehicle details : " , ReadFrom.Excel(EditDelivery, 7, ReadFrom.EditDelivery));
 
 
 					Click("DeliveryDate", DeliveryCalendarLocators);
@@ -838,7 +838,7 @@ public class F_08_DeliveryCalendar extends Baseclass {
 
 					JsClick("DfowEdit", DeliveryCalendarLocators);
 
-					ReportConfig.PassedLogInfo("Filter a delivery request" , "Dfow dropdown is clicked");
+					ReportConfig.PassedLogInfo("Filter a delivery request" , "Click on Dfow dropdown");
 
 					Click("SelectAll", DeliveryCalendarLocators);
 					Wait(2000);
@@ -860,8 +860,8 @@ public class F_08_DeliveryCalendar extends Baseclass {
 						if(IsEqual(DfowInDropdown, DfowInExcel)){
 							Click(Dfow);
 
-							ReportConfig.PassedLogInfo("User edit a delivery request" ,"Dfow is selected as : " + DfowInDropdown );
-							Print("Dfow is selected as : " + DfowInDropdown );
+							ReportConfig.PassedLogInfo("User edit a delivery request" ,"Selected Dfow : " + DfowInDropdown );
+							Print("Selected Dfow : " + DfowInDropdown );
 							break;
 						}
 					}	
@@ -870,8 +870,8 @@ public class F_08_DeliveryCalendar extends Baseclass {
 					JsClick("CompanyEdit", DeliveryCalendarLocators);
 					//Click("Company", DeliveryCalendarLocators);
 
-					ReportConfig.PassedLogInfo("User edit a delivery request" ,"Company dropdown is clicked");
-					Print("Company dropdown is clicked");
+					ReportConfig.PassedLogInfo("User edit a delivery request" ,"Click on Company dropdown");
+					Print("Click on Company dropdown");
 
 					Click("UnselectAll", DeliveryCalendarLocators);
 					Wait(2000);
@@ -892,8 +892,8 @@ public class F_08_DeliveryCalendar extends Baseclass {
 						if(IsEqual(CompanyInDropdown, CompanyInExcel)){
 							Click(Company);
 
-							ReportConfig.PassedLogInfo("User edit a delivery request" ,"Dfow is selected as : " + CompanyInDropdown );
-							Print("Dfow is selected as : " + CompanyInDropdown );
+							ReportConfig.PassedLogInfo("User edit a delivery request" ,"Selected Dfow : " + CompanyInDropdown );
+							Print("Selected Dfow : " + CompanyInDropdown );
 							break;
 						}
 						else {
@@ -904,14 +904,14 @@ public class F_08_DeliveryCalendar extends Baseclass {
 					Wait(2000);
 					Clear("FromHrs", DeliveryCalendarLocators);
 					TypeDataInTheField("FromHrs", DeliveryCalendarLocators, ReadFrom.Excel(EditDelivery, 13, ReadFrom.EditDelivery));
-					Print("From hrs is entered as : " + ReadFrom.Excel(EditDelivery, 13, ReadFrom.EditDelivery));
-					ReportConfig.PassedLogInfo("User edit a delivery request" , "From hrs is entered as : " + ReadFrom.Excel(EditDelivery, 13, ReadFrom.EditDelivery));
+					Print("Entered From hrs : " + ReadFrom.Excel(EditDelivery, 13, ReadFrom.EditDelivery));
+					ReportConfig.PassedLogInfo("User edit a delivery request" , "Entered From hrs : " + ReadFrom.Excel(EditDelivery, 13, ReadFrom.EditDelivery));
 
 					Wait(2000);
 					Clear("FromMin", DeliveryCalendarLocators);
 					TypeDataInTheField("FromMin", DeliveryCalendarLocators, ReadFrom.Excel(EditDelivery, 14, ReadFrom.EditDelivery));
-					Print("From min is entered as : " + ReadFrom.Excel(EditDelivery, 14, ReadFrom.EditDelivery));
-					ReportConfig.PassedLogInfo("User edit a delivery request" ,"From min is entered as : " + ReadFrom.Excel(EditDelivery, 14, ReadFrom.EditDelivery));
+					Print("Entered From min : " + ReadFrom.Excel(EditDelivery, 14, ReadFrom.EditDelivery));
+					ReportConfig.PassedLogInfo("User edit a delivery request" ,"Entered From min : " + ReadFrom.Excel(EditDelivery, 14, ReadFrom.EditDelivery));
 
 					Wait(2000);
 					String ExcelMeridian = ReadFrom.Excel(EditDelivery, 15, ReadFrom.EditDelivery);
@@ -929,14 +929,14 @@ public class F_08_DeliveryCalendar extends Baseclass {
 					Wait(2000);
 					Clear("ToHrs", DeliveryCalendarLocators);
 					TypeDataInTheField("ToHrs", DeliveryCalendarLocators, ReadFrom.Excel(EditDelivery, 16, ReadFrom.EditDelivery));
-					Print("To hrs is entered as : " + ReadFrom.Excel(EditDelivery, 16, ReadFrom.EditDelivery));
-					ReportConfig.PassedLogInfo("User edit a delivery request" ,"To hrs is entered as : " + ReadFrom.Excel(EditDelivery, 16, ReadFrom.EditDelivery));
+					Print("Entered To hrs : " + ReadFrom.Excel(EditDelivery, 16, ReadFrom.EditDelivery));
+					ReportConfig.PassedLogInfo("User edit a delivery request" ,"Entered To hrs : " + ReadFrom.Excel(EditDelivery, 16, ReadFrom.EditDelivery));
 
 					Wait(2000);
 					Clear("ToMin", DeliveryCalendarLocators);
 					TypeDataInTheField("ToMin", DeliveryCalendarLocators, ReadFrom.Excel(EditDelivery, 17, ReadFrom.EditDelivery));
-					Print("To min is entered as : " + ReadFrom.Excel(EditDelivery, 17, ReadFrom.EditDelivery));
-					ReportConfig.PassedLogInfo("User edit a delivery request" ,"To min is entered as : " + ReadFrom.Excel(EditDelivery, 17, ReadFrom.EditDelivery));
+					Print("Entered To min : " + ReadFrom.Excel(EditDelivery, 17, ReadFrom.EditDelivery));
+					ReportConfig.PassedLogInfo("User edit a delivery request" ,"Entered To min : " + ReadFrom.Excel(EditDelivery, 17, ReadFrom.EditDelivery));
 
 					Wait(2000);
 					String ExcelMeridian1 = ReadFrom.Excel(EditDelivery, 18, ReadFrom.EditDelivery);
@@ -953,8 +953,8 @@ public class F_08_DeliveryCalendar extends Baseclass {
 					MoveToElement("SubmitButton", DeliveryCalendarLocators);
 
 					Click("SubmitButton", DeliveryCalendarLocators);
-					ReportConfig.PassedLogInfo("User edit a delivery request" ,"Submit button is clicked");
-					Print("Submit button is clicked");
+					ReportConfig.PassedLogInfo("User edit a delivery request" ,"Click on Submit button");
+					Print("Click on Submit button");
 
 					//					Wait<WebDriver> fluentWait1111 = new FluentWait<WebDriver>(driver)
 					//							.withTimeout(Duration.ofSeconds(120))
@@ -1187,8 +1187,8 @@ public class F_08_DeliveryCalendar extends Baseclass {
 
 					Wait(6000);
 					JsClick("Expand", DeliveryCalendarLocators);
-					ReportConfig.PassedLogInfo("User add attachment to the delivery calendar request","Expand button is clicked");
-					Print("Expand button is clicked");
+					ReportConfig.PassedLogInfo("User add attachment to the delivery calendar request","Click on Expand button");
+					Print("Click on Expand button");
 
 					//					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 					//							.withTimeout(Duration.ofSeconds(120))
@@ -1254,8 +1254,8 @@ Wait(6000);
 							ReportConfig.PassedLogInfo("User add attachment to the delivery calendar request", "Attachment added successfully to the " + DeliveryName);
 
 							JsClick("ClosePopup", DeliveryCalendarLocators);
-							ReportConfig.PassedLogInfo("User add attachment to the delivery calendar request","Close popup button is clicked");
-							Print("Close popup button is clicked");
+							ReportConfig.PassedLogInfo("User add attachment to the delivery calendar request","Click on Close popup button");
+							Print("Click on Close popup button");
 							Wait(2000);
 							Clear("Search", DeliveryCalendarLocators);
 							Wait(10000);
@@ -1342,8 +1342,8 @@ Wait(6000);
 
 					JsClick("Expand", DeliveryCalendarLocators);
 
-					ReportConfig.PassedLogInfo("User view the request info", "Expand button is clicked");
-					Print("Expand button is clicked");
+					ReportConfig.PassedLogInfo("User view the request info", "Click on Expand button");
+					Print("Click on Expand button");
 
 					//					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 					//							.withTimeout(Duration.ofSeconds(120))
@@ -1365,8 +1365,8 @@ Wait(6000);
 
 						JsClick("ClosePopup", DeliveryCalendarLocators);
 
-						ReportConfig.PassedLogInfo("User view the request info","Close popup button is clicked");
-						Print("Close popup button is clicked");
+						ReportConfig.PassedLogInfo("User view the request info","Click on Close popup button");
+						Print("Click on Close popup button");
 						Wait(2000);
 						Clear("Search", DeliveryCalendarLocators);
 						Wait(3000);
@@ -1450,8 +1450,8 @@ Wait(6000);
 					Wait(6000);
 
 					JsClick("Expand", DeliveryCalendarLocators);
-					ReportConfig.PassedLogInfo("User add a comment","Expand button is clicked");
-					Print("Expand button is clicked");
+					ReportConfig.PassedLogInfo("User add a comment","Click on Expand button");
+					Print("Click on Expand button");
 
 					//					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 					//							.withTimeout(Duration.ofSeconds(120))
@@ -1473,11 +1473,11 @@ Wait(6000);
 
 						TypeDataInTheField("AddComment", DeliveryCalendarLocators, ReadFrom.Excel(Comments, 3, ReadFrom.Comments));
 						Print("Comment is entered as : " + ReadFrom.Excel(Comments, 3, ReadFrom.Comments));
-						ReportConfig.PassedLogInfo("User add a comment", "Description is entered as : " + ReadFrom.Excel(Comments, 3, ReadFrom.Comments));
+						ReportConfig.PassedLogInfo("User add a comment", "Entered Description : " + ReadFrom.Excel(Comments, 3, ReadFrom.Comments));
 
 						JsClick("SubmitButton", DeliveryCalendarLocators);
-						ReportConfig.PassedLogInfo("User add a comment","Submit button is clicked");
-						Print("Submit button is clicked");
+						ReportConfig.PassedLogInfo("User add a comment","Click on Submit button");
+						Print("Click on Submit button");
 
 						//						Wait<WebDriver> fluentWait1111 = new FluentWait<WebDriver>(driver)
 						//								.withTimeout(Duration.ofSeconds(120))
@@ -1583,8 +1583,8 @@ Wait(6000);
 					Wait(6000);
 
 					JsClick("Expand", DeliveryCalendarLocators);
-					ReportConfig.PassedLogInfo("User view history","Expand button is clicked");
-					Print("Expand button is clicked");
+					ReportConfig.PassedLogInfo("User view history","Click on Expand button");
+					Print("Click on Expand button");
 
 					//					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 					//							.withTimeout(Duration.ofSeconds(120))
@@ -1628,8 +1628,8 @@ Wait(6000);
 						ReportConfig.PassedLogInfo("User view history",DeliveryName + " : History page is viewed");
 
 						JsClick("ClosePopup", DeliveryCalendarLocators);
-						ReportConfig.PassedLogInfo("User view history","Close popup button is clicked");
-						Print("Close popup button is clicked");
+						ReportConfig.PassedLogInfo("User view history","Click on Close popup button");
+						Print("Click on Close popup button");
 						Wait(2000);
 						Clear("Search", DeliveryCalendarLocators);
 						Wait(3000);
@@ -1713,8 +1713,8 @@ Wait(6000);
 					Wait(6000);
 
 					JsClick("Expand", DeliveryCalendarLocators);
-					ReportConfig.PassedLogInfo("User delivers the request","Expand button is clicked");
-					Print("Expand button is clicked");
+					ReportConfig.PassedLogInfo("User delivers the request","Click on Expand button");
+					Print("Click on Expand button");
 
 					//					Wait<WebDriver> fluentWait1 = new FluentWait<WebDriver>(driver)
 					//							.withTimeout(Duration.ofSeconds(120))
@@ -1763,8 +1763,8 @@ Wait(6000);
 						ReportConfig.PassedLogInfo("User delivers the request",DeliveryName + " : is delivered successfully");
 
 						JsClick("ClosePopup", DeliveryCalendarLocators);
-						ReportConfig.PassedLogInfo("User delivers the request","Close popup button is clicked");
-						Print("Close popup button is clicked");
+						ReportConfig.PassedLogInfo("User delivers the request","Click on Close popup button");
+						Print("Click on Close popup button");
 						Wait(2000);
 						Clear("Search", DeliveryCalendarLocators);
 						Wait(3000);
@@ -1865,15 +1865,15 @@ Wait(6000);
 
 			Clear("Description", DeliveryCalendarLocators);
 			TypeDataInTheField("Description", DeliveryCalendarLocators, ReadFrom.Excel(ApproveOrReject, 2, ReadFrom.ApproveOrReject));
-			Print("Description is entered as : " + ReadFrom.Excel(ApproveOrReject, 2, ReadFrom.ApproveOrReject));
-			ReportConfig.PassedLogInfo("User approve or reject the request","Description is entered as : " + ReadFrom.Excel(ApproveOrReject, 2, ReadFrom.ApproveOrReject));
+			Print("Entered Description : " + ReadFrom.Excel(ApproveOrReject, 2, ReadFrom.ApproveOrReject));
+			ReportConfig.PassedLogInfo("User approve or reject the request","Entered Description : " + ReadFrom.Excel(ApproveOrReject, 2, ReadFrom.ApproveOrReject));
 
 
 			MoveToElement("SubmitButton", DeliveryCalendarLocators);
 
 			Click("SubmitButton", DeliveryCalendarLocators);
-			ReportConfig.PassedLogInfo("User approve or reject the request","Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.PassedLogInfo("User approve or reject the request","Click on Submit button");
+			Print("Click on Submit button");
 
 			//			Wait<WebDriver> fluentWait1111 = new FluentWait<WebDriver>(driver)
 			//					.withTimeout(Duration.ofSeconds(120))
@@ -1953,8 +1953,8 @@ Wait(6000);
 
 			Wait(6000);
 			JsClick("Expand", DeliveryCalendarLocators);
-			ReportConfig.PassedLogInfo("User approve or reject the request","Expand button is clicked");
-			Print("Expand button is clicked");
+			ReportConfig.PassedLogInfo("User approve or reject the request","Click on Expand button");
+			Print("Click on Expand button");
 
 
 			//			new FluentWait<WebDriver>(driver)
@@ -1984,8 +1984,8 @@ Wait(6000);
 
 				Wait(6000);
 				SelectFromVisibleText("SelectStatus", DeliveryCalendarLocators, ReadFrom.Excel(ApproveOrReject, 3, ReadFrom.ApproveOrReject));
-				Print("Status is selected as : " + ReadFrom.Excel(ApproveOrReject, 3, ReadFrom.ApproveOrReject));
-				ReportConfig.PassedLogInfo("User approve or reject the request","Status is selected as : " + ReadFrom.Excel(ApproveOrReject, 3, ReadFrom.ApproveOrReject));
+				Print("Selected Status : " + ReadFrom.Excel(ApproveOrReject, 3, ReadFrom.ApproveOrReject));
+				ReportConfig.PassedLogInfo("User approve or reject the request","Selected Status : " + ReadFrom.Excel(ApproveOrReject, 3, ReadFrom.ApproveOrReject));
 
 				Wait(2000);
 				JsClick("Save", DeliveryCalendarLocators);
@@ -2014,8 +2014,8 @@ Wait(6000);
 					Print("Delivery request is approved");
 					Wait(3000);
 					JsClick("ClosePopup", DeliveryCalendarLocators);
-					ReportConfig.PassedLogInfo("User approve or reject the request","Close popup button is clicked");
-					Print("Close popup button is clicked");
+					ReportConfig.PassedLogInfo("User approve or reject the request","Click on Close popup button");
+					Print("Click on Close popup button");
 					Wait(2000);
 					Clear("Search", DeliveryCalendarLocators);
 					Wait(3000);
@@ -2041,8 +2041,8 @@ Wait(6000);
 					Print("Delivery request is declined");
 					Wait(3000);
 					JsClick("ClosePopup", DeliveryCalendarLocators);
-					ReportConfig.PassedLogInfo("User approve or reject the request","Close popup button is clicked");
-					Print("Close popup button is clicked");
+					ReportConfig.PassedLogInfo("User approve or reject the request","Click on Close popup button");
+					Print("Click on Close popup button");
 					Wait(2000);
 					Clear("Search", DeliveryCalendarLocators);
 					Wait(3000);
@@ -2074,8 +2074,8 @@ Wait(6000);
 
 			if(IsElementDisplayed("Add", DeliveryCalendarLocators)){
 				JsClick("Add", DeliveryCalendarLocators);
-				Print("Add button is clicked");
-				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar", "Add button is clicked");
+				Print("Click on Add button");
+				ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar", "Click on Add button");
 
 			}
 			else
@@ -2113,31 +2113,31 @@ Wait(6000);
 
 
 			TypeDataInTheField("Description", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 0, ReadFrom.AllDeliverRequest));
-			Print("Description is entered as : " + ReadFrom.Excel(AddDelivery, 0, ReadFrom.AllDeliverRequest));
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Description is entered as : " + ReadFrom.Excel(AddDelivery, 0, ReadFrom.AllDeliverRequest));
+			Print("Entered Description : " + ReadFrom.Excel(AddDelivery, 0, ReadFrom.AllDeliverRequest));
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Entered Description : " + ReadFrom.Excel(AddDelivery, 0, ReadFrom.AllDeliverRequest));
 
 			SelectFromVisibleText("GateDropdown", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 1, ReadFrom.AllDeliverRequest));
-			Print("Gate dropdown is selected as : " + ReadFrom.Excel(AddDelivery, 1, ReadFrom.AllDeliverRequest));
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Gate dropdown is selected as : " + ReadFrom.Excel(AddDelivery, 1, ReadFrom.AllDeliverRequest));
+			Print("Entered Gate dropdown : " + ReadFrom.Excel(AddDelivery, 1, ReadFrom.AllDeliverRequest));
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Entered Gate dropdown : " + ReadFrom.Excel(AddDelivery, 1, ReadFrom.AllDeliverRequest));
 
 
 
 			SelectFromVisibleText("EquipmentDropdown", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 2, ReadFrom.AllDeliverRequest));
-			Print("Equipment dropdown is selected as : " + ReadFrom.Excel(AddDelivery, 2, ReadFrom.AllDeliverRequest));
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Equipment dropdown is selected as : " + ReadFrom.Excel(AddDelivery, 2, ReadFrom.AllDeliverRequest));
+			Print("Entered Equipment dropdown : " + ReadFrom.Excel(AddDelivery, 2, ReadFrom.AllDeliverRequest));
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Entered Equipment dropdown : " + ReadFrom.Excel(AddDelivery, 2, ReadFrom.AllDeliverRequest));
 
 			Wait(2000);
 			try {
 				if(IsElementDisplayed("PickingFrom", DeliveryCalendarLocators)) {
 
 					TypeDataInTheField("PickingFrom", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 14, ReadFrom.AllDeliverRequest));
-					Print("Picking from is entered as : " + ReadFrom.Excel(AddDelivery, 14, ReadFrom.AllDeliverRequest));
-					ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Picking from is entered as : " + ReadFrom.Excel(AddDelivery, 14, ReadFrom.AllDeliverRequest));
+					Print("Entered Picking from : " + ReadFrom.Excel(AddDelivery, 14, ReadFrom.AllDeliverRequest));
+					ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Entered Picking from : " + ReadFrom.Excel(AddDelivery, 14, ReadFrom.AllDeliverRequest));
 
 					Wait(2000);
 					TypeDataInTheField("PickingTo", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 15, ReadFrom.AllDeliverRequest));
-					Print("Picking to is entered as : " + ReadFrom.Excel(AddDelivery, 15, ReadFrom.AllDeliverRequest));
-					ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Picking to is entered as : " + ReadFrom.Excel(AddDelivery, 15, ReadFrom.AllDeliverRequest));
+					Print("Entered Picking to : " + ReadFrom.Excel(AddDelivery, 15, ReadFrom.AllDeliverRequest));
+					ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Entered Picking to : " + ReadFrom.Excel(AddDelivery, 15, ReadFrom.AllDeliverRequest));
 
 				}
 
@@ -2152,12 +2152,12 @@ Wait(6000);
 			Wait(2000);
 			MoveToElement("AdditionalText", DeliveryCalendarLocators);
 			TypeDataInTheField("AdditionalText", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 3, ReadFrom.AllDeliverRequest));
-			Print("Additional text is entered as : " + ReadFrom.Excel(AddDelivery, 3, ReadFrom.AllDeliverRequest));
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Additional text is entered as : " + ReadFrom.Excel(AddDelivery, 3, ReadFrom.AllDeliverRequest));
+			Print("Entered Additional text : " + ReadFrom.Excel(AddDelivery, 3, ReadFrom.AllDeliverRequest));
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Entered Additional text : " + ReadFrom.Excel(AddDelivery, 3, ReadFrom.AllDeliverRequest));
 
 			TypeDataInTheField("VehicleDetails", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 4, ReadFrom.AllDeliverRequest));
-			Print("Vehicle details is entered as : " + ReadFrom.Excel(AddDelivery, 4, ReadFrom.AllDeliverRequest));
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Vehicle details is entered as : " + ReadFrom.Excel(AddDelivery, 4, ReadFrom.AllDeliverRequest));
+			Print("Entered Vehicle details : " + ReadFrom.Excel(AddDelivery, 4, ReadFrom.AllDeliverRequest));
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Entered Vehicle details : " + ReadFrom.Excel(AddDelivery, 4, ReadFrom.AllDeliverRequest));
 
 
 			//	Click("DeliveryDate", DeliveryCalendarLocators);
@@ -2167,14 +2167,14 @@ Wait(6000);
 
 			Clear("DeliveryDate", DeliveryCalendarLocators);
 			TypeDataInTheField("DeliveryDate", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 5, ReadFrom.AllDeliverRequest));
-			Print("Start date is entered as : " + ReadFrom.Excel(AddDelivery, 5, ReadFrom.AllDeliverRequest));
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Start date is entered as : " + ReadFrom.Excel(AddDelivery, 5, ReadFrom.AllDeliverRequest));
+			Print("Entered Start date : " + ReadFrom.Excel(AddDelivery, 5, ReadFrom.AllDeliverRequest));
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Entered Start date : " + ReadFrom.Excel(AddDelivery, 5, ReadFrom.AllDeliverRequest));
 
 
 			///////////////////////
 
 			Click("Dfow", DeliveryCalendarLocators);
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Dfow dropdown is clicked");
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Click on Dfow dropdown");
 
 			String DfowInExcel = ReadFrom.Excel(AddDelivery, 6,ReadFrom.AllDeliverRequest);
 			Print(DfowInExcel);
@@ -2189,8 +2189,8 @@ Wait(6000);
 				if(IsEqual(DfowInDropdown, DfowInExcel)){
 					Click(Dfow);
 
-					ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Dfow is selected as : " + DfowInDropdown );
-					Print("Dfow is selected as : " + DfowInDropdown );
+					ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Selected Dfow : " + DfowInDropdown );
+					Print("Selected Dfow : " + DfowInDropdown );
 					break;
 				}
 				else {
@@ -2202,7 +2202,7 @@ Wait(6000);
 			/////////////////////////////////////
 
 			Click("Company", DeliveryCalendarLocators);
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Company dropdown is clicked");
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Click on Company dropdown");
 
 			String CompanyInExcel = ReadFrom.Excel(AddDelivery, 7,ReadFrom.AllDeliverRequest);
 
@@ -2217,8 +2217,8 @@ Wait(6000);
 				if(IsEqual(CompanyInDropdown, CompanyInExcel)){
 					Click(Company);
 
-					ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Dfow is selected as : " + CompanyInDropdown );
-					Print("Dfow is selected as : " + CompanyInDropdown );
+					ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Selected Dfow : " + CompanyInDropdown );
+					Print("Selected Dfow : " + CompanyInDropdown );
 					break;
 				}
 				else {
@@ -2230,14 +2230,14 @@ Wait(6000);
 			Wait(2000);
 			Clear("FromHrs", DeliveryCalendarLocators);
 			TypeDataInTheField("FromHrs", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 4, ReadFrom.NegativeCraneCalendar));
-			Print("From hrs is entered as : " + ReadFrom.Excel(AddDelivery, 4, ReadFrom.NegativeCraneCalendar));
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","From hrs is entered as : " + ReadFrom.Excel(AddDelivery, 4, ReadFrom.NegativeCraneCalendar));
+			Print("Entered From hrs : " + ReadFrom.Excel(AddDelivery, 4, ReadFrom.NegativeCraneCalendar));
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Entered From hrs : " + ReadFrom.Excel(AddDelivery, 4, ReadFrom.NegativeCraneCalendar));
 
 			Wait(2000);
 			Clear("FromMin", DeliveryCalendarLocators);
 			TypeDataInTheField("FromMin", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 5, ReadFrom.NegativeCraneCalendar));
-			Print("From min is entered as : " + ReadFrom.Excel(AddDelivery, 5, ReadFrom.NegativeCraneCalendar));
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","From min is entered as : " + ReadFrom.Excel(AddDelivery, 5, ReadFrom.NegativeCraneCalendar));
+			Print("Entered From min : " + ReadFrom.Excel(AddDelivery, 5, ReadFrom.NegativeCraneCalendar));
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Entered From min : " + ReadFrom.Excel(AddDelivery, 5, ReadFrom.NegativeCraneCalendar));
 
 			Wait(2000);
 			String ExcelMeridian = ReadFrom.Excel(AddDelivery, 6, ReadFrom.NegativeCraneCalendar);
@@ -2256,14 +2256,14 @@ Wait(6000);
 			Wait(2000);
 			Clear("ToHrs", DeliveryCalendarLocators);
 			TypeDataInTheField("ToHrs", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 7, ReadFrom.NegativeCraneCalendar));
-			Print("To hrs is entered as : " + ReadFrom.Excel(AddDelivery, 7, ReadFrom.NegativeCraneCalendar));
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","To hrs is entered as : " + ReadFrom.Excel(AddDelivery, 7, ReadFrom.NegativeCraneCalendar));
+			Print("Entered To hrs : " + ReadFrom.Excel(AddDelivery, 7, ReadFrom.NegativeCraneCalendar));
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Entered To hrs : " + ReadFrom.Excel(AddDelivery, 7, ReadFrom.NegativeCraneCalendar));
 
 			Wait(2000);
 			Clear("ToMin", DeliveryCalendarLocators);
 			TypeDataInTheField("ToMin", DeliveryCalendarLocators, ReadFrom.Excel(AddDelivery, 8, ReadFrom.NegativeCraneCalendar));
-			Print("To min is entered as : " + ReadFrom.Excel(AddDelivery, 8, ReadFrom.NegativeCraneCalendar));
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","To min is entered as : " + ReadFrom.Excel(AddDelivery, 8, ReadFrom.NegativeCraneCalendar));
+			Print("Entered To min : " + ReadFrom.Excel(AddDelivery, 8, ReadFrom.NegativeCraneCalendar));
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Entered To min : " + ReadFrom.Excel(AddDelivery, 8, ReadFrom.NegativeCraneCalendar));
 
 			Wait(2000);
 			String ExcelMeridian1 = ReadFrom.Excel(AddDelivery, 9, ReadFrom.NegativeCraneCalendar);
@@ -2289,19 +2289,19 @@ Wait(6000);
 
 
 			Print("Invalid Time selected Error : " + InvalidTime);
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Invalid Time selected Error: " + InvalidTime);
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Please enter valid time format. " + InvalidTime);
 
 			Wait(3000);
 
 			Click("CancelButton", DeliveryCalendarLocators);
-			Print("Cancel button is clicked");
+			Print("Click on Cancel button");
 
 			Wait(2000);
 
 			Click("Yes", DeliveryCalendarLocators);
 
 			//Print("Yes button is clicked");
-			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Close button is clicked");
+			ReportConfig.Givenlogpass("User uploads invalid date time in Delivery Calendar","Click on Close button");
 
 		}
 

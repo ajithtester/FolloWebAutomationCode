@@ -40,7 +40,7 @@ public class F_17_ConcreteRequest extends Baseclass {
 			Wait(3000);
 
 			Click("ConcreteRequest.CreateNew", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"Add new concrete calendar button is clicked");
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Click on All new button");
 			Print("Add new button is clicked");
 
 			Wait(3000);
@@ -58,14 +58,14 @@ public class F_17_ConcreteRequest extends Baseclass {
 
 
 			TypeDataInTheField("ConcreteRequest.Description", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"Description is entered as : " + ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
-			Print("Description is entered as : " + ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered Description : " + ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
+			Print("Entered Description : " + ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.Location", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"Location is entered as : " + ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
-			Print("Location is entered as : " + ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered Location : " + ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
+			Print("Entered Location : " + ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
 
 			Wait(1000);
 
@@ -74,20 +74,20 @@ public class F_17_ConcreteRequest extends Baseclass {
 			Clear("ConcreteRequest.SelectDate", ConcreteRequestLocators);
 
 			TypeDataInTheField("ConcreteRequest.SelectDate", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"SelectDate is entered as : " + ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
-			Print("SelectDate is entered as : " + ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered SelectDate : " + ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
+			Print("Entered SelectDate : " + ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			Clear("ConcreteRequest.FromHH", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.FromHH", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 3, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"FromHH is entered as : " + ReadFrom.Excel(AddConcreteRequest, 3, ReadFrom.AddConcreteRequest));
-			Print("FromHH is entered as : " + ReadFrom.Excel(AddConcreteRequest, 3, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered FromHH : " + ReadFrom.Excel(AddConcreteRequest, 3, ReadFrom.AddConcreteRequest));
+			Print("Entered FromHH : " + ReadFrom.Excel(AddConcreteRequest, 3, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			Clear("ConcreteRequest.FromMM", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.FromMM", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 4, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"FromMM is entered as : " + ReadFrom.Excel(AddConcreteRequest, 4, ReadFrom.AddConcreteRequest));
-			Print("FromMM is entered as : " + ReadFrom.Excel(AddConcreteRequest, 4, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered FromMM : " + ReadFrom.Excel(AddConcreteRequest, 4, ReadFrom.AddConcreteRequest));
+			Print("Entered FromMM : " + ReadFrom.Excel(AddConcreteRequest, 4, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			String FromMeridian = ReadFrom.Excel(AddConcreteRequest, 5, ReadFrom.AddConcreteRequest);
@@ -105,20 +105,19 @@ public class F_17_ConcreteRequest extends Baseclass {
 			Wait(2000);
 			Clear("ConcreteRequest.ToHH", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.ToHH", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"ToHH is entered as : " + ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.AddConcreteRequest));
-			Print("ToHH is entered as : " + ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered ToHH : " + ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.AddConcreteRequest));
+			Print("Entered ToHH : " + ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			Clear("ConcreteRequest.ToMM", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.ToMM", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 7, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"ToMM is entered as : " + ReadFrom.Excel(AddConcreteRequest, 7, ReadFrom.AddConcreteRequest));
-			Print("ToMM is entered as : " + ReadFrom.Excel(AddConcreteRequest, 7, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered ToMM : " + ReadFrom.Excel(AddConcreteRequest, 7, ReadFrom.AddConcreteRequest));
+			Print("Entered ToMM : " + ReadFrom.Excel(AddConcreteRequest, 7, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			String ToMeridian = ReadFrom.Excel(AddConcreteRequest, 8, ReadFrom.AddConcreteRequest);
 
 			String ToMeridian2 = GetText("ConcreteRequest.ToMeridian", ConcreteRequestLocators);
-			Print(ToMeridian2);
 			if(IsEqual(ToMeridian2, ToMeridian)) {
 
 
@@ -135,52 +134,52 @@ public class F_17_ConcreteRequest extends Baseclass {
 
 			Wait(2000);
 			TypeDataInTheField("ConcreteRequest.MixDesign", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"MixDesign is entered as : " + ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
-			Print("MixDesign is entered as : " + ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered MixDesign : " + ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
+			Print("Entered MixDesign : " + ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			ClickEnter();
 			Wait(1000);
 
 			TypeDataInTheField("ConcreteRequest.OrderNumber", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"OrderNumber is entered as : " + ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
-			Print("OrderNumber is entered as : " + ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered OrderNumber : " + ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
+			Print("Entered OrderNumber : " + ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.Slump", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"Slump is entered as : " + ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
-			Print("Slump is entered as : " + ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered Slump : " + ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
+			Print("Entered Slump : " + ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.TruckSpacingHours", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"TruckSpacingHours is entered as : " + ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
-			Print("TruckSpacingHours is entered as : " + ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered TruckSpacingHours : " + ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
+			Print("Entered TruckSpacingHours : " + ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.QuantityOrdered", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"QuantityOrdered is entered as : " + ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
-			Print("QuantityOrdered is entered as : " + ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered QuantityOrdered : " + ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
+			Print("Entered QuantityOrdered : " + ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.Primer", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"Primer is entered as : " + ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
-			Print("Primer is entered as : " + ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered Primer : " + ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
+			Print("Entered Primer : " + ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.Notes", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"Primer is entered as : " + ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
-			Print("Primer is entered as : " + ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered Primer : " + ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
+			Print("Entered Primer : " + ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			Click("ConcreteRequest.Submit", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Click on Submit button");
+			Print("Click on Submit button");
 
 			Wait<WebDriver> Uploaded = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -257,8 +256,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 			Clear("ConcreteRequest.SearchField", ConcreteRequestLocators);
 			Wait(3000);
 			JsClick("ConcreteRequest.CloseSearch", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("Search delivery request" ,"Clear search button is clicked");
-			Print("Clear search button is clicked");
+			ReportConfig.Givenlogpass("Search delivery request" ,"Click on Clear search button");
+			Print("Click on Clear search button");
 
 		}
 	}
@@ -305,8 +304,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 			Wait(2000);
 			Click("ConcreteRequest.EditButton", ConcreteRequestLocators);
 
-			ReportConfig.Givenlogpass("User edit a Concrete request from the calendar" ,"Edit button is clicked");
-			Print("Edit button is clicked");
+			ReportConfig.Givenlogpass("User edit a Concrete request from the calendar" ,"Click on Edit button");
+			Print("Click on Edit button");
 
 			Wait<WebDriver> description = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -321,19 +320,19 @@ public class F_17_ConcreteRequest extends Baseclass {
 			});
 			Clear("ConcreteRequest.Description", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.Description", ConcreteRequestLocators, ReadFrom.Excel(EditConcreteRequest, 2, ReadFrom.ConcreteRequest));
-			ReportConfig.Givenlogpass("User edit a Concrete request from the calendar" ,"Description is edited as : " + ReadFrom.Excel(EditConcreteRequest, 2, ReadFrom.ConcreteRequest));
-			Print("Description is edited as : " + ReadFrom.Excel(EditConcreteRequest, 2, ReadFrom.ConcreteRequest));
+			ReportConfig.Givenlogpass("User edit a Concrete request from the calendar" ,"Edited Description is : " + ReadFrom.Excel(EditConcreteRequest, 2, ReadFrom.ConcreteRequest));
+			Print("Edited Description is : " + ReadFrom.Excel(EditConcreteRequest, 2, ReadFrom.ConcreteRequest));
 
 			Clear("ConcreteRequest.QuantityOrdered", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.QuantityOrdered", ConcreteRequestLocators, ReadFrom.Excel(EditConcreteRequest, 3, ReadFrom.ConcreteRequest));
-			ReportConfig.Givenlogpass("User edit a Concrete request from the calendar" ,"Quantity ordered is edited as : " + ReadFrom.Excel(EditConcreteRequest, 3, ReadFrom.ConcreteRequest));
-			Print("Quantity ordered is edited as : " + ReadFrom.Excel(EditConcreteRequest, 3, ReadFrom.ConcreteRequest));
+			ReportConfig.Givenlogpass("User edit a Concrete request from the calendar" ,"Edited Quantity ordered is : " + ReadFrom.Excel(EditConcreteRequest, 3, ReadFrom.ConcreteRequest));
+			Print("Edited Quantity ordered is : " + ReadFrom.Excel(EditConcreteRequest, 3, ReadFrom.ConcreteRequest));
 
 			Wait(2000);
 
 			Click("ConcreteRequest.Submit", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User edit a Concrete request from the calendar" ,"Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.Givenlogpass("User edit a Concrete request from the calendar" ,"Click on Submit button");
+			Print("Click on Submit button");
 
 			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -375,8 +374,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 		for(int FilterConcreteRequest =1; FilterConcreteRequest<=ReadFrom.rowcount; FilterConcreteRequest++)	{
 
 			JsClick("ConcreteRequest.FilterIcon", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User filter the Concrete request", "Filter icon is clicked");
-			Print("Filter icon is clicked");
+			ReportConfig.Givenlogpass("User filter the Concrete request", "Click on Filter icon button");
+			Print("Click on Filter icon button");
 
 
 			Wait<WebDriver> Filter = new FluentWait<WebDriver>(driver)
@@ -399,8 +398,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 			Wait(2000);
 
 			JsClick("ConcreteRequest.FilterApply", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User filter the Concrete request", "Apply button is clicked");
-			Print("Apply button is clicked");
+			ReportConfig.Givenlogpass("User filter the Concrete request", "Click on Apply button");
+			Print("Click on Apply button");
 
 			Wait(7000);
 
@@ -429,8 +428,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 			JsClick("ConcreteRequest.FilterIcon", ConcreteRequestLocators);
 			Wait(2000);
 			JsClick("ConcreteRequest.FilterReset", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User filter the Concrete request" ,"Reset button is clicked");
-			Print("Reset button is clicked");
+			ReportConfig.Givenlogpass("User filter the Concrete request" ,"Click on Reset button");
+			Print("Click on Reset button");
 		}
 
 
@@ -488,8 +487,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 				file.sendKeys(filePath);
 				Wait(3000);
 				JsClick("ConcreteRequest.Done", ConcreteRequestLocators);
-				Print("Done button is clicked");
-				ReportConfig.Givenlogpass("To view info and history, add comment, add attachment to the Concrete request" ,"Done button is clicked");
+				Print("Click on Done button");
+				ReportConfig.Givenlogpass("To view info and history, add comment, add attachment to the Concrete request" ,"Click on Done button");
 
 
 				Wait<WebDriver> Uploaded = new FluentWait<WebDriver>(driver)
@@ -536,8 +535,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 
 				Wait(2000);
 				JsClick("ConcreteRequest.Submit", ConcreteRequestLocators);
-				Print("Submit button is clicked");
-				ReportConfig.Givenlogpass("To view info and history, add comment, add attachment to the Concrete request" ,"Submit button is clicked");
+				Print("Click on Submit button");
+				ReportConfig.Givenlogpass("To view info and history, add comment, add attachment to the Concrete request" ,"Click on Submit button");
 
 
 				Wait<WebDriver> AddComment = new FluentWait<WebDriver>(driver)
@@ -647,8 +646,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 			Wait(2000);
 			Click("ConcreteRequest.EditButton", ConcreteRequestLocators);
 
-			ReportConfig.Givenlogpass("User Approve and Complete a concrete request in the calendar" ,"Edit button is clicked");
-			Print("Edit button is clicked");
+			ReportConfig.Givenlogpass("User Approve and Complete a concrete request in the calendar" ,"Click on Edit button");
+			Print("Click on Edit button");
 
 			Wait<WebDriver> description = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -668,8 +667,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 			Wait(2000);
 
 			Click("ConcreteRequest.Submit", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User Approve and Complete a concrete request in the calendar" ,"Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.Givenlogpass("User Approve and Complete a concrete request in the calendar" ,"Click on Submit button");
+			Print("Click on Submit button");
 
 			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -745,18 +744,18 @@ public class F_17_ConcreteRequest extends Baseclass {
 
 
 			SelectFromDropdown("ConcreteRequest.HoursToComplete", ConcreteRequestLocators, ReadFrom.Excel(ApproveAndComplete, 1, ReadFrom.ApproveConcreteRequest));
-			ReportConfig.Givenlogpass("User Approve and Complete a concrete request in the calendar" ,"Hours To Complete is selected as : " + ReadFrom.Excel(ApproveAndComplete, 1, ReadFrom.ApproveConcreteRequest));
-			Print("Hours To Complete is selected as : " + ReadFrom.Excel(ApproveAndComplete, 1, ReadFrom.ApproveConcreteRequest));
+			ReportConfig.Givenlogpass("User Approve and Complete a concrete request in the calendar" ,"Entered Hours To Complete : " + ReadFrom.Excel(ApproveAndComplete, 1, ReadFrom.ApproveConcreteRequest));
+			Print("Entered Hours To Complete : " + ReadFrom.Excel(ApproveAndComplete, 1, ReadFrom.ApproveConcreteRequest));
 			Wait(2000);
 
 			SelectFromDropdown("ConcreteRequest.MinutesToComplete", ConcreteRequestLocators, ReadFrom.Excel(ApproveAndComplete, 2, ReadFrom.ApproveConcreteRequest));
-			ReportConfig.Givenlogpass("User Approve and Complete a concrete request in the calendar" ,"Minutes To Complete is selected as : " + ReadFrom.Excel(ApproveAndComplete, 2, ReadFrom.ApproveConcreteRequest));
-			Print("Minutes To Complete is selected as : " + ReadFrom.Excel(ApproveAndComplete, 2, ReadFrom.ApproveConcreteRequest));
+			ReportConfig.Givenlogpass("User Approve and Complete a concrete request in the calendar" ,"Entered Minutes To Complete : " + ReadFrom.Excel(ApproveAndComplete, 2, ReadFrom.ApproveConcreteRequest));
+			Print("Entered Minutes To Complete : " + ReadFrom.Excel(ApproveAndComplete, 2, ReadFrom.ApproveConcreteRequest));
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.TotalCubic", ConcreteRequestLocators, ReadFrom.Excel(ApproveAndComplete, 3, ReadFrom.ApproveConcreteRequest));
-			ReportConfig.Givenlogpass("User Approve and Complete a concrete request in the calendar" ,"Total Cubic is entered as : " + ReadFrom.Excel(ApproveAndComplete, 3, ReadFrom.ApproveConcreteRequest));
-			Print("Total Cubic is entered as : " + ReadFrom.Excel(ApproveAndComplete, 3, ReadFrom.ApproveConcreteRequest));
+			ReportConfig.Givenlogpass("User Approve and Complete a concrete request in the calendar" ,"Entered Total Cubic : " + ReadFrom.Excel(ApproveAndComplete, 3, ReadFrom.ApproveConcreteRequest));
+			Print("Entered Total Cubic : " + ReadFrom.Excel(ApproveAndComplete, 3, ReadFrom.ApproveConcreteRequest));
 			Wait(2000);
 
 			JsClick("ConcreteRequest.SubmitComplete", ConcreteRequestLocators);
@@ -852,8 +851,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 			Wait(2000);
 			Click("ConcreteRequest.EditButton", ConcreteRequestLocators);
 
-			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Edit button is clicked");
-			Print("Edit button is clicked");
+			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Click on Edit button");
+			Print("Click on Edit button");
 
 			Wait<WebDriver> description = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -870,8 +869,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 			MoveToElement("ConcreteRequest.PumpRequired", ConcreteRequestLocators);
 			Wait(2000);
 			Click("ConcreteRequest.PumpRequired", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Pump required button is clicked");
-			Print("Pump required button is clicked");
+			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Click on Pump required button");
+			Print("Click on Pump required button");
 
 			Wait(2000);
 			MoveToElement("ConcreteRequest.Submit", ConcreteRequestLocators);
@@ -879,26 +878,26 @@ public class F_17_ConcreteRequest extends Baseclass {
 
 			Clear("ConcreteRequest.PumpOrdered", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.PumpOrdered", ConcreteRequestLocators, ReadFrom.Excel(PumpConcreteRequest, 2, ReadFrom.PumpConcreteRequest));
-			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Pump ordered is entered as : " + ReadFrom.Excel(PumpConcreteRequest, 2, ReadFrom.PumpConcreteRequest));
-			Print("Pump ordered is entered as : " + ReadFrom.Excel(PumpConcreteRequest, 2, ReadFrom.PumpConcreteRequest));
+			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Entered Pump ordereds : " + ReadFrom.Excel(PumpConcreteRequest, 2, ReadFrom.PumpConcreteRequest));
+			Print("Entered Pump ordereds : " + ReadFrom.Excel(PumpConcreteRequest, 2, ReadFrom.PumpConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.PumpLocation", ConcreteRequestLocators, ReadFrom.Excel(PumpConcreteRequest, 3, ReadFrom.PumpConcreteRequest));
-			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Pump location is entered as : " + ReadFrom.Excel(PumpConcreteRequest, 3, ReadFrom.PumpConcreteRequest));
-			Print("Pump location is entered as : " + ReadFrom.Excel(PumpConcreteRequest, 3, ReadFrom.PumpConcreteRequest));
+			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Entered Pump Location : " + ReadFrom.Excel(PumpConcreteRequest, 3, ReadFrom.PumpConcreteRequest));
+			Print("Entered Pump Location : " + ReadFrom.Excel(PumpConcreteRequest, 3, ReadFrom.PumpConcreteRequest));
 
 			Wait(2000);
 			Clear("ConcreteRequest.PumpFromHH", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.PumpFromHH", ConcreteRequestLocators, ReadFrom.Excel(PumpConcreteRequest, 4, ReadFrom.PumpConcreteRequest));
-			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"PumpFromHH is entered as : " + ReadFrom.Excel(PumpConcreteRequest, 4, ReadFrom.PumpConcreteRequest));
-			Print("PumpFromHH is entered as : " + ReadFrom.Excel(PumpConcreteRequest, 4, ReadFrom.PumpConcreteRequest));
+			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Entered FromHH : " + ReadFrom.Excel(PumpConcreteRequest, 4, ReadFrom.PumpConcreteRequest));
+			Print("Entered FromHH : " + ReadFrom.Excel(PumpConcreteRequest, 4, ReadFrom.PumpConcreteRequest));
 
 			Wait(2000);
 			Clear("ConcreteRequest.PumpFromMM", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.PumpFromMM", ConcreteRequestLocators, ReadFrom.Excel(PumpConcreteRequest, 5, ReadFrom.PumpConcreteRequest));
-			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"PumpFromMM is entered as : " + ReadFrom.Excel(PumpConcreteRequest, 5, ReadFrom.PumpConcreteRequest));
-			Print("PumpFromMM is entered as : " + ReadFrom.Excel(PumpConcreteRequest, 5, ReadFrom.PumpConcreteRequest));
+			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Entered FromMM : " + ReadFrom.Excel(PumpConcreteRequest, 5, ReadFrom.PumpConcreteRequest));
+			Print("Entered FromMM : " + ReadFrom.Excel(PumpConcreteRequest, 5, ReadFrom.PumpConcreteRequest));
 
 			Wait(2000);
 			String FromMeridian = ReadFrom.Excel(PumpConcreteRequest, 6, ReadFrom.PumpConcreteRequest);
@@ -915,14 +914,14 @@ public class F_17_ConcreteRequest extends Baseclass {
 			Wait(2000);
 			Clear("ConcreteRequest.PumpToHH", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.PumpToHH", ConcreteRequestLocators, ReadFrom.Excel(PumpConcreteRequest, 7, ReadFrom.PumpConcreteRequest));
-			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"PumpToHH is entered as : " + ReadFrom.Excel(PumpConcreteRequest, 7, ReadFrom.PumpConcreteRequest));
-			Print("PumpToHH is entered as : " + ReadFrom.Excel(PumpConcreteRequest, 7, ReadFrom.PumpConcreteRequest));
+			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Entered ToHH : " + ReadFrom.Excel(PumpConcreteRequest, 7, ReadFrom.PumpConcreteRequest));
+			Print("Entered ToHH : " + ReadFrom.Excel(PumpConcreteRequest, 7, ReadFrom.PumpConcreteRequest));
 
 			Wait(2000);
 			Clear("ConcreteRequest.PumpToMM", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.PumpToMM", ConcreteRequestLocators, ReadFrom.Excel(PumpConcreteRequest, 8, ReadFrom.PumpConcreteRequest));
-			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"PumpToMM is entered as : " + ReadFrom.Excel(PumpConcreteRequest, 8, ReadFrom.PumpConcreteRequest));
-			Print("PumpToMM is entered as : " + ReadFrom.Excel(PumpConcreteRequest, 8, ReadFrom.PumpConcreteRequest));
+			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"PumpEntered ToMM : " + ReadFrom.Excel(PumpConcreteRequest, 8, ReadFrom.PumpConcreteRequest));
+			Print("PumpEntered ToMM : " + ReadFrom.Excel(PumpConcreteRequest, 8, ReadFrom.PumpConcreteRequest));
 
 			Wait(2000);
 			String ToMeridian = ReadFrom.Excel(PumpConcreteRequest, 9, ReadFrom.PumpConcreteRequest);
@@ -951,15 +950,15 @@ public class F_17_ConcreteRequest extends Baseclass {
 			TypeDataInTheField("ConcreteRequest.PumpSize", ConcreteRequestLocators, ReadFrom.Excel(PumpConcreteRequest, 1, ReadFrom.PumpConcreteRequest));
 			Wait(2000);
 			ClickEnter();
-			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Pump size is edited as : " + ReadFrom.Excel(PumpConcreteRequest, 1, ReadFrom.PumpConcreteRequest));
-			Print("Pump size is edited as : " + ReadFrom.Excel(PumpConcreteRequest, 1, ReadFrom.PumpConcreteRequest));
+			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Edited Pump size is : " + ReadFrom.Excel(PumpConcreteRequest, 1, ReadFrom.PumpConcreteRequest));
+			Print("Edited Pump size is : " + ReadFrom.Excel(PumpConcreteRequest, 1, ReadFrom.PumpConcreteRequest));
 
 			Wait(2000);
 			MoveToElement("ConcreteRequest.Submit", ConcreteRequestLocators);
 			Wait(2000);
 			Click("ConcreteRequest.Submit", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar" ,"Click on Submit button");
+			Print("Click on Submit button");
 
 			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -1034,12 +1033,12 @@ public class F_17_ConcreteRequest extends Baseclass {
 			MoveToElement("ConcreteRequest.VoidButton", ConcreteRequestLocators);
 			Wait(2000);
 			Click("ConcreteRequest.VoidButton", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User push a Concrete request from the calendar" ,"Void button is clicked");
-			Print("Void button is clicked");
+			ReportConfig.Givenlogpass("User push a Concrete request from the calendar" ,"Click on Void button");
+			Print("Click on Void button");
 
 			Click("ConcreteRequest.YesButton", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User push a Concrete request from the calendar" ,"Yes button is clicked");
-			Print("Yes button is clicked");
+			ReportConfig.Givenlogpass("User push a Concrete request from the calendar" ,"Click on Yes button");
+			Print("Click on Yes button");
 
 			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -1082,8 +1081,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 		Wait(2000);
 		MoveToElement("ConcreteRequest.Submit", ConcreteRequestLocators);
 		JsClick("ConcreteRequest.Submit", ConcreteRequestLocators);
-		Print("Submit button is clicked");
-		ReportConfig.Givenlogpass("User add new Concrete request without filling mandatory field","Submit button is clicked");
+		Print("Click on Submit button");
+		ReportConfig.Givenlogpass("User add new Concrete request without filling mandatory field","Click on Submit button");
 
 		String DescriptionRequired = 	GetText("ConcreteRequest.DescriptionRequired", ConcreteRequestLocators);
 		ReportConfig.Givenlogpass("Description required Error :", DescriptionRequired);
@@ -1092,11 +1091,11 @@ public class F_17_ConcreteRequest extends Baseclass {
 		MoveToElement("ConcreteRequest.Submit", ConcreteRequestLocators);
 		Wait(2000);
 		Click("ConcreteRequest.CancelButton", ConcreteRequestLocators);
-		ReportConfig.Givenlogpass("User add new Concrete request without filling mandatory field","Cancel button is clicked");
+		ReportConfig.Givenlogpass("User add new Concrete request without filling mandatory field","Click on Cancel button");
 		Wait(2000);
 		Click("ConcreteRequest.YesButton", ConcreteRequestLocators);
 		Print("Close button is clicked");
-		ReportConfig.Givenlogpass("User add new Concrete request without filling mandatory field","Yes button is clicked");
+		ReportConfig.Givenlogpass("User add new Concrete request without filling mandatory field","Click on Yes button");
 	}
 
 
@@ -1130,14 +1129,14 @@ public class F_17_ConcreteRequest extends Baseclass {
 			});
 
 			TypeDataInTheField("ConcreteRequest.Description", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Description is entered as : " + ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
-			Print("Description is entered as : " + ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered Description : " + ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
+			Print("Entered Description : " + ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.Location", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Location is entered as : " + ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
-			Print("Location is entered as : " + ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered Location : " + ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
+			Print("Entered Location : " + ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
 
 			Wait(1000);
 			ClickEnter();
@@ -1146,58 +1145,58 @@ public class F_17_ConcreteRequest extends Baseclass {
 			Clear("ConcreteRequest.SelectDate", ConcreteRequestLocators);
 			String InvalidDate = "02/25/2021" ;
 			TypeDataInTheField("ConcreteRequest.SelectDate", ConcreteRequestLocators, InvalidDate);
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"SelectDate is entered as : " + InvalidDate);
-			Print("SelectDate is entered as : " + InvalidDate);
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered SelectDate : " + InvalidDate);
+			Print("Entered SelectDate : " + InvalidDate);
 
 
 			Wait(2000);
 			TypeDataInTheField("ConcreteRequest.MixDesign", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"MixDesign is entered as : " + ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
-			Print("MixDesign is entered as : " + ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered MixDesign : " + ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
+			Print("Entered MixDesign : " + ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			ClickEnter();
 			Wait(1000);
 
 			TypeDataInTheField("ConcreteRequest.OrderNumber", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"OrderNumber is entered as : " + ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
-			Print("OrderNumber is entered as : " + ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered OrderNumber : " + ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
+			Print("Entered OrderNumber : " + ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.Slump", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Slump is entered as : " + ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
-			Print("Slump is entered as : " + ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered Slump : " + ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
+			Print("Entered Slump : " + ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.TruckSpacingHours", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"TruckSpacingHours is entered as : " + ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
-			Print("TruckSpacingHours is entered as : " + ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered TruckSpacingHours : " + ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
+			Print("Entered TruckSpacingHours : " + ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.QuantityOrdered", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"QuantityOrdered is entered as : " + ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
-			Print("QuantityOrdered is entered as : " + ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered QuantityOrdered : " + ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
+			Print("Entered QuantityOrdered : " + ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.Primer", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Primer is entered as : " + ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
-			Print("Primer is entered as : " + ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered Primer : " + ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
+			Print("Entered Primer : " + ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.Notes", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Primer is entered as : " + ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
-			Print("Primer is entered as : " + ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered Primer : " + ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
+			Print("Entered Primer : " + ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			Click("ConcreteRequest.Submit", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Click on Submit button");
+			Print("Click on Submit button");
 
 			Wait<WebDriver> Uploaded = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -1230,26 +1229,25 @@ public class F_17_ConcreteRequest extends Baseclass {
 
 			Clear("ConcreteRequest.SelectDate", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.SelectDate", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request" ,"SelectDate is entered as : " + ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
-			Print("SelectDate is entered as : " + ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request" ,"Entered SelectDate : " + ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
+			Print("Entered SelectDate : " + ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			Clear("ConcreteRequest.FromHH", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.FromHH", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 5, ReadFrom.ConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"FromHH is entered as : " + ReadFrom.Excel(AddConcreteRequest, 5, ReadFrom.ConcreteRequest));
-			Print("FromHH is entered as : " + ReadFrom.Excel(AddConcreteRequest, 5, ReadFrom.ConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered FromHH : " + ReadFrom.Excel(AddConcreteRequest, 5, ReadFrom.ConcreteRequest));
+			Print("Entered FromHH : " + ReadFrom.Excel(AddConcreteRequest, 5, ReadFrom.ConcreteRequest));
 
 			Wait(2000);
 			Clear("ConcreteRequest.FromMM", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.FromMM", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.ConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"FromMM is entered as : " + ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.ConcreteRequest));
-			Print("FromMM is entered as : " + ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.ConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered FromMM : " + ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.ConcreteRequest));
+			Print("Entered FromMM : " + ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.ConcreteRequest));
 
 			Wait(2000);
 			String FromMeridian = ReadFrom.Excel(AddConcreteRequest, 7, ReadFrom.ConcreteRequest);
 
 			String Meridian = GetText("ConcreteRequest.FromMeridian", ConcreteRequestLocators);
-			Print(Meridian);
 			if(IsEqual(Meridian, FromMeridian)) {
 
 
@@ -1261,14 +1259,14 @@ public class F_17_ConcreteRequest extends Baseclass {
 			Wait(2000);
 			Clear("ConcreteRequest.ToHH", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.ToHH", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 8, ReadFrom.ConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"ToHH is entered as : " + ReadFrom.Excel(AddConcreteRequest, 8, ReadFrom.ConcreteRequest));
-			Print("ToHH is entered as : " + ReadFrom.Excel(AddConcreteRequest, 8, ReadFrom.ConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered ToHH : " + ReadFrom.Excel(AddConcreteRequest, 8, ReadFrom.ConcreteRequest));
+			Print("Entered ToHH : " + ReadFrom.Excel(AddConcreteRequest, 8, ReadFrom.ConcreteRequest));
 
 			Wait(2000);
 			Clear("ConcreteRequest.ToMM", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.ToMM", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 9, ReadFrom.ConcreteRequest));
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"ToMM is entered as : " + ReadFrom.Excel(AddConcreteRequest, 9, ReadFrom.ConcreteRequest));
-			Print("ToMM is entered as : " + ReadFrom.Excel(AddConcreteRequest, 9, ReadFrom.ConcreteRequest));
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Entered ToMM : " + ReadFrom.Excel(AddConcreteRequest, 9, ReadFrom.ConcreteRequest));
+			Print("Entered ToMM : " + ReadFrom.Excel(AddConcreteRequest, 9, ReadFrom.ConcreteRequest));
 
 			Wait(2000);
 			String ToMeridian = ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.ConcreteRequest);
@@ -1285,8 +1283,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 
 
 			Click("ConcreteRequest.Submit", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,"Click on Submit button");
+			Print("Click on Submit button");
 
 			String InvalidTime =	GetText("ConcreteRequest.Toast", ConcreteRequestLocators);
 			if(IfContains(InvalidTime, "Please Enter Start time Lesser than End time")) {
@@ -1295,11 +1293,11 @@ public class F_17_ConcreteRequest extends Baseclass {
 				ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time" ,InvalidTime);
 				Wait(2000);
 				Click("ConcreteRequest.CancelButton", ConcreteRequestLocators);
-				ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time","Cancel button is clicked");
+				ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time","Click on Cancel button");
 				Wait(2000);
 				Click("ConcreteRequest.YesButton", ConcreteRequestLocators);
 				Print("Close button is clicked");
-				ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time","Yes button is clicked");
+				ReportConfig.Givenlogpass("User add new Concrete request with invalid date and time","Click on Yes button");
 
 			}
 			else {
@@ -1377,8 +1375,8 @@ public class F_17_ConcreteRequest extends Baseclass {
 				String AttachmentsUploaded =	GetText("ConcreteRequest.Toast", ConcreteRequestLocators);
 				if(IfContains(AttachmentsUploaded, "Please select a valid file")) {
 					Click("ConcreteRequest.Toast", ConcreteRequestLocators);
-					Print("Invalid file is not accepted");
-					ReportConfig.Givenlogpass("User add invalid file in Concrete request" ,"Invalid file is not accepted");
+					Print("Please enter valid file format.");
+					ReportConfig.Givenlogpass("User add invalid file in Concrete request" ,"Please enter valid file format.");
 
 				}
 				else {
@@ -1414,14 +1412,14 @@ public class F_17_ConcreteRequest extends Baseclass {
 			String ConcreteName = 	ReadFrom.Excel(DeleteConcreteRequest, 0, ReadFrom.DeleteConcreteRequest) ;
 			WebElement DeleteRequest = 	DeleteElement(ReadFrom.Excel(DeleteConcreteRequest, 0, ReadFrom.DeleteConcreteRequest));
 			Click(DeleteRequest);
-			ReportConfig.PassedLogInfo("User delete Concrete request", "Delete button is clicked");
-			Print("Delete button is clicked");
+			ReportConfig.PassedLogInfo("User delete Concrete request", "Click on delete button");
+			Print("Click on delete button");
 			Wait(2000);
 
 			Click("ConcreteRequest.YesButton", ConcreteRequestLocators);
 
-			ReportConfig.PassedLogInfo("User delete Concrete request", "Yes delete button is clicked");
-			Print("Yes delete button is clicked");
+			ReportConfig.PassedLogInfo("User delete Concrete request", "Click on Yes button");
+			Print("Click on Yes button");
 
 			Wait<WebDriver> Delete = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))

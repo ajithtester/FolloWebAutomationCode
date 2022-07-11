@@ -61,14 +61,13 @@ public class F_09_Void extends Baseclass {
 				Wait(2000);
 
 				TypeDataInTheField("Search", VoidLocators, ReadFrom.Excel(Search, 0, ReadFrom.SearchVoid));
-				ReportConfig.PassedLogInfo("User search and view the void request", ReadFrom.Excel(Search, 0, ReadFrom.SearchVoid) + " is entered in the search bar");
-				Print(ReadFrom.Excel(Search, 0, ReadFrom.SearchVoid) + " is entered in the search bar");
+				ReportConfig.PassedLogInfo("User search and view the void request","Searched value :" + ReadFrom.Excel(Search, 0, ReadFrom.SearchVoid));
+				Print("Searched value :" + ReadFrom.Excel(Search, 0, ReadFrom.SearchVoid));
 
 				Wait(5000);
 
 
 				int rowcount = 	SizeOfTheList("RequestNameList", VoidLocators);
-				Print("No of request names displayed : " + rowcount);
 
 				for(int Searchedrequest =1; Searchedrequest<=rowcount; Searchedrequest++)	{
 
@@ -106,8 +105,8 @@ public class F_09_Void extends Baseclass {
 				Clear("Search", VoidLocators);
 				Wait(3000);
 				Click("ClearSearch", VoidLocators);
-			ReportConfig.PassedLogInfo("User search and view the void request","Clear search button is clicked");
-				Print("Clear search button is clicked");
+			ReportConfig.PassedLogInfo("User search and view the void request","Click on Clear search button");
+				Print("Click on Clear search button");
 
 
 			}
@@ -121,18 +120,18 @@ public class F_09_Void extends Baseclass {
 			for(int Filter =1; Filter<=ReadFrom.rowcount; Filter++)	{
 
 				Click("FilterIcon", VoidLocators);
-		ReportConfig.PassedLogInfo("User filter void request", "Filter icon is clicked");
-				Print("Filter icon is clicked");
+		ReportConfig.PassedLogInfo("User filter void request", "Click on Filter icon button");
+				Print("Click on Filter icon button");
 				Wait(6000);
 
 
 				SelectFromVisibleText("EquipmentInFilter", VoidLocators, ReadFrom.Excel(Filter, 0, ReadFrom.FilterVoid));
-				ReportConfig.PassedLogInfo("User filter void request","Equipment is selected as : " + ReadFrom.Excel(Filter, 0, ReadFrom.FilterVoid));
-				Print("Equipment is selected as : " + ReadFrom.Excel(Filter, 0, ReadFrom.FilterVoid));
+				ReportConfig.PassedLogInfo("User filter void request","Selected Equipment is : " + ReadFrom.Excel(Filter, 0, ReadFrom.FilterVoid));
+				Print("Selected Equipment is : " + ReadFrom.Excel(Filter, 0, ReadFrom.FilterVoid));
 
 				Click("FilterApply", VoidLocators);
-			ReportConfig.PassedLogInfo("User filter void request","Filter apply button is clicked");
-				Print("Filter apply button is clicked");
+			ReportConfig.PassedLogInfo("User filter void request","Click on Filter apply button");
+				Print("Click on Filter apply button");
 				Wait(3000);
 
 				int rowcount = 	SizeOfTheList("RequestNameList", VoidLocators);
@@ -164,13 +163,13 @@ public class F_09_Void extends Baseclass {
 
 				}
 				JsClick("FilterIcon", VoidLocators);
-			ReportConfig.PassedLogInfo("User filter void request","Filter icon button is clicked");
-				Print("Filter icon button is clicked");
+			ReportConfig.PassedLogInfo("User filter void request","Click on Filter icon button");
+				Print("Click on Filter icon button");
 
 				Wait(3000);
 				JsClick("FilterReset", VoidLocators);
-				ReportConfig.PassedLogInfo("User filter void request","Filter reset button is clicked");
-				Print("Filter reset button is clicked");
+				ReportConfig.PassedLogInfo("User filter void request","Click on Filter reset button");
+				Print("Click on Filter reset button");
 
 				Wait(3000);
 				//	Clear("SearchDfow", DFOWLocators);
@@ -184,7 +183,6 @@ public class F_09_Void extends Baseclass {
 
 			for(int RestoreDelivery =1; RestoreDelivery<=ReadFrom.rowcount; RestoreDelivery++)	{
 
-				Print("No of excel : " + ReadFrom.rowcount);
 				int rowcount = 	SizeOfTheList("RequestNameList", VoidLocators);
 				
 
@@ -197,7 +195,6 @@ public class F_09_Void extends Baseclass {
 					
 
 					String Restore =	ReadFrom.Excel(RestoreDelivery, 0, ReadFrom.Restore);
-					Print(Restore);
 
 					if(IsEqual(RestoreRequestName, Restore)) {
 
@@ -216,8 +213,8 @@ public class F_09_Void extends Baseclass {
 			Click("RestoreButton", VoidLocators);
 			Wait(2000);
 			Click("YesRestore", VoidLocators);
-			ReportConfig.PassedLogInfo("User filter void request","Request is selected and yes restore button is clicked");
-			Print("Request is selected and yes restore button is clicked");
+			ReportConfig.PassedLogInfo("User filter void request","Click on yes restore button");
+			Print("Click on yes restore button");
 
 			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))

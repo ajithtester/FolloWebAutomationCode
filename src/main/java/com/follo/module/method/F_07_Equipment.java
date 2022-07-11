@@ -29,34 +29,34 @@ public class F_07_Equipment extends Baseclass {
 		for(int AddEquipment =1; AddEquipment<=ReadFrom.rowcount; AddEquipment++)		{	
 
 			Click("AddNewEquipment", EquipmentLocators);
-			ReportConfig.PassedLogInfo("To add equipments" ,"Add new equipment button is clicked");
-			Print("Add new equipment button is clicked");
+			ReportConfig.PassedLogInfo("User adds new equipment","Click on Add new button");
+			Print("Click on Add new button");
 			Wait(5000);
 			WaitForTheElement("EquipmentName", EquipmentLocators);
 			if(IsElementDisplayed("EquipmentName", EquipmentLocators)) {
 
 				TypeDataInTheField("EquipmentName", EquipmentLocators, ReadFrom.Excel(AddEquipment, 0, ReadFrom.AddEquipment));
-				ReportConfig.PassedLogInfo("Equipment name is entered as : " , ReadFrom.Excel(AddEquipment, 0, ReadFrom.AddEquipment));
-				Print("Equipment name is entered as : " + ReadFrom.Excel(AddEquipment, 0, ReadFrom.AddEquipment));
+				ReportConfig.PassedLogInfo("User adds new equipment", "Entered Equipment name : " + ReadFrom.Excel(AddEquipment, 0, ReadFrom.AddEquipment));
+				Print("Entered Equipment name : " + ReadFrom.Excel(AddEquipment, 0, ReadFrom.AddEquipment));
 
 				Wait(2000);
 
 				SelectFromVisibleText("EquipmentType" , EquipmentLocators, ReadFrom.Excel(AddEquipment, 1, ReadFrom.AddEquipment));
-				ReportConfig.PassedLogInfo("Equipment type is entered as : " , ReadFrom.Excel(AddEquipment, 1, ReadFrom.AddEquipment));
-				Print("Equipment type is entered as : " + ReadFrom.Excel(AddEquipment, 1, ReadFrom.AddEquipment));
+				ReportConfig.PassedLogInfo("User adds new equipment", "Entered Equipment type : " + ReadFrom.Excel(AddEquipment, 1, ReadFrom.AddEquipment));
+				Print("Entered Equipment type : " + ReadFrom.Excel(AddEquipment, 1, ReadFrom.AddEquipment));
 
 				Wait(2000);
 
 				SelectFromVisibleText("ContactPerson" , EquipmentLocators, ReadFrom.Excel(AddEquipment, 2, ReadFrom.AddEquipment));
-				ReportConfig.PassedLogInfo("Contact person is entered as : " , ReadFrom.Excel(AddEquipment, 2, ReadFrom.AddEquipment));
-				Print("Contact person is entered as : " + ReadFrom.Excel(AddEquipment, 2, ReadFrom.AddEquipment));
+				ReportConfig.PassedLogInfo("User adds new equipment", "Entered Contact person : " + ReadFrom.Excel(AddEquipment, 2, ReadFrom.AddEquipment));
+				Print("Entered Contact person : " + ReadFrom.Excel(AddEquipment, 2, ReadFrom.AddEquipment));
 
 				Click("SubmitButton", EquipmentLocators);
-				ReportConfig.PassedLogInfo("To add equipments" , "Submit button is clicked");
-				Print("Submit button is clicked");
+				ReportConfig.PassedLogInfo("User adds new equipment", "Click on Submit button");
+				Print("Click on Submit button");
 			}
 			else {
-				ReportConfig.FailedLogInfo("To add equipments" , "Add equipment popup is not opened");
+				ReportConfig.FailedLogInfo("User adds new equipment", "Add equipment popup is not opened");
 				Print("Equipment popup is not opened button is clicked");
 				
 				String IssueSummary = "Add equipment popup is not opened" ;
@@ -79,12 +79,12 @@ public class F_07_Equipment extends Baseclass {
 			if(IsElementDisplayed("EquipmentAdded", EquipmentLocators)) {
 				Click("EquipmentAdded", EquipmentLocators);
 				Print("Equipment added is : " + ReadFrom.Excel(AddEquipment, 0, ReadFrom.AddEquipment));
-				ReportConfig.PassedLogInfo("Equipment added is : " ,  ReadFrom.Excel(AddEquipment, 0, ReadFrom.AddEquipment));
+				ReportConfig.PassedLogInfo("User adds new equipment", "Equipment added is : " +  ReadFrom.Excel(AddEquipment, 0, ReadFrom.AddEquipment));
 			}
 			else {
 
 				PrintError("Equipment is not added");
-				ReportConfig.FailedLogInfo("To add equipments" ,"Equipment is not added");
+				ReportConfig.FailedLogInfo("User adds new equipment","Equipment is not added");
 				
 				String IssueSummary = "Equipment added successfully is not displayed" ;
 				String Storydescription = "Add equipments" ;
@@ -125,21 +125,21 @@ public class F_07_Equipment extends Baseclass {
 					Clear("EquipmentName", EquipmentLocators);
 
 					TypeDataInTheField("EquipmentName", EquipmentLocators, ReadFrom.Excel(EditEquipmentDetails, 1, ReadFrom.EditEquipment));
-					ReportConfig.PassedLogInfo("Equipment name is edited as : " , ReadFrom.Excel(EditEquipmentDetails, 1, ReadFrom.EditEquipment));
-					Print("Equipment name is edited as : " + ReadFrom.Excel(EditEquipmentDetails, 1, ReadFrom.EditEquipment));
+					ReportConfig.PassedLogInfo("User edit a equipment from the list", "Edited Equipment name is : " + ReadFrom.Excel(EditEquipmentDetails, 1, ReadFrom.EditEquipment));
+					Print("Edited Equipment name is : " + ReadFrom.Excel(EditEquipmentDetails, 1, ReadFrom.EditEquipment));
 
 					Wait(2000);
 
 					SelectFromVisibleText("EquipmentType" , EquipmentLocators, ReadFrom.Excel(EditEquipmentDetails, 2, ReadFrom.EditEquipment));
-					ReportConfig.PassedLogInfo("Equipment type name is edited as : " , ReadFrom.Excel(EditEquipmentDetails, 2, ReadFrom.EditEquipment));
-					Print("Equipment type  is edited as : " + ReadFrom.Excel(EditEquipmentDetails, 2, ReadFrom.EditEquipment));
+					ReportConfig.PassedLogInfo("User edit a equipment from the list", "Edited Equipment type is : " + ReadFrom.Excel(EditEquipmentDetails, 2, ReadFrom.EditEquipment));
+					Print("Edited Equipment type is : " + ReadFrom.Excel(EditEquipmentDetails, 2, ReadFrom.EditEquipment));
 
 
 					Wait(2000);
 
 					SelectFromVisibleText("ContactPerson" , EquipmentLocators, ReadFrom.Excel(EditEquipmentDetails, 3, ReadFrom.EditEquipment));
-					ReportConfig.PassedLogInfo("Contact person is edited as : " , ReadFrom.Excel(EditEquipmentDetails, 3, ReadFrom.EditEquipment));
-					Print("Contact person is edited as : " + ReadFrom.Excel(EditEquipmentDetails, 3, ReadFrom.EditEquipment));
+					ReportConfig.PassedLogInfo("User edit a equipment from the list", "Edited Contact person is : " + ReadFrom.Excel(EditEquipmentDetails, 3, ReadFrom.EditEquipment));
+					Print("Edited Contact person is : " + ReadFrom.Excel(EditEquipmentDetails, 3, ReadFrom.EditEquipment));
 
 					Wait(2000);
 					Click("SubmitButton", EquipmentLocators);
@@ -159,7 +159,7 @@ public class F_07_Equipment extends Baseclass {
 					if(IsElementDisplayed("EquipmentEdit", EquipmentLocators)) {
 
 						Print("Updated equipment is : " + EquipmentListList );
-						ReportConfig.PassedLogInfo("Updated equipment is : " , EquipmentListList );
+						ReportConfig.PassedLogInfo("User edit a equipment from the list", "Updated equipment is : " + EquipmentListList );
 					}
 					else {
 						
@@ -182,14 +182,13 @@ public class F_07_Equipment extends Baseclass {
 			Wait(2000);
 
 			TypeDataInTheField("Search", EquipmentLocators, ReadFrom.Excel(Search, 0, ReadFrom.SearchEquipment));
-			ReportConfig.PassedLogInfo(ReadFrom.Excel(Search, 0, ReadFrom.SearchEquipment) , " is entered in the search bar");
+			ReportConfig.PassedLogInfo("User search and view the equipment","Searched value :" +ReadFrom.Excel(Search, 0, ReadFrom.SearchEquipment));
 			Print(ReadFrom.Excel(Search, 0, ReadFrom.SearchEquipment) + " is entered in the search bar");
 
 			Wait(5000);
 
 
 			int rowcount = 	SizeOfTheList("EquipmentLists", EquipmentLocators);
-			Print("No of equipment displayed : " + rowcount);
 
 			for(int SearchedEquipment =1; SearchedEquipment<=rowcount; SearchedEquipment++)	{
 
@@ -204,7 +203,7 @@ public class F_07_Equipment extends Baseclass {
 
 					Wait(2000);
 					Print("Displayed value is : " + EquipmentName);
-					ReportConfig.PassedLogInfo("Displayed value is : " , EquipmentName);
+					ReportConfig.PassedLogInfo("User search and view the equipment","Displayed value is : " + EquipmentName);
 
 					Wait(3000);
 					break;
@@ -224,8 +223,8 @@ public class F_07_Equipment extends Baseclass {
 			Clear("Search", EquipmentLocators);
 			Wait(3000);
 			Click("ClearSearch", EquipmentLocators);
-			ReportConfig.PassedLogInfo("To search equipments","Clear search button is clicked");
-			Print("Clear search button is clicked");
+			ReportConfig.PassedLogInfo("To search equipments","Click on Clear search button");
+			Print("Click on Clear search button");
 		}
 	}
 
@@ -239,7 +238,6 @@ public class F_07_Equipment extends Baseclass {
 
 
 			int rowcount = 	SizeOfTheList("DeleteButtonLocator", EquipmentLocators);
-			Print("No of elements : " + rowcount);
 
 			for(int DeleteButton =1; DeleteButton<=rowcount; DeleteButton++)	{
 
@@ -259,8 +257,8 @@ public class F_07_Equipment extends Baseclass {
 					Wait(2000);
 
 					Click("YesDelete", EquipmentLocators);
-					ReportConfig.PassedLogInfo("To delete equipments", "Equipment is selected and delete button is clicked");
-					Print("Equipment is selected and delete button is clicked");
+					ReportConfig.PassedLogInfo("User delete a equipment from the list", "Click on delete button");
+					Print("Click on delete button");
 
 					Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -276,11 +274,11 @@ public class F_07_Equipment extends Baseclass {
 					if(IsElementDisplayed("EquipmentDeleted", EquipmentLocators)){
 						Click("EquipmentDeleted", EquipmentLocators);
 						Print("Equipment deleted is : " + ReadFrom.Excel(DeleteEquipment, 0, ReadFrom.DeleteEquipment));
-						ReportConfig.PassedLogInfo("Equipment deleted is : " , ReadFrom.Excel(DeleteEquipment, 0, ReadFrom.DeleteEquipment));
+						ReportConfig.PassedLogInfo("User delete a equipment from the list", "Equipment deleted is : " + ReadFrom.Excel(DeleteEquipment, 0, ReadFrom.DeleteEquipment));
 						break;
 					}else {
 						PrintError("Equipment not deleted");
-						ReportConfig.FailedLogInfo("To delete equipments", "Equipment not deleted");
+						ReportConfig.FailedLogInfo("User delete a equipment from the list", "Equipment not deleted");
 						
 						String IssueSummary = "Equipment deleted successfully is not displayed" ;
 						String Storydescription = "Deleted equipments" ;
@@ -311,17 +309,15 @@ public class F_07_Equipment extends Baseclass {
 
 
 			TypeDataInTheField("EquipmentNameInFilter", EquipmentLocators, ReadFrom.Excel(Filter, 0, ReadFrom.FilterEquipment));
-			ReportConfig.PassedLogInfo("Equipment name is entered as : " , ReadFrom.Excel(Filter, 0, ReadFrom.FilterEquipment));
-			Print("Equipment name is entered as : " + ReadFrom.Excel(Filter, 0, ReadFrom.FilterEquipment));
+			ReportConfig.PassedLogInfo("User filter the company based on equipment name", "Entered Equipment name : " + ReadFrom.Excel(Filter, 0, ReadFrom.FilterEquipment));
+			Print("Entered Equipment name : " + ReadFrom.Excel(Filter, 0, ReadFrom.FilterEquipment));
 
 			Click("FilterApply", EquipmentLocators);
-			ReportConfig.PassedLogInfo("To filter equipments", "Filter apply button is clicked");
-			Print("Filter apply button is clicked");
+			ReportConfig.PassedLogInfo("User filter the company based on equipment name", "Click on Filter apply button");
+			Print("Click on Filter apply button");
 			Wait(3000);
 
 			int rowcount = 	SizeOfTheList("EquipmentLists", EquipmentLocators);
-			Print("No of Equipmentsedisplayed : " + rowcount);
-
 
 			for(int EquipmentLists =1; EquipmentLists<=rowcount; EquipmentLists++)	{
 
@@ -331,7 +327,6 @@ public class F_07_Equipment extends Baseclass {
 				Wait(2000);
 
 				String FilteredValue = ReadFrom.Excel(Filter, 0, ReadFrom.FilterEquipment);
-
 
 				if(	IsEqual(EquipmentName, FilteredValue)) {
 
@@ -349,13 +344,13 @@ public class F_07_Equipment extends Baseclass {
 
 			}
 			Click("FilterIcon", EquipmentLocators);
-			ReportConfig.PassedLogInfo("To filter equipments", "Filter icon button is clicked");
-			Print("Filter icon button is clicked");
+			ReportConfig.PassedLogInfo("User filter the company based on equipment name", "Click on Filter icon button");
+			Print("Click on Filter icon button");
 
 			Wait(3000);
 			Click("FilterReset", EquipmentLocators);
-			ReportConfig.PassedLogInfo("To filter equipments", "Filter reset button is clicked");
-			Print("Filter reset button is clicked");
+			ReportConfig.PassedLogInfo("User filter the company based on equipment name", "Click on Filter reset button");
+			Print("Click on Filter reset button");
 
 			Wait(3000);
 			//	Clear("SearchDfow", DFOWLocators);
@@ -371,8 +366,8 @@ public class F_07_Equipment extends Baseclass {
 		for(int AddEquipment =1; AddEquipment<=1; AddEquipment++)		{	
 
 			Click("AddNewEquipment", EquipmentLocators);
-			ReportConfig.Givenlogpass("user adds equipment name that exceeds maximum length","Add new equipment button is clicked");
-			Print("Add new equipment button is clicked");
+			ReportConfig.Givenlogpass("user adds equipment name that exceeds maximum length","Click on Add new button");
+			Print("Click on Add new button");
 			Wait(4000);
 			WaitForTheElement("EquipmentName", EquipmentLocators);
 			if(IsElementDisplayed("EquipmentName", EquipmentLocators)) {
@@ -386,18 +381,18 @@ public class F_07_Equipment extends Baseclass {
 				Wait(2000);
 
 				SelectFromVisibleText("EquipmentType" , EquipmentLocators, ReadFrom.Excel(AddEquipment, 1, ReadFrom.AddEquipment));
-				ReportConfig.Givenlogpass("user adds equipment name that exceeds maximum length","Equipment type is entered as : " + ReadFrom.Excel(AddEquipment, 1, ReadFrom.AddEquipment));
-				Print("Equipment type is entered as : " + ReadFrom.Excel(AddEquipment, 1, ReadFrom.AddEquipment));
+				ReportConfig.Givenlogpass("user adds equipment name that exceeds maximum length","Entered Equipment type : " + ReadFrom.Excel(AddEquipment, 1, ReadFrom.AddEquipment));
+				Print("Entered Equipment type : " + ReadFrom.Excel(AddEquipment, 1, ReadFrom.AddEquipment));
 
 				Wait(2000);
 
 				SelectFromVisibleText("ContactPerson" , EquipmentLocators, ReadFrom.Excel(AddEquipment, 2, ReadFrom.AddEquipment));
-				ReportConfig.Givenlogpass("user adds equipment name that exceeds maximum length","Contact person is entered as : " + ReadFrom.Excel(AddEquipment, 2, ReadFrom.AddEquipment));
-				Print("Contact person is entered as : " + ReadFrom.Excel(AddEquipment, 2, ReadFrom.AddEquipment));
+				ReportConfig.Givenlogpass("user adds equipment name that exceeds maximum length","Entered Contact person : " + ReadFrom.Excel(AddEquipment, 2, ReadFrom.AddEquipment));
+				Print("Entered Contact person : " + ReadFrom.Excel(AddEquipment, 2, ReadFrom.AddEquipment));
 
 				Click("SubmitButton", EquipmentLocators);
-				ReportConfig.Givenlogpass("user adds equipment name that exceeds maximum length","Submit button is clicked");
-				Print("Submit button is clicked");
+				ReportConfig.Givenlogpass("user adds equipment name that exceeds maximum length","Click on Submit button");
+				Print("Click on Submit button");
 
 
 				WebDriverWait wait = new WebDriverWait(driver, 120);
@@ -422,8 +417,8 @@ public class F_07_Equipment extends Baseclass {
 				Wait(2000);
 
 				Click("SubmitButton", EquipmentLocators);
-				ReportConfig.Givenlogpass("user adds equipment name that exceeds maximum length","Submit button is clicked");
-				Print("Submit button is clicked");
+				ReportConfig.Givenlogpass("user adds equipment name that exceeds maximum length","Click on Submit button");
+				Print("Click on Submit button");
 
 
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='alertdialog']")));

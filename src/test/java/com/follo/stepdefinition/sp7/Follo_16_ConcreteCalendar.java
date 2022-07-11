@@ -19,8 +19,8 @@ public class Follo_16_ConcreteCalendar extends Baseclass {
 			Wait(2000);
 			Click("Concrete.Calendar", ConcreteCalendarLocators);
 
-			Print("Concrete calendar button is clicked");
-			ReportConfig.Givenlogpass("User clicks Crane calendar button from the menu","Concrete calendar button is clicked");
+			Print("Click on Concrete calendar button");
+			ReportConfig.Givenlogpass("User clicks Crane calendar button from the menu","Click on Concrete calendar button");
 
 		} 
 		catch (Exception e) {
@@ -45,8 +45,8 @@ public class Follo_16_ConcreteCalendar extends Baseclass {
 			Waitfortheelement("Concrete.DateAndMonth", ConcreteCalendarLocators);
 			Click("Concrete.DateAndMonth", ConcreteCalendarLocators);
 
-			Print("Concrete page is displayed");
-			ReportConfig.Givenlogpass("Concrete calendar page should display","Concrete page is displayed");
+			Print("Validate Concrete page");
+			ReportConfig.Givenlogpass("Concrete calendar page should display","Validate Concrete page");
 
 		} 
 		catch (Exception e) {
@@ -72,7 +72,7 @@ public class Follo_16_ConcreteCalendar extends Baseclass {
 
 			F_16_ConcreteCalendar.AddConcreteRequest();	
 
-			ReportConfig.Givenlogpass("User add new Concrete request","Concrete request is added successfully");
+		//	ReportConfig.Givenlogpass("User add new Concrete request","Concrete request is added successfully");
 
 		} 
 		catch (Exception e) {
@@ -98,7 +98,7 @@ public class Follo_16_ConcreteCalendar extends Baseclass {
 
 			F_16_ConcreteCalendar.SearchConcreteRequest();	
 
-			ReportConfig.Givenlogpass("User search the Concrete request","Concrete request is searched successfully");
+		//	ReportConfig.Givenlogpass("User search the Concrete request","Concrete request is searched successfully");
 
 		} 
 		catch (Exception e) {
@@ -124,7 +124,7 @@ public class Follo_16_ConcreteCalendar extends Baseclass {
 
 			F_16_ConcreteCalendar.FilterConcreteRequest();	
 
-			ReportConfig.Givenlogpass("User filter the Concrete request in calendar","Concrete request is filtered successfully");
+	//		ReportConfig.Givenlogpass("User filter the Concrete request in calendar","Concrete request is filtered successfully");
 
 		} 
 		catch (Exception e) {
@@ -151,7 +151,7 @@ public class Follo_16_ConcreteCalendar extends Baseclass {
 
 			F_16_ConcreteCalendar.ConcreteCalendarInfo();	
 
-			ReportConfig.Givenlogpass("To view info and history, add comment, add attachment to the Concrete request","Concrete request is added successfully");
+		//	ReportConfig.Givenlogpass("To view info and history, add comment, add attachment to the Concrete request","Concrete request is added successfully");
 
 		} 
 		catch (Exception e) {
@@ -177,7 +177,7 @@ public class Follo_16_ConcreteCalendar extends Baseclass {
 
 			F_16_ConcreteCalendar.EditConcreteRequest();	
 
-			ReportConfig.Givenlogpass("User edit a Concrete request from the calendar","Concrete request is added successfully");
+	//		ReportConfig.Givenlogpass("User edit a Concrete request from the calendar","Concrete request is added successfully");
 
 		} 
 		catch (Exception e) {
@@ -203,7 +203,7 @@ public class Follo_16_ConcreteCalendar extends Baseclass {
 
 			F_16_ConcreteCalendar.VoidConcreteRequest();	
 
-			ReportConfig.Givenlogpass("User push a Concrete request from the calendar","Concrete request is pushed to void successfully");
+		//	ReportConfig.Givenlogpass("User push a Concrete request from the calendar","Concrete request is pushed to void successfully");
 
 		} 
 		catch (Exception e) {
@@ -229,7 +229,7 @@ public class Follo_16_ConcreteCalendar extends Baseclass {
 
 			F_16_ConcreteCalendar.ApproveAndComplete();	
 
-			ReportConfig.Givenlogpass("User Approve and Complete a concrete calendar request in the calendar","Concrete request approved and completed successfully");
+		//	ReportConfig.Givenlogpass("User Approve and Complete a concrete calendar request in the calendar","Concrete request approved and completed successfully");
 
 		} 
 		catch (Exception e) {
@@ -253,7 +253,7 @@ public class Follo_16_ConcreteCalendar extends Baseclass {
 
 			F_16_ConcreteCalendar.AddPump();	
 
-			ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar","Pump added successfully");
+	//		ReportConfig.Givenlogpass("User add pump to the concrete request in concrete calendar","Pump added successfully");
 
 		} 
 		catch (Exception e) {

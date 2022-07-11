@@ -47,77 +47,74 @@ public class F_04_Companies extends Baseclass {
 
 				Wait(2000);
 				TypeDataInTheField("CompanyName", CompaniesLocators, ReadFrom.Excel(AddCompany, 0, ReadFrom.AddCompany));
-				ReportConfig.PassedLogInfo("Company name is entered as : " , ReadFrom.Excel(AddCompany, 0, ReadFrom.AddCompany));
-				Print("Company name is entered as : " +ReadFrom.Excel(AddCompany, 0, ReadFrom.AddCompany));
+				ReportConfig.PassedLogInfo("User add new companies", "Entered Company name  : " + ReadFrom.Excel(AddCompany, 0, ReadFrom.AddCompany));
+				Print("Entered Company name  : " +ReadFrom.Excel(AddCompany, 0, ReadFrom.AddCompany));
 
 
 				Wait(2000);
 				TypeDataInTheField("AddressLine1", CompaniesLocators, ReadFrom.Excel(AddCompany, 2, ReadFrom.AddCompany));
-				ReportConfig.PassedLogInfo("Address line1 is entered as : " , ReadFrom.Excel(AddCompany, 2, ReadFrom.AddCompany));
-				Print("Address line1 is entered as : " +ReadFrom.Excel(AddCompany, 2, ReadFrom.AddCompany));
+				ReportConfig.PassedLogInfo("User add new companies", "Entered Address line1 : " + ReadFrom.Excel(AddCompany, 2, ReadFrom.AddCompany));
+				Print("Entered Address line1 : " +ReadFrom.Excel(AddCompany, 2, ReadFrom.AddCompany));
 
 				Wait(2000);
 				ClickEnter();
 
 				Wait(2000);
 				TypeDataInTheField("AddressLine2", CompaniesLocators, ReadFrom.Excel(AddCompany, 3, ReadFrom.AddCompany));
-				ReportConfig.PassedLogInfo("Address line2 is entered as : " , ReadFrom.Excel(AddCompany, 3, ReadFrom.AddCompany));
-				Print("Address line2 is entered as : " +ReadFrom.Excel(AddCompany, 3, ReadFrom.AddCompany));
+				ReportConfig.PassedLogInfo("User add new companies", "Entered Address line 2 : " + ReadFrom.Excel(AddCompany, 3, ReadFrom.AddCompany));
+				Print("Entered Address line 2 : " +ReadFrom.Excel(AddCompany, 3, ReadFrom.AddCompany));
 
 				Wait(2000);
 				TypeDataInTheField("City", CompaniesLocators, ReadFrom.Excel(AddCompany, 4, ReadFrom.AddCompany));
-				ReportConfig.PassedLogInfo("City is entered as : " , ReadFrom.Excel(AddCompany, 4, ReadFrom.AddCompany));
-				Print("City is entered as : " +ReadFrom.Excel(AddCompany, 4, ReadFrom.AddCompany));
+				ReportConfig.PassedLogInfo("User add new companies", "Entered City : " + ReadFrom.Excel(AddCompany, 4, ReadFrom.AddCompany));
+				Print("Entered City : " +ReadFrom.Excel(AddCompany, 4, ReadFrom.AddCompany));
 
 				Wait(2000);
 				TypeDataInTheField("State", CompaniesLocators, ReadFrom.Excel(AddCompany, 5, ReadFrom.AddCompany));
-				ReportConfig.PassedLogInfo("State is entered as : " , ReadFrom.Excel(AddCompany, 5, ReadFrom.AddCompany));
-				Print("State is entered as : " +ReadFrom.Excel(AddCompany, 5, ReadFrom.AddCompany));
+				ReportConfig.PassedLogInfo("User add new companies", "Entered State : " + ReadFrom.Excel(AddCompany, 5, ReadFrom.AddCompany));
+				Print("Entered State : " +ReadFrom.Excel(AddCompany, 5, ReadFrom.AddCompany));
 
 				Wait(2000);
 				TypeDataInTheField("Zipcode", CompaniesLocators, ReadFrom.Excel(AddCompany, 6, ReadFrom.AddCompany));
-				ReportConfig.PassedLogInfo("Zipcode is entered as : " , ReadFrom.Excel(AddCompany,6, ReadFrom.AddCompany));
-				Print("Zipcode is entered as : " +ReadFrom.Excel(AddCompany,6, ReadFrom.AddCompany));
+				ReportConfig.PassedLogInfo("User add new companies", "Entered Zipcode : " + ReadFrom.Excel(AddCompany,6, ReadFrom.AddCompany));
+				Print("Entered Zipcode : " +ReadFrom.Excel(AddCompany,6, ReadFrom.AddCompany));
 
 				Wait(2000);
 				TypeDataInTheField("Country", CompaniesLocators, ReadFrom.Excel(AddCompany, 7, ReadFrom.AddCompany));
-				ReportConfig.PassedLogInfo("Country is entered as : " , ReadFrom.Excel(AddCompany, 7, ReadFrom.AddCompany));
-				Print("Country is entered as : " +ReadFrom.Excel(AddCompany, 7, ReadFrom.AddCompany));
+				ReportConfig.PassedLogInfo("User add new companies", "Entered Country : " + ReadFrom.Excel(AddCompany, 7, ReadFrom.AddCompany));
+				Print("Entered Country : " +ReadFrom.Excel(AddCompany, 7, ReadFrom.AddCompany));
 
 				Wait(2000);
 				TypeDataInTheField("Website", CompaniesLocators, ReadFrom.Excel(AddCompany, 8, ReadFrom.AddCompany));
-				ReportConfig.PassedLogInfo("Website is entered as : " , ReadFrom.Excel(AddCompany, 8, ReadFrom.AddCompany));
-				Print("Website is entered as : " +ReadFrom.Excel(AddCompany, 8, ReadFrom.AddCompany));
+				ReportConfig.PassedLogInfo("User add new companies","Entered Website : " + ReadFrom.Excel(AddCompany, 8, ReadFrom.AddCompany));
+				Print("Entered Website : " +ReadFrom.Excel(AddCompany, 8, ReadFrom.AddCompany));
 
 				Wait(2000);
 				TypeDataInTheField("AdditionalNotes", CompaniesLocators, ReadFrom.Excel(AddCompany, 9, ReadFrom.AddCompany));
-				ReportConfig.PassedLogInfo("Additional notes is entered as : " , ReadFrom.Excel(AddCompany, 9, ReadFrom.AddCompany));
-				Print("Additional notes is entered as : " +ReadFrom.Excel(AddCompany, 9, ReadFrom.AddCompany));
+				ReportConfig.PassedLogInfo("User add new companies", "Entered Additional notes : " + ReadFrom.Excel(AddCompany, 9, ReadFrom.AddCompany));
+				Print("Entered Additional notes : " +ReadFrom.Excel(AddCompany, 9, ReadFrom.AddCompany));
 
 				Wait(2000);
 				Click("Dfow", CompaniesLocators);
-				ReportConfig.PassedLogInfo("To add new companies" ,"Dfow dropdown is clicked");
+				ReportConfig.PassedLogInfo("User add new companies", "Click on Dfow dropdown");
 
 				//	ReadFrom.DynamicExcel(ReadFrom.AddCompanyDfow);
 
 				//	for(int AddCompanyDfow =1; AddCompanyDfow<=ReadFrom.rowcount; AddCompanyDfow++)		{	
 				String DfowInExcel = ReadFrom.Excel(AddCompany, 1,ReadFrom.AddCompany);
-				Print(DfowInExcel);
 
 				int rowcountofthelist = 	SizeOfTheList("DfowList", CompaniesLocators);
-				Print("No of elements : " + rowcountofthelist);
 
 				for(int DropdownValues =1; DropdownValues<=rowcountofthelist; DropdownValues++)		{	
 					WebElement Dfow = 	FindElement("DfowInDropdown", CompaniesLocators, DropdownValues);
 					String DfowInDropdown = 	GetTextFromTheElement(Dfow);
-					Print(DfowInDropdown);
 
 
 					if(IsEqual(DfowInDropdown, DfowInExcel)){
 						Click(Dfow);
 
-						ReportConfig.PassedLogInfo("Dfow is selected as : " , DfowInDropdown );
-						Print("Dfow is selected as : " + DfowInDropdown );
+						ReportConfig.PassedLogInfo("User add new companies","Selected Dfow  : " + DfowInDropdown );
+						Print("Selected Dfow  : " + DfowInDropdown );
 						break;
 					}
 					else {
@@ -129,7 +126,7 @@ public class F_04_Companies extends Baseclass {
 				Wait(2000);
 
 				Click("SubmitButton", CompaniesLocators);
-				ReportConfig.PassedLogInfo("To add new companies" , "Submit button is clicked");
+				ReportConfig.PassedLogInfo("To add new companies" , "Click on Submit button");
 				Wait(5000);
 
 				Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
@@ -146,7 +143,7 @@ public class F_04_Companies extends Baseclass {
 
 				if(IsElementDisplayed("CompanyAdded", CompaniesLocators)){
 					Print("Company added is : " + ReadFrom.Excel(AddCompany, 0, ReadFrom.AddCompany));
-					ReportConfig.PassedLogInfo("Company added is : " , ReadFrom.Excel(AddCompany, 0, ReadFrom.AddCompany));
+					ReportConfig.PassedLogInfo("User add new companies", "Company added is : " + ReadFrom.Excel(AddCompany, 0, ReadFrom.AddCompany));
 
 				}else {
 					PrintError("Company not added");
@@ -169,11 +166,11 @@ public class F_04_Companies extends Baseclass {
 		Click("Search", CompaniesLocators);
 		for(int Search =1; Search<=ReadFrom.rowcount; Search++)	{
 
-			ReportConfig.PassedLogInfo("Search Company" ,"Search button is clicked");
+			ReportConfig.PassedLogInfo("User search and view the company" , "Click on search button");
 
 			TypeDataInTheField("SearchCompany", CompaniesLocators, ReadFrom.Excel(Search, 0, ReadFrom.SearchCompany));
-			ReportConfig.PassedLogInfo(ReadFrom.Excel(Search, 0, ReadFrom.SearchCompany) , " is entered in the search bar");
-			Print(ReadFrom.Excel(Search, 0, ReadFrom.SearchCompany) + " is entered in the search bar");
+			ReportConfig.PassedLogInfo("User search and view the company" , "Searched Value : " + ReadFrom.Excel(Search, 0, ReadFrom.SearchCompany));
+			Print("Searched Value : " + ReadFrom.Excel(Search, 0, ReadFrom.SearchCompany));
 
 			ClickEnter();
 			Wait(6000);
@@ -193,21 +190,21 @@ public class F_04_Companies extends Baseclass {
 				if(IsEqual(CompanyName, SearchedValue)) {
 
 					Wait(2000);
-					Print("Displayed value is : " + CompanyName);
-					ReportConfig.PassedLogInfo("Displayed value is : " , CompanyName);
+					Print("Displayed value : " + CompanyName);
+					ReportConfig.PassedLogInfo("User search and view the company" , "Displayed value : " + CompanyName);
 
 					Wait(3000);
 
 				}
-				else {
-					PrintError("Displayed value is : " + CompanyName);
-					
-//					String IssueSummary = "Searched value is : " + ReadFrom.Excel(Search, 0, ReadFrom.SearchCompany) + "but displayed value is : " + CompanyName ;
-//					String Storydescription = "Search company" ;
-//					pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
-					
-					
-				}
+//				else {
+//					PrintError("Displayed value is : " + CompanyName);
+//					
+////					String IssueSummary = "Searched value is : " + ReadFrom.Excel(Search, 0, ReadFrom.SearchCompany) + "but displayed value is : " + CompanyName ;
+////					String Storydescription = "Search company" ;
+////					pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
+//					
+//					
+//				}
 
 
 			}
@@ -215,8 +212,8 @@ public class F_04_Companies extends Baseclass {
 			Clear("SearchDfow", DFOWLocators);
 			Wait(3000);
 			Click("ClearSearch", CompaniesLocators);
-			ReportConfig.PassedLogInfo("Search Company" ,"Clear search button is clicked");
-			Print("Clear search button is clicked");
+			ReportConfig.PassedLogInfo("User search and view the company" , "Click on Clear search button");
+			Print("Click on Clear search button");
 			Wait(3000);
 
 
@@ -233,18 +230,18 @@ public class F_04_Companies extends Baseclass {
 
 		for(int Filter =1; Filter<=ReadFrom.rowcount; Filter++)	{
 			Click("FilterIcon", CompaniesLocators);
-			ReportConfig.PassedLogInfo("Filter Company","Filter icon button is clicked");
-			Print("Filter icon button is clicked");
+			ReportConfig.PassedLogInfo("Filter Company","Click on Filter icon");
+			Print("Click on Filter icon");
 
 			TypeDataInTheField("FilterCompanyName", CompaniesLocators, ReadFrom.Excel(Filter, 0, ReadFrom.FilterCompany));
-			ReportConfig.PassedLogInfo(ReadFrom.Excel(Filter, 0, ReadFrom.FilterCompany) , " is entered in the search bar");
-			Print(ReadFrom.Excel(Filter, 0, ReadFrom.FilterCompany) + " is entered in the search bar");
+			ReportConfig.PassedLogInfo("Filter Company", "Filter value : " + ReadFrom.Excel(Filter, 0, ReadFrom.FilterCompany));
+			Print( "Filtered value : " + ReadFrom.Excel(Filter, 0, ReadFrom.FilterCompany));
 
 
 			Wait(2000);
 			Click("FilterApply", CompaniesLocators);
-			ReportConfig.PassedLogInfo("Filter Company","Filter apply button is clicked");
-			Print("Filter apply button is clicked");
+			ReportConfig.PassedLogInfo("Filter Company","Click on Filter apply button");
+			Print("Click on Filter apply button");
 			Wait(6000);
 
 			int rowcount = 	SizeOfTheList("CompanyList", CompaniesLocators);
@@ -262,25 +259,25 @@ public class F_04_Companies extends Baseclass {
 				if(	IsEqual(CompanyName, FilteredValue)) {
 
 					Wait(2000);
-					Print("Displayed value is : " + CompanyName);
-					ReportConfig.PassedLogInfo("Displayed value is : " , CompanyName);
+					Print("Displayed value: " + CompanyName);
+					ReportConfig.PassedLogInfo("Filter Company", "Displayed value : " + CompanyName);
 
 					Wait(3000);
 
 				}
-				else {
-					PrintError("Displayed value is : " + CompanyName);
-				}
+//				else {
+//					PrintError("Displayed value is : " + CompanyName);
+//				}
 
 
 			}
 			Click("FilterIcon", CompaniesLocators);
-			ReportConfig.PassedLogInfo("Filter Company","Filter icon button is clicked");
-			Print("Filter icon button is clicked");
+			ReportConfig.PassedLogInfo("Filter Company","Click on Filter icon");
+			Print("Click on Filter icon");
 
 			Click("FilterReset", CompaniesLocators);
-			ReportConfig.PassedLogInfo("Filter Company","Filter Reset button is clicked");
-			Print("Filter Reset button is clicked");
+			ReportConfig.PassedLogInfo("Filter Company","Click on Filter Reset button");
+			Print("Click on Filter Reset button");
 			Wait(3000);
 			//	Clear("SearchDfow", DFOWLocators);
 
@@ -299,14 +296,12 @@ public class F_04_Companies extends Baseclass {
 
 
 			int rowcount = SizeOfTheList("CompanyList", CompaniesLocators);
-			Print("No of elements : " + rowcount);
 
 			for(int DeleteButton =2; DeleteButton<=rowcount; DeleteButton++)	{
 
 				WebElement CompanyNames =	FindElement("CompanyListed" ,CompaniesLocators, DeleteButton);
 
 				String CompanyNamesList = 	GetTextFromTheElement(CompanyNames);
-				Print(CompanyNamesList);
 
 				String DeleteIt =	ReadFrom.Excel(DeleteCompany, 0, ReadFrom.DeleteCompany);
 
@@ -323,8 +318,8 @@ public class F_04_Companies extends Baseclass {
 					Wait(2000);
 
 					Click("YesDelete", CompaniesLocators);
-					ReportConfig.PassedLogInfo("Delete Company" ,"Company is selected and delete button is clicked");
-					Print("Company is selected and delete button is clicked");
+					ReportConfig.PassedLogInfo("Delete Company" ,"Click on delete button");
+					Print("Click on delete button");
 
 					Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -338,8 +333,8 @@ public class F_04_Companies extends Baseclass {
 					});
 
 					if(IsElementDisplayed("CompanyDeleted", CompaniesLocators)){
-						Print("Company deleted is : " + ReadFrom.Excel(DeleteCompany, 0, ReadFrom.DeleteCompany));
-						ReportConfig.PassedLogInfo("Company deleted is : " , ReadFrom.Excel(DeleteCompany, 0, ReadFrom.DeleteCompany));
+						Print("Deleted company  : " + ReadFrom.Excel(DeleteCompany, 0, ReadFrom.DeleteCompany));
+						ReportConfig.PassedLogInfo("Deleted company  : " , ReadFrom.Excel(DeleteCompany, 0, ReadFrom.DeleteCompany));
 						break;
 					}else {
 						PrintError("Company not deleted");
@@ -367,7 +362,6 @@ public class F_04_Companies extends Baseclass {
 
 
 			int rowcount = SizeOfTheList("CompanyList", CompaniesLocators);
-			Print("No of elements : " + rowcount);
 
 			for(int CompanyList =1; CompanyList<=rowcount; CompanyList++)	{
 
@@ -385,8 +379,8 @@ public class F_04_Companies extends Baseclass {
 
 					WebElement EditButton =	FindElement("EditCompany" ,CompaniesLocators,  CompanyList);
 					Click(EditButton);
-					ReportConfig.PassedLogInfo("Edit Company", "Edit button is clicked");
-					Print("Edit button is clicked");
+					ReportConfig.PassedLogInfo("Edit Company", "Click on Edit button");
+					Print("Click on Edit button");
 					/////////////////////////////////////////////////////////////////////////////////
 
 					//						ReadFrom.DynamicExcel(ReadFrom.EditCompanyDetails);
@@ -399,95 +393,95 @@ public class F_04_Companies extends Baseclass {
 
 						Wait(2000);
 						Clear("CompanyName", CompaniesLocators);
-						ReportConfig.PassedLogInfo("Edit Company" ,"Company name is cleared");
-						Print("Company name is cleared");
+//						ReportConfig.PassedLogInfo("Edit Company" ,"Company name is cleared");
+//						Print("Company name is cleared");
 
 						TypeDataInTheField("CompanyName", CompaniesLocators, ReadFrom.Excel(EditCompanyDetails, 1, ReadFrom.EditCompanyDetails));
-						ReportConfig.PassedLogInfo("Company name is edited as : " , ReadFrom.Excel(EditCompanyDetails, 1, ReadFrom.EditCompanyDetails));
-						Print("Company name is edited as : " + ReadFrom.Excel(EditCompanyDetails, 1, ReadFrom.EditCompanyDetails));
+						ReportConfig.PassedLogInfo("Edit Company" , "Edited Company name is : " + ReadFrom.Excel(EditCompanyDetails, 1, ReadFrom.EditCompanyDetails));
+						Print("Edited Company name : " + ReadFrom.Excel(EditCompanyDetails, 1, ReadFrom.EditCompanyDetails));
 
 
 						Wait(2000);
 						Clear("AddressLine1", CompaniesLocators);
-						ReportConfig.PassedLogInfo("Edit Company" ,"AddressLine1 is cleared");
-						Print("AddressLine1 is cleared");
+//						ReportConfig.PassedLogInfo("Edit Company" ,"AddressLine1 is cleared");
+//						Print("AddressLine1 is cleared");
 
 						TypeDataInTheField("AddressLine1", CompaniesLocators, ReadFrom.Excel(EditCompanyDetails, 3, ReadFrom.EditCompanyDetails));
-						ReportConfig.PassedLogInfo("AddressLine1 is edited as : " , ReadFrom.Excel(EditCompanyDetails, 3, ReadFrom.EditCompanyDetails));
-						Print("AddressLine1 is edited as : " + ReadFrom.Excel(EditCompanyDetails, 3, ReadFrom.EditCompanyDetails));
+						ReportConfig.PassedLogInfo("Edit Company" , "Edited AddressLine1 is : " + ReadFrom.Excel(EditCompanyDetails, 3, ReadFrom.EditCompanyDetails));
+						Print("Edited AddressLine1  : " + ReadFrom.Excel(EditCompanyDetails, 3, ReadFrom.EditCompanyDetails));
 
 						Wait(2000);
 						ClickEnter();
 
 						Wait(2000);
 						Clear("AddressLine2", CompaniesLocators);
-						ReportConfig.PassedLogInfo("Edit Company" ,"AddressLine2 is cleared");
-						Print("AddressLine2 is cleared");
+//						ReportConfig.PassedLogInfo("Edit Company" ,"AddressLine2 is cleared");
+//						Print("AddressLine2 is cleared");
 
 						TypeDataInTheField("AddressLine2", CompaniesLocators, ReadFrom.Excel(EditCompanyDetails, 4, ReadFrom.EditCompanyDetails));
-						ReportConfig.PassedLogInfo("AddressLine2 is edited as : " , ReadFrom.Excel(EditCompanyDetails, 4, ReadFrom.EditCompanyDetails));
-						Print("AddressLine2 is edited as : " + ReadFrom.Excel(EditCompanyDetails, 4, ReadFrom.EditCompanyDetails));
+						ReportConfig.PassedLogInfo("Edit Company" , "Edited AddressLine2 is : " + ReadFrom.Excel(EditCompanyDetails, 4, ReadFrom.EditCompanyDetails));
+						Print("Edited AddressLine2 : " + ReadFrom.Excel(EditCompanyDetails, 4, ReadFrom.EditCompanyDetails));
 
 						Wait(2000);
 						Clear("City", CompaniesLocators);
-						ReportConfig.PassedLogInfo("Edit Company" ,"City is cleared");
-						Print("City is cleared");
+//						ReportConfig.PassedLogInfo("Edit Company" ,"City is cleared");
+//						Print("City is cleared");
 
 						TypeDataInTheField("City", CompaniesLocators, ReadFrom.Excel(EditCompanyDetails, 5, ReadFrom.EditCompanyDetails));
-						ReportConfig.PassedLogInfo("City is edited as : " , ReadFrom.Excel(EditCompanyDetails, 5, ReadFrom.EditCompanyDetails));
-						Print("City is edited as : " + ReadFrom.Excel(EditCompanyDetails, 5, ReadFrom.EditCompanyDetails));
+						ReportConfig.PassedLogInfo("Edit Company" ,"Edited City is : " + ReadFrom.Excel(EditCompanyDetails, 5, ReadFrom.EditCompanyDetails));
+						Print("Edited City : " + ReadFrom.Excel(EditCompanyDetails, 5, ReadFrom.EditCompanyDetails));
 
 						Wait(2000);
 						Clear("State", CompaniesLocators);
-						ReportConfig.PassedLogInfo("Edit Company" ,"State is cleared");
-						Print("State is cleared");
+//						ReportConfig.PassedLogInfo("Edit Company" ,"State is cleared");
+//						Print("State is cleared");
 
 						TypeDataInTheField("State", CompaniesLocators, ReadFrom.Excel(EditCompanyDetails, 6, ReadFrom.EditCompanyDetails));
-						ReportConfig.PassedLogInfo("State is edited as : " , ReadFrom.Excel(EditCompanyDetails, 6, ReadFrom.EditCompanyDetails));
-						Print("State is edited as : " + ReadFrom.Excel(EditCompanyDetails, 6, ReadFrom.EditCompanyDetails));
+						ReportConfig.PassedLogInfo("Edit Company" , "Edited State is : " + ReadFrom.Excel(EditCompanyDetails, 6, ReadFrom.EditCompanyDetails));
+						Print("Edited State : " + ReadFrom.Excel(EditCompanyDetails, 6, ReadFrom.EditCompanyDetails));
 
 						Wait(2000);
 						Clear("Zipcode", CompaniesLocators);
-						ReportConfig.PassedLogInfo("Edit Company" ,"Zipcode is cleared");
-						Print("Zipcode is cleared");
+//						ReportConfig.PassedLogInfo("Edit Company" ,"Zipcode is cleared");
+//						Print("Zipcode is cleared");
 
 						TypeDataInTheField("Zipcode", CompaniesLocators, ReadFrom.Excel(EditCompanyDetails, 7, ReadFrom.EditCompanyDetails));
-						ReportConfig.PassedLogInfo("Zipcode is edited as : " , ReadFrom.Excel(EditCompanyDetails, 7, ReadFrom.EditCompanyDetails));
-						Print("Zipcode is edited as : " + ReadFrom.Excel(EditCompanyDetails, 7, ReadFrom.EditCompanyDetails));
+						ReportConfig.PassedLogInfo("Edit Company" , "Edited Zipcode is : " + ReadFrom.Excel(EditCompanyDetails, 7, ReadFrom.EditCompanyDetails));
+						Print("Edited Zipcode is : " + ReadFrom.Excel(EditCompanyDetails, 7, ReadFrom.EditCompanyDetails));
 
 						Wait(2000);
 						Clear("Country", CompaniesLocators);
-						ReportConfig.PassedLogInfo("Edit Company" ,"Country is cleared");
-						Print("Country is cleared");
+//						ReportConfig.PassedLogInfo("Edit Company" ,"Country is cleared");
+//						Print("Country is cleared");
 
 						TypeDataInTheField("Country", CompaniesLocators, ReadFrom.Excel(EditCompanyDetails, 8, ReadFrom.EditCompanyDetails));
-						ReportConfig.PassedLogInfo("Country is edited as : " , ReadFrom.Excel(EditCompanyDetails, 8, ReadFrom.EditCompanyDetails));
-						Print("Country is edited as : " + ReadFrom.Excel(EditCompanyDetails, 8, ReadFrom.EditCompanyDetails));
+						ReportConfig.PassedLogInfo("Edit Company" , "Edited Country is : " + ReadFrom.Excel(EditCompanyDetails, 8, ReadFrom.EditCompanyDetails));
+						Print("Edited Country is : " + ReadFrom.Excel(EditCompanyDetails, 8, ReadFrom.EditCompanyDetails));
 
 						Wait(2000);
 						Clear("Website", CompaniesLocators);
-						ReportConfig.PassedLogInfo("Edit Company" ,"Website is cleared");
-						Print("Website is cleared");
+//						ReportConfig.PassedLogInfo("Edit Company" ,"Website is cleared");
+//						Print("Website is cleared");
 
 						TypeDataInTheField("Website", CompaniesLocators, ReadFrom.Excel(EditCompanyDetails, 9, ReadFrom.EditCompanyDetails));
-						ReportConfig.PassedLogInfo("Website is edited as : " , ReadFrom.Excel(EditCompanyDetails, 9, ReadFrom.EditCompanyDetails));
-						Print("Website is edited as : " + ReadFrom.Excel(EditCompanyDetails, 9, ReadFrom.EditCompanyDetails));
+						ReportConfig.PassedLogInfo("Edit Company" ,"Edited Website is : " + ReadFrom.Excel(EditCompanyDetails, 9, ReadFrom.EditCompanyDetails));
+						Print("Edited Website is : " + ReadFrom.Excel(EditCompanyDetails, 9, ReadFrom.EditCompanyDetails));
 
 						Wait(2000);
 						Clear("AdditionalNotes", CompaniesLocators);
-						ReportConfig.PassedLogInfo("Edit Company" ,"AdditionalNotes is cleared");
-						Print("AdditionalNotes is cleared");
+//						ReportConfig.PassedLogInfo("Edit Company" ,"AdditionalNotes is cleared");
+//						Print("AdditionalNotes is cleared");
 
 						TypeDataInTheField("AdditionalNotes", CompaniesLocators, ReadFrom.Excel(EditCompanyDetails, 10, ReadFrom.EditCompanyDetails));
-						ReportConfig.PassedLogInfo("AdditionalNotes is edited as : " , ReadFrom.Excel(EditCompanyDetails, 10, ReadFrom.EditCompanyDetails));
-						Print("AdditionalNotes is edited as : " + ReadFrom.Excel(EditCompanyDetails, 10, ReadFrom.EditCompanyDetails));
+						ReportConfig.PassedLogInfo("Edit Company" , "Edited AdditionalNotes is : " + ReadFrom.Excel(EditCompanyDetails, 10, ReadFrom.EditCompanyDetails));
+						Print("Edited AdditionalNotes is : " + ReadFrom.Excel(EditCompanyDetails, 10, ReadFrom.EditCompanyDetails));
 
 
 						Wait(2000);
 
 						Click("DropdownList", CompaniesLocators);
-						ReportConfig.PassedLogInfo("Edit Company" ,"Dropdown is clicked");
-						Print("Dropdown is clicked");
+						ReportConfig.PassedLogInfo("Edit Company" ,"Click on Dropdown");
+						Print("Click on Dropdown ");
 
 						Click("SelectAllInDropdown", CompaniesLocators);
 
@@ -496,22 +490,19 @@ public class F_04_Companies extends Baseclass {
 
 						//	for(int AddCompanyDfow =1; AddCompanyDfow<=ReadFrom.rowcount; AddCompanyDfow++)		{	
 						String DfowInExcel = ReadFrom.Excel(EditCompanyDetails, 2,ReadFrom.EditCompanyDetails);
-						Print(DfowInExcel);
 
 
 						int rowcountofthelist = 	SizeOfTheList("DfowList", CompaniesLocators);
-						Print("No of elements : " + rowcountofthelist);
 
 						for(int DropdownValues =1; DropdownValues<=rowcountofthelist; DropdownValues++)		{	
 
 							WebElement Dfow = 	FindElement("DfowInDropdown", CompaniesLocators, DropdownValues);
 							String DfowInDropdown = 	GetTextFromTheElement(Dfow);
-							Print(DfowInDropdown);
 
 							if(DfowInDropdown.equalsIgnoreCase(DfowInExcel)){
 								Click(Dfow);
-								ReportConfig.PassedLogInfo(DfowInDropdown , " is selected from the dropdown");
-								Print(DfowInDropdown + " is selected from the dropdown");
+								ReportConfig.PassedLogInfo("Edit Company" ,"Select Dfow: " + DfowInDropdown);
+								Print("Select Dfow: " + DfowInDropdown);
 								break;
 							}
 							else {
@@ -523,8 +514,8 @@ public class F_04_Companies extends Baseclass {
 
 						Wait(2000);
 						Click("SubmitButton", CompaniesLocators);
-						ReportConfig.PassedLogInfo("Edit Company" ,"Submit button is clicked");
-						Print("Submit button is clicked");
+						ReportConfig.PassedLogInfo("Edit Company" ,"Click on Submit button");
+						Print("Click on Submit button");
 
 						Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 								.withTimeout(Duration.ofSeconds(120))
@@ -539,8 +530,8 @@ public class F_04_Companies extends Baseclass {
 						});
 
 						if(IsElementDisplayed("CompanyEdited", CompaniesLocators)){
-							Print("Company edited is : " + ReadFrom.Excel(EditCompanyDetails, 0, ReadFrom.EditCompanyDetails));
-							ReportConfig.PassedLogInfo("Company edited is : " , ReadFrom.Excel(EditCompanyDetails, 0, ReadFrom.EditCompanyDetails));
+							Print( "Company edited is : " + ReadFrom.Excel(EditCompanyDetails, 0, ReadFrom.EditCompanyDetails));
+							ReportConfig.PassedLogInfo("Edit Company" , "Company edited is : " + ReadFrom.Excel(EditCompanyDetails, 0, ReadFrom.EditCompanyDetails));
 							break;
 						}else {
 							PrintError("Company not edited");
@@ -599,8 +590,8 @@ public class F_04_Companies extends Baseclass {
 
 		Click("ImportMultiple", CompaniesLocators);
 
-		Print("Import Multiple button is clicked");
-		ReportConfig.Givenlogpass("User uploads invalid file" ,"Import Multiple button is clicked");
+		Print("Click on Import Multiple button");
+		ReportConfig.Givenlogpass("User uploads invalid file" ,"Click on Import Multiple button");
 
 		Wait(2000);
 
@@ -615,15 +606,15 @@ public class F_04_Companies extends Baseclass {
 		Wait(1000);
 		String invalidText =	GetText("InvalidFileAlert", CompaniesLocators);
 
-		Print("Invalid Image upload alert : " + invalidText);
-		ReportConfig.Givenlogpass("User uploads invalid file" ,"Invalid Image upload alert: " + invalidText);
+		Print("Please enter valid file format. : " + invalidText);
+		ReportConfig.Givenlogpass("User uploads invalid file" ,"Please enter valid file format.: " + invalidText);
 
 		Wait(7000);
 
 		Click("CloseButton", CompaniesLocators);
 
-		Print("Close button is clicked");
-		ReportConfig.Givenlogpass("User uploads invalid file" ,"Close button is clicked");
+		Print("Click on Close button");
+		ReportConfig.Givenlogpass("User uploads invalid file" ,"Click on Close button");
 
 	}
 
@@ -631,8 +622,8 @@ public class F_04_Companies extends Baseclass {
 		PrintError("Company InvalidImageError started");
 		Wait(2000);
 		Click("NewCompany", CompaniesLocators);
-		ReportConfig.Givenlogpass("User adds invalid file in company logo", "New company button is clicked");
-		Print("New company button is clicked");
+		ReportConfig.Givenlogpass("User adds invalid file in company logo", "Click on New company button");
+		Print("Click on New company button");
 
 
 		Wait(2000);
@@ -652,16 +643,16 @@ public class F_04_Companies extends Baseclass {
 		Wait(1000);
 		String InvalidImage =	GetText("InvalidImage", CompaniesLocators);
 
-		Print("Invalid Image upload alert : " + InvalidImage);
-		ReportConfig.Givenlogpass("User adds invalid file in company logo","Invalid Image upload alert: " + InvalidImage);
+		Print("Please enter valid file format. : " + InvalidImage);
+		ReportConfig.Givenlogpass("User adds invalid file in company logo","Please enter valid file format.: " + InvalidImage);
 
 
 		Wait(4000);
 
 		Click("CloseButton", CompaniesLocators);
 
-		Print("Close button is clicked");
-		ReportConfig.Givenlogpass("User adds invalid file in company logo","Close button is clicked");	
+		Print("Click on Close button");
+		ReportConfig.Givenlogpass("User adds invalid file in company logo","Click on Close button");	
 
 
 	}
@@ -674,8 +665,8 @@ public class F_04_Companies extends Baseclass {
 
 			Wait(2000);
 			Click("NewCompany", CompaniesLocators);
-			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"New company button is clicked");
-			Print("New company button is clicked");
+			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Click on New company button");
+			Print("Click on New company button");
 
 
 			Wait(2000);
@@ -691,7 +682,7 @@ public class F_04_Companies extends Baseclass {
 			Wait(2000);
 			try {
 				Click("Dfow", CompaniesLocators);
-				ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" , "Dfow dropdown is clicked");
+				ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" , "Click on Dropdown");
 
 				String DfowInExcel = ReadFrom.Excel(AddCompany, 1,ReadFrom.AddCompany);
 
@@ -705,8 +696,8 @@ public class F_04_Companies extends Baseclass {
 					if(IsEqual(DfowInDropdown, DfowInExcel)){
 						Click(Dfow);
 
-						ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Dfow is selected as : " + DfowInDropdown );
-						Print("Dfow is selected as : " + DfowInDropdown );
+						ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Selected Dfow  : " + DfowInDropdown );
+						Print("Selected Dfow  : " + DfowInDropdown );
 						break;
 					}
 					else {
@@ -721,28 +712,28 @@ public class F_04_Companies extends Baseclass {
 
 			Wait(2000);
 			TypeDataInTheField("AddressLine1", CompaniesLocators, ReadFrom.Excel(AddCompany, 2, ReadFrom.AddCompany));
-			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Address line1 is entered as : " +ReadFrom.Excel(AddCompany, 2, ReadFrom.AddCompany));
-			Print("Address line1 is entered as : " +ReadFrom.Excel(AddCompany, 2, ReadFrom.AddCompany));
+			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Entered Address line1 : " +ReadFrom.Excel(AddCompany, 2, ReadFrom.AddCompany));
+			Print("Entered Address line1 : " +ReadFrom.Excel(AddCompany, 2, ReadFrom.AddCompany));
 
 			Wait(2000);
 			TypeDataInTheField("City", CompaniesLocators, ReadFrom.Excel(AddCompany, 4, ReadFrom.AddCompany));
-			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"City is entered as : " +ReadFrom.Excel(AddCompany, 4, ReadFrom.AddCompany));
-			Print("City is entered as : " +ReadFrom.Excel(AddCompany, 4, ReadFrom.AddCompany));
+			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Entered City : " +ReadFrom.Excel(AddCompany, 4, ReadFrom.AddCompany));
+			Print("Entered City : " +ReadFrom.Excel(AddCompany, 4, ReadFrom.AddCompany));
 
 			Wait(2000);
 			TypeDataInTheField("State", CompaniesLocators, ReadFrom.Excel(AddCompany, 5, ReadFrom.AddCompany));
-			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"State is entered as : " +ReadFrom.Excel(AddCompany, 5, ReadFrom.AddCompany));
-			Print("State is entered as : " +ReadFrom.Excel(AddCompany, 5, ReadFrom.AddCompany));
+			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Entered State : " +ReadFrom.Excel(AddCompany, 5, ReadFrom.AddCompany));
+			Print("Entered State : " +ReadFrom.Excel(AddCompany, 5, ReadFrom.AddCompany));
 
 			Wait(2000);
 			TypeDataInTheField("Zipcode", CompaniesLocators, ReadFrom.Excel(AddCompany, 6, ReadFrom.AddCompany));
-			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Zipcode is entered as : " +ReadFrom.Excel(AddCompany,6, ReadFrom.AddCompany));
-			Print("Zipcode is entered as : " +ReadFrom.Excel(AddCompany,6, ReadFrom.AddCompany));
+			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Entered Zipcode : " +ReadFrom.Excel(AddCompany,6, ReadFrom.AddCompany));
+			Print("Entered Zipcode : " +ReadFrom.Excel(AddCompany,6, ReadFrom.AddCompany));
 
 			Wait(2000);
 			TypeDataInTheField("Country", CompaniesLocators, ReadFrom.Excel(AddCompany, 7, ReadFrom.AddCompany));
-			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Country is entered as : " +ReadFrom.Excel(AddCompany, 7, ReadFrom.AddCompany));
-			Print("Country is entered as : " +ReadFrom.Excel(AddCompany, 7, ReadFrom.AddCompany));
+			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Entered Country : " +ReadFrom.Excel(AddCompany, 7, ReadFrom.AddCompany));
+			Print("Entered Country : " +ReadFrom.Excel(AddCompany, 7, ReadFrom.AddCompany));
 
 
 			Wait(2000);
@@ -785,14 +776,14 @@ public class F_04_Companies extends Baseclass {
 			Wait(4000);
 
 			Click("CloseButton", CompaniesLocators);
-			Print("Close button is clicked");
+			Print("Click on Close button");
 
 			Wait(3000);
 
 			Click("Yes", CompaniesLocators);
 
 			Print("Yes button is clicked");
-			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Close button is clicked");
+			ReportConfig.Givenlogpass("user adds company name that exceeds maximum length" ,"Click on Close button");
 
 
 		}

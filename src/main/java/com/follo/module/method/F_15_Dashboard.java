@@ -41,8 +41,8 @@ public class F_15_Dashboard extends Baseclass {
 
 			if(IsElementDisplayed("CreateNew", DashboardLocators)){
 				JsClick("CreateNew", DashboardLocators);
-				Print("Create new button is clicked");
-				ReportConfig.PassedLogInfo("User add new delivery request", "Create new button is clicked");
+				Print("Click on Create new button");
+				ReportConfig.PassedLogInfo("User add new delivery request", "Click on Create new button");
 
 			}
 			else
@@ -74,29 +74,29 @@ public class F_15_Dashboard extends Baseclass {
 			}
 
 			TypeDataInTheField("Description", DashboardLocators, ReadFrom.Excel(AddRequestDashBoard, 0, ReadFrom.AddRequestDashBoard));
-			Print("Description is entered as : " + ReadFrom.Excel(AddRequestDashBoard, 0, ReadFrom.AddRequestDashBoard));
-			ReportConfig.PassedLogInfo("User add new delivery request","Description is entered as : " + ReadFrom.Excel(AddRequestDashBoard, 0, ReadFrom.AddRequestDashBoard));
+			Print("Entered Description  : " + ReadFrom.Excel(AddRequestDashBoard, 0, ReadFrom.AddRequestDashBoard));
+			ReportConfig.PassedLogInfo("User add new delivery request","Entered Description  : " + ReadFrom.Excel(AddRequestDashBoard, 0, ReadFrom.AddRequestDashBoard));
 
 			SelectFromVisibleText("GateDropdown", DashboardLocators, ReadFrom.Excel(AddRequestDashBoard, 1, ReadFrom.AddRequestDashBoard));
-			Print("Gate dropdown is selected as : " + ReadFrom.Excel(AddRequestDashBoard, 1, ReadFrom.AddRequestDashBoard));
-			ReportConfig.PassedLogInfo("User add new delivery request","Gate dropdown is selected as : " + ReadFrom.Excel(AddRequestDashBoard, 1, ReadFrom.AddRequestDashBoard));
+			Print("Selected Gate : " + ReadFrom.Excel(AddRequestDashBoard, 1, ReadFrom.AddRequestDashBoard));
+			ReportConfig.PassedLogInfo("User add new delivery request","Selected Gate : " + ReadFrom.Excel(AddRequestDashBoard, 1, ReadFrom.AddRequestDashBoard));
 
 			SelectFromVisibleText("EquipmentDropdown", DashboardLocators, ReadFrom.Excel(AddRequestDashBoard, 2, ReadFrom.AddRequestDashBoard));
-			Print("Equipment dropdown is selected as : " + ReadFrom.Excel(AddRequestDashBoard, 2, ReadFrom.AddRequestDashBoard));
-			ReportConfig.PassedLogInfo("User add new delivery request","Equipment dropdown is selected as : " + ReadFrom.Excel(AddRequestDashBoard, 2, ReadFrom.AddRequestDashBoard));
+			Print("Selected Equipment : " + ReadFrom.Excel(AddRequestDashBoard, 2, ReadFrom.AddRequestDashBoard));
+			ReportConfig.PassedLogInfo("User add new delivery request","Selected Equipment : " + ReadFrom.Excel(AddRequestDashBoard, 2, ReadFrom.AddRequestDashBoard));
 
 			Wait(2000);
 			try {
 				if(IsElementDisplayed("PickingFrom", DashboardLocators)) {
 
 					TypeDataInTheField("PickingFrom", DashboardLocators, ReadFrom.Excel(AddRequestDashBoard, 5, ReadFrom.AddRequestDashBoard));
-					Print("Picking from is entered as : " + ReadFrom.Excel(AddRequestDashBoard, 5, ReadFrom.AddRequestDashBoard));
-					ReportConfig.PassedLogInfo("User add new delivery request","Picking from is entered as : " + ReadFrom.Excel(AddRequestDashBoard, 5, ReadFrom.AddRequestDashBoard));
+					Print("Entered Picking from : " + ReadFrom.Excel(AddRequestDashBoard, 5, ReadFrom.AddRequestDashBoard));
+					ReportConfig.PassedLogInfo("User add new delivery request","Entered Picking from : " + ReadFrom.Excel(AddRequestDashBoard, 5, ReadFrom.AddRequestDashBoard));
 
 					Wait(2000);
 					TypeDataInTheField("PickingTo", DashboardLocators, ReadFrom.Excel(AddRequestDashBoard, 6, ReadFrom.AddRequestDashBoard));
-					Print("Picking to is entered as : " + ReadFrom.Excel(AddRequestDashBoard, 6, ReadFrom.AddRequestDashBoard));
-					ReportConfig.PassedLogInfo("User add new delivery request","Picking to is entered as : " + ReadFrom.Excel(AddRequestDashBoard, 6, ReadFrom.AddRequestDashBoard));
+					Print("Entered Picking to : " + ReadFrom.Excel(AddRequestDashBoard, 6, ReadFrom.AddRequestDashBoard));
+					ReportConfig.PassedLogInfo("User add new delivery request","Entered Picking to : " + ReadFrom.Excel(AddRequestDashBoard, 6, ReadFrom.AddRequestDashBoard));
 
 				}
 
@@ -108,11 +108,11 @@ public class F_15_Dashboard extends Baseclass {
 
 			Wait(2000);
 			TypeDataInTheField("VehicleDetails", DashboardLocators, ReadFrom.Excel(AddRequestDashBoard, 3, ReadFrom.AddRequestDashBoard));
-			Print("Vehicle details is entered as : " + ReadFrom.Excel(AddRequestDashBoard, 3, ReadFrom.AddRequestDashBoard));
-			ReportConfig.PassedLogInfo("User add new delivery request","Vehicle details is entered as : " + ReadFrom.Excel(AddRequestDashBoard, 3, ReadFrom.AddRequestDashBoard));
+			Print("Entered Vehicle details : " + ReadFrom.Excel(AddRequestDashBoard, 3, ReadFrom.AddRequestDashBoard));
+			ReportConfig.PassedLogInfo("User add new delivery request","Entered Vehicle details : " + ReadFrom.Excel(AddRequestDashBoard, 3, ReadFrom.AddRequestDashBoard));
 
 			Click("Dfow", DashboardLocators);
-			ReportConfig.PassedLogInfo("User add new delivery request","Dfow dropdown is clicked");
+			ReportConfig.PassedLogInfo("User add new delivery request","Click on Dfow dropdown");
 
 			String DfowInExcel = ReadFrom.Excel(AddRequestDashBoard, 4,ReadFrom.AddRequestDashBoard);
 
@@ -125,8 +125,8 @@ public class F_15_Dashboard extends Baseclass {
 				if(IsEqual(DfowInDropdown, DfowInExcel)){
 					Click(Dfow);
 
-					ReportConfig.PassedLogInfo("User add new delivery request","Dfow is selected as : " + DfowInDropdown );
-					Print("Dfow is selected as : " + DfowInDropdown );
+					ReportConfig.PassedLogInfo("User add new delivery request","Selected dfow : " + DfowInDropdown );
+					Print("Selected dfow : " + DfowInDropdown );
 					break;
 				}
 			}	
@@ -149,13 +149,13 @@ public class F_15_Dashboard extends Baseclass {
 
 			if(IsElementDisplayed("DeliveryAdded", DashboardLocators)) {
 				Click("DeliveryAdded", DashboardLocators);
-				Print("Delivery request added");
+				Print("Delivery request added successfully");
 			}
 			else {
 				PrintError("Delivery request add failed");
 				ReportConfig.FailedLogInfo("User add new delivery request","Delivery request add failed" );
 				
-				String IssueSummary = "Delivery Request Created Successfully is not displayed" ;
+				String IssueSummary = "Delivery request add failed" ;
 				String Storydescription = "Add request in dashboard" ;
 				pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
 				
@@ -172,48 +172,48 @@ public class F_15_Dashboard extends Baseclass {
 			for(int AddCompanyDashBoard =1; AddCompanyDashBoard<=ReadFrom.rowcount; AddCompanyDashBoard++)		{	
 				Wait(2000);
 				Click("NewCompany", DashboardLocators);
-				ReportConfig.PassedLogInfo("To add new companies" ,"New company button is clicked");
-				Print("New company button is clicked");
+				ReportConfig.PassedLogInfo("User adds a Company to the list","Click on New company");
+				Print("Click on New company");
 
 				Wait(5000);
 				if(IsElementDisplayed("Dfow", DashboardLocators)) {
 					
 					Wait(2000);
 					TypeDataInTheField("CompanyName", DashboardLocators, ReadFrom.Excel(AddCompanyDashBoard, 0, ReadFrom.AddCompanyDashBoard));
-					ReportConfig.PassedLogInfo("Company name is entered as : " , ReadFrom.Excel(AddCompanyDashBoard, 0, ReadFrom.AddCompanyDashBoard));
-					Print("Company name is entered as : " +ReadFrom.Excel(AddCompanyDashBoard, 0, ReadFrom.AddCompanyDashBoard));
+					ReportConfig.PassedLogInfo("User adds a Company to the list","Entered Company name : " + ReadFrom.Excel(AddCompanyDashBoard, 0, ReadFrom.AddCompanyDashBoard));
+					Print("Entered Company name : " +ReadFrom.Excel(AddCompanyDashBoard, 0, ReadFrom.AddCompanyDashBoard));
 
 					Wait(2000);
 					TypeDataInTheField("AddressLine1", DashboardLocators, ReadFrom.Excel(AddCompanyDashBoard, 2, ReadFrom.AddCompanyDashBoard));
-					ReportConfig.PassedLogInfo("Address line1 is entered as : " , ReadFrom.Excel(AddCompanyDashBoard, 2, ReadFrom.AddCompanyDashBoard));
-					Print("Address line1 is entered as : " +ReadFrom.Excel(AddCompanyDashBoard, 2, ReadFrom.AddCompanyDashBoard));
+					ReportConfig.PassedLogInfo("User adds a Company to the list","Entered Address line1 : " + ReadFrom.Excel(AddCompanyDashBoard, 2, ReadFrom.AddCompanyDashBoard));
+					Print("Entered Address line1 : " +ReadFrom.Excel(AddCompanyDashBoard, 2, ReadFrom.AddCompanyDashBoard));
 
 					Wait(2000);
 					ClickEnter();
 
 					Wait(2000);
 					TypeDataInTheField("City", DashboardLocators, ReadFrom.Excel(AddCompanyDashBoard, 3, ReadFrom.AddCompanyDashBoard));
-					ReportConfig.PassedLogInfo("City is entered as : " , ReadFrom.Excel(AddCompanyDashBoard, 3, ReadFrom.AddCompanyDashBoard));
-					Print("City is entered as : " +ReadFrom.Excel(AddCompanyDashBoard, 3, ReadFrom.AddCompanyDashBoard));
+					ReportConfig.PassedLogInfo("User adds a Company to the list","Entered City : " + ReadFrom.Excel(AddCompanyDashBoard, 3, ReadFrom.AddCompanyDashBoard));
+					Print("Entered City : " +ReadFrom.Excel(AddCompanyDashBoard, 3, ReadFrom.AddCompanyDashBoard));
 
 					Wait(2000);
 					TypeDataInTheField("State", DashboardLocators, ReadFrom.Excel(AddCompanyDashBoard, 4, ReadFrom.AddCompanyDashBoard));
-					ReportConfig.PassedLogInfo("State is entered as : " , ReadFrom.Excel(AddCompanyDashBoard, 4, ReadFrom.AddCompanyDashBoard));
-					Print("State is entered as : " +ReadFrom.Excel(AddCompanyDashBoard, 4, ReadFrom.AddCompanyDashBoard));
+					ReportConfig.PassedLogInfo("User adds a Company to the list","Entered State : " + ReadFrom.Excel(AddCompanyDashBoard, 4, ReadFrom.AddCompanyDashBoard));
+					Print("Entered State : " +ReadFrom.Excel(AddCompanyDashBoard, 4, ReadFrom.AddCompanyDashBoard));
 
 					Wait(2000);
 					TypeDataInTheField("Zipcode", DashboardLocators, ReadFrom.Excel(AddCompanyDashBoard, 5, ReadFrom.AddCompanyDashBoard));
-					ReportConfig.PassedLogInfo("Zipcode is entered as : " , ReadFrom.Excel(AddCompanyDashBoard, 5, ReadFrom.AddCompanyDashBoard));
-					Print("Zipcode is entered as : " +ReadFrom.Excel(AddCompanyDashBoard, 5, ReadFrom.AddCompanyDashBoard));
+					ReportConfig.PassedLogInfo("User adds a Company to the list","Entered Zipcode : " + ReadFrom.Excel(AddCompanyDashBoard, 5, ReadFrom.AddCompanyDashBoard));
+					Print("Entered Zipcode : " +ReadFrom.Excel(AddCompanyDashBoard, 5, ReadFrom.AddCompanyDashBoard));
 
 					Wait(2000);
 					TypeDataInTheField("Country", DashboardLocators, ReadFrom.Excel(AddCompanyDashBoard, 6, ReadFrom.AddCompanyDashBoard));
-					ReportConfig.PassedLogInfo("Country is entered as : " , ReadFrom.Excel(AddCompanyDashBoard, 6, ReadFrom.AddCompanyDashBoard));
-					Print("Country is entered as : " +ReadFrom.Excel(AddCompanyDashBoard, 6, ReadFrom.AddCompanyDashBoard));
+					ReportConfig.PassedLogInfo("User adds a Company to the list","Entered Country : " + ReadFrom.Excel(AddCompanyDashBoard, 6, ReadFrom.AddCompanyDashBoard));
+					Print("Entered Country : " +ReadFrom.Excel(AddCompanyDashBoard, 6, ReadFrom.AddCompanyDashBoard));
 
 					Wait(2000);
 						Click("Dfow", DashboardLocators);
-						ReportConfig.PassedLogInfo("To add new companies" ,"Dfow dropdown is clicked");
+						ReportConfig.PassedLogInfo("User adds a Company to the list","Click on Dfow dropdown");
 
 						String DfowInExcel = ReadFrom.Excel(AddCompanyDashBoard, 1,ReadFrom.AddCompanyDashBoard);
 
@@ -226,8 +226,8 @@ public class F_15_Dashboard extends Baseclass {
 							if(IsEqual(DfowInDropdown, DfowInExcel)){
 								Click(Dfow);
 
-								ReportConfig.PassedLogInfo("Dfow is selected as : " , DfowInDropdown );
-								Print("Dfow is selected as : " + DfowInDropdown );
+								ReportConfig.PassedLogInfo("User adds a Company to the list","Selected dfow : " + DfowInDropdown );
+								Print("Selected dfow : " + DfowInDropdown );
 								break;
 							}
 						}
@@ -236,7 +236,7 @@ public class F_15_Dashboard extends Baseclass {
 					Wait(2000);
 
 					Click("SubmitButton", DashboardLocators);
-					ReportConfig.PassedLogInfo("To add new companies" , "Submit button is clicked");
+					ReportConfig.PassedLogInfo("User adds a Company to the list", "Click on Submit button");
 					Wait(5000);
 
 					Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
@@ -253,11 +253,11 @@ public class F_15_Dashboard extends Baseclass {
 
 					if(IsElementDisplayed("CompanyAdded", DashboardLocators)){
 						Print("Company added is : " + ReadFrom.Excel(AddCompanyDashBoard, 0, ReadFrom.AddCompanyDashBoard));
-						ReportConfig.PassedLogInfo("Company added is : " , ReadFrom.Excel(AddCompanyDashBoard, 0, ReadFrom.AddCompanyDashBoard));
+						ReportConfig.PassedLogInfo("User adds a Company to the list","Company added is : " + ReadFrom.Excel(AddCompanyDashBoard, 0, ReadFrom.AddCompanyDashBoard));
 
 					}else {
 						PrintError("Company not added");
-						ReportConfig.FailedLogInfo("To add new companies" ,"Company not added");
+						ReportConfig.FailedLogInfo("User adds a Company to the list","Company not added");
 						
 						String IssueSummary = "Company Created Successfully popup is not displayed" ;
 						String Storydescription = "Add Company in dashboard" ;
@@ -287,8 +287,8 @@ public class F_15_Dashboard extends Baseclass {
 
 
 			if(IsEqual(EnteredEmail, ReadFrom.Excel(invite, 0, ReadFrom.AddMemberDashBoard))) {
-				Print("Entered mail id is : " + ReadFrom.Excel(invite, 0, ReadFrom.AddMemberDashBoard) );
-				ReportConfig.PassedLogInfo("Entered mail id is : " , ReadFrom.Excel(invite, 0, ReadFrom.AddMemberDashBoard));
+				Print("Entered mail id : " + ReadFrom.Excel(invite, 0, ReadFrom.AddMemberDashBoard) );
+				ReportConfig.PassedLogInfo("User enters members mailid", "Entered mail id : " + ReadFrom.Excel(invite, 0, ReadFrom.AddMemberDashBoard));
 			}
 			else {
 
@@ -320,8 +320,8 @@ public class F_15_Dashboard extends Baseclass {
 
 		WebElement	SelectCompany =	FindElement("SelectComanyDropdown" , DashboardLocators, invite);
 		Click(SelectCompany);
-		ReportConfig.PassedLogInfo("User assign company and role to the member","Select company dropdown is clicked");
-		Print("Select company dropdown is clicked");
+		ReportConfig.PassedLogInfo("User assign company and role to the member","Click on company dropdown");
+		Print("Click on company dropdown");
 		Wait(3000);
 
 		List<WebElement> CompanyList = getElements("CompanyListInDropdown", DashboardLocators);
@@ -332,8 +332,8 @@ public class F_15_Dashboard extends Baseclass {
 				Wait(2000);
 				Click(Value);
 
-				Print("Company selected for the member : " + EnteredEmail + " : " + CompanyInExcel);
-				ReportConfig.PassedLogInfo("Company selected for the member : " , EnteredEmail + " is : " + CompanyInExcel);
+				Print("Company assigned to the member : " + EnteredEmail + " : " + CompanyInExcel);
+				ReportConfig.PassedLogInfo("User assign company and role to the member", "Company assigned to the member : "  + CompanyInExcel);
 				Wait(3000);
 				break;
 			}
@@ -345,8 +345,8 @@ public class F_15_Dashboard extends Baseclass {
 
 		WebElement	SelectRole =	FindElement("SelectRoleDropdown" , DashboardLocators, invite);
 		Click(SelectRole);
-		ReportConfig.PassedLogInfo("User assign company and role to the member","Select role dropdown is clicked");
-		Print("Select role dropdown is clicked");
+		ReportConfig.PassedLogInfo("User assign company and role to the member","Click on role dropdown");
+		Print("Click on role dropdown");
 		Wait(3000);
 
 		List<WebElement> RoleList = getElements("RoleListInDropdown", DashboardLocators);
@@ -357,8 +357,8 @@ public class F_15_Dashboard extends Baseclass {
 				Wait(2000);
 				Click(Value);
 
-				Print("Role selected for the member : " + EnteredEmail + " : " + RoleInExcel);
-				ReportConfig.PassedLogInfo("Role selected for the member : " , EnteredEmail + " : " + RoleInExcel);
+				Print("Role assigned to the member : " + EnteredEmail + " : " + RoleInExcel);
+				ReportConfig.PassedLogInfo("User assign company and role to the member" ,"Role assigned to the member : " + RoleInExcel);
 				Wait(3000);
 				break;
 			}
@@ -376,35 +376,35 @@ public class F_15_Dashboard extends Baseclass {
 		for(int AddEquipDashBoard =1; AddEquipDashBoard<=ReadFrom.rowcount; AddEquipDashBoard++)		{	
 
 			Click("AddNewEquipment", DashboardLocators);
-			ReportConfig.PassedLogInfo("To add equipments" ,"Add new equipment button is clicked");
-			Print("Add new equipment button is clicked");
+			ReportConfig.PassedLogInfo("User adds a Company to the list","Click on Add new equipment button");
+			Print("Click on Add new equipment button");
 			Wait(4000);
 			WaitForTheElement("EquipmentName", DashboardLocators);
 			if(IsElementDisplayed("EquipmentName", DashboardLocators)) {
 
 				TypeDataInTheField("EquipmentName", DashboardLocators, ReadFrom.Excel(AddEquipDashBoard, 0, ReadFrom.AddEquipDashBoard));
-				ReportConfig.PassedLogInfo("Equipment name is entered as : " , ReadFrom.Excel(AddEquipDashBoard, 0, ReadFrom.AddEquipDashBoard));
-				Print("Equipment name is entered as : " + ReadFrom.Excel(AddEquipDashBoard, 0, ReadFrom.AddEquipDashBoard));
+				ReportConfig.PassedLogInfo("User adds a Company to the list","Entered Equipment name : " + ReadFrom.Excel(AddEquipDashBoard, 0, ReadFrom.AddEquipDashBoard));
+				Print("Entered Equipment name : " + ReadFrom.Excel(AddEquipDashBoard, 0, ReadFrom.AddEquipDashBoard));
 
 				Wait(2000);
 
 				SelectFromVisibleText("EquipmentType" , DashboardLocators, ReadFrom.Excel(AddEquipDashBoard, 1, ReadFrom.AddEquipDashBoard));
-				ReportConfig.PassedLogInfo("Equipment type is entered as : " , ReadFrom.Excel(AddEquipDashBoard, 1, ReadFrom.AddEquipDashBoard));
-				Print("Equipment type is entered as : " + ReadFrom.Excel(AddEquipDashBoard, 1, ReadFrom.AddEquipDashBoard));
+				ReportConfig.PassedLogInfo("User adds a Company to the list","Entered Equipment type : " + ReadFrom.Excel(AddEquipDashBoard, 1, ReadFrom.AddEquipDashBoard));
+				Print("Entered Equipment type : " + ReadFrom.Excel(AddEquipDashBoard, 1, ReadFrom.AddEquipDashBoard));
 
 				Wait(2000);
 
 				SelectFromVisibleText("ContactPerson" , DashboardLocators, ReadFrom.Excel(AddEquipDashBoard, 2, ReadFrom.AddEquipDashBoard));
-				ReportConfig.PassedLogInfo("Contact person is entered as : " , ReadFrom.Excel(AddEquipDashBoard, 2, ReadFrom.AddEquipDashBoard));
-				Print("Contact person is entered as : " + ReadFrom.Excel(AddEquipDashBoard, 2, ReadFrom.AddEquipDashBoard));
+				ReportConfig.PassedLogInfo("User adds a Company to the list","Entered Contact person : " + ReadFrom.Excel(AddEquipDashBoard, 2, ReadFrom.AddEquipDashBoard));
+				Print("Entered Contact person : " + ReadFrom.Excel(AddEquipDashBoard, 2, ReadFrom.AddEquipDashBoard));
 
 				Click("SubmitButton", DashboardLocators);
-				ReportConfig.PassedLogInfo("To add equipments" , "Submit button is clicked");
-				Print("Submit button is clicked");
+				ReportConfig.PassedLogInfo("User adds a Company to the list", "Click on Submit button");
+				Print("Click on Submit button");
 			}
 			else {
-				ReportConfig.FailedLogInfo("To add equipments" , "Equipment popup is not opened button is clicked");
-				Print("Equipment popup is not opened button is clicked");
+				ReportConfig.FailedLogInfo("User adds a Company to the list", "Equipment popup is not opened");
+				Print("Equipment popup is not opened");
 
 			}
 			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
@@ -422,12 +422,12 @@ public class F_15_Dashboard extends Baseclass {
 			if(IsElementDisplayed("EquipmentAdded", DashboardLocators)) {
 				Click("EquipmentAdded", DashboardLocators);
 				Print("Equipment added is : " + ReadFrom.Excel(AddEquipDashBoard, 0, ReadFrom.AddEquipDashBoard));
-				ReportConfig.PassedLogInfo("Equipment added is : " ,  ReadFrom.Excel(AddEquipDashBoard, 0, ReadFrom.AddEquipDashBoard));
+				ReportConfig.PassedLogInfo("User adds a Company to the list", "Equipment added is : " +  ReadFrom.Excel(AddEquipDashBoard, 0, ReadFrom.AddEquipDashBoard));
 			}
 			else {
 
 				PrintError("Equipment is not added");
-				ReportConfig.FailedLogInfo("To add equipments" ,"Equipment is not added");
+				ReportConfig.FailedLogInfo("User adds a Company to the list","Equipment is not added");
 				
 				String IssueSummary = "Equipment added successfully popup is not displayed" ;
 				String Storydescription = "Equipment Company in dashboard" ;
@@ -468,8 +468,8 @@ public class F_15_Dashboard extends Baseclass {
 					Wait(2000);
 
 					Click("YesDelete", DashboardLocators);
-					ReportConfig.PassedLogInfo("Delete Company" ,"Company is selected and delete button is clicked");
-					Print("Company is selected and delete button is clicked");
+					ReportConfig.PassedLogInfo("Delete Company" ,"Click on yes delete button");
+					Print("Click on yes delete button");
 
 					Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -484,7 +484,7 @@ public class F_15_Dashboard extends Baseclass {
 
 					if(IsElementDisplayed("CompanyDeleted", DashboardLocators)){
 						Print("Company deleted is : " + ReadFrom.Excel(DeleteDashBoard, 0, ReadFrom.DeleteDashBoard));
-						ReportConfig.PassedLogInfo("Company deleted is : " , ReadFrom.Excel(DeleteDashBoard, 0, ReadFrom.DeleteDashBoard));
+						ReportConfig.PassedLogInfo("User deletes a Company from the list", "Company deleted is : " + ReadFrom.Excel(DeleteDashBoard, 0, ReadFrom.DeleteDashBoard));
 						break;
 					}
 
@@ -530,13 +530,13 @@ public class F_15_Dashboard extends Baseclass {
 					WebElement Delete =	FindElement("DeleteButton" , DashboardLocators ,TotalMembers);
 					Click(Delete);
 
-					ReportConfig.PassedLogInfo("User deletes a member from the list", "Delete button is clicked");
-					Print("Delete button is clicked");
+					ReportConfig.PassedLogInfo("User deletes a member from the list", "Click on delete button");
+					Print("Click on delete button");
 					Wait(2000);
 
 					Click("DeleteMembers", DashboardLocators);
-					ReportConfig.PassedLogInfo("User deletes a member from the list", "Yes delete button is clicked");
-					Print("Yes delete button is clicked");
+					ReportConfig.PassedLogInfo("User deletes a member from the list", "Click on yes button");
+					Print("Click on yes button");
 
 					Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -602,8 +602,8 @@ public class F_15_Dashboard extends Baseclass {
 					Wait(2000);
 
 					Click("DeleteEquip", DashboardLocators);
-					ReportConfig.PassedLogInfo("To delete equipments", "Equipment is selected and delete button is clicked");
-					Print("Equipment is selected and delete button is clicked");
+					ReportConfig.PassedLogInfo("User deletes a equipment from the list", "Click on delete button");
+					Print("Click on delete button");
 
 					Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 							.withTimeout(Duration.ofSeconds(120))
@@ -623,7 +623,7 @@ public class F_15_Dashboard extends Baseclass {
 						break;
 					}else {
 						PrintError("Equipment not deleted");
-						ReportConfig.FailedLogInfo("To delete equipments", "Equipment not deleted");
+						ReportConfig.FailedLogInfo("User deletes a equipment from the list", "Equipment not deleted");
 						
 						String IssueSummary = "Equipment Deleted Successfully popup is not displayed" ;
 						String Storydescription = "Equipment Member in dashboard" ;

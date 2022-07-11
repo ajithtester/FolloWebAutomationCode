@@ -49,7 +49,7 @@ public class F_18_NotificationPreference extends Baseclass {
 			WebElement CheckBox = 	InstantList(ReadFrom.Excel(Instant, 0, ReadFrom.Instant));
 			Wait(2000);
 			if (CheckBox.isSelected()) {
-				Print("Checkbox: " + InstantName + "is already selected");
+				Print("Checkbox: " + InstantName + "is selected already");
 			} else {
 				JsClick(CheckBox);
 			}
@@ -73,7 +73,7 @@ public class F_18_NotificationPreference extends Baseclass {
 			WebElement CheckBox = 	DigestList(ReadFrom.Excel(Instant, 0, ReadFrom.Instant));
 			Wait(2000);
 			if (CheckBox.isSelected()) {
-				Print("Checkbox: " + DigestName + "is already selected");
+				Print("Checkbox: " + DigestName + "is selected already");
 			} else {
 				// Select the checkbox
 				JsClick(CheckBox);
@@ -106,7 +106,7 @@ public class F_18_NotificationPreference extends Baseclass {
 			Wait(3000);
 
 			Click("ConcreteRequest.CreateNew", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("Member adds a request" ,"Add new concrete calendar button is clicked");
+			ReportConfig.Givenlogpass("Member adds a request" ,"Click on Add new button");
 			Print("Add new button is clicked");
 
 			Wait(3000);
@@ -124,14 +124,14 @@ public class F_18_NotificationPreference extends Baseclass {
 
 
 			TypeDataInTheField("ConcreteRequest.Description", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"Description is entered as : " + ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
-			Print("Description is entered as : " + ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered Description : " + ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
+			Print("Entered Description : " + ReadFrom.Excel(AddConcreteRequest, 0, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.Location", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"Location is entered as : " + ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
-			Print("Location is entered as : " + ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered Location : " + ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
+			Print("Entered Location : " + ReadFrom.Excel(AddConcreteRequest, 1, ReadFrom.AddConcreteRequest));
 
 			Wait(1000);
 
@@ -140,20 +140,20 @@ public class F_18_NotificationPreference extends Baseclass {
 			Clear("ConcreteRequest.SelectDate", ConcreteRequestLocators);
 
 			TypeDataInTheField("ConcreteRequest.SelectDate", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"SelectDate is entered as : " + ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
-			Print("SelectDate is entered as : " + ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered SelectDate : " + ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
+			Print("Entered SelectDate : " + ReadFrom.Excel(AddConcreteRequest, 2, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			Clear("ConcreteRequest.FromHH", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.FromHH", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 3, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"FromHH is entered as : " + ReadFrom.Excel(AddConcreteRequest, 3, ReadFrom.AddConcreteRequest));
-			Print("FromHH is entered as : " + ReadFrom.Excel(AddConcreteRequest, 3, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered FromHH : " + ReadFrom.Excel(AddConcreteRequest, 3, ReadFrom.AddConcreteRequest));
+			Print("Entered FromHH : " + ReadFrom.Excel(AddConcreteRequest, 3, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			Clear("ConcreteRequest.FromMM", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.FromMM", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 4, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"FromMM is entered as : " + ReadFrom.Excel(AddConcreteRequest, 4, ReadFrom.AddConcreteRequest));
-			Print("FromMM is entered as : " + ReadFrom.Excel(AddConcreteRequest, 4, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered FromMM : " + ReadFrom.Excel(AddConcreteRequest, 4, ReadFrom.AddConcreteRequest));
+			Print("Entered FromMM : " + ReadFrom.Excel(AddConcreteRequest, 4, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			String FromMeridian = ReadFrom.Excel(AddConcreteRequest, 5, ReadFrom.AddConcreteRequest);
@@ -171,14 +171,14 @@ public class F_18_NotificationPreference extends Baseclass {
 			Wait(2000);
 			Clear("ConcreteRequest.ToHH", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.ToHH", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"ToHH is entered as : " + ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.AddConcreteRequest));
-			Print("ToHH is entered as : " + ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered ToHH : " + ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.AddConcreteRequest));
+			Print("Entered ToHH : " + ReadFrom.Excel(AddConcreteRequest, 6, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			Clear("ConcreteRequest.ToMM", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.ToMM", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 7, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"ToMM is entered as : " + ReadFrom.Excel(AddConcreteRequest, 7, ReadFrom.AddConcreteRequest));
-			Print("ToMM is entered as : " + ReadFrom.Excel(AddConcreteRequest, 7, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered ToMM : " + ReadFrom.Excel(AddConcreteRequest, 7, ReadFrom.AddConcreteRequest));
+			Print("Entered ToMM : " + ReadFrom.Excel(AddConcreteRequest, 7, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			String ToMeridian = ReadFrom.Excel(AddConcreteRequest, 8, ReadFrom.AddConcreteRequest);
@@ -195,46 +195,46 @@ public class F_18_NotificationPreference extends Baseclass {
 
 			Wait(2000);
 			TypeDataInTheField("ConcreteRequest.MixDesign", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"MixDesign is entered as : " + ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
-			Print("MixDesign is entered as : " + ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered MixDesign : " + ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
+			Print("Entered MixDesign : " + ReadFrom.Excel(AddConcreteRequest, 10, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 			ClickEnter();
 			Wait(1000);
 
 			TypeDataInTheField("ConcreteRequest.OrderNumber", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"OrderNumber is entered as : " + ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
-			Print("OrderNumber is entered as : " + ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered OrderNumber : " + ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
+			Print("Entered OrderNumber : " + ReadFrom.Excel(AddConcreteRequest, 11, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.Slump", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"Slump is entered as : " + ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
-			Print("Slump is entered as : " + ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered Slump : " + ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
+			Print("Entered Slump : " + ReadFrom.Excel(AddConcreteRequest, 12, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.TruckSpacingHours", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"TruckSpacingHours is entered as : " + ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
-			Print("TruckSpacingHours is entered as : " + ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered TruckSpacingHours : " + ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
+			Print("Entered TruckSpacingHours : " + ReadFrom.Excel(AddConcreteRequest, 13, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.QuantityOrdered", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"QuantityOrdered is entered as : " + ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
-			Print("QuantityOrdered is entered as : " + ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered QuantityOrdered : " + ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
+			Print("Entered QuantityOrdered : " + ReadFrom.Excel(AddConcreteRequest, 14, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.Primer", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"Primer is entered as : " + ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
-			Print("Primer is entered as : " + ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered Primer : " + ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
+			Print("Entered Primer : " + ReadFrom.Excel(AddConcreteRequest, 15, ReadFrom.AddConcreteRequest));
 
 			Wait(2000);
 
 			TypeDataInTheField("ConcreteRequest.Notes", ConcreteRequestLocators, ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
-			ReportConfig.Givenlogpass("Member adds a request" ,"Primer is entered as : " + ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
-			Print("Primer is entered as : " + ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
+			ReportConfig.Givenlogpass("Member adds a request" ,"Entered notes : " + ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
+			Print("Entered notes : " + ReadFrom.Excel(AddConcreteRequest, 17, ReadFrom.AddConcreteRequest));
 
 
 
@@ -248,8 +248,8 @@ public class F_18_NotificationPreference extends Baseclass {
 
 			Wait(2000);
 			Click("ConcreteRequest.Submit", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("Member adds a request" ,"Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.Givenlogpass("Member adds a request" ,"Click on Submit button");
+			Print("Click on Submit button");
 
 			Wait<WebDriver> Uploaded = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -335,8 +335,8 @@ public class F_18_NotificationPreference extends Baseclass {
 				file.sendKeys(filePath);
 				Wait(3000);
 				JsClick("ConcreteRequest.Done", ConcreteRequestLocators);
-				Print("Done button is clicked");
-				ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Done button is clicked");
+				Print("Click on Done button");
+				ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Click on Done button");
 
 
 				Wait<WebDriver> Uploaded = new FluentWait<WebDriver>(driver)
@@ -356,7 +356,7 @@ public class F_18_NotificationPreference extends Baseclass {
 				if(IfContains(AttachmentsUploaded, "Uploaded Successfully.")) {
 					Click("ConcreteRequest.Toast", ConcreteRequestLocators);
 					Print("Attachments added to the request : " + ConcreteName);
-					ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Add attachment to the request : " + ConcreteName);
+					ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Attachment edded to the request : " + ConcreteName);
 
 				}
 				else {
@@ -429,8 +429,8 @@ public class F_18_NotificationPreference extends Baseclass {
 
 				Wait(2000);
 				JsClick("ConcreteRequest.Submit", ConcreteRequestLocators);
-				Print("Submit button is clicked");
-				ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Submit button is clicked");
+				Print("Click on Submit button");
+				ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Click on Submit button");
 
 
 				Wait<WebDriver> AddComment = new FluentWait<WebDriver>(driver)
@@ -467,8 +467,8 @@ public class F_18_NotificationPreference extends Baseclass {
 			Wait(2000);
 			Click("ConcreteRequest.EditButton", ConcreteRequestLocators);
 
-			ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Edit button is clicked");
-			Print("Edit button is clicked");
+			ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Click on Edit button");
+			Print("Click on Edit button");
 
 			Wait<WebDriver> description = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -483,20 +483,20 @@ public class F_18_NotificationPreference extends Baseclass {
 			});
 			Clear("ConcreteRequest.Description", ConcreteRequestLocators);
 			TypeDataInTheField("ConcreteRequest.Description", ConcreteRequestLocators, ReadFrom.Excel(ConcreteRequest, 0, ReadFrom.ConcreteRequest));
-			ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Description is edited as : " + ReadFrom.Excel(ConcreteRequest, 0, ReadFrom.ConcreteRequest));
-			Print("Description is edited as : " + ReadFrom.Excel(ConcreteRequest, 0, ReadFrom.ConcreteRequest));
+			ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Edited Description is : " + ReadFrom.Excel(ConcreteRequest, 0, ReadFrom.ConcreteRequest));
+			Print("Edited Description is : " + ReadFrom.Excel(ConcreteRequest, 0, ReadFrom.ConcreteRequest));
 
 			MoveToElement("ConcreteRequest.ConcreteConfirmed", ConcreteRequestLocators);
 			Wait(2000);
 			Click("ConcreteRequest.ConcreteConfirmed", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Concrete Confirmed is clicked");
-			Print("Concrete Confirmed is clicked");
+			ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Click on Concrete Confirmed");
+			Print("Click on Concrete Confirmed");
 
 			Wait(2000);
 
 			Click("ConcreteRequest.Submit", ConcreteRequestLocators);
-			ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Submit button is clicked");
-			Print("Submit button is clicked");
+			ReportConfig.Givenlogpass("Member perform attach, delete, comment, edit and status update a request" ,"Click on Submit button");
+			Print("Click on Submit button");
 
 			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
@@ -561,8 +561,8 @@ public class F_18_NotificationPreference extends Baseclass {
 			Clear("Notifications.SearchField", NotificationLocators);
 			Wait(3000);
 			Click("Notifications.CloseSearch", NotificationLocators);
-			ReportConfig.PassedLogInfo("Search the notification" , "Clear search button is clicked");
-			Print("Clear search button is clicked");
+			ReportConfig.PassedLogInfo("Search the notification" , "Click on Clear search");
+			Print("Click on Clear search");
 		}
 	}
 
@@ -574,8 +574,8 @@ public class F_18_NotificationPreference extends Baseclass {
 		for(int Filter =1; Filter<=ReadFrom.rowcount; Filter++)	{
 
 			Click("Notifications.FilterIcon", NotificationLocators);
-			ReportConfig.PassedLogInfo("Filter the notification", "Filter icon is clicked");
-			Print("Filter icon is clicked");
+			ReportConfig.PassedLogInfo("Filter the notification", "Click on Filter icon");
+			Print("Click on Filter icon Confirmed");
 			Wait(6000);
 
 
@@ -584,8 +584,8 @@ public class F_18_NotificationPreference extends Baseclass {
 			Print("Project is selected as : " + ReadFrom.Excel(Filter, 0, ReadFrom.FilterNoti));
 
 			Click("Notifications.FilterApply", NotificationLocators);
-			ReportConfig.PassedLogInfo("Filter the notification","Filter apply button is clicked");
-			Print("Filter apply button is clicked");
+			ReportConfig.PassedLogInfo("Filter the notification","Click on Filter apply");
+			Print("Click on Filter apply");
 			Wait(3000);
 
 
@@ -610,13 +610,13 @@ public class F_18_NotificationPreference extends Baseclass {
 				}
 			}
 			JsClick("Notifications.FilterIcon", NotificationLocators);
-			ReportConfig.PassedLogInfo("Filter the notification","Filter icon button is clicked");
-			Print("Filter icon button is clicked");
+			ReportConfig.PassedLogInfo("Filter the notification","Click on Filter icon");
+			Print("Click on Filter icon");
 
 			Wait(3000);
 			JsClick("Notifications.FilterReset", NotificationLocators);
-			ReportConfig.PassedLogInfo("Filter the notification","Filter reset button is clicked");
-			Print("Filter reset button is clicked");
+			ReportConfig.PassedLogInfo("Filter the notification","Click on Filter reset");
+			Print("Click on Filter reset");
 
 			Wait(3000);
 

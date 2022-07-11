@@ -31,20 +31,40 @@ public class Follo_18_NotificationPreference extends Baseclass {
 
 			ReportConfig.ReportCreateScenarioTest("User login existing account to verify notification feature");
 
+			ReportConfig.ReportCreateScenarioTest("Launch the app URL and navigate to login page");
+
 			BrowserLaunch.LaunchTheAppURL("URL", AppProperties);
-			ReportConfig.Givenlogpass("User login existing account to verify notification feature", "Browser launch passed");
 
+			String ActualTitle =	PageTitle();		
+			String ExpectedTitle =	PropertyFile("PageTitle", AppProperties);
 
-		}
+			if(IsEqual(ActualTitle, ExpectedTitle)) {
+
+				ReportConfig.Givenlogpass("User launching the web url","Page title verified as : " + PropertyFile("PageTitle", AppProperties));
+
+				Print("Page title verified as : " + PropertyFile("PageTitle", AppProperties));
+
+			}
+			else {
+
+				ReportConfig.Givenlogfail("User launching the web url","Page title verified as : " + PropertyFile("PageTitle", AppProperties));
+
+				PrintError("Page title verified as : " + PropertyFile("PageTitle", AppProperties));
+				String IssueSummary = "Excepted Page title is : " + ExpectedTitle  + " , But actual page title is : " + ActualTitle ;
+				String Storydescription = "Application launched failed" ;
+				pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
+			}
+			
+		} 
+
 		catch (Exception e) {
 
-			ReportConfig.Givenlogfail("User login existing account to verify notification feature", "Browser launch failed");
-
-			PrintError("Page title is : " + PropertyFile("URL", AppProperties) + ": Application launched failed");
-			String IssueSummary = "Browser launch failed" ;
+			ReportConfig.Givenlogfail("User launching the web url","Page title verified as : " + PropertyFile("PageTitle", AppProperties));
+			Print(e.getMessage());
+			String IssueSummary = e.getMessage();
 			String Storydescription = "Application launched failed" ;
 			pt_Integration.CreateStory.post_Story(Storydescription , IssueSummary );
-
+			Print("Page title verified as : " + PropertyFile("PageTitle", AppProperties) + ": Application launched failed because : " + e.getMessage());
 		}
 
 	}
@@ -127,8 +147,8 @@ public class Follo_18_NotificationPreference extends Baseclass {
 			Wait(2000);
 			Click("Notifications.NotificationsPreference", NotificationLocators);
 
-			Print("Notifications preference button is clicked");
-			ReportConfig.Givenlogpass("User click on settings button","Notifications preference button is clicked");
+			Print("Click on Notifications preference button button");
+			ReportConfig.Givenlogpass("User click on settings button","Click on Notifications preference button button");
 
 		} 
 		catch (Exception e) {
@@ -152,8 +172,8 @@ public class Follo_18_NotificationPreference extends Baseclass {
 			Wait(3000);
 			if(IsElementDisplayed("Notifications.Instant", NotificationLocators)) {
 
-				Print("Notifications preference is displayed");
-				ReportConfig.Andlogpass("User clicks Notifications preference button","Notifications preference is displayed");
+				Print("Validate Notifications preference Page");
+				ReportConfig.Andlogpass("User clicks Notifications preference button","Validate Notifications preference Page");
 				ClickPageDown();
 			}
 
@@ -337,7 +357,7 @@ public class Follo_18_NotificationPreference extends Baseclass {
 
 			F_18_NotificationPreference.AddConcreteRequest();	
 
-			ReportConfig.Givenlogpass("Member adds a request","Concrete request is added successfully");
+		//	ReportConfig.Givenlogpass("Member adds a request","Concrete request is added successfully");
 
 		} 
 		catch (Exception e) {
@@ -395,8 +415,8 @@ public class Follo_18_NotificationPreference extends Baseclass {
 			Click("Notifications.Notifications", NotificationLocators);
 
 
-			Print("Notifications button is clicked");
-			ReportConfig.Andlogpass("Clicks notification from menu","Notifications button is clicked");
+			Print("Click on Notifications button");
+			ReportConfig.Andlogpass("Clicks notification from menu","Click on Notifications button");
 			ClickPageDown();
 
 
@@ -461,12 +481,12 @@ public class Follo_18_NotificationPreference extends Baseclass {
 				}
 			});
 			
-			Print("Notifications opened and viewed");
-			ReportConfig.Andlogpass("User verify the notification list","Notifications opened and viewed");
+			Print("Validate Notifications");
+			ReportConfig.Andlogpass("User verify the notification list","Validate Notifications");
 			Wait(3000);
 			Click("Notifications.ClosePopup",NotificationLocators);
-			Print("Close popup button is clicked");
-			ReportConfig.Andlogpass("User verify the notification list","Close popup button is clicked");
+			Print("Click on Close popup button");
+			ReportConfig.Andlogpass("User verify the notification list","Click on Close popup button");
 
 		} 
 		catch (Exception e) {
@@ -538,12 +558,12 @@ public class Follo_18_NotificationPreference extends Baseclass {
 			Wait(3000);
 
 			Click("Notifications.DeleteNotification", NotificationLocators);
-			Print("Notification deleted button clicked");
-			ReportConfig.Givenlogpass("Delete the notification" ,"Notification deleted button clicked");
+			Print("Click on delete button");
+			ReportConfig.Givenlogpass("Delete the notification" ,"Click on delete button");
 			Wait(3000);
 			Click("Notifications.YesDelete", NotificationLocators);
-			Print("Yes deleted button clicked");
-			ReportConfig.Givenlogpass("Delete the notification" ,"Yes deleted button clicked");
+			Print("Click on Yes button");
+			ReportConfig.Givenlogpass("Delete the notification" ,"Click on Yes button");
 			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(120))
 					.pollingEvery(Duration.ofSeconds(5))

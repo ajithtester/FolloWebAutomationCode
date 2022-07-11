@@ -23,7 +23,7 @@ public class Follo_07_Equipment extends Baseclass {
 				Print("Equipment button is displayed");
 				Click("EquipmentButton", EquipmentLocators);
 				Print("Equipment button is displayed");
-				ReportConfig.Givenlogpass("User clicks equipment button","Equipment button is clicked");
+				ReportConfig.Givenlogpass("User clicks equipment button","Click on Equipment button");
 
 
 			}
@@ -49,7 +49,7 @@ public class Follo_07_Equipment extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("To add equipments");
 			F_07_Equipment.AddEquipment();
-			ReportConfig.Givenlogpass("User adds new equipment","Equipment added successfully");
+		//	ReportConfig.Givenlogpass("User adds new equipment","Equipment added successfully");
 
 		} 
 		catch (Exception e) {
@@ -71,7 +71,7 @@ public class Follo_07_Equipment extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("To edit equipments");
 			F_07_Equipment.EditEquipment();
-			ReportConfig.Givenlogpass("User edit a equipment from the list","Equipment edited successfully");
+		//	ReportConfig.Givenlogpass("User edit a equipment from the list","Equipment edited successfully");
 		} 
 		catch (Exception e) {
 
@@ -94,7 +94,7 @@ public class Follo_07_Equipment extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("To filter equipments");
 			F_07_Equipment.FilterEquipment();
-			ReportConfig.Givenlogpass("User filter the company based on equipment name","Equipment filtered successfully");
+	//		ReportConfig.Givenlogpass("User filter the company based on equipment name","Equipment filtered successfully");
 
 		} 
 		catch (Exception e) {
@@ -116,7 +116,7 @@ public class Follo_07_Equipment extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("To search equipments");
 			F_07_Equipment.SearchEquipment();
-			ReportConfig.Givenlogpass("User search and view the equipment","Equipment searched successfully");
+		//	ReportConfig.Givenlogpass("User search and view the equipment","Equipment searched successfully");
 
 
 		} 
@@ -141,7 +141,7 @@ public class Follo_07_Equipment extends Baseclass {
 		try {
 			ReportConfig.ReportCreateScenarioTest("To delete equipments");
 			F_07_Equipment.DeleteEquipment();
-			ReportConfig.Givenlogpass("User delete a equipment from the list","Equipment deleted successfully");
+		//	ReportConfig.Givenlogpass("User delete a equipment from the list","Equipment deleted successfully");
 		} 
 		catch (Exception e) {
 

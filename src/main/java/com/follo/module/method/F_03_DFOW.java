@@ -81,7 +81,7 @@ public class F_03_DFOW extends Baseclass  {
 
 						Wait(2000);
 						Print("Searched Dfow: " + DFOWname);
-						ReportConfig.PassedLogInfo("User search the dfow", "Displayed Dfow: " + DFOWname);
+						ReportConfig.PassedLogInfo("User search the dfow", "Searched Dfow: " + DFOWname);
 						Wait(3000);
 
 					}

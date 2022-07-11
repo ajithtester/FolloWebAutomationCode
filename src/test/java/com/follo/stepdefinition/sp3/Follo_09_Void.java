@@ -22,7 +22,7 @@ public class Follo_09_Void extends Baseclass {
 				ClickPageDown();
 
 				Click("Settings", DFOWLocators);
-				Print("Settings button is clicked");
+				Print("Click on Settings button");
 			}
 			ClickPageDown();
 			Wait(2000);
@@ -33,8 +33,8 @@ public class Follo_09_Void extends Baseclass {
 			if(IsElementDisplayed("VoidList", VoidLocators)){
 				Print("Void list button is displayed");
 				Click("VoidList", VoidLocators);
-				Print("Void list button is clicked");
-				ReportConfig.Givenlogpass("User clicks Void button","Void list button is clicked");
+				Print("Click on Void list button");
+				ReportConfig.Givenlogpass("User clicks Void button","Click on Void list button");
 
 			}
 		} 
@@ -61,7 +61,7 @@ public class Follo_09_Void extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("Search Void request");
 
 			F_09_Void.SearchVoid();
-			ReportConfig.Givenlogpass("User search and view the void request","Void request is searched successfully");
+		//	ReportConfig.Givenlogpass("User search and view the void request","Void request is searched successfully");
 		} 
 		catch (Exception e) {
 			PrintError(e.getMessage());
@@ -82,7 +82,7 @@ public class Follo_09_Void extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("Filter Void request");
 
 			F_09_Void.FilterVoid();
-			ReportConfig.Givenlogpass("User filter void request","Void request is filtered successfully");
+		//	ReportConfig.Givenlogpass("User filter void request","Void request is filtered successfully");
 
 		} 
 		catch (Exception e) {
@@ -105,7 +105,7 @@ public class Follo_09_Void extends Baseclass {
 			ReportConfig.ReportCreateScenarioTest("Restore Void request");
 
 			F_09_Void.RestoreDelivery();
-			ReportConfig.Givenlogpass("User filter void request","Void request is restored successfully");
+		//	ReportConfig.Givenlogpass("User filter void request","Void request is restored successfully");
 
 		} 
 		catch (Exception e) {
